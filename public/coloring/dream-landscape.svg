@@ -1,0 +1,99 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <style>
+    .colorable { fill: white; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; cursor: pointer; }
+    .outline { fill: none; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .fixed { fill: #333; }
+    .label { font-family: sans-serif; font-size: 9px; fill: #aaa; text-anchor: middle; }
+  </style>
+  <rect width="400" height="500" fill="#FFFFFF"/>
+
+  <!-- 제목 -->
+  <text x="200" y="25" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#888">나만의 풍경을 색칠해요</text>
+
+  <!-- 하늘 -->
+  <rect x="20" y="35" width="360" height="200" rx="10" class="colorable" id="sky"/>
+
+  <!-- 태양 -->
+  <circle cx="320" cy="90" r="35" class="colorable" id="sun"/>
+  <line x1="320" y1="48" x2="320" y2="40" class="outline" stroke-width="2.5"/>
+  <line x1="347" y1="63" x2="353" y2="57" class="outline" stroke-width="2.5"/>
+  <line x1="362" y1="90" x2="370" y2="90" class="outline" stroke-width="2.5"/>
+  <line x1="347" y1="117" x2="353" y2="123" class="outline" stroke-width="2.5"/>
+  <line x1="293" y1="63" x2="287" y2="57" class="outline" stroke-width="2.5"/>
+  <line x1="278" y1="90" x2="270" y2="90" class="outline" stroke-width="2.5"/>
+
+  <!-- 구름 -->
+  <ellipse cx="95" cy="72" rx="42" ry="25" class="colorable" id="cloud1"/>
+  <ellipse cx="68" cy="78" rx="28" ry="20" class="colorable" id="cloud1l"/>
+  <ellipse cx="120" cy="76" rx="30" ry="22" class="colorable" id="cloud1r"/>
+  <ellipse cx="210" cy="58" rx="32" ry="18" class="colorable" id="cloud2"/>
+  <ellipse cx="188" cy="64" rx="22" ry="15" class="colorable" id="cloud2l"/>
+  <ellipse cx="232" cy="62" rx="22" ry="15" class="colorable" id="cloud2r"/>
+
+  <!-- 산 -->
+  <polygon points="20,235 120,100 220,235" class="colorable" id="mountain-l"/>
+  <polygon points="100,235 220,88 340,235" class="colorable" id="mountain-m"/>
+  <polygon points="220,235 320,115 420,235" class="colorable" id="mountain-r"/>
+  <!-- 산 꼭대기 눈 -->
+  <polygon points="220,88 205,118 235,118" class="colorable" id="snow-cap"/>
+
+  <!-- 강 -->
+  <path d="M20 310 Q80 295 140 308 Q200 322 260 305 Q320 288 380 305 L380 340 Q320 325 260 340 Q200 355 140 342 Q80 328 20 342 Z" class="colorable" id="river"/>
+  <!-- 강 물결 -->
+  <path d="M50 318 Q80 312 110 318" class="outline" stroke-width="1.5"/>
+  <path d="M160 322 Q190 316 220 322" class="outline" stroke-width="1.5"/>
+  <path d="M270 312 Q300 306 330 312" class="outline" stroke-width="1.5"/>
+
+  <!-- 잔디 (강 앞) -->
+  <path d="M20 335 Q200 320 380 335 L380 500 L20 500 Z" class="colorable" id="ground"/>
+
+  <!-- 집 -->
+  <rect x="52" y="295" width="80" height="65" rx="5" class="colorable" id="house-wall"/>
+  <polygon points="42,298 92,255 142,298" class="colorable" id="house-roof"/>
+  <rect x="78" y="330" width="28" height="30" rx="4" class="colorable" id="house-door"/>
+  <rect x="58" y="308" width="22" height="18" rx="3" class="colorable" id="house-win-l"/>
+  <rect x="104" y="308" width="22" height="18" rx="3" class="colorable" id="house-win-r"/>
+  <rect x="88" y="262" width="10" height="25" rx="3" class="colorable" id="house-chimney"/>
+  <text x="92" y="375" class="label">집</text>
+
+  <!-- 나무 -->
+  <rect x="188" y="335" width="14" height="55" rx="4" class="colorable" id="tree-trunk"/>
+  <circle cx="195" cy="315" r="32" class="colorable" id="tree-top"/>
+  <circle cx="175" cy="328" r="20" class="colorable" id="tree-tl"/>
+  <circle cx="215" cy="328" r="20" class="colorable" id="tree-tr"/>
+  <text x="195" y="402" class="label">나무</text>
+
+  <!-- 꽃밭 -->
+  <ellipse cx="290" cy="375" rx="55" ry="22" class="colorable" id="flower-field"/>
+  <!-- 꽃들 -->
+  <circle cx="268" cy="362" r="9" class="colorable" id="fl1-c"/>
+  <circle cx="260" cy="352" r="7" class="colorable" id="fl1-p1"/>
+  <circle cx="268" cy="348" r="7" class="colorable" id="fl1-p2"/>
+  <circle cx="276" cy="352" r="7" class="colorable" id="fl1-p3"/>
+  <circle cx="290" cy="360" r="9" class="colorable" id="fl2-c"/>
+  <circle cx="282" cy="350" r="7" class="colorable" id="fl2-p1"/>
+  <circle cx="290" cy="346" r="7" class="colorable" id="fl2-p2"/>
+  <circle cx="298" cy="350" r="7" class="colorable" id="fl2-p3"/>
+  <circle cx="312" cy="362" r="9" class="colorable" id="fl3-c"/>
+  <circle cx="304" cy="352" r="7" class="colorable" id="fl3-p1"/>
+  <circle cx="312" cy="348" r="7" class="colorable" id="fl3-p2"/>
+  <circle cx="320" cy="352" r="7" class="colorable" id="fl3-p3"/>
+  <text x="290" y="408" class="label">꽃</text>
+
+  <!-- 동물 (토끼) -->
+  <ellipse cx="340" cy="348" rx="18" ry="22" class="colorable" id="animal-body"/>
+  <circle cx="340" cy="325" r="14" class="colorable" id="animal-head"/>
+  <ellipse cx="330" cy="310" rx="7" ry="16" class="colorable" id="animal-ear-l"/>
+  <ellipse cx="350" cy="310" rx="7" ry="16" class="colorable" id="animal-ear-r"/>
+  <circle cx="336" cy="323" r="3" class="fixed"/>
+  <circle cx="344" cy="323" r="3" class="fixed"/>
+  <ellipse cx="340" cy="330" rx="6" ry="4" class="colorable" id="animal-snout"/>
+  <text x="340" y="382" class="label">동물</text>
+
+  <!-- 강 레이블 -->
+  <text x="200" y="332" class="label">강</text>
+  <!-- 산 레이블 -->
+  <text x="220" y="225" class="label">산</text>
+
+  <text x="200" y="492" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#7EC8A0" font-weight="bold">꿈의 풍경 🌄</text>
+</svg>

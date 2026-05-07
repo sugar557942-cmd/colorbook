@@ -1,26 +1,84 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap");
+
+@font-face {
+  font-family: 'Cafe24Ssurround';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+@theme {
+  --color-maeul-cream: #FFF8E7;
+  --color-maeul-warm-white: #FFFDF5;
+  --color-maeul-gold: #FFD93D;
+  --color-maeul-coral: #FF8B8B;
+  --color-maeul-mint: #7ECEC1;
+  --color-maeul-lavender: #C3AED6;
+  --color-maeul-sky: #87CEEB;
+  --color-maeul-leaf: #8BC48A;
+  --color-maeul-earth: #C4A77D;
+  --color-maeul-charcoal: #3D3D3D;
+  --color-maeul-soft-gray: #9E9E9E;
+
+  --radius-xl: 0.75rem;
+
+  --shadow-storybook: 0 4px 20px rgba(255, 217, 61, 0.15), 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-float: 0 8px 30px rgba(0, 0, 0, 0.12);
+
+  --font-title: "Cafe24Ssurround", "Pretendard", sans-serif;
+  --font-body: "Pretendard", sans-serif;
+  --font-nunito: "Nunito", sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--color-maeul-cream);
+    --foreground: var(--color-maeul-charcoal);
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    background-color: var(--color-maeul-cream);
+    color: var(--color-maeul-charcoal);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    position: relative;
+    min-height: 100vh;
+  }
+
+  /* Paper texture background */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: -1;
+    background-image:
+      repeating-linear-gradient(45deg, #000 0, #000 1px, transparent 0, transparent 50%),
+      repeating-linear-gradient(135deg, #000 0, #000 1px, transparent 0, transparent 50%);
+    background-size: 4px 4px;
+  }
+
+  ::selection {
+    background-color: var(--color-maeul-gold);
+    color: white;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-title);
+  }
 }

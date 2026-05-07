@@ -1,0 +1,91 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <style>
+    .colorable { fill: white; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; cursor: pointer; }
+    .outline { fill: none; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .fixed { fill: #333; }
+  </style>
+  <rect width="400" height="500" fill="#FFFFFF"/>
+
+  <!-- 무지개 아크 (7색) -->
+  <path d="M30 300 Q200 50 370 300" fill="none" stroke-width="22" class="colorable" id="rainbow-7" stroke="#333"/>
+  <path d="M48 300 Q200 75 352 300" fill="none" stroke-width="20" class="colorable" id="rainbow-6" stroke="#333"/>
+  <path d="M66 300 Q200 100 334 300" fill="none" stroke-width="18" class="colorable" id="rainbow-5" stroke="#333"/>
+  <path d="M84 300 Q200 125 316 300" fill="none" stroke-width="16" class="colorable" id="rainbow-4" stroke="#333"/>
+  <path d="M102 300 Q200 148 298 300" fill="none" stroke-width="14" class="colorable" id="rainbow-3" stroke="#333"/>
+  <path d="M120 300 Q200 170 280 300" fill="none" stroke-width="12" class="colorable" id="rainbow-2" stroke="#333"/>
+  <path d="M138 300 Q200 192 262 300" fill="none" stroke-width="10" class="colorable" id="rainbow-1" stroke="#333"/>
+
+  <!-- 구름 (왼쪽) -->
+  <ellipse cx="65" cy="292" rx="48" ry="30" class="colorable" id="cloud-l-main"/>
+  <ellipse cx="38" cy="298" rx="30" ry="22" class="colorable" id="cloud-l-1"/>
+  <ellipse cx="92" cy="295" rx="32" ry="24" class="colorable" id="cloud-l-2"/>
+  <ellipse cx="62" cy="272" rx="28" ry="20" class="colorable" id="cloud-l-3"/>
+
+  <!-- 구름 (오른쪽) -->
+  <ellipse cx="335" cy="292" rx="48" ry="30" class="colorable" id="cloud-r-main"/>
+  <ellipse cx="362" cy="298" rx="30" ry="22" class="colorable" id="cloud-r-1"/>
+  <ellipse cx="308" cy="295" rx="32" ry="24" class="colorable" id="cloud-r-2"/>
+  <ellipse cx="338" cy="272" rx="28" ry="20" class="colorable" id="cloud-r-3"/>
+
+  <!-- 빗방울 장식 (작은) -->
+  <ellipse cx="155" cy="340" rx="5" ry="8" class="colorable" id="raindrop1"/>
+  <ellipse cx="200" cy="348" rx="5" ry="8" class="colorable" id="raindrop2"/>
+  <ellipse cx="245" cy="340" rx="5" ry="8" class="colorable" id="raindrop3"/>
+  <ellipse cx="178" cy="358" rx="4" ry="7" class="colorable" id="raindrop4"/>
+  <ellipse cx="222" cy="355" rx="4" ry="7" class="colorable" id="raindrop5"/>
+
+  <!-- 소리 몸통 (고양이) -->
+  <ellipse cx="200" cy="432" rx="68" ry="55" class="colorable" id="body"/>
+  <ellipse cx="200" cy="435" rx="42" ry="40" class="colorable" id="belly"/>
+
+  <!-- 꼬리 (무지개 색 꿈꾸는 느낌으로 올라감) -->
+  <path d="M265 440 Q310 415 320 385 Q325 360 305 355" class="colorable" id="tail"/>
+
+  <!-- 팔 -->
+  <ellipse cx="128" cy="415" rx="22" ry="48" transform="rotate(20 128 415)" class="colorable" id="arm-l"/>
+  <ellipse cx="272" cy="415" rx="22" ry="48" transform="rotate(-20 272 415)" class="colorable" id="arm-r"/>
+
+  <!-- 발 -->
+  <ellipse cx="170" cy="482" rx="28" ry="15" class="colorable" id="foot-l"/>
+  <ellipse cx="230" cy="482" rx="28" ry="15" class="colorable" id="foot-r"/>
+
+  <!-- 머리 -->
+  <circle cx="200" cy="330" r="78" class="colorable" id="head"/>
+
+  <!-- 고양이 귀 -->
+  <polygon points="152,272 140,228 180,260" class="colorable" id="ear-l"/>
+  <polygon points="157,275 147,234 183,264" fill="white" stroke="#333" stroke-width="1.5"/>
+  <polygon points="248,272 260,228 220,260" class="colorable" id="ear-r"/>
+  <polygon points="243,275 253,234 217,264" fill="white" stroke="#333" stroke-width="1.5"/>
+
+  <!-- 눈 (반짝반짝 올려다봄) -->
+  <ellipse cx="180" cy="325" rx="14" ry="13" class="colorable" id="eye-l"/>
+  <ellipse cx="180" cy="323" rx="7" ry="9" class="fixed"/>
+  <circle cx="177" cy="319" r="3" fill="white"/>
+  <ellipse cx="220" cy="325" rx="14" ry="13" class="colorable" id="eye-r"/>
+  <ellipse cx="220" cy="323" rx="7" ry="9" class="fixed"/>
+  <circle cx="217" cy="319" r="3" fill="white"/>
+
+  <!-- 주둥이 -->
+  <ellipse cx="200" cy="345" rx="24" ry="17" class="colorable" id="snout"/>
+  <ellipse cx="200" cy="340" rx="7" ry="5" class="colorable" id="nose"/>
+  <!-- 행복한 표정 -->
+  <path d="M188 350 Q200 362 212 350" class="outline" stroke-width="2.5"/>
+
+  <!-- 수염 -->
+  <line x1="176" y1="344" x2="148" y2="338" class="outline" stroke-width="1.5"/>
+  <line x1="176" y1="350" x2="146" y2="350" class="outline" stroke-width="1.5"/>
+  <line x1="224" y1="344" x2="252" y2="338" class="outline" stroke-width="1.5"/>
+  <line x1="224" y1="350" x2="254" y2="350" class="outline" stroke-width="1.5"/>
+
+  <!-- 볼 -->
+  <ellipse cx="162" cy="340" rx="14" ry="9" class="colorable" id="blush-l"/>
+  <ellipse cx="238" cy="340" rx="14" ry="9" class="colorable" id="blush-r"/>
+
+  <!-- 별 반짝 -->
+  <path d="M352 165 L354 159 L356 165 L362 167 L356 169 L354 175 L352 169 L346 167 Z" class="colorable" id="sparkle1"/>
+  <path d="M45 165 L47 159 L49 165 L55 167 L49 169 L47 175 L45 169 L39 167 Z" class="colorable" id="sparkle2"/>
+  <path d="M200 88 L202 82 L204 88 L210 90 L204 92 L202 98 L200 92 L194 90 Z" class="colorable" id="sparkle3"/>
+
+  <text x="200" y="498" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#FF9FD0" font-weight="bold">소리의 무지개 🌈</text>
+</svg>

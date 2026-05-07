@@ -1,0 +1,87 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <style>
+    .colorable { fill: white; stroke: #333; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; cursor: pointer; }
+    .outline { fill: none; stroke: #333; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="400" height="500" fill="#FFFFFF"/>
+
+  <text x="200" y="28" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#888">별빛처럼 빛나는 나</text>
+
+  <!-- 만다라 중심 (200, 252), 8겹 별 -->
+
+  <!-- 최외곽 원 -->
+  <circle cx="200" cy="252" r="155" class="outline" stroke-width="1.5"/>
+
+  <!-- 바깥 큰 별 뾰족이 8개 (r=110~152) -->
+  <g transform="rotate(0,200,252)"><path d="M200 100 L207 140 L200 152 L193 140 Z" class="colorable" id="sp-0"/></g>
+  <g transform="rotate(45,200,252)"><path d="M200 100 L207 140 L200 152 L193 140 Z" class="colorable" id="sp-45"/></g>
+  <g transform="rotate(90,200,252)"><path d="M200 100 L207 140 L200 152 L193 140 Z" class="colorable" id="sp-90"/></g>
+  <g transform="rotate(135,200,252)"><path d="M200 100 L207 140 L200 152 L193 140 Z" class="colorable" id="sp-135"/></g>
+  <g transform="rotate(180,200,252)"><path d="M200 100 L207 140 L200 152 L193 140 Z" class="colorable" id="sp-180"/></g>
+  <g transform="rotate(225,200,252)"><path d="M200 100 L207 140 L200 152 L193 140 Z" class="colorable" id="sp-225"/></g>
+  <g transform="rotate(270,200,252)"><path d="M200 100 L207 140 L200 152 L193 140 Z" class="colorable" id="sp-270"/></g>
+  <g transform="rotate(315,200,252)"><path d="M200 100 L207 140 L200 152 L193 140 Z" class="colorable" id="sp-315"/></g>
+
+  <!-- 바깥 작은 삼각 사이 8개 -->
+  <g transform="rotate(22.5,200,252)"><path d="M200 115 L205 138 L195 138 Z" class="colorable" id="st-22"/></g>
+  <g transform="rotate(67.5,200,252)"><path d="M200 115 L205 138 L195 138 Z" class="colorable" id="st-67"/></g>
+  <g transform="rotate(112.5,200,252)"><path d="M200 115 L205 138 L195 138 Z" class="colorable" id="st-112"/></g>
+  <g transform="rotate(157.5,200,252)"><path d="M200 115 L205 138 L195 138 Z" class="colorable" id="st-157"/></g>
+  <g transform="rotate(202.5,200,252)"><path d="M200 115 L205 138 L195 138 Z" class="colorable" id="st-202"/></g>
+  <g transform="rotate(247.5,200,252)"><path d="M200 115 L205 138 L195 138 Z" class="colorable" id="st-247"/></g>
+  <g transform="rotate(292.5,200,252)"><path d="M200 115 L205 138 L195 138 Z" class="colorable" id="st-292"/></g>
+  <g transform="rotate(337.5,200,252)"><path d="M200 115 L205 138 L195 138 Z" class="colorable" id="st-337"/></g>
+
+  <!-- 외곽 원 장식 8개 (r=148) -->
+  <g transform="rotate(22.5,200,252)"><circle cx="200" cy="104" r="13" class="colorable" id="oc-22"/></g>
+  <g transform="rotate(67.5,200,252)"><circle cx="200" cy="104" r="13" class="colorable" id="oc-67"/></g>
+  <g transform="rotate(112.5,200,252)"><circle cx="200" cy="104" r="13" class="colorable" id="oc-112"/></g>
+  <g transform="rotate(157.5,200,252)"><circle cx="200" cy="104" r="13" class="colorable" id="oc-157"/></g>
+  <g transform="rotate(202.5,200,252)"><circle cx="200" cy="104" r="13" class="colorable" id="oc-202"/></g>
+  <g transform="rotate(247.5,200,252)"><circle cx="200" cy="104" r="13" class="colorable" id="oc-247"/></g>
+  <g transform="rotate(292.5,200,252)"><circle cx="200" cy="104" r="13" class="colorable" id="oc-292"/></g>
+  <g transform="rotate(337.5,200,252)"><circle cx="200" cy="104" r="13" class="colorable" id="oc-337"/></g>
+
+  <!-- 중간 링 구분선 -->
+  <circle cx="200" cy="252" r="105" class="outline" stroke-width="1" stroke-dasharray="5 4"/>
+
+  <!-- 중간 별 섹션 8개 (r=75~105) -->
+  <g transform="rotate(0,200,252)"><path d="M200 148 L208 170 L200 182 L192 170 Z" class="colorable" id="mp-0"/></g>
+  <g transform="rotate(45,200,252)"><path d="M200 148 L208 170 L200 182 L192 170 Z" class="colorable" id="mp-45"/></g>
+  <g transform="rotate(90,200,252)"><path d="M200 148 L208 170 L200 182 L192 170 Z" class="colorable" id="mp-90"/></g>
+  <g transform="rotate(135,200,252)"><path d="M200 148 L208 170 L200 182 L192 170 Z" class="colorable" id="mp-135"/></g>
+  <g transform="rotate(180,200,252)"><path d="M200 148 L208 170 L200 182 L192 170 Z" class="colorable" id="mp-180"/></g>
+  <g transform="rotate(225,200,252)"><path d="M200 148 L208 170 L200 182 L192 170 Z" class="colorable" id="mp-225"/></g>
+  <g transform="rotate(270,200,252)"><path d="M200 148 L208 170 L200 182 L192 170 Z" class="colorable" id="mp-270"/></g>
+  <g transform="rotate(315,200,252)"><path d="M200 148 L208 170 L200 182 L192 170 Z" class="colorable" id="mp-315"/></g>
+
+  <!-- 중간 원 장식 8개 (r=95) -->
+  <g transform="rotate(22.5,200,252)"><circle cx="200" cy="157" r="10" class="colorable" id="mc-22"/></g>
+  <g transform="rotate(67.5,200,252)"><circle cx="200" cy="157" r="10" class="colorable" id="mc-67"/></g>
+  <g transform="rotate(112.5,200,252)"><circle cx="200" cy="157" r="10" class="colorable" id="mc-112"/></g>
+  <g transform="rotate(157.5,200,252)"><circle cx="200" cy="157" r="10" class="colorable" id="mc-157"/></g>
+  <g transform="rotate(202.5,200,252)"><circle cx="200" cy="157" r="10" class="colorable" id="mc-202"/></g>
+  <g transform="rotate(247.5,200,252)"><circle cx="200" cy="157" r="10" class="colorable" id="mc-247"/></g>
+  <g transform="rotate(292.5,200,252)"><circle cx="200" cy="157" r="10" class="colorable" id="mc-292"/></g>
+  <g transform="rotate(337.5,200,252)"><circle cx="200" cy="157" r="10" class="colorable" id="mc-337"/></g>
+
+  <!-- 내부 링 -->
+  <circle cx="200" cy="252" r="60" class="outline" stroke-width="1" stroke-dasharray="4 3"/>
+
+  <!-- 내부 삼각 8개 (r=40~60) -->
+  <g transform="rotate(0,200,252)"><path d="M200 252 L207 210 L193 210 Z" class="colorable" id="it-0"/></g>
+  <g transform="rotate(45,200,252)"><path d="M200 252 L207 210 L193 210 Z" class="colorable" id="it-45"/></g>
+  <g transform="rotate(90,200,252)"><path d="M200 252 L207 210 L193 210 Z" class="colorable" id="it-90"/></g>
+  <g transform="rotate(135,200,252)"><path d="M200 252 L207 210 L193 210 Z" class="colorable" id="it-135"/></g>
+  <g transform="rotate(180,200,252)"><path d="M200 252 L207 210 L193 210 Z" class="colorable" id="it-180"/></g>
+  <g transform="rotate(225,200,252)"><path d="M200 252 L207 210 L193 210 Z" class="colorable" id="it-225"/></g>
+  <g transform="rotate(270,200,252)"><path d="M200 252 L207 210 L193 210 Z" class="colorable" id="it-270"/></g>
+  <g transform="rotate(315,200,252)"><path d="M200 252 L207 210 L193 210 Z" class="colorable" id="it-315"/></g>
+
+  <!-- 중심 8각 별 -->
+  <path d="M200 226 L205 236 L216 232 L210 242 L220 248 L210 254 L216 264 L205 260 L200 270 L195 260 L184 264 L190 254 L180 248 L190 242 L184 232 L195 236 Z" class="colorable" id="center-star"/>
+  <circle cx="200" cy="252" r="12" class="colorable" id="center-dot"/>
+
+  <text x="200" y="435" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#9E9E9E">별처럼 반짝이는 내 모습을 색칠해요</text>
+  <text x="200" y="458" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#9B8ED6" font-weight="bold">별 만다라 ⭐</text>
+</svg>

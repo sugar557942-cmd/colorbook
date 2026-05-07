@@ -1,0 +1,105 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <style>
+    .colorable { fill: white; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; cursor: pointer; }
+    .outline { fill: none; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .fixed { fill: #333; }
+  </style>
+  <rect width="400" height="500" fill="#FFFFFF"/>
+
+  <!-- 이젤 (캔버스 거치대) -->
+  <line x1="310" y1="100" x2="285" y2="390" class="outline" stroke-width="3"/>
+  <line x1="355" y1="100" x2="380" y2="390" class="outline" stroke-width="3"/>
+  <line x1="308" y1="250" x2="357" y2="250" class="outline" stroke-width="3"/>
+  <line x1="295" y1="390" x2="370" y2="390" class="outline" stroke-width="2.5"/>
+  <!-- 캔버스 -->
+  <rect x="292" y="105" width="82" height="120" rx="5" class="colorable" id="canvas"/>
+  <!-- 캔버스 위 그림 (간단히) -->
+  <circle cx="333" cy="135" r="18" class="colorable" id="painting-sun"/>
+  <path d="M300 195 Q315 178 333 185 Q350 178 365 195" class="colorable" id="painting-hill"/>
+
+  <!-- 물감 팔레트 -->
+  <ellipse cx="65" cy="350" rx="45" ry="30" class="colorable" id="palette"/>
+  <circle cx="45" cy="335" r="9" class="colorable" id="paint-red"/>
+  <circle cx="65" cy="328" r="9" class="colorable" id="paint-yellow"/>
+  <circle cx="85" cy="335" r="9" class="colorable" id="paint-blue"/>
+  <circle cx="90" cy="355" r="9" class="colorable" id="paint-green"/>
+  <circle cx="75" cy="368" r="9" class="colorable" id="paint-purple"/>
+  <circle cx="48" cy="362" r="9" class="colorable" id="paint-white"/>
+  <!-- 팔레트 구멍 -->
+  <ellipse cx="62" cy="348" rx="10" ry="7" fill="#FFFFFF" stroke="#333" stroke-width="1.5"/>
+
+  <!-- 붓들 (왼쪽에 꽂힌) -->
+  <rect x="30" y="280" width="12" height="55" rx="5" class="colorable" id="brush-jar"/>
+  <line x1="34" y1="278" x2="30" y2="220" stroke="#333" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="30" cy="218" rx="5" ry="8" class="colorable" id="brush1-tip"/>
+  <line x1="40" y1="278" x2="42" y2="215" stroke="#333" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="42" cy="213" rx="5" ry="8" class="colorable" id="brush2-tip"/>
+
+  <!-- 소리 몸통 (고양이) -->
+  <ellipse cx="200" cy="370" rx="72" ry="80" class="colorable" id="body"/>
+  <ellipse cx="200" cy="375" rx="45" ry="58" class="colorable" id="belly"/>
+
+  <!-- 팔 왼쪽 (붓 들기) -->
+  <ellipse cx="122" cy="330" rx="24" ry="58" transform="rotate(25 122 330)" class="colorable" id="arm-l"/>
+  <!-- 팔 오른쪽 -->
+  <ellipse cx="278" cy="340" rx="24" ry="52" transform="rotate(-18 278 340)" class="colorable" id="arm-r"/>
+
+  <!-- 붓 (들고 있음) -->
+  <rect x="75" y="258" width="8" height="62" rx="3" transform="rotate(-20 75 258)" class="colorable" id="held-brush"/>
+  <ellipse cx="68" cy="247" rx="6" ry="10" transform="rotate(-20 68 247)" class="colorable" id="held-brush-tip"/>
+
+  <!-- 발 -->
+  <ellipse cx="170" cy="450" rx="30" ry="17" class="colorable" id="foot-l"/>
+  <ellipse cx="230" cy="450" rx="30" ry="17" class="colorable" id="foot-r"/>
+  <!-- 고양이 발가락 -->
+  <line x1="155" y1="458" x2="150" y2="466" class="outline" stroke-width="2"/>
+  <line x1="168" y1="461" x2="168" y2="470" class="outline" stroke-width="2"/>
+  <line x1="182" y1="458" x2="187" y2="466" class="outline" stroke-width="2"/>
+  <line x1="215" y1="458" x2="210" y2="466" class="outline" stroke-width="2"/>
+  <line x1="230" y1="461" x2="230" y2="470" class="outline" stroke-width="2"/>
+  <line x1="245" y1="458" x2="250" y2="466" class="outline" stroke-width="2"/>
+
+  <!-- 꼬리 -->
+  <path d="M268 420 Q320 400 335 430 Q340 455 310 460" class="colorable" id="tail"/>
+
+  <!-- 머리 -->
+  <circle cx="200" cy="248" r="82" class="colorable" id="head"/>
+
+  <!-- 고양이 귀 (뾰족) -->
+  <polygon points="152,185 140,140 180,178" class="colorable" id="ear-l"/>
+  <polygon points="157,188 147,146 183,182" fill="white" stroke="#333" stroke-width="1.5"/>
+  <polygon points="248,185 260,140 220,178" class="colorable" id="ear-r"/>
+  <polygon points="243,188 253,146 217,182" fill="white" stroke="#333" stroke-width="1.5"/>
+
+  <!-- 눈 -->
+  <ellipse cx="178" cy="248" rx="14" ry="13" class="colorable" id="eye-l"/>
+  <ellipse cx="178" cy="248" rx="7" ry="9" class="fixed"/>
+  <circle cx="175" cy="244" r="2.5" fill="white"/>
+  <ellipse cx="222" cy="248" rx="14" ry="13" class="colorable" id="eye-r"/>
+  <ellipse cx="222" cy="248" rx="7" ry="9" class="fixed"/>
+  <circle cx="219" cy="244" r="2.5" fill="white"/>
+
+  <!-- 주둥이 -->
+  <ellipse cx="200" cy="268" rx="24" ry="17" class="colorable" id="snout"/>
+  <ellipse cx="200" cy="263" rx="7" ry="5" class="colorable" id="nose"/>
+  <path d="M192 272 Q200 282 208 272" class="outline"/>
+
+  <!-- 수염 -->
+  <line x1="176" y1="266" x2="148" y2="260" class="outline" stroke-width="1.5"/>
+  <line x1="176" y1="272" x2="146" y2="272" class="outline" stroke-width="1.5"/>
+  <line x1="224" y1="266" x2="252" y2="260" class="outline" stroke-width="1.5"/>
+  <line x1="224" y1="272" x2="254" y2="272" class="outline" stroke-width="1.5"/>
+
+  <!-- 볼 -->
+  <ellipse cx="162" cy="262" rx="14" ry="9" class="colorable" id="blush-l"/>
+  <ellipse cx="238" cy="262" rx="14" ry="9" class="colorable" id="blush-r"/>
+
+  <!-- 앞치마 (화가 용) -->
+  <path d="M162 308 Q200 318 238 308 L232 400 Q200 408 168 400 Z" class="colorable" id="apron"/>
+  <!-- 물감 얼룩 -->
+  <circle cx="185" cy="345" r="7" class="colorable" id="paint-spot1"/>
+  <circle cx="212" cy="362" r="6" class="colorable" id="paint-spot2"/>
+  <circle cx="198" cy="335" r="5" class="colorable" id="paint-spot3"/>
+
+  <text x="200" y="492" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#FF9FD0" font-weight="bold">소리의 미술실 🐱</text>
+</svg>

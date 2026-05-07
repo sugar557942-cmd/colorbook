@@ -1,0 +1,81 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <style>
+    .colorable { fill: white; stroke: #333; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; cursor: pointer; }
+    .outline { fill: none; stroke: #333; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="400" height="500" fill="#FFFFFF"/>
+
+  <text x="200" y="28" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#888">꽃처럼 피어나는 마음</text>
+
+  <!-- 만다라 중심 (200, 252) 6겹 꽃 -->
+
+  <!-- 바깥 원 -->
+  <circle cx="200" cy="252" r="155" class="outline" stroke-width="1.5"/>
+
+  <!-- 최외곽 꽃잎 6개 (큰, r=95~150) -->
+  <g transform="rotate(0,200,252)"><ellipse cx="200" cy="132" rx="26" ry="42" class="colorable" id="op6-0"/></g>
+  <g transform="rotate(60,200,252)"><ellipse cx="200" cy="132" rx="26" ry="42" class="colorable" id="op6-60"/></g>
+  <g transform="rotate(120,200,252)"><ellipse cx="200" cy="132" rx="26" ry="42" class="colorable" id="op6-120"/></g>
+  <g transform="rotate(180,200,252)"><ellipse cx="200" cy="132" rx="26" ry="42" class="colorable" id="op6-180"/></g>
+  <g transform="rotate(240,200,252)"><ellipse cx="200" cy="132" rx="26" ry="42" class="colorable" id="op6-240"/></g>
+  <g transform="rotate(300,200,252)"><ellipse cx="200" cy="132" rx="26" ry="42" class="colorable" id="op6-300"/></g>
+
+  <!-- 최외곽 사이 작은 꽃잎 6개 -->
+  <g transform="rotate(30,200,252)"><ellipse cx="200" cy="148" rx="14" ry="28" class="colorable" id="sp6-30"/></g>
+  <g transform="rotate(90,200,252)"><ellipse cx="200" cy="148" rx="14" ry="28" class="colorable" id="sp6-90"/></g>
+  <g transform="rotate(150,200,252)"><ellipse cx="200" cy="148" rx="14" ry="28" class="colorable" id="sp6-150"/></g>
+  <g transform="rotate(210,200,252)"><ellipse cx="200" cy="148" rx="14" ry="28" class="colorable" id="sp6-210"/></g>
+  <g transform="rotate(270,200,252)"><ellipse cx="200" cy="148" rx="14" ry="28" class="colorable" id="sp6-270"/></g>
+  <g transform="rotate(330,200,252)"><ellipse cx="200" cy="148" rx="14" ry="28" class="colorable" id="sp6-330"/></g>
+
+  <!-- 외곽 원형 장식 12개 (r=145) -->
+  <g transform="rotate(0,200,252)"><circle cx="200" cy="107" r="12" class="colorable" id="od12-0"/></g>
+  <g transform="rotate(30,200,252)"><circle cx="200" cy="107" r="12" class="colorable" id="od12-30"/></g>
+  <g transform="rotate(60,200,252)"><circle cx="200" cy="107" r="12" class="colorable" id="od12-60"/></g>
+  <g transform="rotate(90,200,252)"><circle cx="200" cy="107" r="12" class="colorable" id="od12-90"/></g>
+  <g transform="rotate(120,200,252)"><circle cx="200" cy="107" r="12" class="colorable" id="od12-120"/></g>
+  <g transform="rotate(150,200,252)"><circle cx="200" cy="107" r="12" class="colorable" id="od12-150"/></g>
+  <g transform="rotate(180,200,252)"><circle cx="200" cy="107" r="12" class="colorable" id="od12-180"/></g>
+  <g transform="rotate(210,200,252)"><circle cx="200" cy="107" r="12" class="colorable" id="od12-210"/></g>
+  <g transform="rotate(240,200,252)"><circle cx="200" cy="107" r="12" class="colorable" id="od12-240"/></g>
+  <g transform="rotate(270,200,252)"><circle cx="200" cy="107" r="12" class="colorable" id="od12-270"/></g>
+  <g transform="rotate(300,200,252)"><circle cx="200" cy="107" r="12" class="colorable" id="od12-300"/></g>
+  <g transform="rotate(330,200,252)"><circle cx="200" cy="107" r="12" class="colorable" id="od12-330"/></g>
+
+  <!-- 중간 링 원 (outline) -->
+  <circle cx="200" cy="252" r="96" class="outline" stroke-width="1" stroke-dasharray="5 4"/>
+
+  <!-- 중간 꽃잎 6개 (r=55~95) -->
+  <g transform="rotate(0,200,252)"><ellipse cx="200" cy="177" rx="20" ry="35" class="colorable" id="mp6-0"/></g>
+  <g transform="rotate(60,200,252)"><ellipse cx="200" cy="177" rx="20" ry="35" class="colorable" id="mp6-60"/></g>
+  <g transform="rotate(120,200,252)"><ellipse cx="200" cy="177" rx="20" ry="35" class="colorable" id="mp6-120"/></g>
+  <g transform="rotate(180,200,252)"><ellipse cx="200" cy="177" rx="20" ry="35" class="colorable" id="mp6-180"/></g>
+  <g transform="rotate(240,200,252)"><ellipse cx="200" cy="177" rx="20" ry="35" class="colorable" id="mp6-240"/></g>
+  <g transform="rotate(300,200,252)"><ellipse cx="200" cy="177" rx="20" ry="35" class="colorable" id="mp6-300"/></g>
+
+  <!-- 중간 꽃잎 사이 하트 모양 6개 -->
+  <g transform="rotate(30,200,252)"><path d="M200 196 Q194 183 200 178 Q206 183 200 196 Z" class="colorable" id="heart-30"/></g>
+  <g transform="rotate(90,200,252)"><path d="M200 196 Q194 183 200 178 Q206 183 200 196 Z" class="colorable" id="heart-90"/></g>
+  <g transform="rotate(150,200,252)"><path d="M200 196 Q194 183 200 178 Q206 183 200 196 Z" class="colorable" id="heart-150"/></g>
+  <g transform="rotate(210,200,252)"><path d="M200 196 Q194 183 200 178 Q206 183 200 196 Z" class="colorable" id="heart-210"/></g>
+  <g transform="rotate(270,200,252)"><path d="M200 196 Q194 183 200 178 Q206 183 200 196 Z" class="colorable" id="heart-270"/></g>
+  <g transform="rotate(330,200,252)"><path d="M200 196 Q194 183 200 178 Q206 183 200 196 Z" class="colorable" id="heart-330"/></g>
+
+  <!-- 내부 링 원 (outline) -->
+  <circle cx="200" cy="252" r="56" class="outline" stroke-width="1" stroke-dasharray="4 3"/>
+
+  <!-- 내부 꽃잎 6개 (r=25~55) -->
+  <g transform="rotate(0,200,252)"><ellipse cx="200" cy="224" rx="13" ry="22" class="colorable" id="inn6-0"/></g>
+  <g transform="rotate(60,200,252)"><ellipse cx="200" cy="224" rx="13" ry="22" class="colorable" id="inn6-60"/></g>
+  <g transform="rotate(120,200,252)"><ellipse cx="200" cy="224" rx="13" ry="22" class="colorable" id="inn6-120"/></g>
+  <g transform="rotate(180,200,252)"><ellipse cx="200" cy="224" rx="13" ry="22" class="colorable" id="inn6-180"/></g>
+  <g transform="rotate(240,200,252)"><ellipse cx="200" cy="224" rx="13" ry="22" class="colorable" id="inn6-240"/></g>
+  <g transform="rotate(300,200,252)"><ellipse cx="200" cy="224" rx="13" ry="22" class="colorable" id="inn6-300"/></g>
+
+  <!-- 중심 꽃 -->
+  <circle cx="200" cy="252" r="28" class="colorable" id="center-flower"/>
+  <circle cx="200" cy="252" r="14" class="colorable" id="center-core"/>
+
+  <text x="200" y="435" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#9E9E9E">꽃잎을 하나씩 색칠하며 차분해져요</text>
+  <text x="200" y="458" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#E8A0BF" font-weight="bold">꽃 만다라 🌸</text>
+</svg>

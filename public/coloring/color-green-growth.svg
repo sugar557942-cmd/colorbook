@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <style>
+    .colorable { fill: white; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; cursor: pointer; }
+    .outline { fill: none; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .fixed { fill: #333; }
+  </style>
+  <rect width="400" height="500" fill="#FFFFFF"/>
+
+  <text x="200" y="22" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#888">초록색 = 성장과 조화!</text>
+
+  <!-- 땅 -->
+  <path d="M0 420 Q100 405 200 410 Q300 405 400 420 L400 500 L0 500 Z" class="colorable" id="ground"/>
+
+  <!-- 큰 나무 (가운데) -->
+  <rect x="185" y="300" width="30" height="140" rx="10" class="colorable" id="trunk-main"/>
+  <!-- 나무 결 -->
+  <line x1="192" y1="320" x2="192" y2="430" class="outline" stroke-width="1.5"/>
+  <line x1="208" y1="315" x2="208" y2="432" class="outline" stroke-width="1.5"/>
+
+  <!-- 나뭇가지 -->
+  <path d="M200 310 Q160 285 130 295" class="outline" stroke-width="5" stroke-linecap="round"/>
+  <path d="M200 330 Q240 305 270 315" class="outline" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M200 290 Q185 260 170 255" class="outline" stroke-width="4" stroke-linecap="round"/>
+  <path d="M200 285 Q215 255 232 250" class="outline" stroke-width="4" stroke-linecap="round"/>
+  <path d="M130 295 Q105 280 88 285" class="outline" stroke-width="3" stroke-linecap="round"/>
+  <path d="M270 315 Q292 298 310 300" class="outline" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- 나무 잎 뭉치들 -->
+  <circle cx="200" cy="220" r="68" class="colorable" id="foliage-main"/>
+  <circle cx="155" cy="248" r="48" class="colorable" id="foliage-l"/>
+  <circle cx="245" cy="245" r="48" class="colorable" id="foliage-r"/>
+  <circle cx="168" cy="195" r="40" class="colorable" id="foliage-tl"/>
+  <circle cx="232" cy="192" r="40" class="colorable" id="foliage-tr"/>
+  <circle cx="200" cy="168" r="38" class="colorable" id="foliage-t"/>
+  <circle cx="115" cy="270" r="32" class="colorable" id="foliage-ll"/>
+  <circle cx="285" cy="268" r="32" class="colorable" id="foliage-rr"/>
+  <circle cx="88" cy="260" r="22" class="colorable" id="foliage-far-l"/>
+  <circle cx="312" cy="258" r="22" class="colorable" id="foliage-far-r"/>
+
+  <!-- 새 둥지 (나뭇가지 위) -->
+  <path d="M120 278 Q140 265 162 275 Q158 290 140 292 Q122 290 120 278 Z" class="colorable" id="nest"/>
+  <circle cx="132" cy="276" r="9" class="colorable" id="egg1"/>
+  <circle cx="148" cy="273" r="9" class="colorable" id="egg2"/>
+  <circle cx="143" cy="284" r="8" class="colorable" id="egg3"/>
+
+  <!-- 나무에 새 -->
+  <circle cx="302" cy="298" r="14" class="colorable" id="bird-body"/>
+  <circle cx="302" cy="286" r="10" class="colorable" id="bird-head"/>
+  <path d="M295 282 L288 278 L292 286 Z" class="colorable" id="bird-beak"/>
+  <path d="M310 295 Q322 288 326 296 Q320 308 310 302 Z" class="colorable" id="bird-wing"/>
+  <circle cx="300" cy="284" r="3" class="fixed"/>
+
+  <!-- 땅 위 새싹들 -->
+  <!-- 새싹 1 -->
+  <path d="M62 420 Q62 395 68 380 Q76 368 82 380 Q78 398 75 420 Z" class="colorable" id="sprout1-stem"/>
+  <path d="M72 390 Q55 378 48 388 Q56 400 72 396 Z" class="colorable" id="sprout1-leaf-l"/>
+  <path d="M75 385 Q92 373 98 383 Q90 395 75 391 Z" class="colorable" id="sprout1-leaf-r"/>
+
+  <!-- 새싹 2 -->
+  <path d="M118 420 Q118 400 122 388 Q128 378 134 388 Q130 402 128 420 Z" class="colorable" id="sprout2-stem"/>
+  <path d="M124 395 Q110 384 104 393 Q110 404 124 400 Z" class="colorable" id="sprout2-leaf"/>
+
+  <!-- 새싹 3 (오른쪽) -->
+  <path d="M310 420 Q310 398 315 385 Q322 373 328 385 Q324 400 322 420 Z" class="colorable" id="sprout3-stem"/>
+  <path d="M316 392 Q300 380 295 390 Q302 402 316 398 Z" class="colorable" id="sprout3-leaf-l"/>
+  <path d="M320 387 Q336 375 342 385 Q334 397 320 393 Z" class="colorable" id="sprout3-leaf-r"/>
+
+  <!-- 버섯들 -->
+  <ellipse cx="355" cy="418" rx="25" ry="10" class="colorable" id="mush-base"/>
+  <path d="M330 418 Q330 395 355 385 Q380 395 380 418 Z" class="colorable" id="mush-cap"/>
+  <circle cx="348" cy="400" r="5" class="colorable" id="mush-dot1"/>
+  <circle cx="362" cy="396" r="4" class="colorable" id="mush-dot2"/>
+
+  <!-- 나비 -->
+  <path d="M185 138 Q168 120 160 134 Q168 148 185 143 Z" class="colorable" id="btfl-lu"/>
+  <path d="M185 148 Q168 160 165 150 Q170 140 185 143 Z" class="colorable" id="btfl-ld"/>
+  <path d="M190 138 Q207 120 215 134 Q207 148 190 143 Z" class="colorable" id="btfl-ru"/>
+  <path d="M190 148 Q207 160 210 150 Q205 140 190 143 Z" class="colorable" id="btfl-rd"/>
+  <line x1="187" y1="138" x2="185" y2="125" class="outline" stroke-width="1.5"/>
+  <line x1="193" y1="138" x2="195" y2="125" class="outline" stroke-width="1.5"/>
+
+  <!-- 반짝 장식 -->
+  <path d="M38 200 L40 193 L42 200 L49 202 L42 204 L40 211 L38 204 L31 202 Z" class="colorable" id="spark1"/>
+  <path d="M362 200 L364 193 L366 200 L373 202 L366 204 L364 211 L362 204 L355 202 Z" class="colorable" id="spark2"/>
+  <path d="M50 320 L52 315 L54 320 L59 322 L54 324 L52 329 L50 324 L45 322 Z" class="colorable" id="spark3"/>
+  <path d="M350 320 L352 315 L354 320 L359 322 L354 324 L352 329 L350 324 L345 322 Z" class="colorable" id="spark4"/>
+
+  <text x="200" y="468" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#888">초록색으로 색칠하면 마음이 자라나요!</text>
+  <text x="200" y="490" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#5BB88A" font-weight="bold">초록색의 성장 🌱</text>
+</svg>

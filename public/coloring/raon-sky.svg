@@ -1,0 +1,103 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <style>
+    .colorable { fill: white; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; cursor: pointer; }
+    .outline { fill: none; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .fixed { fill: #333; }
+  </style>
+  <rect width="400" height="500" fill="#FFFFFF"/>
+
+  <!-- 태양 -->
+  <circle cx="340" cy="75" r="45" class="colorable" id="sun"/>
+  <line x1="340" y1="20" x2="340" y2="8" class="outline" stroke-width="3"/>
+  <line x1="375" y1="40" x2="384" y2="32" class="outline" stroke-width="3"/>
+  <line x1="395" y1="75" x2="407" y2="75" class="outline" stroke-width="3"/>
+  <line x1="375" y1="110" x2="384" y2="118" class="outline" stroke-width="3"/>
+  <line x1="305" y1="40" x2="296" y2="32" class="outline" stroke-width="3"/>
+  <line x1="285" y1="75" x2="273" y2="75" class="outline" stroke-width="3"/>
+  <line x1="305" y1="110" x2="296" y2="118" class="outline" stroke-width="3"/>
+  <line x1="340" y1="130" x2="340" y2="142" class="outline" stroke-width="3"/>
+  <!-- 태양 얼굴 -->
+  <circle cx="330" cy="70" r="4.5" class="fixed"/>
+  <circle cx="350" cy="70" r="4.5" class="fixed"/>
+  <path d="M328 82 Q340 92 352 82" class="outline" stroke-width="2"/>
+
+  <!-- 구름들 -->
+  <ellipse cx="85" cy="95" rx="52" ry="30" class="colorable" id="cloud1"/>
+  <ellipse cx="58" cy="102" rx="33" ry="24" class="colorable" id="cloud1l"/>
+  <ellipse cx="112" cy="100" rx="35" ry="26" class="colorable" id="cloud1r"/>
+  <ellipse cx="82" cy="75" rx="30" ry="22" class="colorable" id="cloud1t"/>
+
+  <ellipse cx="250" cy="155" rx="42" ry="25" class="colorable" id="cloud2"/>
+  <ellipse cx="228" cy="162" rx="28" ry="20" class="colorable" id="cloud2l"/>
+  <ellipse cx="272" cy="160" rx="28" ry="20" class="colorable" id="cloud2r"/>
+
+  <ellipse cx="55" cy="240" rx="38" ry="22" class="colorable" id="cloud3"/>
+  <ellipse cx="35" cy="246" rx="24" ry="17" class="colorable" id="cloud3l"/>
+  <ellipse cx="75" cy="244" rx="26" ry="18" class="colorable" id="cloud3r"/>
+
+  <!-- 라온 몸통 (새) -->
+  <ellipse cx="200" cy="300" rx="75" ry="65" class="colorable" id="body"/>
+  <!-- 배 -->
+  <ellipse cx="200" cy="308" rx="48" ry="45" class="colorable" id="belly"/>
+
+  <!-- 날개 (펼침 - 크게) -->
+  <path d="M125 275 Q68 230 42 268 Q52 310 125 302 Z" class="colorable" id="wing-l"/>
+  <!-- 날개 깃털 결 -->
+  <path d="M125 280 Q92 252 72 265" class="outline" stroke-width="1.5"/>
+  <path d="M125 292 Q88 268 65 278" class="outline" stroke-width="1.5"/>
+  <path d="M125 303 Q90 288 58 296" class="outline" stroke-width="1.5"/>
+
+  <path d="M275 275 Q332 230 358 268 Q348 310 275 302 Z" class="colorable" id="wing-r"/>
+  <!-- 날개 깃털 결 -->
+  <path d="M275 280 Q308 252 328 265" class="outline" stroke-width="1.5"/>
+  <path d="M275 292 Q312 268 335 278" class="outline" stroke-width="1.5"/>
+  <path d="M275 303 Q310 288 342 296" class="outline" stroke-width="1.5"/>
+
+  <!-- 꼬리 깃털 -->
+  <path d="M175 362 Q168 400 155 420 Q165 425 175 405 Q180 395 185 380 Z" class="colorable" id="tail-l"/>
+  <path d="M200 365 Q200 405 200 428 Q210 425 210 405 Q210 388 210 368 Z" class="colorable" id="tail-m"/>
+  <path d="M225 362 Q232 400 245 420 Q235 425 225 405 Q220 395 215 380 Z" class="colorable" id="tail-r"/>
+
+  <!-- 발 -->
+  <ellipse cx="175" cy="370" rx="20" ry="10" class="colorable" id="foot-l"/>
+  <ellipse cx="225" cy="370" rx="20" ry="10" class="colorable" id="foot-r"/>
+  <line x1="160" y1="375" x2="153" y2="385" class="outline" stroke-width="2"/>
+  <line x1="173" y1="378" x2="173" y2="388" class="outline" stroke-width="2"/>
+  <line x1="187" y1="375" x2="193" y2="385" class="outline" stroke-width="2"/>
+  <line x1="213" y1="375" x2="207" y2="385" class="outline" stroke-width="2"/>
+  <line x1="227" y1="378" x2="227" y2="388" class="outline" stroke-width="2"/>
+  <line x1="240" y1="375" x2="247" y2="385" class="outline" stroke-width="2"/>
+
+  <!-- 머리 -->
+  <circle cx="200" cy="218" r="72" class="colorable" id="head"/>
+  <!-- 볏 (머리 장식) -->
+  <path d="M178 150 Q188 128 200 145 Q210 125 218 148" class="colorable" id="crest"/>
+  <ellipse cx="200" cy="153" rx="18" ry="12" class="colorable" id="crest-base"/>
+
+  <!-- 눈 -->
+  <circle cx="180" cy="215" r="14" class="colorable" id="eye-l"/>
+  <circle cx="180" cy="215" r="7" class="fixed"/>
+  <circle cx="177" cy="212" r="3" fill="white"/>
+  <circle cx="220" cy="215" r="14" class="colorable" id="eye-r"/>
+  <circle cx="220" cy="215" r="7" class="fixed"/>
+  <circle cx="217" cy="212" r="3" fill="white"/>
+
+  <!-- 부리 -->
+  <path d="M187 232 L200 248 L213 232 Q200 228 187 232 Z" class="colorable" id="beak-top"/>
+  <path d="M190 240 L200 252 L210 240 Q200 237 190 240 Z" class="colorable" id="beak-bot"/>
+
+  <!-- 볼 -->
+  <ellipse cx="163" cy="225" rx="14" ry="9" class="colorable" id="blush-l"/>
+  <ellipse cx="237" cy="225" rx="14" ry="9" class="colorable" id="blush-r"/>
+
+  <!-- 작은 새들 (멀리) -->
+  <path d="M310 200 Q318 193 326 200" class="outline" stroke-width="2"/>
+  <path d="M335 185 Q343 178 351 185" class="outline" stroke-width="2"/>
+  <path d="M298 178 Q305 172 312 178" class="outline" stroke-width="2"/>
+
+  <!-- 반짝 -->
+  <path d="M48 158 L50 152 L52 158 L58 160 L52 162 L50 168 L48 162 L42 160 Z" class="colorable" id="sparkle1"/>
+  <path d="M355 230 L357 224 L359 230 L365 232 L359 234 L357 240 L355 234 L349 232 Z" class="colorable" id="sparkle2"/>
+
+  <text x="200" y="492" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#5BAED6" font-weight="bold">라온의 하늘 🐦</text>
+</svg>

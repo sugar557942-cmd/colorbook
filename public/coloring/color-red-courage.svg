@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <style>
+    .colorable { fill: white; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; cursor: pointer; }
+    .outline { fill: none; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .fixed { fill: #333; }
+  </style>
+  <rect width="400" height="500" fill="#FFFFFF"/>
+
+  <text x="200" y="22" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#888">빨간색 = 용기와 힘!</text>
+
+  <!-- 불꽃 배경 장식들 -->
+  <path d="M48 420 Q38 395 48 375 Q56 358 48 340 Q60 355 62 375 Q68 355 72 340 Q80 360 78 385 Q82 370 88 355 Q90 380 82 400 Q90 388 96 375 Q94 405 80 420 Z" class="colorable" id="flame-l"/>
+  <path d="M304 420 Q294 395 304 375 Q312 358 304 340 Q316 355 318 375 Q324 355 328 340 Q336 360 334 385 Q338 370 344 355 Q346 380 338 400 Q346 388 352 375 Q350 405 336 420 Z" class="colorable" id="flame-r"/>
+
+  <!-- 작은 불꽃들 -->
+  <path d="M160 455 Q155 445 160 435 Q164 428 160 420 Q166 427 167 435 Q170 428 173 420 Q176 430 175 440 Q178 433 181 425 Q182 437 178 447 Q181 441 184 435 Q183 450 174 458 Z" class="colorable" id="small-flame-l"/>
+  <path d="M218 455 Q213 445 218 435 Q222 428 218 420 Q224 427 225 435 Q228 428 231 420 Q234 430 233 440 Q236 433 239 425 Q240 437 236 447 Q239 441 242 435 Q241 450 232 458 Z" class="colorable" id="small-flame-r"/>
+
+  <!-- 사자 몸통 -->
+  <ellipse cx="200" cy="360" rx="80" ry="85" class="colorable" id="lion-body"/>
+  <ellipse cx="200" cy="365" rx="52" ry="60" class="colorable" id="lion-belly"/>
+
+  <!-- 사자 꼬리 -->
+  <path d="M278 380 Q320 355 335 375 Q340 395 320 405 Q308 408 300 398" class="colorable" id="lion-tail"/>
+  <path d="M318 395 Q330 382 338 388 Q342 398 332 408 Q322 414 314 405 Z" class="colorable" id="tail-tuft"/>
+
+  <!-- 앞발 -->
+  <ellipse cx="140" cy="418" rx="35" ry="22" class="colorable" id="paw-fl"/>
+  <ellipse cx="260" cy="418" rx="35" ry="22" class="colorable" id="paw-fr"/>
+  <!-- 발톱 -->
+  <line x1="123" y1="432" x2="116" y2="442" class="outline" stroke-width="2"/>
+  <line x1="138" y1="436" x2="138" y2="447" class="outline" stroke-width="2"/>
+  <line x1="155" y1="432" x2="162" y2="442" class="outline" stroke-width="2"/>
+  <line x1="245" y1="432" x2="238" y2="442" class="outline" stroke-width="2"/>
+  <line x1="262" y1="436" x2="262" y2="447" class="outline" stroke-width="2"/>
+  <line x1="277" y1="432" x2="284" y2="442" class="outline" stroke-width="2"/>
+
+  <!-- 갈기 (머리 주위) -->
+  <circle cx="200" cy="230" r="108" class="colorable" id="mane"/>
+  <!-- 갈기 층 -->
+  <circle cx="200" cy="235" r="88" class="colorable" id="mane-inner"/>
+
+  <!-- 머리 -->
+  <circle cx="200" cy="238" r="72" class="colorable" id="lion-head"/>
+
+  <!-- 눈 -->
+  <circle cx="178" cy="228" r="14" class="colorable" id="eye-l"/>
+  <circle cx="178" cy="228" r="7" class="fixed"/>
+  <circle cx="175" cy="224" r="3" fill="white"/>
+  <circle cx="222" cy="228" r="14" class="colorable" id="eye-r"/>
+  <circle cx="222" cy="228" r="7" class="fixed"/>
+  <circle cx="219" cy="224" r="3" fill="white"/>
+
+  <!-- 코/주둥이 -->
+  <ellipse cx="200" cy="252" rx="26" ry="19" class="colorable" id="snout"/>
+  <ellipse cx="200" cy="247" rx="9" ry="7" class="colorable" id="nose"/>
+  <!-- 으르렁 표정 -->
+  <path d="M183 262 Q191 270 200 265 Q209 270 217 262" class="outline" stroke-width="2"/>
+  <!-- 작은 이빨 -->
+  <path d="M191 268 L194 278 L197 268" class="colorable" id="tooth-l"/>
+  <path d="M203 268 L206 278 L209 268" class="colorable" id="tooth-r"/>
+
+  <!-- 수염 -->
+  <line x1="174" y1="252" x2="148" y2="245" class="outline" stroke-width="1.5"/>
+  <line x1="174" y1="258" x2="145" y2="258" class="outline" stroke-width="1.5"/>
+  <line x1="226" y1="252" x2="252" y2="245" class="outline" stroke-width="1.5"/>
+  <line x1="226" y1="258" x2="255" y2="258" class="outline" stroke-width="1.5"/>
+
+  <!-- 귀 -->
+  <circle cx="150" cy="175" r="22" class="colorable" id="ear-l"/>
+  <circle cx="150" cy="175" r="12" class="colorable" id="ear-l-in"/>
+  <circle cx="250" cy="175" r="22" class="colorable" id="ear-r"/>
+  <circle cx="250" cy="175" r="12" class="colorable" id="ear-r-in"/>
+
+  <!-- 하트들 (장식) -->
+  <path d="M62 200 Q62 188 70 188 Q78 188 78 200 Q78 212 62 220 Q46 212 46 200 Q46 188 54 188 Q62 188 62 200 Z" class="colorable" id="heart1"/>
+  <path d="M338 200 Q338 188 346 188 Q354 188 354 200 Q354 212 338 220 Q322 212 322 200 Q322 188 330 188 Q338 188 338 200 Z" class="colorable" id="heart2"/>
+  <path d="M35 280 Q35 272 41 272 Q47 272 47 280 Q47 288 35 294 Q23 288 23 280 Q23 272 29 272 Q35 272 35 280 Z" class="colorable" id="heart3"/>
+  <path d="M365 280 Q365 272 371 272 Q377 272 377 280 Q377 288 365 294 Q353 288 353 280 Q353 272 359 272 Q365 272 365 280 Z" class="colorable" id="heart4"/>
+
+  <!-- 별 장식 -->
+  <path d="M68 130 L71 121 L74 130 L83 132 L74 134 L71 143 L68 134 L59 132 Z" class="colorable" id="star1"/>
+  <path d="M328 130 L331 121 L334 130 L343 132 L334 134 L331 143 L328 134 L319 132 Z" class="colorable" id="star2"/>
+  <path d="M200 68 L203 59 L206 68 L215 70 L206 72 L203 81 L200 72 L191 70 Z" class="colorable" id="star3"/>
+
+  <!-- 색채치료 텍스트 -->
+  <text x="200" y="468" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#888">빨간색으로 색칠하면 용기가 생겨요!</text>
+  <text x="200" y="490" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#E85858" font-weight="bold">빨간색의 용기 🦁</text>
+</svg>

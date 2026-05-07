@@ -1,0 +1,95 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <style>
+    .colorable { fill: white; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; cursor: pointer; }
+    .outline { fill: none; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .fixed { fill: #333; }
+  </style>
+  <rect width="400" height="500" fill="#FFFFFF"/>
+
+  <!-- 실험대 -->
+  <rect x="40" y="360" width="320" height="18" rx="6" class="colorable" id="table"/>
+  <rect x="55" y="378" width="20" height="60" rx="5" class="colorable" id="table-leg-l"/>
+  <rect x="325" y="378" width="20" height="60" rx="5" class="colorable" id="table-leg-r"/>
+
+  <!-- 플라스크 (왼쪽) -->
+  <path d="M95 290 L95 330 Q75 355 70 370 L130 370 Q125 355 105 330 L105 290 Z" class="colorable" id="flask-l"/>
+  <rect x="92" y="278" width="16" height="16" rx="4" class="colorable" id="flask-neck-l"/>
+  <!-- 거품 -->
+  <circle cx="85" cy="262" r="8" class="colorable" id="bubble1"/>
+  <circle cx="100" cy="248" r="6" class="colorable" id="bubble2"/>
+  <circle cx="112" cy="258" r="5" class="colorable" id="bubble3"/>
+
+  <!-- 비커 (가운데) -->
+  <path d="M168 300 L162 368 L218 368 L212 300 Z" class="colorable" id="beaker"/>
+  <rect x="166" y="288" width="48" height="16" rx="3" class="colorable" id="beaker-top"/>
+  <!-- 비커 내용물 선 -->
+  <line x1="165" y1="340" x2="215" y2="340" class="outline" stroke-width="1.5"/>
+
+  <!-- 시험관 (오른쪽) -->
+  <rect x="272" y="290" width="18" height="75" rx="9" class="colorable" id="tube1"/>
+  <rect x="300" y="305" width="16" height="60" rx="8" class="colorable" id="tube2"/>
+  <!-- 시험관 거치대 -->
+  <rect x="265" y="282" width="60" height="12" rx="4" class="colorable" id="tube-rack"/>
+
+  <!-- 폭발 효과! -->
+  <path d="M190 220 L200 190 L210 220 L235 205 L215 225 L240 235 L210 232 L215 260 L200 240 L185 260 L190 232 L160 235 L185 225 L165 205 Z" class="colorable" id="explosion"/>
+  <circle cx="200" cy="235" r="18" class="colorable" id="smoke"/>
+
+  <!-- 나리 몸통 -->
+  <rect x="150" y="265" width="100" height="95" rx="18" class="colorable" id="body"/>
+  <!-- 실험복 -->
+  <path d="M158 270 Q200 278 242 270 L238 358 Q200 365 162 358 Z" class="colorable" id="lab-coat"/>
+
+  <!-- 팔 왼쪽 -->
+  <rect x="112" y="272" width="42" height="20" rx="10" class="colorable" id="arm-l"/>
+  <!-- 팔 오른쪽 (들어올림) -->
+  <rect x="246" y="258" width="20" height="50" rx="10" class="colorable" id="arm-r"/>
+
+  <!-- 다리 -->
+  <rect x="162" y="358" width="28" height="48" rx="11" class="colorable" id="leg-l"/>
+  <rect x="210" y="358" width="28" height="48" rx="11" class="colorable" id="leg-r"/>
+  <ellipse cx="176" cy="406" rx="19" ry="11" class="colorable" id="foot-l"/>
+  <ellipse cx="224" cy="406" rx="19" ry="11" class="colorable" id="foot-r"/>
+
+  <!-- 머리 -->
+  <ellipse cx="200" cy="175" rx="78" ry="82" class="colorable" id="head"/>
+  <!-- 여우 귀 -->
+  <polygon points="132,130 118,78 157,115" class="colorable" id="ear-l"/>
+  <polygon points="137,135 124,84 162,120" fill="white" stroke="#333" stroke-width="1.5"/>
+  <polygon points="268,130 282,78 243,115" class="colorable" id="ear-r"/>
+  <polygon points="263,135 276,84 238,120" fill="white" stroke="#333" stroke-width="1.5"/>
+
+  <!-- 안전 고글 -->
+  <ellipse cx="178" cy="152" rx="20" ry="15" class="colorable" id="goggle-l"/>
+  <ellipse cx="222" cy="152" rx="20" ry="15" class="colorable" id="goggle-r"/>
+  <line x1="198" y1="152" x2="202" y2="152" class="outline" stroke-width="3"/>
+  <path d="M135 147 Q158 140 158 152" class="outline" stroke-width="2.5"/>
+  <path d="M265 147 Q242 140 242 152" class="outline" stroke-width="2.5"/>
+
+  <!-- 주둥이 -->
+  <ellipse cx="200" cy="195" rx="30" ry="20" class="colorable" id="snout"/>
+  <!-- 눈 -->
+  <circle cx="178" cy="172" r="12" class="colorable" id="eye-l"/>
+  <circle cx="178" cy="172" r="5.5" class="fixed"/>
+  <circle cx="175" cy="169" r="2.5" fill="white"/>
+  <circle cx="222" cy="172" r="12" class="colorable" id="eye-r"/>
+  <circle cx="222" cy="172" r="5.5" class="fixed"/>
+  <circle cx="219" cy="169" r="2.5" fill="white"/>
+  <!-- 코 -->
+  <ellipse cx="200" cy="192" rx="7" ry="5" class="colorable" id="nose"/>
+  <!-- 입 (놀란 표정) -->
+  <ellipse cx="200" cy="205" rx="9" ry="7" class="colorable" id="mouth-open"/>
+  <!-- 볼 -->
+  <ellipse cx="163" cy="188" rx="13" ry="8" class="colorable" id="blush-l"/>
+  <ellipse cx="237" cy="188" rx="13" ry="8" class="colorable" id="blush-r"/>
+
+  <!-- 책 (실험 노트) -->
+  <rect x="60" y="340" width="55" height="40" rx="5" class="colorable" id="notebook"/>
+  <line x1="87" y1="340" x2="87" y2="380" class="outline" stroke-width="2"/>
+  <!-- 노트 줄 -->
+  <line x1="92" y1="350" x2="110" y2="350" class="outline" stroke-width="1"/>
+  <line x1="92" y1="358" x2="110" y2="358" class="outline" stroke-width="1"/>
+  <line x1="92" y1="366" x2="110" y2="366" class="outline" stroke-width="1"/>
+
+  <text x="200" y="490" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#FF8B4A" font-weight="bold">나리의 실험실 🦊</text>
+</svg>

@@ -1,0 +1,110 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <style>
+    .colorable { fill: white; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; cursor: pointer; }
+    .outline { fill: none; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .fixed { fill: #333; }
+  </style>
+  <rect width="400" height="500" fill="#FFFFFF"/>
+
+  <!-- 길 (구불구불) -->
+  <path d="M0 460 Q80 440 160 455 Q240 470 320 445 Q370 432 400 445 L400 500 L0 500 Z" class="colorable" id="path-ground"/>
+  <path d="M0 455 Q80 435 160 450 Q240 465 320 440 Q370 428 400 440" class="outline" stroke-width="2"/>
+
+  <!-- 나무 (왼쪽) -->
+  <rect x="42" y="340" width="18" height="80" rx="5" class="colorable" id="tree-trunk-l"/>
+  <circle cx="51" cy="315" r="42" class="colorable" id="tree-top-l"/>
+  <circle cx="32" cy="332" r="28" class="colorable" id="tree-top-l2"/>
+  <circle cx="70" cy="328" r="28" class="colorable" id="tree-top-l3"/>
+
+  <!-- 나무 (오른쪽) -->
+  <rect x="338" y="350" width="16" height="70" rx="5" class="colorable" id="tree-trunk-r"/>
+  <circle cx="346" cy="328" r="35" class="colorable" id="tree-top-r"/>
+  <circle cx="328" cy="342" r="24" class="colorable" id="tree-top-r2"/>
+  <circle cx="362" cy="340" r="24" class="colorable" id="tree-top-r3"/>
+
+  <!-- 이정표 -->
+  <rect x="280" y="355" width="12" height="90" rx="4" class="colorable" id="sign-pole"/>
+  <rect x="258" y="355" width="65" height="28" rx="6" class="colorable" id="sign-board"/>
+  <polygon points="323,355 330,369 323,383" class="colorable" id="sign-arrow"/>
+
+  <!-- 꽃들 -->
+  <circle cx="125" cy="448" r="10" class="colorable" id="flower-a-c"/>
+  <circle cx="113" cy="438" r="8" class="colorable" id="flower-a-p1"/>
+  <circle cx="125" cy="434" r="8" class="colorable" id="flower-a-p2"/>
+  <circle cx="137" cy="438" r="8" class="colorable" id="flower-a-p3"/>
+  <circle cx="137" cy="452" r="8" class="colorable" id="flower-a-p4"/>
+  <circle cx="125" cy="458" r="8" class="colorable" id="flower-a-p5"/>
+  <circle cx="113" cy="452" r="8" class="colorable" id="flower-a-p6"/>
+
+  <!-- 느루 몸통 (거북) -->
+  <!-- 등껍질 -->
+  <ellipse cx="200" cy="370" rx="100" ry="78" class="colorable" id="shell"/>
+  <!-- 껍질 무늬 (육각형 패턴) -->
+  <polygon points="200,308 220,318 220,338 200,348 180,338 180,318" class="outline" stroke-width="2"/>
+  <polygon points="200,308 180,298 160,308 160,328 180,338 200,328" class="outline" stroke-width="2"/>
+  <polygon points="200,308 220,318 240,308 240,288 220,278 200,288" class="outline" stroke-width="2"/>
+  <polygon points="200,348 220,338 240,348 240,368 220,378 200,368" class="outline" stroke-width="2"/>
+  <polygon points="200,348 180,338 160,348 160,368 180,378 200,368" class="outline" stroke-width="2"/>
+  <polygon points="200,288 220,278 220,258 200,248 180,258 180,278" class="outline" stroke-width="2"/>
+
+  <!-- 배 (아래) -->
+  <ellipse cx="200" cy="415" rx="75" ry="38" class="colorable" id="belly"/>
+
+  <!-- 머리 -->
+  <ellipse cx="200" cy="298" rx="48" ry="42" class="colorable" id="head"/>
+
+  <!-- 눈 -->
+  <circle cx="184" cy="288" r="11" class="colorable" id="eye-l"/>
+  <circle cx="184" cy="288" r="5.5" class="fixed"/>
+  <circle cx="181" cy="285" r="2" fill="white"/>
+  <circle cx="216" cy="288" r="11" class="colorable" id="eye-r"/>
+  <circle cx="216" cy="288" r="5.5" class="fixed"/>
+  <circle cx="213" cy="285" r="2" fill="white"/>
+
+  <!-- 코/입 -->
+  <ellipse cx="200" cy="302" rx="16" ry="11" class="colorable" id="snout"/>
+  <ellipse cx="200" cy="299" rx="5" ry="3.5" class="colorable" id="nose"/>
+  <path d="M193 308 Q200 315 207 308" class="outline"/>
+
+  <!-- 볼 -->
+  <ellipse cx="172" cy="298" rx="11" ry="7" class="colorable" id="blush-l"/>
+  <ellipse cx="228" cy="298" rx="11" ry="7" class="colorable" id="blush-r"/>
+
+  <!-- 다리 네 개 -->
+  <ellipse cx="128" cy="418" rx="35" ry="20" class="colorable" id="leg-fl"/>
+  <ellipse cx="272" cy="418" rx="35" ry="20" class="colorable" id="leg-fr"/>
+  <ellipse cx="140" cy="445" rx="30" ry="17" class="colorable" id="leg-bl"/>
+  <ellipse cx="260" cy="445" rx="30" ry="17" class="colorable" id="leg-br"/>
+
+  <!-- 배낭 -->
+  <rect x="218" y="310" width="55" height="62" rx="10" class="colorable" id="backpack"/>
+  <rect x="225" y="305" width="42" height="12" rx="5" class="colorable" id="backpack-top"/>
+  <rect x="236" y="338" width="22" height="20" rx="4" class="colorable" id="backpack-pocket"/>
+  <!-- 끈 -->
+  <path d="M222 315 Q210 322 215 338" class="outline" stroke-width="2"/>
+  <path d="M268 315 Q280 322 275 338" class="outline" stroke-width="2"/>
+
+  <!-- 꼬리 -->
+  <ellipse cx="292" cy="392" rx="18" ry="12" class="colorable" id="tail"/>
+
+  <!-- 구름 -->
+  <ellipse cx="320" cy="105" rx="48" ry="28" class="colorable" id="cloud1"/>
+  <ellipse cx="295" cy="112" rx="30" ry="22" class="colorable" id="cloud1l"/>
+  <ellipse cx="348" cy="110" rx="28" ry="20" class="colorable" id="cloud1r"/>
+
+  <!-- 태양 -->
+  <circle cx="68" cy="85" r="35" class="colorable" id="sun"/>
+  <line x1="68" y1="40" x2="68" y2="28" class="outline" stroke-width="3"/>
+  <line x1="98" y1="55" x2="106" y2="46" class="outline" stroke-width="3"/>
+  <line x1="113" y1="85" x2="125" y2="85" class="outline" stroke-width="3"/>
+  <line x1="98" y1="115" x2="106" y2="124" class="outline" stroke-width="3"/>
+  <line x1="38" y1="55" x2="30" y2="46" class="outline" stroke-width="3"/>
+  <line x1="23" y1="85" x2="11" y2="85" class="outline" stroke-width="3"/>
+  <line x1="38" y1="115" x2="30" y2="124" class="outline" stroke-width="3"/>
+  <!-- 태양 얼굴 -->
+  <circle cx="58" cy="80" r="4" class="fixed"/>
+  <circle cx="78" cy="80" r="4" class="fixed"/>
+  <path d="M58 92 Q68 100 78 92" class="outline" stroke-width="2"/>
+
+  <text x="200" y="492" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#5BB88A" font-weight="bold">느루의 여행 🐢</text>
+</svg>

@@ -1,0 +1,82 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <style>
+    .colorable { fill: white; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; cursor: pointer; }
+    .outline { fill: none; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .fixed { fill: #333; }
+    .label { font-family: 'Pretendard', sans-serif; font-size: 11px; fill: #555; text-anchor: middle; }
+  </style>
+  <rect width="400" height="500" fill="#FFFFFF"/>
+
+  <!-- 제목 -->
+  <text x="200" y="30" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#C4A77D" font-weight="bold">오늘의 마음 날씨</text>
+
+  <!-- 날씨 카드 4개: 맑음, 흐림, 비, 무지개 -->
+  <!-- 맑음 카드 -->
+  <rect x="20" y="45" width="165" height="175" rx="16" class="colorable" id="card-sunny"/>
+  <!-- 태양 -->
+  <circle cx="102" cy="110" r="35" class="colorable" id="sun-face"/>
+  <!-- 태양 광선 -->
+  <line x1="102" y1="65" x2="102" y2="55" class="outline" stroke-width="3"/>
+  <line x1="133" y1="79" x2="139" y2="71" class="outline" stroke-width="3"/>
+  <line x1="147" y1="110" x2="157" y2="110" class="outline" stroke-width="3"/>
+  <line x1="133" y1="141" x2="139" y2="149" class="outline" stroke-width="3"/>
+  <line x1="102" y1="155" x2="102" y2="165" class="outline" stroke-width="3"/>
+  <line x1="71" y1="141" x2="65" y2="149" class="outline" stroke-width="3"/>
+  <line x1="57" y1="110" x2="47" y2="110" class="outline" stroke-width="3"/>
+  <line x1="71" y1="79" x2="65" y2="71" class="outline" stroke-width="3"/>
+  <!-- 태양 눈/미소 -->
+  <circle cx="91" cy="105" r="5" class="fixed"/>
+  <circle cx="113" cy="105" r="5" class="fixed"/>
+  <path d="M90 120 Q102 132 114 120" class="outline" stroke-width="2.5"/>
+  <text x="102" y="200" class="label">😊 기쁨</text>
+
+  <!-- 흐림 카드 -->
+  <rect x="215" y="45" width="165" height="175" rx="16" class="colorable" id="card-cloudy"/>
+  <!-- 구름들 -->
+  <ellipse cx="297" cy="115" rx="42" ry="28" class="colorable" id="cloud-big"/>
+  <ellipse cx="265" cy="120" rx="28" ry="20" class="colorable" id="cloud-left"/>
+  <ellipse cx="329" cy="120" rx="25" ry="18" class="colorable" id="cloud-right"/>
+  <!-- 작은 구름 뒤 태양 -->
+  <circle cx="285" cy="90" r="22" class="colorable" id="hidden-sun"/>
+  <text x="297" y="200" class="label">😶 평온</text>
+
+  <!-- 비 카드 -->
+  <rect x="20" y="255" width="165" height="175" rx="16" class="colorable" id="card-rainy"/>
+  <!-- 비구름 -->
+  <ellipse cx="102" cy="295" rx="45" ry="28" class="colorable" id="rain-cloud"/>
+  <ellipse cx="75" cy="305" rx="28" ry="20" class="colorable" id="rain-cloud-l"/>
+  <ellipse cx="130" cy="302" rx="25" ry="18" class="colorable" id="rain-cloud-r"/>
+  <!-- 빗방울들 -->
+  <ellipse cx="75" cy="355" rx="6" ry="10" class="colorable" id="drop1"/>
+  <ellipse cx="102" cy="365" rx="6" ry="10" class="colorable" id="drop2"/>
+  <ellipse cx="129" cy="355" rx="6" ry="10" class="colorable" id="drop3"/>
+  <ellipse cx="88" cy="340" rx="5" ry="9" class="colorable" id="drop4"/>
+  <ellipse cx="115" cy="345" rx="5" ry="9" class="colorable" id="drop5"/>
+  <text x="102" y="410" class="label">😢 슬픔</text>
+
+  <!-- 무지개 카드 -->
+  <rect x="215" y="255" width="165" height="175" rx="16" class="colorable" id="card-rainbow"/>
+  <!-- 무지개 아크 7단 -->
+  <path d="M240 395 Q297 305 355 395" class="colorable" id="rainbow-7" fill="white" stroke-width="12"/>
+  <path d="M248 395 Q297 318 347 395" class="colorable" id="rainbow-6" fill="white" stroke-width="10.5"/>
+  <path d="M256 395 Q297 330 339 395" class="colorable" id="rainbow-5" fill="white" stroke-width="10.5"/>
+  <path d="M264 395 Q297 342 331 395" class="colorable" id="rainbow-4" fill="white" stroke-width="10.5"/>
+  <path d="M272 395 Q297 354 323 395" class="colorable" id="rainbow-3" fill="white" stroke-width="10.5"/>
+  <path d="M280 395 Q297 366 315 395" class="colorable" id="rainbow-2" fill="white" stroke-width="10.5"/>
+  <path d="M288 395 Q297 378 307 395" class="colorable" id="rainbow-1" fill="white" stroke-width="8"/>
+  <!-- 구름 양 끝 -->
+  <ellipse cx="247" cy="390" rx="22" ry="15" class="colorable" id="cloud-end-l"/>
+  <ellipse cx="348" cy="390" rx="22" ry="15" class="colorable" id="cloud-end-r"/>
+  <text x="297" y="410" class="label">🌈 행복</text>
+
+  <!-- 다온이 작은 얼굴 가운데 -->
+  <circle cx="200" cy="235" r="22" class="colorable" id="daon-face-center"/>
+  <circle cx="193" cy="230" r="5" class="fixed"/>
+  <circle cx="207" cy="230" r="5" class="fixed"/>
+  <ellipse cx="200" cy="240" rx="8" ry="6" class="colorable" id="daon-snout-c"/>
+  <circle cx="200" cy="239" r="3" class="fixed"/>
+  <circle cx="191" cy="218" r="8" class="colorable" id="ear-c-l"/>
+  <circle cx="209" cy="218" r="8" class="colorable" id="ear-c-r"/>
+
+  <text x="200" y="488" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#9E9E9E">어떤 마음인지 색칠해 보세요!</text>
+</svg>

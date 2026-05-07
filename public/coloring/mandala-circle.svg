@@ -1,0 +1,73 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <style>
+    .colorable { fill: white; stroke: #333; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; cursor: pointer; }
+    .outline { fill: none; stroke: #333; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="400" height="500" fill="#FFFFFF"/>
+
+  <text x="200" y="28" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#888">마음을 집중하며 색칠해요</text>
+
+  <!-- 만다라 중심 (200, 255) -->
+
+  <!-- 바깥 원 테두리 -->
+  <circle cx="200" cy="255" r="155" class="outline" stroke-width="1.5"/>
+  <circle cx="200" cy="255" r="108" class="outline" stroke-width="1" stroke-dasharray="4 3"/>
+  <circle cx="200" cy="255" r="62" class="outline" stroke-width="1" stroke-dasharray="3 3"/>
+
+  <!-- 바깥 꽃잎 8개 (r=115~150) -->
+  <g transform="rotate(0,200,255)"><path d="M200 255 Q186 198 200 140 Q214 198 200 255 Z" class="colorable" id="op-0"/></g>
+  <g transform="rotate(45,200,255)"><path d="M200 255 Q186 198 200 140 Q214 198 200 255 Z" class="colorable" id="op-45"/></g>
+  <g transform="rotate(90,200,255)"><path d="M200 255 Q186 198 200 140 Q214 198 200 255 Z" class="colorable" id="op-90"/></g>
+  <g transform="rotate(135,200,255)"><path d="M200 255 Q186 198 200 140 Q214 198 200 255 Z" class="colorable" id="op-135"/></g>
+  <g transform="rotate(180,200,255)"><path d="M200 255 Q186 198 200 140 Q214 198 200 255 Z" class="colorable" id="op-180"/></g>
+  <g transform="rotate(225,200,255)"><path d="M200 255 Q186 198 200 140 Q214 198 200 255 Z" class="colorable" id="op-225"/></g>
+  <g transform="rotate(270,200,255)"><path d="M200 255 Q186 198 200 140 Q214 198 200 255 Z" class="colorable" id="op-270"/></g>
+  <g transform="rotate(315,200,255)"><path d="M200 255 Q186 198 200 140 Q214 198 200 255 Z" class="colorable" id="op-315"/></g>
+
+  <!-- 바깥 원형 장식 8개 (r=150) -->
+  <g transform="rotate(22.5,200,255)"><circle cx="200" cy="106" r="14" class="colorable" id="od-22"/></g>
+  <g transform="rotate(67.5,200,255)"><circle cx="200" cy="106" r="14" class="colorable" id="od-67"/></g>
+  <g transform="rotate(112.5,200,255)"><circle cx="200" cy="106" r="14" class="colorable" id="od-112"/></g>
+  <g transform="rotate(157.5,200,255)"><circle cx="200" cy="106" r="14" class="colorable" id="od-157"/></g>
+  <g transform="rotate(202.5,200,255)"><circle cx="200" cy="106" r="14" class="colorable" id="od-202"/></g>
+  <g transform="rotate(247.5,200,255)"><circle cx="200" cy="106" r="14" class="colorable" id="od-247"/></g>
+  <g transform="rotate(292.5,200,255)"><circle cx="200" cy="106" r="14" class="colorable" id="od-292"/></g>
+  <g transform="rotate(337.5,200,255)"><circle cx="200" cy="106" r="14" class="colorable" id="od-337"/></g>
+
+  <!-- 중간 다이아몬드 8개 (r=108) -->
+  <g transform="rotate(22.5,200,255)"><path d="M200 148 L208 157 L200 166 L192 157 Z" class="colorable" id="dia-22"/></g>
+  <g transform="rotate(67.5,200,255)"><path d="M200 148 L208 157 L200 166 L192 157 Z" class="colorable" id="dia-67"/></g>
+  <g transform="rotate(112.5,200,255)"><path d="M200 148 L208 157 L200 166 L192 157 Z" class="colorable" id="dia-112"/></g>
+  <g transform="rotate(157.5,200,255)"><path d="M200 148 L208 157 L200 166 L192 157 Z" class="colorable" id="dia-157"/></g>
+  <g transform="rotate(202.5,200,255)"><path d="M200 148 L208 157 L200 166 L192 157 Z" class="colorable" id="dia-202"/></g>
+  <g transform="rotate(247.5,200,255)"><path d="M200 148 L208 157 L200 166 L192 157 Z" class="colorable" id="dia-247"/></g>
+  <g transform="rotate(292.5,200,255)"><path d="M200 148 L208 157 L200 166 L192 157 Z" class="colorable" id="dia-292"/></g>
+  <g transform="rotate(337.5,200,255)"><path d="M200 148 L208 157 L200 166 L192 157 Z" class="colorable" id="dia-337"/></g>
+
+  <!-- 내부 꽃잎 8개 (r=62) -->
+  <g transform="rotate(0,200,255)"><path d="M200 255 Q192 228 200 193 Q208 228 200 255 Z" class="colorable" id="ip-0"/></g>
+  <g transform="rotate(45,200,255)"><path d="M200 255 Q192 228 200 193 Q208 228 200 255 Z" class="colorable" id="ip-45"/></g>
+  <g transform="rotate(90,200,255)"><path d="M200 255 Q192 228 200 193 Q208 228 200 255 Z" class="colorable" id="ip-90"/></g>
+  <g transform="rotate(135,200,255)"><path d="M200 255 Q192 228 200 193 Q208 228 200 255 Z" class="colorable" id="ip-135"/></g>
+  <g transform="rotate(180,200,255)"><path d="M200 255 Q192 228 200 193 Q208 228 200 255 Z" class="colorable" id="ip-180"/></g>
+  <g transform="rotate(225,200,255)"><path d="M200 255 Q192 228 200 193 Q208 228 200 255 Z" class="colorable" id="ip-225"/></g>
+  <g transform="rotate(270,200,255)"><path d="M200 255 Q192 228 200 193 Q208 228 200 255 Z" class="colorable" id="ip-270"/></g>
+  <g transform="rotate(315,200,255)"><path d="M200 255 Q192 228 200 193 Q208 228 200 255 Z" class="colorable" id="ip-315"/></g>
+
+  <!-- 내부 작은 원 8개 (r=75) -->
+  <g transform="rotate(22.5,200,255)"><circle cx="200" cy="181" r="9" class="colorable" id="ic-22"/></g>
+  <g transform="rotate(67.5,200,255)"><circle cx="200" cy="181" r="9" class="colorable" id="ic-67"/></g>
+  <g transform="rotate(112.5,200,255)"><circle cx="200" cy="181" r="9" class="colorable" id="ic-112"/></g>
+  <g transform="rotate(157.5,200,255)"><circle cx="200" cy="181" r="9" class="colorable" id="ic-157"/></g>
+  <g transform="rotate(202.5,200,255)"><circle cx="200" cy="181" r="9" class="colorable" id="ic-202"/></g>
+  <g transform="rotate(247.5,200,255)"><circle cx="200" cy="181" r="9" class="colorable" id="ic-247"/></g>
+  <g transform="rotate(292.5,200,255)"><circle cx="200" cy="181" r="9" class="colorable" id="ic-292"/></g>
+  <g transform="rotate(337.5,200,255)"><circle cx="200" cy="181" r="9" class="colorable" id="ic-337"/></g>
+
+  <!-- 중심원 -->
+  <circle cx="200" cy="255" r="28" class="colorable" id="center-ring"/>
+  <circle cx="200" cy="255" r="14" class="colorable" id="center-dot"/>
+
+  <text x="200" y="435" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#9E9E9E">집중하며 색칠하면 마음이 차분해져요</text>
+  <text x="200" y="458" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#C4A77D" font-weight="bold">원 만다라 ✨</text>
+</svg>

@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <style>
+    .colorable { fill: white; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; cursor: pointer; }
+    .outline { fill: none; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .fixed { fill: #333; }
+    .label { font-family: sans-serif; font-size: 9px; fill: #666; text-anchor: middle; }
+  </style>
+  <rect width="400" height="500" fill="#FFFFFF"/>
+
+  <text x="200" y="22" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#888">마음마을 지도를 색칠해요</text>
+
+  <!-- 테두리 -->
+  <rect x="15" y="30" width="370" height="440" rx="12" class="colorable" id="map-bg"/>
+
+  <!-- 길 (십자형 + 구불) -->
+  <rect x="175" y="30" width="50" height="440" rx="0" class="colorable" id="road-v"/>
+  <rect x="15" y="230" width="370" height="50" rx="0" class="colorable" id="road-h"/>
+  <!-- 길 중앙선 -->
+  <line x1="200" y1="30" x2="200" y2="470" stroke="#CCC" stroke-width="2" stroke-dasharray="8 6"/>
+  <line x1="15" y1="255" x2="385" y2="255" stroke="#CCC" stroke-width="2" stroke-dasharray="8 6"/>
+
+  <!-- 다온이 집 (왼쪽 위) -->
+  <rect x="35" y="55" width="115" height="85" rx="6" class="colorable" id="daon-house-wall"/>
+  <polygon points="25,62 92,38 160,62" class="colorable" id="daon-house-roof"/>
+  <rect x="72" y="100" width="30" height="40" rx="4" class="colorable" id="daon-door"/>
+  <rect x="42" y="72" width="25" height="20" rx="3" class="colorable" id="daon-win1"/>
+  <rect x="118" y="72" width="25" height="20" rx="3" class="colorable" id="daon-win2"/>
+  <rect x="87" y="47" width="10" height="20" rx="3" class="colorable" id="daon-chimney"/>
+  <text x="92" y="155" class="label">🐻 다온이 집</text>
+
+  <!-- 나리의 발명 공방 (오른쪽 위) -->
+  <rect x="240" y="50" width="130" height="90" rx="6" class="colorable" id="nari-workshop"/>
+  <polygon points="232,57 305,32 378,57" class="colorable" id="nari-roof"/>
+  <!-- 공방 창문 (둥근) -->
+  <circle cx="262" cy="80" r="18" class="colorable" id="nari-window1"/>
+  <circle cx="348" cy="80" r="18" class="colorable" id="nari-window2"/>
+  <rect x="295" y="95" width="22" height="45" rx="4" class="colorable" id="nari-door"/>
+  <rect x="300" y="42" width="12" height="18" rx="3" class="colorable" id="nari-chimney"/>
+  <!-- 연기 -->
+  <path d="M306 40 Q302 28 308 18" class="outline" stroke-width="1.5"/>
+  <text x="305" y="158" class="label">🦊 나리의 공방</text>
+
+  <!-- 하루의 정원 (왼쪽 아래) -->
+  <rect x="30" y="300" width="130" height="75" rx="8" class="colorable" id="haru-garden"/>
+  <!-- 꽃들 in 정원 -->
+  <circle cx="55" cy="332" r="10" class="colorable" id="g-flower1"/>
+  <circle cx="80" cy="325" r="10" class="colorable" id="g-flower2"/>
+  <circle cx="105" cy="335" r="10" class="colorable" id="g-flower3"/>
+  <circle cx="130" cy="328" r="10" class="colorable" id="g-flower4"/>
+  <!-- 꽃 줄기 -->
+  <line x1="55" y1="342" x2="55" y2="360" class="outline" stroke-width="1.5"/>
+  <line x1="80" y1="335" x2="80" y2="360" class="outline" stroke-width="1.5"/>
+  <line x1="105" y1="345" x2="105" y2="360" class="outline" stroke-width="1.5"/>
+  <line x1="130" y1="338" x2="130" y2="360" class="outline" stroke-width="1.5"/>
+  <!-- 정원 테두리 선 -->
+  <path d="M30 360 Q80 350 130 360 Q155 365 160 358" class="outline" stroke-width="1.5"/>
+  <text x="95" y="388" class="label">🐰 하루의 정원</text>
+
+  <!-- 지우의 도서관 (오른쪽 아래) -->
+  <rect x="238" y="298" width="132" height="90" rx="6" class="colorable" id="jiu-library"/>
+  <polygon points="230,305 304,278 378,305" class="colorable" id="jiu-roof"/>
+  <!-- 기둥 -->
+  <rect x="252" y="323" width="12" height="65" rx="3" class="colorable" id="lib-col1"/>
+  <rect x="352" y="323" width="12" height="65" rx="3" class="colorable" id="lib-col2"/>
+  <!-- 도서관 창문 -->
+  <rect x="270" y="318" width="60" height="38" rx="4" class="colorable" id="lib-window"/>
+  <line x1="300" y1="318" x2="300" y2="356" class="outline" stroke-width="1.5"/>
+  <!-- 문 -->
+  <rect x="292" y="352" width="20" height="36" rx="3" class="colorable" id="lib-door"/>
+  <text x="304" y="400" class="label">🦉 지우의 도서관</text>
+
+  <!-- 연못 (가운데) -->
+  <ellipse cx="200" cy="255" rx="30" ry="20" class="colorable" id="pond"/>
+  <!-- 물결 -->
+  <path d="M182 252 Q190 248 198 252" class="outline" stroke-width="1.2"/>
+  <path d="M202 258 Q210 254 218 258" class="outline" stroke-width="1.2"/>
+
+  <!-- 마음마을 표지판 -->
+  <rect x="155" y="425" width="90" height="28" rx="5" class="colorable" id="sign"/>
+  <rect x="196" y="453" width="8" height="18" rx="2" class="colorable" id="sign-post"/>
+  <text x="200" y="444" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#666">마음마을</text>
+
+  <!-- 나무들 -->
+  <circle cx="162" cy="180" r="18" class="colorable" id="t1-top"/>
+  <rect x="158" y="195" width="8" height="22" rx="3" class="colorable" id="t1-trunk"/>
+  <circle cx="238" cy="185" r="18" class="colorable" id="t2-top"/>
+  <rect x="234" y="200" width="8" height="22" rx="3" class="colorable" id="t2-trunk"/>
+
+  <!-- 소리의 미술관 표시 (작게, 가운데 위쪽) -->
+  <rect x="155" y="60" width="45" height="45" rx="5" class="colorable" id="sori-studio"/>
+  <text x="177" y="89" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#666">🐱</text>
+  <text x="177" y="122" class="label">소리의 미술관</text>
+
+  <!-- 느루의 쉼터 (가운데 아래쪽) -->
+  <rect x="160" y="395" width="80" height="55" rx="8" class="colorable" id="neuru-shelter"/>
+  <path d="M155 402 Q200 382 245 402" class="colorable" id="neuru-roof-arc"/>
+  <text x="200" y="465" class="label">🐢 느루의 쉼터</text>
+
+  <!-- 라온 둥지 (왼쪽 나무 위) -->
+  <path d="M137 142 Q152 132 162 142 Q160 150 152 152 Q142 150 137 142 Z" class="colorable" id="raon-nest"/>
+  <text x="152" y="168" class="label">🐦 라온 둥지</text>
+
+  <text x="200" y="492" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#C4A77D" font-weight="bold">마음마을 지도 🗺️</text>
+</svg>

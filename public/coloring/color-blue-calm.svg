@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <style>
+    .colorable { fill: white; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; cursor: pointer; }
+    .outline { fill: none; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .fixed { fill: #333; }
+  </style>
+  <rect width="400" height="500" fill="#FFFFFF"/>
+
+  <text x="200" y="22" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#888">파란색 = 차분함과 평온!</text>
+
+  <!-- 바다/물 배경 -->
+  <path d="M0 300 Q80 280 160 295 Q240 310 320 288 Q360 278 400 290 L400 500 L0 500 Z" class="colorable" id="sea"/>
+  <!-- 물결 장식 -->
+  <path d="M30 318 Q70 308 110 318" class="outline" stroke-width="2"/>
+  <path d="M150 308 Q190 298 230 308" class="outline" stroke-width="2"/>
+  <path d="M260 322 Q300 312 340 322" class="outline" stroke-width="2"/>
+  <path d="M50 340 Q100 330 150 340" class="outline" stroke-width="1.5"/>
+  <path d="M200 348 Q250 338 300 348" class="outline" stroke-width="1.5"/>
+
+  <!-- 큰 고래 -->
+  <!-- 몸통 -->
+  <path d="M55 235 Q45 180 80 155 Q120 130 200 138 Q290 130 330 165 Q360 188 350 240 Q340 290 280 308 Q200 320 120 305 Q65 290 55 235 Z" class="colorable" id="whale-body"/>
+  <!-- 배 (밝은 부분) -->
+  <path d="M100 230 Q150 218 200 222 Q255 218 295 235 Q285 278 240 290 Q200 298 158 290 Q118 278 100 230 Z" class="colorable" id="whale-belly"/>
+
+  <!-- 지느러미 (왼쪽) -->
+  <path d="M72 245 Q42 242 30 265 Q38 285 72 278 Z" class="colorable" id="fin-l"/>
+  <!-- 지느러미 (오른쪽) -->
+  <path d="M330 248 Q360 245 372 268 Q364 288 330 280 Z" class="colorable" id="fin-r"/>
+  <!-- 꼬리 지느러미 -->
+  <path d="M108 305 Q85 328 62 342 Q72 362 98 348 Q108 338 120 320 Z" class="colorable" id="tail-l"/>
+  <path d="M108 305 Q88 322 72 340 Q86 358 108 345 Q118 332 125 318 Z" class="colorable" id="tail-l2"/>
+
+  <!-- 눈 -->
+  <circle cx="155" cy="188" r="16" class="colorable" id="eye-l"/>
+  <circle cx="155" cy="188" r="8" class="fixed"/>
+  <circle cx="151" cy="184" r="3.5" fill="white"/>
+  <!-- 표정 (부드럽게 웃는) -->
+  <path d="M175 215 Q200 228 225 215" class="outline" stroke-width="2.5"/>
+
+  <!-- 물 뿜기 -->
+  <path d="M265 138 Q260 108 272 88 Q278 75 272 58" class="outline" stroke-width="3"/>
+  <path d="M272 88 Q280 75 286 80 Q290 90 283 100" class="outline" stroke-width="2"/>
+  <ellipse cx="268" cy="58" rx="18" ry="10" class="colorable" id="spray-top"/>
+  <ellipse cx="280" cy="52" rx="12" ry="8" class="colorable" id="spray-r"/>
+  <ellipse cx="256" cy="54" rx="12" ry="8" class="colorable" id="spray-l"/>
+
+  <!-- 물고기들 (작은) -->
+  <path d="M340 360 Q355 352 368 360 Q355 368 340 360 Z" class="colorable" id="fish1-body"/>
+  <path d="M337 360 L328 353 L328 367 Z" class="colorable" id="fish1-tail"/>
+  <circle cx="362" cy="358" r="2" class="fixed"/>
+
+  <path d="M60 380 Q72 373 82 380 Q72 387 60 380 Z" class="colorable" id="fish2-body"/>
+  <path d="M58 380 L50 374 L50 386 Z" class="colorable" id="fish2-tail"/>
+  <circle cx="78" cy="378" r="2" class="fixed"/>
+
+  <path d="M190 395 Q202 388 212 395 Q202 402 190 395 Z" class="colorable" id="fish3-body"/>
+  <path d="M188 395 L180 389 L180 401 Z" class="colorable" id="fish3-tail"/>
+  <circle cx="208" cy="393" r="2" class="fixed"/>
+
+  <!-- 거품들 -->
+  <circle cx="300" cy="275" r="9" class="colorable" id="bubble-a"/>
+  <circle cx="320" cy="255" r="6" class="colorable" id="bubble-b"/>
+  <circle cx="308" cy="240" r="7" class="colorable" id="bubble-c"/>
+  <circle cx="330" cy="240" r="5" class="colorable" id="bubble-d"/>
+  <circle cx="72" cy="265" r="8" class="colorable" id="bubble-e"/>
+  <circle cx="88" cy="248" r="6" class="colorable" id="bubble-f"/>
+
+  <!-- 달과 별 (위쪽 하늘) -->
+  <path d="M52 95 Q52 62 70 62 A33 33 0 0 0 52 95 Z" class="colorable" id="moon"/>
+  <path d="M340 68 L342 60 L344 68 L352 70 L344 72 L342 80 L340 72 L332 70 Z" class="colorable" id="star-a"/>
+  <path d="M300 48 L302 42 L304 48 L310 50 L304 52 L302 58 L300 52 L294 50 Z" class="colorable" id="star-b"/>
+  <path d="M110 52 L112 46 L114 52 L120 54 L114 56 L112 62 L110 56 L104 54 Z" class="colorable" id="star-c"/>
+  <circle cx="220" cy="55" r="4" class="colorable" id="star-dot1"/>
+  <circle cx="165" cy="38" r="3" class="colorable" id="star-dot2"/>
+  <circle cx="370" cy="95" r="4" class="colorable" id="star-dot3"/>
+
+  <!-- 구름 -->
+  <ellipse cx="200" cy="88" rx="52" ry="28" class="colorable" id="cloud1"/>
+  <ellipse cx="170" cy="95" rx="35" ry="22" class="colorable" id="cloud1l"/>
+  <ellipse cx="230" cy="93" rx="33" ry="20" class="colorable" id="cloud1r"/>
+
+  <text x="200" y="468" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#888">파란색으로 색칠하면 마음이 차분해져요!</text>
+  <text x="200" y="490" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#5BAED6" font-weight="bold">파란색의 평온 🐋</text>
+</svg>

@@ -12,6 +12,7 @@ import FloatingElements from '@/components/shared/FloatingElements';
 import { ArrowLeft, ArrowRight, BookOpen, Info, Heart, Palette } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import { STORY_ILLUSTRATIONS } from '@/components/illustrations/StoryIllustrations';
 
 // 이야기별 실제 페이지 데이터
 const STORY_PAGES: Record<string, { text: string; bg: string }[]> = {
@@ -151,6 +152,9 @@ const StoryReaderPage = () => {
     const totalPages = pages.length;
     const isLastPage = currentPage === totalPages - 1;
 
+    // 이야기 일러스트 컴포넌트 (현재 페이지)
+    const IllustComp = STORY_ILLUSTRATIONS[slug]?.[currentPage];
+
     // 이 이야기 주인공의 색칠 도안 + 연결 도안
     const relatedColoring = coloringPages
         .filter(p => p.character === story.mainCharacter || p.slug === coloringPages.find(x => x.relatedStory === slug)?.slug)
@@ -204,8 +208,18 @@ const StoryReaderPage = () => {
                     >
                         <div className="flex flex-col md:flex-row min-h-[320px] md:min-h-[400px]">
                             {/* Left: Illustration */}
-                            <div className="flex-1 flex items-center justify-center p-10 md:p-16 border-b md:border-b-0 md:border-r border-white/50">
-                                {currentPage === 0 ? (
+                            <div className="flex-1 flex items-center justify-center p-6 md:p-10 border-b md:border-b-0 md:border-r border-white/50">
+                                {IllustComp ? (
+                                    <div className="w-full flex flex-col items-center gap-2">
+                                        <IllustComp className="w-full h-auto rounded-2xl drop-shadow-sm" />
+                                        {currentPage === 0 && (
+                                            <p className="font-title text-maeul-charcoal/50 text-xs">글·그림 마음마을</p>
+                                        )}
+                                        {isLastPage && (
+                                            <p className="font-title text-maeul-charcoal/50 text-xs">— 끝 —</p>
+                                        )}
+                                    </div>
+                                ) : currentPage === 0 ? (
                                     <div className="text-center">
                                         <motion.div
                                             animate={{ y: [0, -8, 0] }}

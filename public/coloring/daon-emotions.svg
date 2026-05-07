@@ -1,82 +1,106 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
-  <style>
-    .colorable { fill: white; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; cursor: pointer; }
-    .outline { fill: none; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
-    .fixed { fill: #333; }
-    .label { font-family: 'Pretendard', sans-serif; font-size: 11px; fill: #555; text-anchor: middle; }
-  </style>
-  <rect width="400" height="500" fill="#FFFFFF"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560">
+  <!-- White background -->
+  <rect width="400" height="560" fill="white"/>
+  <!-- Outer border -->
+  <rect x="8" y="8" width="384" height="544" rx="14" stroke="#2a2a2a" stroke-width="3" fill="none"/>
+  <!-- Inner border -->
+  <rect x="16" y="16" width="368" height="528" rx="10" stroke="#2a2a2a" stroke-width="1" fill="none"/>
+  <!-- Title -->
+  <text x="200" y="50" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="20" font-weight="bold" fill="#2a2a2a">다온이의 마음 날씨</text>
+  <!-- Dashed divider -->
+  <line x1="40" y1="62" x2="360" y2="62" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="5,4"/>
 
-  <!-- 제목 -->
-  <text x="200" y="30" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#C4A77D" font-weight="bold">오늘의 마음 날씨</text>
+  <!-- === SMALL BEAR AT TOP CENTER === -->
+  <!-- Ears -->
+  <circle cx="182" cy="82" r="13" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="184" cy="84" r="7" fill="white" stroke="#2a2a2a" stroke-width="1.2"/>
+  <circle cx="218" cy="82" r="13" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="216" cy="84" r="7" fill="white" stroke="#2a2a2a" stroke-width="1.2"/>
+  <!-- Head -->
+  <circle cx="200" cy="100" r="35" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Eyes -->
+  <circle cx="190" cy="94" r="5" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="191" cy="93" r="2.2" fill="#2a2a2a"/>
+  <circle cx="210" cy="94" r="5" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="211" cy="93" r="2.2" fill="#2a2a2a"/>
+  <!-- Muzzle -->
+  <ellipse cx="200" cy="108" rx="16" ry="12" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <!-- Nose -->
+  <ellipse cx="200" cy="103" rx="5" ry="3.5" fill="#2a2a2a"/>
+  <!-- Smile -->
+  <path d="M193,112 Q200,120 207,112" fill="none" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Body (small) -->
+  <ellipse cx="200" cy="152" rx="30" ry="35" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 
-  <!-- 날씨 카드 4개: 맑음, 흐림, 비, 무지개 -->
-  <!-- 맑음 카드 -->
-  <rect x="20" y="45" width="165" height="175" rx="16" class="colorable" id="card-sunny"/>
-  <!-- 태양 -->
-  <circle cx="102" cy="110" r="35" class="colorable" id="sun-face"/>
-  <!-- 태양 광선 -->
-  <line x1="102" y1="65" x2="102" y2="55" class="outline" stroke-width="3"/>
-  <line x1="133" y1="79" x2="139" y2="71" class="outline" stroke-width="3"/>
-  <line x1="147" y1="110" x2="157" y2="110" class="outline" stroke-width="3"/>
-  <line x1="133" y1="141" x2="139" y2="149" class="outline" stroke-width="3"/>
-  <line x1="102" y1="155" x2="102" y2="165" class="outline" stroke-width="3"/>
-  <line x1="71" y1="141" x2="65" y2="149" class="outline" stroke-width="3"/>
-  <line x1="57" y1="110" x2="47" y2="110" class="outline" stroke-width="3"/>
-  <line x1="71" y1="79" x2="65" y2="71" class="outline" stroke-width="3"/>
-  <!-- 태양 눈/미소 -->
-  <circle cx="91" cy="105" r="5" class="fixed"/>
-  <circle cx="113" cy="105" r="5" class="fixed"/>
-  <path d="M90 120 Q102 132 114 120" class="outline" stroke-width="2.5"/>
-  <text x="102" y="200" class="label">😊 기쁨</text>
+  <!-- === WEATHER PANELS 2x2 GRID === -->
+  <!-- Panel 1: 맑음 (Sunny) — top left -->
+  <rect x="30" y="200" width="155" height="130" rx="12" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Sun circle -->
+  <circle cx="107" cy="252" r="28" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Sun rays -->
+  <line x1="107" y1="212" x2="107" y2="204" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="131" y1="220" x2="136" y2="214" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="144" y1="244" x2="152" y2="244" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="131" y1="268" x2="136" y2="274" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="107" y1="280" x2="107" y2="288" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="83" y1="268" x2="78" y2="274" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="70" y1="244" x2="62" y2="244" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="83" y1="220" x2="78" y2="214" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Sun smile face -->
+  <circle cx="99" cy="247" r="3.5" fill="#2a2a2a"/>
+  <circle cx="115" cy="247" r="3.5" fill="#2a2a2a"/>
+  <path d="M97,257 Q107,266 117,257" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <!-- Label -->
+  <text x="107" y="314" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="14" font-weight="bold" fill="#2a2a2a">맑음</text>
 
-  <!-- 흐림 카드 -->
-  <rect x="215" y="45" width="165" height="175" rx="16" class="colorable" id="card-cloudy"/>
-  <!-- 구름들 -->
-  <ellipse cx="297" cy="115" rx="42" ry="28" class="colorable" id="cloud-big"/>
-  <ellipse cx="265" cy="120" rx="28" ry="20" class="colorable" id="cloud-left"/>
-  <ellipse cx="329" cy="120" rx="25" ry="18" class="colorable" id="cloud-right"/>
-  <!-- 작은 구름 뒤 태양 -->
-  <circle cx="285" cy="90" r="22" class="colorable" id="hidden-sun"/>
-  <text x="297" y="200" class="label">😶 평온</text>
+  <!-- Panel 2: 흐림 (Cloudy) — top right -->
+  <rect x="215" y="200" width="155" height="130" rx="12" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Clouds -->
+  <ellipse cx="292" cy="248" rx="36" ry="24" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <ellipse cx="268" cy="258" rx="24" ry="18" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <ellipse cx="316" cy="256" rx="22" ry="16" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Partially hidden sun behind clouds -->
+  <path d="M272,228 A22,22 0 0 1 312,228" fill="white" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="292" y1="208" x2="292" y2="202" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="309" y1="213" x2="313" y2="208" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="316" y1="228" x2="322" y2="228" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <!-- Label -->
+  <text x="292" y="314" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="14" font-weight="bold" fill="#2a2a2a">흐림</text>
 
-  <!-- 비 카드 -->
-  <rect x="20" y="255" width="165" height="175" rx="16" class="colorable" id="card-rainy"/>
-  <!-- 비구름 -->
-  <ellipse cx="102" cy="295" rx="45" ry="28" class="colorable" id="rain-cloud"/>
-  <ellipse cx="75" cy="305" rx="28" ry="20" class="colorable" id="rain-cloud-l"/>
-  <ellipse cx="130" cy="302" rx="25" ry="18" class="colorable" id="rain-cloud-r"/>
-  <!-- 빗방울들 -->
-  <ellipse cx="75" cy="355" rx="6" ry="10" class="colorable" id="drop1"/>
-  <ellipse cx="102" cy="365" rx="6" ry="10" class="colorable" id="drop2"/>
-  <ellipse cx="129" cy="355" rx="6" ry="10" class="colorable" id="drop3"/>
-  <ellipse cx="88" cy="340" rx="5" ry="9" class="colorable" id="drop4"/>
-  <ellipse cx="115" cy="345" rx="5" ry="9" class="colorable" id="drop5"/>
-  <text x="102" y="410" class="label">😢 슬픔</text>
+  <!-- Panel 3: 비 (Rainy) — bottom left -->
+  <rect x="30" y="345" width="155" height="130" rx="12" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Rain cloud -->
+  <ellipse cx="107" cy="382" rx="38" ry="22" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <ellipse cx="85" cy="390" rx="22" ry="16" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <ellipse cx="130" cy="388" rx="20" ry="15" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Rain drops -->
+  <path d="M75,412 Q72,424 75,428" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M92,418 Q89,430 92,434" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M108,412 Q105,424 108,428" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M124,418 Q121,430 124,434" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M140,412 Q137,424 140,428" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Label -->
+  <text x="107" y="458" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="14" font-weight="bold" fill="#2a2a2a">비</text>
 
-  <!-- 무지개 카드 -->
-  <rect x="215" y="255" width="165" height="175" rx="16" class="colorable" id="card-rainbow"/>
-  <!-- 무지개 아크 7단 -->
-  <path d="M240 395 Q297 305 355 395" class="colorable" id="rainbow-7" fill="white" stroke-width="12"/>
-  <path d="M248 395 Q297 318 347 395" class="colorable" id="rainbow-6" fill="white" stroke-width="10.5"/>
-  <path d="M256 395 Q297 330 339 395" class="colorable" id="rainbow-5" fill="white" stroke-width="10.5"/>
-  <path d="M264 395 Q297 342 331 395" class="colorable" id="rainbow-4" fill="white" stroke-width="10.5"/>
-  <path d="M272 395 Q297 354 323 395" class="colorable" id="rainbow-3" fill="white" stroke-width="10.5"/>
-  <path d="M280 395 Q297 366 315 395" class="colorable" id="rainbow-2" fill="white" stroke-width="10.5"/>
-  <path d="M288 395 Q297 378 307 395" class="colorable" id="rainbow-1" fill="white" stroke-width="8"/>
-  <!-- 구름 양 끝 -->
-  <ellipse cx="247" cy="390" rx="22" ry="15" class="colorable" id="cloud-end-l"/>
-  <ellipse cx="348" cy="390" rx="22" ry="15" class="colorable" id="cloud-end-r"/>
-  <text x="297" y="410" class="label">🌈 행복</text>
+  <!-- Panel 4: 무지개 (Rainbow) — bottom right -->
+  <rect x="215" y="345" width="155" height="130" rx="12" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Rainbow arcs -->
+  <path d="M228,455 Q292,365 358,455" fill="none" stroke="#2a2a2a" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M236,455 Q292,375 349,455" fill="none" stroke="#2a2a2a" stroke-width="4" stroke-linecap="round"/>
+  <path d="M244,455 Q292,385 341,455" fill="none" stroke="#2a2a2a" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M252,455 Q292,395 332,455" fill="none" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round"/>
+  <path d="M260,455 Q292,405 324,455" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Small clouds at rainbow ends -->
+  <ellipse cx="235" cy="452" rx="16" ry="10" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="349" cy="452" rx="16" ry="10" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Label -->
+  <text x="292" y="458" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="14" font-weight="bold" fill="#2a2a2a">무지개</text>
 
-  <!-- 다온이 작은 얼굴 가운데 -->
-  <circle cx="200" cy="235" r="22" class="colorable" id="daon-face-center"/>
-  <circle cx="193" cy="230" r="5" class="fixed"/>
-  <circle cx="207" cy="230" r="5" class="fixed"/>
-  <ellipse cx="200" cy="240" rx="8" ry="6" class="colorable" id="daon-snout-c"/>
-  <circle cx="200" cy="239" r="3" class="fixed"/>
-  <circle cx="191" cy="218" r="8" class="colorable" id="ear-c-l"/>
-  <circle cx="209" cy="218" r="8" class="colorable" id="ear-c-r"/>
-
-  <text x="200" y="488" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#9E9E9E">어떤 마음인지 색칠해 보세요!</text>
+  <!-- Activity prompt -->
+  <text x="200" y="488" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="13" fill="#555">
+    <tspan x="200" dy="0">오늘 내 마음은 어떤 날씨예요?</tspan>
+    <tspan x="200" dy="18">날씨 칸에 색을 칠해 보세요.</tspan>
+  </text>
+  <!-- Footer -->
+  <text x="200" y="540" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="10" fill="#aaa">마음마을 © 색칠공부</text>
 </svg>

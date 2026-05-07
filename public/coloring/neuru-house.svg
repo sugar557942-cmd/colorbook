@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560">
+  <rect width="400" height="560" fill="white"/>
+  <rect x="8" y="8" width="384" height="544" rx="14" stroke="#2a2a2a" stroke-width="3" fill="none"/>
+  <rect x="16" y="16" width="368" height="528" rx="10" stroke="#2a2a2a" stroke-width="1" fill="none"/>
+  <text x="200" y="50" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="20" font-weight="bold" fill="#2a2a2a">느루의 작은 돌집</text>
+  <line x1="40" y1="62" x2="360" y2="62" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- Sky / clouds -->
+  <ellipse cx="75" cy="110" rx="35" ry="18" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="95" cy="100" rx="26" ry="17" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="56" cy="105" rx="22" ry="14" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- STONE COTTAGE -->
+  <!-- Main walls (stone texture) -->
+  <rect x="85" y="230" width="230" height="180" rx="8" fill="white" stroke="#2a2a2a" stroke-width="3"/>
+  <!-- Stone texture on walls -->
+  <!-- Row 1 -->
+  <path d="M85,260 Q115,255 145,260 Q175,265 205,260 Q235,255 265,260 Q295,265 315,260" fill="none" stroke="#2a2a2a" stroke-width="1.2"/>
+  <!-- Row 2 -->
+  <path d="M85,285 Q100,280 130,285 Q160,290 190,285 Q220,280 250,285 Q280,290 315,285" fill="none" stroke="#2a2a2a" stroke-width="1.2"/>
+  <!-- Row 3 -->
+  <path d="M85,310 Q115,305 145,310 Q175,315 205,310 Q235,305 265,310 Q295,315 315,310" fill="none" stroke="#2a2a2a" stroke-width="1.2"/>
+  <!-- Row 4 -->
+  <path d="M85,335 Q100,330 130,335 Q160,340 190,335 Q220,330 250,335 Q280,340 315,335" fill="none" stroke="#2a2a2a" stroke-width="1.2"/>
+  <!-- Row 5 -->
+  <path d="M85,360 Q115,355 145,360 Q175,365 205,360 Q235,355 265,360 Q295,365 315,360" fill="none" stroke="#2a2a2a" stroke-width="1.2"/>
+  <!-- Row 6 -->
+  <path d="M85,385 Q100,380 130,385 Q160,390 190,385 Q220,380 250,385 Q280,390 315,385" fill="none" stroke="#2a2a2a" stroke-width="1.2"/>
+  <!-- Vertical stone dividers -->
+  <line x1="128" y1="260" x2="128" y2="285" stroke="#2a2a2a" stroke-width="1"/>
+  <line x1="175" y1="285" x2="175" y2="310" stroke="#2a2a2a" stroke-width="1"/>
+  <line x1="222" y1="260" x2="222" y2="285" stroke="#2a2a2a" stroke-width="1"/>
+  <line x1="267" y1="285" x2="267" y2="310" stroke="#2a2a2a" stroke-width="1"/>
+  <line x1="110" y1="310" x2="110" y2="335" stroke="#2a2a2a" stroke-width="1"/>
+  <line x1="165" y1="335" x2="165" y2="360" stroke="#2a2a2a" stroke-width="1"/>
+  <line x1="248" y1="310" x2="248" y2="335" stroke="#2a2a2a" stroke-width="1"/>
+  <line x1="290" y1="335" x2="290" y2="360" stroke="#2a2a2a" stroke-width="1"/>
+
+  <!-- Roof (triangular with tiles) -->
+  <polygon points="70,235 200,140 330,235" fill="white" stroke="#2a2a2a" stroke-width="3" stroke-linejoin="round"/>
+  <!-- Roof tiles -->
+  <path d="M130,235 Q160,215 190,235" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <path d="M155,235 Q185,208 215,235" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <path d="M180,235 Q210,200 240,235" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <path d="M105,235 Q135,222 165,235" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <path d="M205,235 Q235,215 265,235" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <path d="M230,235 Q258,208 288,235" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Roof ridge cap -->
+  <line x1="200" y1="140" x2="200" y2="235" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <!-- Roof eave -->
+  <line x1="68" y1="237" x2="332" y2="237" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- Chimney -->
+  <rect x="250" y="150" width="28" height="65" rx="3" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Chimney cap -->
+  <rect x="244" y="147" width="40" height="8" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Smoke curls -->
+  <path d="M258,147 Q252,133 258,120 Q264,107 258,94" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M268,147 Q274,131 268,116 Q262,101 268,88" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M263,147 Q256,128 263,110" fill="none" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- Window with flower box -->
+  <rect x="98" y="255" width="68" height="58" rx="5" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Window cross panes -->
+  <line x1="132" y1="255" x2="132" y2="313" stroke="#2a2a2a" stroke-width="1.8"/>
+  <line x1="98" y1="284" x2="166" y2="284" stroke="#2a2a2a" stroke-width="1.8"/>
+  <!-- Window interior (empty for child to draw) -->
+  <text x="132" y="272" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="7" fill="#ccc">그려봐요</text>
+  <!-- Flower box under window -->
+  <rect x="92" y="313" width="82" height="14" rx="4" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Flowers in box -->
+  <line x1="103" y1="313" x2="103" y2="303" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="103" cy="300" r="4" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <ellipse cx="103" cy="295" rx="3" ry="4" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <ellipse cx="107" cy="297" rx="3" ry="4" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(60,107,297)"/>
+  <ellipse cx="99" cy="297" rx="3" ry="4" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(-60,99,297)"/>
+  <line x1="120" y1="313" x2="120" y2="303" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="120" cy="300" r="4" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <ellipse cx="120" cy="295" rx="3" ry="4" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <ellipse cx="124" cy="297" rx="3" ry="4" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(60,124,297)"/>
+  <ellipse cx="116" cy="297" rx="3" ry="4" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(-60,116,297)"/>
+  <line x1="137" y1="313" x2="137" y2="302" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <ellipse cx="133" cy="300" rx="3" ry="4" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(-30,133,300)"/>
+  <ellipse cx="141" cy="300" rx="3" ry="4" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(30,141,300)"/>
+  <line x1="155" y1="313" x2="155" y2="303" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="155" cy="300" r="4" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <ellipse cx="155" cy="295" rx="3" ry="4" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <ellipse cx="159" cy="297" rx="3" ry="4" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(60,159,297)"/>
+  <ellipse cx="151" cy="297" rx="3" ry="4" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(-60,151,297)"/>
+
+  <!-- Front door -->
+  <rect x="175" y="330" width="50" height="80" rx="5" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Door arch top -->
+  <path d="M175,340 Q200,320 225,340" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Door handle -->
+  <circle cx="218" cy="374" r="4" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Door panel details -->
+  <rect x="181" y="348" width="16" height="18" rx="2" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <rect x="203" y="348" width="16" height="18" rx="2" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+
+  <!-- Flowering vines on wall -->
+  <path d="M315,230 Q322,270 318,310 Q314,350 320,390" fill="none" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M318,255 Q330,248 336,255" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="338" cy="252" r="5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <ellipse cx="338" cy="245" rx="3" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <ellipse cx="343" cy="249" rx="3" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(60,343,249)"/>
+  <ellipse cx="333" cy="249" rx="3" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(-60,333,249)"/>
+  <path d="M317,285 Q328,278 333,286" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="335" cy="276" r="5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <ellipse cx="335" cy="269" rx="3" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <ellipse cx="340" cy="272" rx="3" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(60,340,272)"/>
+  <ellipse cx="330" cy="272" rx="3" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(-60,330,272)"/>
+  <path d="M319,330 Q330,323 334,331" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="336" cy="321" r="5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <ellipse cx="336" cy="314" rx="3" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <ellipse cx="341" cy="318" rx="3" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(60,341,318)"/>
+  <ellipse cx="331" cy="318" rx="3" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(-60,331,318)"/>
+
+  <!-- Garden path -->
+  <path d="M140,410 Q200,400 260,410" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <!-- Stepping stones -->
+  <ellipse cx="158" cy="412" rx="12" ry="7" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="182" cy="408" rx="12" ry="7" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="206" cy="406" rx="12" ry="7" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="230" cy="408" rx="12" ry="7" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- Ground -->
+  <path d="M30,418 Q200,406 370,418 L370,455 Q200,445 30,455 Z" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+
+  <!-- TURTLE at front door -->
+  <!-- Mini turtle - simplified for space -->
+  <ellipse cx="200" cy="400" rx="32" ry="25" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <ellipse cx="200" cy="410" rx="32" ry="10" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Mini hex -->
+  <polygon points="200,380 210,385 210,394 200,399 190,394 190,385" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <polygon points="212,387 222,392 222,400 212,404 202,400 202,392" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <polygon points="188,387 198,392 198,400 188,404 178,400 178,392" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Mini flower on shell -->
+  <circle cx="200" cy="388" r="3" fill="white" stroke="#2a2a2a" stroke-width="1.2"/>
+  <ellipse cx="200" cy="384" rx="2" ry="3" fill="white" stroke="#2a2a2a" stroke-width="1.2"/>
+  <ellipse cx="203" cy="386" rx="2" ry="3" fill="white" stroke="#2a2a2a" stroke-width="1.2" transform="rotate(60,203,386)"/>
+  <ellipse cx="197" cy="386" rx="2" ry="3" fill="white" stroke="#2a2a2a" stroke-width="1.2" transform="rotate(-60,197,386)"/>
+  <!-- Mini legs -->
+  <ellipse cx="220" cy="414" rx="9" ry="6" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="180" cy="414" rx="9" ry="6" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Mini neck + head -->
+  <ellipse cx="225" cy="395" rx="6" ry="10" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="233" cy="386" r="11" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <circle cx="236" cy="383" r="3.5" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <circle cx="237" cy="383" r="1.5" fill="#2a2a2a"/>
+  <path d="M228,390 Q233,395 238,391" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Activity prompt -->
+  <text x="200" y="490" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="13" fill="#555">
+    <tspan x="200" dy="0">느루의 집 창문에 무엇이 보이나요?</tspan>
+    <tspan x="200" dy="18">그려 보세요.</tspan>
+  </text>
+  <text x="200" y="540" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="10" fill="#aaa">마음마을 © 색칠공부</text>
+</svg>

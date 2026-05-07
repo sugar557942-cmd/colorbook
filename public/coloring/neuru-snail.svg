@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560">
+  <rect width="400" height="560" fill="white"/>
+  <rect x="8" y="8" width="384" height="544" rx="14" stroke="#2a2a2a" stroke-width="3" fill="none"/>
+  <rect x="16" y="16" width="368" height="528" rx="10" stroke="#2a2a2a" stroke-width="1" fill="none"/>
+  <text x="200" y="50" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="20" font-weight="bold" fill="#2a2a2a">달팽이 친구와 느루</text>
+  <line x1="40" y1="62" x2="360" y2="62" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- Sky area with small clouds -->
+  <ellipse cx="80" cy="100" rx="32" ry="17" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="98" cy="91" rx="24" ry="16" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="62" cy="95" rx="20" ry="13" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+
+  <ellipse cx="310" cy="105" rx="28" ry="16" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="328" cy="96" rx="22" ry="14" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="294" cy="98" rx="18" ry="12" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- Ground / path -->
+  <path d="M30,420 Q200,408 370,420 L370,460 Q200,450 30,460 Z" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Path markings -->
+  <path d="M40,433 Q200,424 360,433" fill="none" stroke="#2a2a2a" stroke-width="1.2" stroke-dasharray="8,6"/>
+  <path d="M40,445 Q200,436 360,445" fill="none" stroke="#2a2a2a" stroke-width="1.2" stroke-dasharray="3,4"/>
+
+  <!-- Flowers along path -->
+  <!-- Left flower -->
+  <line x1="50" y1="420" x2="50" y2="395" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="50" cy="388" r="7" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="50" cy="378" rx="5" ry="7" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <ellipse cx="58" cy="382" rx="5" ry="7" fill="white" stroke="#2a2a2a" stroke-width="1.8" transform="rotate(60,58,382)"/>
+  <ellipse cx="58" cy="394" rx="5" ry="7" fill="white" stroke="#2a2a2a" stroke-width="1.8" transform="rotate(120,58,394)"/>
+  <ellipse cx="42" cy="394" rx="5" ry="7" fill="white" stroke="#2a2a2a" stroke-width="1.8" transform="rotate(240,42,394)"/>
+  <ellipse cx="42" cy="382" rx="5" ry="7" fill="white" stroke="#2a2a2a" stroke-width="1.8" transform="rotate(300,42,382)"/>
+  <!-- Right flower -->
+  <line x1="350" y1="420" x2="350" y2="396" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="350" cy="389" r="7" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="350" cy="379" rx="5" ry="7" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <ellipse cx="358" cy="383" rx="5" ry="7" fill="white" stroke="#2a2a2a" stroke-width="1.8" transform="rotate(60,358,383)"/>
+  <ellipse cx="358" cy="395" rx="5" ry="7" fill="white" stroke="#2a2a2a" stroke-width="1.8" transform="rotate(120,358,395)"/>
+  <ellipse cx="342" cy="395" rx="5" ry="7" fill="white" stroke="#2a2a2a" stroke-width="1.8" transform="rotate(240,342,395)"/>
+  <ellipse cx="342" cy="383" rx="5" ry="7" fill="white" stroke="#2a2a2a" stroke-width="1.8" transform="rotate(300,342,383)"/>
+
+  <!-- Speech bubble - SNAIL (left) -->
+  <ellipse cx="100" cy="200" rx="55" ry="38" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Bubble tail pointing to snail -->
+  <path d="M80,238 Q82,260 68,268" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Empty inside for child to write -->
+  <text x="100" y="196" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="8" fill="#bbb">달팽이의</text>
+  <text x="100" y="208" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="8" fill="#bbb">말을 써봐요</text>
+
+  <!-- Speech bubble - TURTLE (right) -->
+  <ellipse cx="295" cy="190" rx="60" ry="40" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Bubble tail pointing to turtle -->
+  <path d="M310,230 Q312,254 298,264" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <text x="295" y="186" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="8" fill="#bbb">느루의</text>
+  <text x="295" y="198" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="8" fill="#bbb">말을 써봐요</text>
+
+  <!-- SNAIL (left side) -->
+  <!-- Snail body -->
+  <ellipse cx="88" cy="398" rx="38" ry="18" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Snail shell (large spiral) -->
+  <circle cx="100" cy="378" rx="26" ry="0" r="26" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <circle cx="100" cy="378" r="26" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <path d="M100,378 m18,0 a18,18 0 1,1 -18,18 a12,12 0 1,0 12,-12 a6,6 0 1,1 -6,6" fill="none" stroke="#2a2a2a" stroke-width="1.8"/>
+  <!-- Snail head -->
+  <ellipse cx="62" cy="393" rx="14" ry="10" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Snail eye stalks -->
+  <line x1="58" y1="383" x2="54" y2="372" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="54" cy="372" r="3" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <circle cx="54" cy="372" r="1.2" fill="#2a2a2a"/>
+  <line x1="64" y1="383" x2="60" y2="371" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="60" cy="371" r="3" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <circle cx="60" cy="371" r="1.2" fill="#2a2a2a"/>
+  <!-- Snail smile -->
+  <path d="M57,397 Q62,402 68,398" fill="none" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Snail trail -->
+  <path d="M30,415 Q58,410 88,415" fill="none" stroke="#2a2a2a" stroke-width="1.2" stroke-dasharray="2,3"/>
+
+  <!-- TURTLE (right side) -->
+  <!-- Shell -->
+  <ellipse cx="270" cy="345" rx="68" ry="54" fill="white" stroke="#2a2a2a" stroke-width="3"/>
+  <ellipse cx="270" cy="360" rx="68" ry="20" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Hex on shell -->
+  <polygon points="270,299 287,308 287,325 270,334 253,325 253,308" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <polygon points="292,312 308,320 308,336 292,344 276,336 276,320" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <polygon points="248,312 264,320 264,336 248,344 232,336 232,320" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <polygon points="270,327 286,335 286,350 270,358 254,350 254,335" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Flower on shell -->
+  <circle cx="270" cy="315" r="5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <ellipse cx="270" cy="308" rx="3" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <ellipse cx="276" cy="311" rx="3" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(60,276,311)"/>
+  <ellipse cx="276" cy="319" rx="3" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(120,276,319)"/>
+  <ellipse cx="264" cy="319" rx="3" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(240,264,319)"/>
+  <ellipse cx="264" cy="311" rx="3" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(300,264,311)"/>
+
+  <!-- Turtle legs -->
+  <ellipse cx="320" cy="372" rx="18" ry="11" fill="white" stroke="#2a2a2a" stroke-width="2.5" transform="rotate(-20,320,372)"/>
+  <ellipse cx="220" cy="372" rx="18" ry="11" fill="white" stroke="#2a2a2a" stroke-width="2.5" transform="rotate(20,220,372)"/>
+  <ellipse cx="310" cy="386" rx="16" ry="10" fill="white" stroke="#2a2a2a" stroke-width="2.5" transform="rotate(12,310,386)"/>
+  <ellipse cx="230" cy="386" rx="16" ry="10" fill="white" stroke="#2a2a2a" stroke-width="2.5" transform="rotate(-12,230,386)"/>
+  <!-- Neck -->
+  <ellipse cx="222" cy="330" rx="13" ry="20" fill="white" stroke="#2a2a2a" stroke-width="2.5" transform="rotate(15,222,330)"/>
+  <!-- Head (facing left toward snail) -->
+  <circle cx="206" cy="313" r="22" fill="white" stroke="#2a2a2a" stroke-width="3"/>
+  <!-- Eyes (looking left at snail) -->
+  <circle cx="197" cy="307" r="6" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="195" cy="307" r="2.5" fill="#2a2a2a"/>
+  <circle cx="194" cy="305" r="1" fill="white"/>
+  <circle cx="213" cy="309" r="4" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <circle cx="213" cy="309" r="1.5" fill="#2a2a2a"/>
+  <!-- Friendly smile -->
+  <path d="M197,320 Q205,327 213,321" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <!-- Tail -->
+  <path d="M337,360 Q350,366 352,378" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Activity prompt -->
+  <text x="200" y="490" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="13" fill="#555">
+    <tspan x="200" dy="0">느루와 달팽이 친구 사이에</tspan>
+    <tspan x="200" dy="18">어떤 이야기가 오갔을까요?</tspan>
+  </text>
+  <text x="200" y="540" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="10" fill="#aaa">마음마을 © 색칠공부</text>
+</svg>

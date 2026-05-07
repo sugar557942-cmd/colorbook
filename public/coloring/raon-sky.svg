@@ -1,103 +1,139 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
-  <style>
-    .colorable { fill: white; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; cursor: pointer; }
-    .outline { fill: none; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
-    .fixed { fill: #333; }
-  </style>
-  <rect width="400" height="500" fill="#FFFFFF"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560">
+  <!-- Background -->
+  <rect width="400" height="560" fill="white"/>
+  <!-- Outer border -->
+  <rect x="8" y="8" width="384" height="544" rx="14" fill="none" stroke="#2a2a2a" stroke-width="3"/>
+  <!-- Inner border -->
+  <rect x="16" y="16" width="368" height="528" rx="10" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+  <!-- Title -->
+  <text x="200" y="50" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="20" font-weight="bold" fill="#2a2a2a">라온의 하늘 전망대</text>
+  <!-- Dashed divider -->
+  <line x1="40" y1="62" x2="360" y2="62" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="5,4"/>
 
-  <!-- 태양 -->
-  <circle cx="340" cy="75" r="45" class="colorable" id="sun"/>
-  <line x1="340" y1="20" x2="340" y2="8" class="outline" stroke-width="3"/>
-  <line x1="375" y1="40" x2="384" y2="32" class="outline" stroke-width="3"/>
-  <line x1="395" y1="75" x2="407" y2="75" class="outline" stroke-width="3"/>
-  <line x1="375" y1="110" x2="384" y2="118" class="outline" stroke-width="3"/>
-  <line x1="305" y1="40" x2="296" y2="32" class="outline" stroke-width="3"/>
-  <line x1="285" y1="75" x2="273" y2="75" class="outline" stroke-width="3"/>
-  <line x1="305" y1="110" x2="296" y2="118" class="outline" stroke-width="3"/>
-  <line x1="340" y1="130" x2="340" y2="142" class="outline" stroke-width="3"/>
-  <!-- 태양 얼굴 -->
-  <circle cx="330" cy="70" r="4.5" class="fixed"/>
-  <circle cx="350" cy="70" r="4.5" class="fixed"/>
-  <path d="M328 82 Q340 92 352 82" class="outline" stroke-width="2"/>
+  <!-- CLOUDS -->
+  <ellipse cx="78" cy="118" rx="34" ry="17" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <ellipse cx="105" cy="108" rx="26" ry="15" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <ellipse cx="58" cy="113" rx="22" ry="13" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <ellipse cx="315" cy="105" rx="36" ry="18" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <ellipse cx="344" cy="94" rx="26" ry="14" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <ellipse cx="290" cy="100" rx="22" ry="13" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <ellipse cx="200" cy="90" rx="28" ry="13" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <ellipse cx="220" cy="82" rx="19" ry="11" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <ellipse cx="182" cy="84" rx="17" ry="10" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
 
-  <!-- 구름들 -->
-  <ellipse cx="85" cy="95" rx="52" ry="30" class="colorable" id="cloud1"/>
-  <ellipse cx="58" cy="102" rx="33" ry="24" class="colorable" id="cloud1l"/>
-  <ellipse cx="112" cy="100" rx="35" ry="26" class="colorable" id="cloud1r"/>
-  <ellipse cx="82" cy="75" rx="30" ry="22" class="colorable" id="cloud1t"/>
+  <!-- TOWER PILLARS -->
+  <rect x="181" y="305" width="13" height="148" rx="3" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <rect x="206" y="305" width="13" height="148" rx="3" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Cross braces -->
+  <line x1="181" y1="380" x2="219" y2="330" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="219" y1="380" x2="181" y2="330" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="181" y1="435" x2="219" y2="400" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="219" y1="435" x2="181" y2="400" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
 
-  <ellipse cx="250" cy="155" rx="42" ry="25" class="colorable" id="cloud2"/>
-  <ellipse cx="228" cy="162" rx="28" ry="20" class="colorable" id="cloud2l"/>
-  <ellipse cx="272" cy="160" rx="28" ry="20" class="colorable" id="cloud2r"/>
+  <!-- PLATFORM FLOOR -->
+  <rect x="128" y="292" width="144" height="15" rx="4" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
 
-  <ellipse cx="55" cy="240" rx="38" ry="22" class="colorable" id="cloud3"/>
-  <ellipse cx="35" cy="246" rx="24" ry="17" class="colorable" id="cloud3l"/>
-  <ellipse cx="75" cy="244" rx="26" ry="18" class="colorable" id="cloud3r"/>
+  <!-- RAILING POSTS -->
+  <line x1="143" y1="292" x2="143" y2="257" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="173" y1="292" x2="173" y2="257" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="227" y1="292" x2="227" y2="257" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="257" y1="292" x2="257" y2="257" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Top rail -->
+  <line x1="138" y1="257" x2="262" y2="257" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Mid rail -->
+  <line x1="138" y1="274" x2="262" y2="274" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
 
-  <!-- 라온 몸통 (새) -->
-  <ellipse cx="200" cy="300" rx="75" ry="65" class="colorable" id="body"/>
-  <!-- 배 -->
-  <ellipse cx="200" cy="308" rx="48" ry="45" class="colorable" id="belly"/>
+  <!-- STAIRS at base -->
+  <rect x="179" y="450" width="42" height="7" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="169" y="457" width="62" height="7" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2"/>
 
-  <!-- 날개 (펼침 - 크게) -->
-  <path d="M125 275 Q68 230 42 268 Q52 310 125 302 Z" class="colorable" id="wing-l"/>
-  <!-- 날개 깃털 결 -->
-  <path d="M125 280 Q92 252 72 265" class="outline" stroke-width="1.5"/>
-  <path d="M125 292 Q88 268 65 278" class="outline" stroke-width="1.5"/>
-  <path d="M125 303 Q90 288 58 296" class="outline" stroke-width="1.5"/>
+  <!-- VILLAGE BELOW: houses, trees, ground -->
+  <!-- Ground -->
+  <line x1="34" y1="445" x2="366" y2="445" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Hill bumps -->
+  <path d="M34,445 Q90,410 150,438 Q200,420 260,438 Q310,415 366,445" fill="white" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
 
-  <path d="M275 275 Q332 230 358 268 Q348 310 275 302 Z" class="colorable" id="wing-r"/>
-  <!-- 날개 깃털 결 -->
-  <path d="M275 280 Q308 252 328 265" class="outline" stroke-width="1.5"/>
-  <path d="M275 292 Q312 268 335 278" class="outline" stroke-width="1.5"/>
-  <path d="M275 303 Q310 288 342 296" class="outline" stroke-width="1.5"/>
+  <!-- House left -->
+  <rect x="42" y="404" width="52" height="38" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <polygon points="42,404 68,380 94,404" fill="white" stroke="#2a2a2a" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="60" y="420" width="12" height="22" rx="1" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <rect x="47" y="410" width="10" height="9" rx="1" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
 
-  <!-- 꼬리 깃털 -->
-  <path d="M175 362 Q168 400 155 420 Q165 425 175 405 Q180 395 185 380 Z" class="colorable" id="tail-l"/>
-  <path d="M200 365 Q200 405 200 428 Q210 425 210 405 Q210 388 210 368 Z" class="colorable" id="tail-m"/>
-  <path d="M225 362 Q232 400 245 420 Q235 425 225 405 Q220 395 215 380 Z" class="colorable" id="tail-r"/>
+  <!-- House right -->
+  <rect x="292" y="408" width="56" height="34" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <polygon points="292,408 320,384 348,408" fill="white" stroke="#2a2a2a" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="308" y="422" width="12" height="20" rx="1" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
 
-  <!-- 발 -->
-  <ellipse cx="175" cy="370" rx="20" ry="10" class="colorable" id="foot-l"/>
-  <ellipse cx="225" cy="370" rx="20" ry="10" class="colorable" id="foot-r"/>
-  <line x1="160" y1="375" x2="153" y2="385" class="outline" stroke-width="2"/>
-  <line x1="173" y1="378" x2="173" y2="388" class="outline" stroke-width="2"/>
-  <line x1="187" y1="375" x2="193" y2="385" class="outline" stroke-width="2"/>
-  <line x1="213" y1="375" x2="207" y2="385" class="outline" stroke-width="2"/>
-  <line x1="227" y1="378" x2="227" y2="388" class="outline" stroke-width="2"/>
-  <line x1="240" y1="375" x2="247" y2="385" class="outline" stroke-width="2"/>
+  <!-- Trees -->
+  <line x1="112" y1="444" x2="112" y2="413" stroke="#2a2a2a" stroke-width="2.2" stroke-linecap="round"/>
+  <ellipse cx="112" cy="404" rx="13" ry="15" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="132" y1="444" x2="132" y2="418" stroke="#2a2a2a" stroke-width="2.2" stroke-linecap="round"/>
+  <ellipse cx="132" cy="410" rx="10" ry="12" fill="white" stroke="#2a2a2a" stroke-width="2"/>
 
-  <!-- 머리 -->
-  <circle cx="200" cy="218" r="72" class="colorable" id="head"/>
-  <!-- 볏 (머리 장식) -->
-  <path d="M178 150 Q188 128 200 145 Q210 125 218 148" class="colorable" id="crest"/>
-  <ellipse cx="200" cy="153" rx="18" ry="12" class="colorable" id="crest-base"/>
+  <line x1="264" y1="444" x2="264" y2="412" stroke="#2a2a2a" stroke-width="2.2" stroke-linecap="round"/>
+  <ellipse cx="264" cy="403" rx="13" ry="15" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="282" y1="444" x2="282" y2="420" stroke="#2a2a2a" stroke-width="2.2" stroke-linecap="round"/>
+  <ellipse cx="282" cy="412" rx="10" ry="12" fill="white" stroke="#2a2a2a" stroke-width="2"/>
 
-  <!-- 눈 -->
-  <circle cx="180" cy="215" r="14" class="colorable" id="eye-l"/>
-  <circle cx="180" cy="215" r="7" class="fixed"/>
-  <circle cx="177" cy="212" r="3" fill="white"/>
-  <circle cx="220" cy="215" r="14" class="colorable" id="eye-r"/>
-  <circle cx="220" cy="215" r="7" class="fixed"/>
-  <circle cx="217" cy="212" r="3" fill="white"/>
+  <!-- ===== SPARROW RAON on railing ===== -->
+  <!-- Body oval -->
+  <ellipse cx="200" cy="272" rx="21" ry="17" fill="white" stroke="#2a2a2a" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Tail feathers -->
+  <path d="M180,275 Q170,284 163,280 Q169,273 179,271 Z" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="170" y1="276" x2="164" y2="281" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="172" y1="280" x2="165" y2="285" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Head -->
+  <circle cx="214" cy="255" r="14" fill="white" stroke="#2a2a2a" stroke-width="2.8"/>
+  <!-- Explorer hat brim -->
+  <ellipse cx="214" cy="243" rx="17" ry="5" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Hat crown -->
+  <path d="M201,243 Q203,232 214,230 Q225,232 227,243" fill="white" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <!-- Hat band line -->
+  <path d="M202,240 Q214,238 226,240" fill="none" stroke="#2a2a2a" stroke-width="1.3" stroke-linecap="round"/>
+  <!-- Beak (small triangle, forward) -->
+  <polygon points="226,251 236,248 228,256" fill="white" stroke="#2a2a2a" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Eye wide with sparkle -->
+  <circle cx="219" cy="251" r="5" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="220" cy="251" r="2.5" fill="#2a2a2a"/>
+  <circle cx="221.5" cy="249.5" r="1" fill="white"/>
+  <!-- Eyebrow raised with curiosity -->
+  <path d="M215,245 Q219,242 223,244" fill="none" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Wing folded D-shape -->
+  <path d="M197,265 Q187,271 189,281 Q197,283 210,281 Q209,271 200,265 Z" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="191" y1="272" x2="207" y2="274" stroke="#2a2a2a" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="190" y1="277" x2="207" y2="279" stroke="#2a2a2a" stroke-width="1.3" stroke-linecap="round"/>
+  <!-- Feet on railing top -->
+  <line x1="202" y1="289" x2="202" y2="296" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="199" y1="296" x2="202" y2="296" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="205" y1="296" x2="202" y2="296" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="202" y1="296" x2="202" y2="299" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="209" y1="289" x2="209" y2="296" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="206" y1="296" x2="209" y2="296" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="212" y1="296" x2="209" y2="296" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="209" y1="296" x2="209" y2="299" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
 
-  <!-- 부리 -->
-  <path d="M187 232 L200 248 L213 232 Q200 228 187 232 Z" class="colorable" id="beak-top"/>
-  <path d="M190 240 L200 252 L210 240 Q200 237 190 240 Z" class="colorable" id="beak-bot"/>
+  <!-- BINOCULARS held up to beak -->
+  <circle cx="233" cy="245" r="8" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <circle cx="247" cy="245" r="8" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <rect x="236" y="242" width="8" height="6" rx="1" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Binocular strap -->
+  <path d="M228,252 Q228,256 226,258" fill="none" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
 
-  <!-- 볼 -->
-  <ellipse cx="163" cy="225" rx="14" ry="9" class="colorable" id="blush-l"/>
-  <ellipse cx="237" cy="225" rx="14" ry="9" class="colorable" id="blush-r"/>
+  <!-- Sun top right corner -->
+  <circle cx="345" cy="82" r="16" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="345" y1="60" x2="345" y2="56" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="363" y1="68" x2="366" y2="65" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="367" y1="82" x2="371" y2="82" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="363" y1="96" x2="366" y2="99" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="327" y1="68" x2="324" y2="65" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="323" y1="82" x2="319" y2="82" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="327" y1="96" x2="324" y2="99" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
 
-  <!-- 작은 새들 (멀리) -->
-  <path d="M310 200 Q318 193 326 200" class="outline" stroke-width="2"/>
-  <path d="M335 185 Q343 178 351 185" class="outline" stroke-width="2"/>
-  <path d="M298 178 Q305 172 312 178" class="outline" stroke-width="2"/>
-
-  <!-- 반짝 -->
-  <path d="M48 158 L50 152 L52 158 L58 160 L52 162 L50 168 L48 162 L42 160 Z" class="colorable" id="sparkle1"/>
-  <path d="M355 230 L357 224 L359 230 L365 232 L359 234 L357 240 L355 234 L349 232 Z" class="colorable" id="sparkle2"/>
-
-  <text x="200" y="492" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#5BAED6" font-weight="bold">라온의 하늘 🐦</text>
+  <!-- Activity prompt -->
+  <text x="200" y="476" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="13" fill="#555">
+    <tspan x="200" dy="0">전망대에서 보이는 세상,</tspan>
+    <tspan x="200" dy="18">어떤 것들이 있나요?</tspan>
+  </text>
+  <!-- Footer -->
+  <text x="200" y="540" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="10" fill="#aaa">마음마을 © 색칠공부</text>
 </svg>

@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560">
+  <!-- White background -->
+  <rect width="400" height="560" fill="white"/>
+  <!-- Outer border -->
+  <rect x="8" y="8" width="384" height="544" rx="14" stroke="#2a2a2a" stroke-width="3" fill="none"/>
+  <!-- Inner border -->
+  <rect x="16" y="16" width="368" height="528" rx="10" stroke="#2a2a2a" stroke-width="1" fill="none"/>
+  <!-- Title -->
+  <text x="200" y="50" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="20" font-weight="bold" fill="#2a2a2a">비 오는 날 다온이</text>
+  <!-- Dashed divider -->
+  <line x1="40" y1="62" x2="360" y2="62" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- === RAIN CLOUDS === -->
+  <!-- Main cloud (behind umbrella) -->
+  <ellipse cx="200" cy="92" rx="55" ry="32" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="165" cy="106" rx="34" ry="24" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <ellipse cx="235" cy="104" rx="32" ry="22" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Side cloud left -->
+  <ellipse cx="72" cy="110" rx="36" ry="22" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="50" cy="120" rx="22" ry="16" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="94" cy="118" rx="20" ry="14" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Side cloud right -->
+  <ellipse cx="328" cy="108" rx="36" ry="22" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="308" cy="118" rx="20" ry="14" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="350" cy="118" rx="22" ry="16" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- === RAIN DROPS === -->
+  <!-- Left side rain -->
+  <path d="M55,140 L50,162" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M75,150 L70,172" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M38,158 L33,180" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M92,145 L87,167" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Right side rain -->
+  <path d="M306,138 L301,160" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M326,148 L321,170" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M346,140 L341,162" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M362,152 L357,174" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Foreground rain drops -->
+  <path d="M60,340 L55,365" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M85,360 L80,385" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M42,380 L37,405" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M320,345 L315,370" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M345,360 L340,385" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M362,380 L357,405" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Mid rain -->
+  <path d="M130,150 L125,175" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M268,150 L263,175" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- === UMBRELLA (polka-dot) === -->
+  <!-- Umbrella canopy -->
+  <path d="M120,190 Q120,130 200,125 Q280,130 280,190 Z" fill="white" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Umbrella rib lines -->
+  <path d="M200,125 L200,190" fill="none" stroke="#2a2a2a" stroke-width="1.8"/>
+  <path d="M200,125 L158,188" fill="none" stroke="#2a2a2a" stroke-width="1.8"/>
+  <path d="M200,125 L132,178" fill="none" stroke="#2a2a2a" stroke-width="1.8"/>
+  <path d="M200,125 L242,188" fill="none" stroke="#2a2a2a" stroke-width="1.8"/>
+  <path d="M200,125 L268,178" fill="none" stroke="#2a2a2a" stroke-width="1.8"/>
+  <!-- Polka dots on umbrella -->
+  <circle cx="160" cy="158" r="8" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="200" cy="150" r="8" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="240" cy="158" r="8" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="143" cy="175" r="6" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <circle cx="178" cy="170" r="6" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <circle cx="222" cy="170" r="6" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <circle cx="257" cy="175" r="6" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <!-- Umbrella tips/scallops at bottom -->
+  <path d="M120,190 Q128,198 136,190" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M136,190 Q152,202 168,190" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M168,190 Q184,202 200,190" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M200,190 Q216,202 232,190" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M232,190 Q248,202 264,190" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M264,190 Q272,198 280,190" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Umbrella handle -->
+  <path d="M200,190 L200,360 Q200,376 185,376 Q170,376 170,362" fill="none" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- === PUDDLE on ground === -->
+  <ellipse cx="200" cy="430" rx="80" ry="18" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Ripple rings in puddle -->
+  <ellipse cx="178" cy="428" rx="16" ry="5" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <ellipse cx="178" cy="428" rx="9" ry="3" fill="none" stroke="#2a2a2a" stroke-width="1.2"/>
+  <ellipse cx="222" cy="432" rx="14" ry="4.5" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <ellipse cx="222" cy="432" rx="8" ry="2.8" fill="none" stroke="#2a2a2a" stroke-width="1.2"/>
+
+  <!-- === BEAR (holding umbrella, looking up) === -->
+  <!-- Left ear outer -->
+  <circle cx="158" cy="228" r="20" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="161" cy="231" r="11" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Right ear outer -->
+  <circle cx="242" cy="228" r="20" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="239" cy="231" r="11" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Head -->
+  <circle cx="200" cy="270" r="54" fill="white" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Eyes looking up -->
+  <circle cx="183" cy="260" r="7" fill="white" stroke="#2a2a2a" stroke-width="2.2"/>
+  <circle cx="183" cy="257" r="3" fill="#2a2a2a"/>
+  <circle cx="217" cy="260" r="7" fill="white" stroke="#2a2a2a" stroke-width="2.2"/>
+  <circle cx="217" cy="257" r="3" fill="#2a2a2a"/>
+  <!-- Muzzle -->
+  <ellipse cx="200" cy="284" rx="24" ry="17" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <!-- Nose -->
+  <ellipse cx="200" cy="277" rx="7" ry="4.8" fill="#2a2a2a"/>
+  <!-- Neutral/wondering expression -->
+  <path d="M191,291 Q200,295 209,291" fill="none" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Body -->
+  <ellipse cx="200" cy="370" rx="66" ry="72" fill="white" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Belly -->
+  <ellipse cx="200" cy="374" rx="38" ry="44" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <!-- Right arm raised (holding umbrella) -->
+  <path d="M258,330 Q270,302 220,210" fill="white" stroke="#2a2a2a" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Right paw at umbrella handle -->
+  <ellipse cx="220" cy="208" rx="14" ry="10" fill="white" stroke="#2a2a2a" stroke-width="2.2"/>
+  <!-- Left arm relaxed at side -->
+  <path d="M142,330 Q122,360 128,390" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="130" cy="394" rx="15" ry="10" fill="white" stroke="#2a2a2a" stroke-width="2.2"/>
+  <!-- Legs -->
+  <ellipse cx="168" cy="432" rx="28" ry="18" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <ellipse cx="162" cy="449" rx="22" ry="11" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <ellipse cx="232" cy="432" rx="28" ry="18" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <ellipse cx="238" cy="449" rx="22" ry="11" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+
+  <!-- Activity prompt -->
+  <text x="200" y="478" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="13" fill="#555">
+    <tspan x="200" dy="0">비 오는 날 어떤 기분이 드나요?</tspan>
+    <tspan x="200" dy="18">다온이 표정을 그려 보세요.</tspan>
+  </text>
+  <!-- Footer -->
+  <text x="200" y="540" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="10" fill="#aaa">마음마을 © 색칠공부</text>
+</svg>

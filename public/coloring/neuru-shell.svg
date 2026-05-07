@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560">
+  <rect width="400" height="560" fill="white"/>
+  <rect x="8" y="8" width="384" height="544" rx="14" stroke="#2a2a2a" stroke-width="3" fill="none"/>
+  <rect x="16" y="16" width="368" height="528" rx="10" stroke="#2a2a2a" stroke-width="1" fill="none"/>
+  <text x="200" y="50" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="20" font-weight="bold" fill="#2a2a2a">꽃무늬 등껍질</text>
+  <line x1="40" y1="62" x2="360" y2="62" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- Large shell close-up filling page -->
+  <!-- Shell outer dome - large -->
+  <ellipse cx="200" cy="270" rx="158" ry="130" fill="white" stroke="#2a2a2a" stroke-width="3.5"/>
+  <!-- Shell underplate rim -->
+  <ellipse cx="200" cy="360" rx="158" ry="44" fill="white" stroke="#2a2a2a" stroke-width="3"/>
+
+  <!-- Large hexagonal panels -->
+  <!-- Center hex -->
+  <polygon points="200,148 240,170 240,214 200,236 160,214 160,170" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Upper right -->
+  <polygon points="240,148 280,170 280,214 240,236 200,214 200,170" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Upper left -->
+  <polygon points="160,148 200,170 200,214 160,236 120,214 120,170" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Lower center -->
+  <polygon points="200,214 240,236 240,280 200,302 160,280 160,236" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Lower right -->
+  <polygon points="240,214 280,236 280,280 240,302 200,280 200,236" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Lower left -->
+  <polygon points="160,214 200,236 200,280 160,302 120,280 120,236" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Bottom center -->
+  <polygon points="200,280 240,302 240,346 200,368 160,346 160,302" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+
+  <!-- Flower decoration in CENTER hex (filled pattern) -->
+  <circle cx="200" cy="192" r="16" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="200" cy="173" rx="8" ry="12" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="214" cy="181" rx="8" ry="12" fill="white" stroke="#2a2a2a" stroke-width="2" transform="rotate(60,214,181)"/>
+  <ellipse cx="214" cy="203" rx="8" ry="12" fill="white" stroke="#2a2a2a" stroke-width="2" transform="rotate(120,214,203)"/>
+  <ellipse cx="200" cy="211" rx="8" ry="12" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="186" cy="203" rx="8" ry="12" fill="white" stroke="#2a2a2a" stroke-width="2" transform="rotate(240,186,203)"/>
+  <ellipse cx="186" cy="181" rx="8" ry="12" fill="white" stroke="#2a2a2a" stroke-width="2" transform="rotate(300,186,181)"/>
+
+  <!-- Flower in LOWER RIGHT hex -->
+  <circle cx="240" cy="258" r="13" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="240" cy="242" rx="7" ry="10" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="252" cy="249" rx="7" ry="10" fill="white" stroke="#2a2a2a" stroke-width="2" transform="rotate(60,252,249)"/>
+  <ellipse cx="252" cy="267" rx="7" ry="10" fill="white" stroke="#2a2a2a" stroke-width="2" transform="rotate(120,252,267)"/>
+  <ellipse cx="240" cy="274" rx="7" ry="10" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="228" cy="267" rx="7" ry="10" fill="white" stroke="#2a2a2a" stroke-width="2" transform="rotate(240,228,267)"/>
+  <ellipse cx="228" cy="249" rx="7" ry="10" fill="white" stroke="#2a2a2a" stroke-width="2" transform="rotate(300,228,249)"/>
+
+  <!-- EMPTY hex panels with dashed border hint for child to draw -->
+  <!-- Upper right - empty with dashed "draw here" hint -->
+  <text x="240" y="188" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="9" fill="#aaa">나만의</text>
+  <text x="240" y="200" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="9" fill="#aaa">무늬</text>
+  <!-- Upper left - empty -->
+  <text x="160" y="188" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="9" fill="#aaa">나만의</text>
+  <text x="160" y="200" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="9" fill="#aaa">무늬</text>
+  <!-- Lower left - empty -->
+  <text x="160" y="254" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="9" fill="#aaa">나만의</text>
+  <text x="160" y="266" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="9" fill="#aaa">무늬</text>
+  <!-- Bottom center - small star hint -->
+  <polygon points="200,310 203,320 213,320 205,326 208,336 200,330 192,336 195,326 187,320 197,320" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+
+  <!-- Lower center - simple circle pattern -->
+  <circle cx="200" cy="323" r="8" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <circle cx="200" cy="323" r="3" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+
+  <!-- Turtle head peeking from left edge -->
+  <ellipse cx="51" cy="248" rx="12" ry="16" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <circle cx="42" cy="232" r="19" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <circle cx="36" cy="227" r="6" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="35" cy="227" r="2.5" fill="#2a2a2a"/>
+  <circle cx="34" cy="225" r="1" fill="white"/>
+  <path d="M34,237 Q41,244 49,239" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Front legs visible at bottom -->
+  <ellipse cx="120" cy="395" rx="25" ry="14" fill="white" stroke="#2a2a2a" stroke-width="2.5" transform="rotate(10,120,395)"/>
+  <ellipse cx="280" cy="395" rx="25" ry="14" fill="white" stroke="#2a2a2a" stroke-width="2.5" transform="rotate(-10,280,395)"/>
+  <!-- Back legs -->
+  <ellipse cx="85" cy="415" rx="20" ry="12" fill="white" stroke="#2a2a2a" stroke-width="2.5" transform="rotate(20,85,415)"/>
+  <ellipse cx="315" cy="415" rx="20" ry="12" fill="white" stroke="#2a2a2a" stroke-width="2.5" transform="rotate(-20,315,415)"/>
+  <!-- Tail -->
+  <path d="M200,400 Q200,415 196,420" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Activity prompt -->
+  <text x="200" y="490" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="13" fill="#555">
+    <tspan x="200" dy="0">느루의 등껍질에 나를 나타내는</tspan>
+    <tspan x="200" dy="18">무늬를 그려 보세요.</tspan>
+  </text>
+  <text x="200" y="540" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="10" fill="#aaa">마음마을 © 색칠공부</text>
+</svg>

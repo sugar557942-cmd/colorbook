@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560" width="400" height="560">
+  <rect width="400" height="560" fill="white"/>
+  <rect x="8" y="8" width="384" height="544" rx="14" fill="none" stroke="#2a2a2a" stroke-width="3"/>
+  <rect x="16" y="16" width="368" height="528" rx="10" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="200" y="50" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="20" font-weight="bold" fill="#2a2a2a">마을 지도 그리는 지우</text>
+  <line x1="40" y1="62" x2="360" y2="62" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- Table surface -->
+  <rect x="28" y="360" width="344" height="20" rx="4" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Table legs -->
+  <rect x="48" y="380" width="14" height="60" rx="4" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="338" y="380" width="14" height="60" rx="4" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- Large map spread on table -->
+  <!-- Map paper -->
+  <rect x="48" y="230" width="290" height="132" rx="6" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Map paper corner curl -->
+  <path d="M322,362 Q338,354 338,362Z" fill="white" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Map content: paths and routes -->
+  <path d="M80,315 Q120,305 160,310 Q200,315 240,305 Q270,298 305,310" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M140,250 Q145,275 148,310" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M220,245 Q218,270 222,305" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <!-- River wavy line -->
+  <path d="M70,290 Q90,283 110,290 Q130,297 150,290 Q170,283 190,290 Q210,297 230,290" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round" stroke-dasharray="1,0"/>
+
+  <!-- Map icons: house -->
+  <polygon points="82,268 92,256 102,268" fill="white" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="82" y="268" width="20" height="14" rx="1" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <rect x="89" y="273" width="6" height="9" rx="1" fill="white" stroke="#2a2a2a" stroke-width="1.2"/>
+  <!-- Map icons: tree -->
+  <circle cx="176" cy="260" r="8" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <line x1="176" y1="268" x2="176" y2="280" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Map icons: star/landmark -->
+  <path d="M248,265 L250,271 L256,271 L251,275 L253,281 L248,277 L243,281 L245,275 L240,271 L246,271Z" fill="white" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Map icons: bridge symbol -->
+  <path d="M280,330 L310,330" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M283,330 Q295,320 307,330" fill="none" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Compass rose on map -->
+  <circle cx="310" cy="262" r="16" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <path d="M310,248 L314,260 L310,256 L306,260Z" fill="white" stroke="#2a2a2a" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M310,276 L306,264 L310,268 L314,264Z" fill="white" stroke="#2a2a2a" stroke-width="1.5" stroke-linejoin="round"/>
+  <line x1="296" y1="262" x2="324" y2="262" stroke="#2a2a2a" stroke-width="1.5"/>
+  <text x="310" y="246" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" fill="#2a2a2a">N</text>
+  <!-- Map grid faint -->
+  <line x1="48" y1="270" x2="338" y2="270" stroke="#2a2a2a" stroke-width="0.8" stroke-dasharray="3,4"/>
+  <line x1="48" y1="300" x2="338" y2="300" stroke="#2a2a2a" stroke-width="0.8" stroke-dasharray="3,4"/>
+  <line x1="48" y1="330" x2="338" y2="330" stroke="#2a2a2a" stroke-width="0.8" stroke-dasharray="3,4"/>
+  <line x1="118" y1="230" x2="118" y2="362" stroke="#2a2a2a" stroke-width="0.8" stroke-dasharray="3,4"/>
+  <line x1="188" y1="230" x2="188" y2="362" stroke="#2a2a2a" stroke-width="0.8" stroke-dasharray="3,4"/>
+  <line x1="258" y1="230" x2="258" y2="362" stroke="#2a2a2a" stroke-width="0.8" stroke-dasharray="3,4"/>
+
+  <!-- Ruler beside map -->
+  <rect x="338" y="235" width="16" height="120" rx="4" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Ruler ticks -->
+  <line x1="338" y1="260" x2="346" y2="260" stroke="#2a2a2a" stroke-width="1.2"/>
+  <line x1="338" y1="275" x2="342" y2="275" stroke="#2a2a2a" stroke-width="1"/>
+  <line x1="338" y1="285" x2="346" y2="285" stroke="#2a2a2a" stroke-width="1.2"/>
+  <line x1="338" y1="300" x2="342" y2="300" stroke="#2a2a2a" stroke-width="1"/>
+  <line x1="338" y1="310" x2="346" y2="310" stroke="#2a2a2a" stroke-width="1.2"/>
+  <line x1="338" y1="325" x2="342" y2="325" stroke="#2a2a2a" stroke-width="1"/>
+  <line x1="338" y1="335" x2="346" y2="335" stroke="#2a2a2a" stroke-width="1.2"/>
+
+  <!-- Pencil on table -->
+  <rect x="38" y="348" width="8" height="32" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2" transform="rotate(15 42 364)"/>
+  <polygon points="38,380 46,380 42,390" fill="white" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" transform="rotate(15 42 385)"/>
+
+  <!-- OWL leaning over map, arms outstretched -->
+  <!-- Body -->
+  <ellipse cx="200" cy="200" rx="42" ry="48" fill="white" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Belly -->
+  <ellipse cx="200" cy="212" rx="24" ry="30" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <path d="M188,203 Q200,206 212,203" fill="none" stroke="#2a2a2a" stroke-width="1" stroke-linecap="round"/>
+  <path d="M186,214 Q200,217 214,214" fill="none" stroke="#2a2a2a" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Wing left extending over map (holding pencil) -->
+  <path d="M160,192 Q110,205 80,230" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Wing feathers left -->
+  <path d="M160,192 Q140,185 120,195 Q130,208 150,206Z" fill="white" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Wing right extending (holding magnifying glass) -->
+  <path d="M240,192 Q290,205 320,228" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M240,192 Q260,185 280,195 Q270,208 250,206Z" fill="white" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Magnifying glass in right talon -->
+  <circle cx="330" cy="250" r="18" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <circle cx="330" cy="250" r="12" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="343" y1="263" x2="355" y2="276" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Pencil in left talon -->
+  <rect x="66" y="240" width="7" height="28" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2" transform="rotate(-40 70 254)"/>
+  <polygon points="65,268 72,268 68,278" fill="white" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" transform="rotate(-40 68 273)"/>
+
+  <!-- HEAD -->
+  <circle cx="200" cy="122" r="56" fill="white" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Ear tufts -->
+  <polygon points="172,78 164,52 184,74" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="228,78 236,52 216,74" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Eyes -->
+  <circle cx="180" cy="120" r="22" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <circle cx="220" cy="120" r="22" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <circle cx="180" cy="120" r="14" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="220" cy="120" r="14" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="181" cy="121" r="7" fill="#2a2a2a"/>
+  <circle cx="221" cy="121" r="7" fill="#2a2a2a"/>
+  <circle cx="184" cy="117" r="2.5" fill="white"/>
+  <circle cx="224" cy="117" r="2.5" fill="white"/>
+  <path d="M162,106 Q172,100 183,104" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M198,104 Q210,99 222,103" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Beak -->
+  <path d="M196,135 L200,144 L204,135 Q200,132 196,135Z" fill="white" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Spectacles -->
+  <circle cx="180" cy="120" r="24" fill="none" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="220" cy="120" r="24" fill="none" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="204" y1="120" x2="196" y2="120" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="156" y1="116" x2="146" y2="112" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="244" y1="116" x2="254" y2="112" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Activity prompt -->
+  <text x="200" y="473" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="13" fill="#555">
+    <tspan x="200" dy="0">지우의 지도에 내가 좋아하는</tspan>
+    <tspan x="200" dy="18">장소를 표시해 보세요.</tspan>
+  </text>
+  <text x="200" y="540" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="10" fill="#aaa">마음마을 © 색칠공부</text>
+</svg>

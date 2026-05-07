@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560">
+  <rect width="400" height="560" fill="white"/>
+  <rect x="8" y="8" width="384" height="544" rx="14" fill="none" stroke="#2a2a2a" stroke-width="3"/>
+  <rect x="16" y="16" width="368" height="528" rx="10" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="200" y="50" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="20" font-weight="bold" fill="#2a2a2a">당근 수확하는 하루</text>
+  <line x1="40" y1="62" x2="360" y2="62" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- Ground soil -->
+  <path d="M30,400 Q200,392 375,400" fill="none" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Soil texture bumps -->
+  <path d="M60,400 Q70,393 80,400" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <path d="M110,400 Q120,391 130,400" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <path d="M250,400 Q260,393 270,400" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <path d="M300,400 Q310,391 320,400" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Soil crumbles around pulled carrot -->
+  <circle cx="230" cy="405" r="4" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="245" cy="410" r="3" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="220" cy="412" r="3" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="255" cy="404" r="2.5" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+
+  <!-- Big carrot being pulled -->
+  <!-- Carrot body (large triangle shape) -->
+  <path d="M215,240 L245,240 Q255,270 248,340 Q245,380 235,395 Q230,403 225,395 Q215,380 212,340 Q205,270 215,240Z" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Carrot tip -->
+  <path d="M225,395 Q225,415 222,420" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Carrot horizontal lines (texture) -->
+  <path d="M210,280 Q230,275 250,280" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <path d="M208,310 Q228,305 252,310" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <path d="M210,340 Q230,335 250,340" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <path d="M213,368 Q230,363 247,368" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Carrot leafy top -->
+  <path d="M218,240 Q210,210 215,185 Q220,170 225,185" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M225,240 Q225,205 225,178 Q225,162 225,178" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M232,240 Q240,210 235,185 Q230,170 225,185" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M215,240 Q200,218 205,196 Q208,182 217,195" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M235,240 Q250,218 245,196 Q242,182 233,195" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Rabbit (하루) pulling carrot -->
+  <!-- Left ear -->
+  <ellipse cx="140" cy="168" rx="18" ry="50" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <ellipse cx="140" cy="170" rx="10" ry="36" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Right ear -->
+  <ellipse cx="182" cy="162" rx="18" ry="50" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <ellipse cx="182" cy="164" rx="10" ry="36" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Head -->
+  <circle cx="162" cy="218" r="50" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Eyes (wide surprised/delighted) -->
+  <circle cx="146" cy="210" r="9" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="178" cy="210" r="9" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="148" cy="211" r="4.5" fill="#2a2a2a"/>
+  <circle cx="180" cy="211" r="4.5" fill="#2a2a2a"/>
+  <circle cx="145" cy="208" r="2" fill="white"/>
+  <circle cx="177" cy="208" r="2" fill="white"/>
+  <!-- Eyebrows raised -->
+  <path d="M140,200 Q146,194 152,200" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M172,200 Q178,194 184,200" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <!-- Nose + open grin -->
+  <ellipse cx="162" cy="228" rx="6" ry="4.5" fill="none" stroke="#2a2a2a" stroke-width="2"/>
+  <path d="M152,232 Q162,243 172,232" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Body (leaning back pulling) -->
+  <ellipse cx="148" cy="330" rx="52" ry="52" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Arms (both reaching forward to grab carrot) -->
+  <path d="M185,310 Q200,300 210,285" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="213" cy="280" rx="13" ry="9" fill="white" stroke="#2a2a2a" stroke-width="2" transform="rotate(-30,213,280)"/>
+  <path d="M190,325 Q206,320 213,308" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="216" cy="302" rx="13" ry="9" fill="white" stroke="#2a2a2a" stroke-width="2" transform="rotate(-20,216,302)"/>
+  <!-- Left arm (braced) -->
+  <path d="M100,310 Q82,300 75,315" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="69" cy="320" rx="14" ry="9" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Legs (braced/pulling) -->
+  <ellipse cx="125" cy="375" rx="22" ry="14" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <ellipse cx="170" cy="378" rx="22" ry="14" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Tail -->
+  <circle cx="95" cy="325" r="13" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Effort lines -->
+  <path d="M88,248 Q78,240 72,248" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <path d="M84,260 Q73,255 70,263" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+
+  <text x="200" y="476" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="13" fill="#555">하루가 키운 당근 외에 어떤 채소를</text>
+  <text x="200" y="494" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="13" fill="#555">더 수확했을까요?</text>
+  <text x="200" y="540" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#aaa">마음마을 © 색칠공부</text>
+</svg>

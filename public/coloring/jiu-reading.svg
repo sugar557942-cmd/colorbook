@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560" width="400" height="560">
+  <rect width="400" height="560" fill="white"/>
+  <rect x="8" y="8" width="384" height="544" rx="14" fill="none" stroke="#2a2a2a" stroke-width="3"/>
+  <rect x="16" y="16" width="368" height="528" rx="10" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="200" y="50" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="20" font-weight="bold" fill="#2a2a2a">책 읽는 지우</text>
+  <line x1="40" y1="62" x2="360" y2="62" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- Cozy corner wall lines -->
+  <line x1="28" y1="75" x2="28" y2="445" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="28" y1="445" x2="372" y2="445" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- Wallpaper dots -->
+  <circle cx="50" cy="100" r="3" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+  <circle cx="50" cy="130" r="3" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+  <circle cx="50" cy="160" r="3" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+  <circle cx="50" cy="190" r="3" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+  <circle cx="50" cy="220" r="3" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+  <circle cx="65" cy="115" r="3" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+  <circle cx="65" cy="145" r="3" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+  <circle cx="65" cy="175" r="3" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+  <circle cx="65" cy="205" r="3" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+
+  <!-- Small shelf on wall -->
+  <rect x="28" y="240" width="78" height="10" rx="3" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Books on small shelf -->
+  <rect x="32" y="220" width="12" height="21" rx="2" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <rect x="46" y="224" width="10" height="17" rx="2" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <rect x="58" y="218" width="14" height="23" rx="2" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <rect x="74" y="222" width="10" height="19" rx="2" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Shelf brackets -->
+  <line x1="35" y1="250" x2="35" y2="260" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="35" y1="260" x2="28" y2="260" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="98" y1="250" x2="98" y2="260" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="98" y1="260" x2="106" y2="260" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- Cozy pillow/cushion -->
+  <ellipse cx="120" cy="428" rx="82" ry="22" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Pillow seam -->
+  <path d="M60,420 Q120,412 180,420" fill="none" stroke="#2a2a2a" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <!-- Pillow tufts -->
+  <circle cx="120" cy="422" r="4" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="90" cy="424" r="3" fill="none" stroke="#2a2a2a" stroke-width="1.2"/>
+  <circle cx="150" cy="424" r="3" fill="none" stroke="#2a2a2a" stroke-width="1.2"/>
+
+  <!-- Thought bubble -->
+  <!-- Connecting bubbles -->
+  <circle cx="252" cy="145" r="6" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="264" cy="128" r="9" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="278" cy="112" r="13" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Main thought cloud -->
+  <ellipse cx="310" cy="90" rx="52" ry="36" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <ellipse cx="275" cy="88" rx="20" ry="18" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="345" cy="88" rx="20" ry="18" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="310" cy="72" rx="24" ry="15" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Thought bubble interior: lightbulb -->
+  <circle cx="295" cy="90" r="10" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <rect x="291" y="100" width="8" height="5" rx="1" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="293" y1="105" x2="293" y2="108" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="299" y1="105" x2="299" y2="108" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Bulb rays -->
+  <line x1="295" y1="78" x2="295" y2="74" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="284" y1="82" x2="281" y2="79" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="306" y1="82" x2="309" y2="79" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Star in thought bubble -->
+  <path d="M325,84 L327,90 L333,90 L328,94 L330,100 L325,96 L320,100 L322,94 L317,90 L323,90Z" fill="white" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- OWL sitting reading -->
+  <!-- Body -->
+  <ellipse cx="196" cy="354" rx="58" ry="68" fill="white" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Wings -->
+  <path d="M140,336 Q112,354 130,390 Q152,378 152,350Z" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M252,336 Q280,354 262,390 Q240,378 240,350Z" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Belly -->
+  <ellipse cx="196" cy="368" rx="34" ry="44" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <path d="M180,355 Q196,359 212,355" fill="none" stroke="#2a2a2a" stroke-width="1" stroke-linecap="round"/>
+  <path d="M176,368 Q196,372 216,368" fill="none" stroke="#2a2a2a" stroke-width="1" stroke-linecap="round"/>
+  <path d="M180,381 Q196,385 212,381" fill="none" stroke="#2a2a2a" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- HEAD -->
+  <circle cx="196" cy="264" r="60" fill="white" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Ear tufts -->
+  <polygon points="166,214 158,188 178,210" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="226,214 234,188 214,210" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Eyes -->
+  <circle cx="176" cy="260" r="22" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <circle cx="216" cy="260" r="22" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <circle cx="176" cy="260" r="14" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="216" cy="260" r="14" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="177" cy="261" r="7" fill="#2a2a2a"/>
+  <circle cx="217" cy="261" r="7" fill="#2a2a2a"/>
+  <circle cx="180" cy="257" r="2.5" fill="white"/>
+  <circle cx="220" cy="257" r="2.5" fill="white"/>
+  <path d="M158,244 Q168,238 179,242" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M196,242 Q208,237 220,241" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Beak -->
+  <path d="M191,276 L196,287 L201,276 Q196,272 191,276Z" fill="white" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Spectacles -->
+  <circle cx="176" cy="260" r="24" fill="none" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="216" cy="260" r="24" fill="none" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="200" y1="260" x2="192" y2="260" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="152" y1="256" x2="142" y2="252" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="240" y1="256" x2="250" y2="252" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Large open book held by wings -->
+  <path d="M112,408 Q196,394 280,408 L280,448 Q196,434 112,448Z" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Book spine -->
+  <line x1="196" y1="394" x2="196" y2="448" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Page curl at corner -->
+  <path d="M270,408 Q278,404 280,408" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Book text lines left page -->
+  <line x1="122" y1="416" x2="186" y2="412" stroke="#2a2a2a" stroke-width="1.2"/>
+  <line x1="122" y1="423" x2="186" y2="419" stroke="#2a2a2a" stroke-width="1.2"/>
+  <line x1="122" y1="430" x2="186" y2="426" stroke="#2a2a2a" stroke-width="1.2"/>
+  <line x1="122" y1="437" x2="186" y2="433" stroke="#2a2a2a" stroke-width="1.2"/>
+  <!-- Book text lines right page -->
+  <line x1="206" y1="412" x2="270" y2="416" stroke="#2a2a2a" stroke-width="1.2"/>
+  <line x1="206" y1="419" x2="270" y2="423" stroke="#2a2a2a" stroke-width="1.2"/>
+  <line x1="206" y1="426" x2="270" y2="430" stroke="#2a2a2a" stroke-width="1.2"/>
+  <line x1="206" y1="433" x2="270" y2="437" stroke="#2a2a2a" stroke-width="1.2"/>
+
+  <!-- Talon peeks -->
+  <path d="M140,448 L133,458 M140,448 L140,462 M140,448 L148,459" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M252,448 L245,458 M252,448 L252,462 M252,448 L260,459" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Activity prompt -->
+  <text x="200" y="473" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="13" fill="#555">
+    <tspan x="200" dy="0">지우가 읽고 있는 책은</tspan>
+    <tspan x="200" dy="18">무슨 이야기일까요?</tspan>
+  </text>
+  <text x="200" y="540" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="10" fill="#aaa">마음마을 © 색칠공부</text>
+</svg>

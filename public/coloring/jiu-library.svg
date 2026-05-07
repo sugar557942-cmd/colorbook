@@ -1,103 +1,131 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
-  <style>
-    .colorable { fill: white; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; cursor: pointer; }
-    .outline { fill: none; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
-    .fixed { fill: #333; }
-  </style>
-  <rect width="400" height="500" fill="#FFFFFF"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560" width="400" height="560">
+  <rect width="400" height="560" fill="white"/>
+  <rect x="8" y="8" width="384" height="544" rx="14" fill="none" stroke="#2a2a2a" stroke-width="3"/>
+  <rect x="16" y="16" width="368" height="528" rx="10" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="200" y="50" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="20" font-weight="bold" fill="#2a2a2a">지우의 지혜 도서관</text>
+  <line x1="40" y1="62" x2="360" y2="62" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="5,4"/>
 
-  <!-- 책장 배경 -->
-  <rect x="20" y="50" width="80" height="360" rx="6" class="colorable" id="shelf-l"/>
-  <rect x="300" y="50" width="80" height="360" rx="6" class="colorable" id="shelf-r"/>
-  <!-- 책장 선반 -->
-  <rect x="20" y="168" width="80" height="10" rx="3" class="colorable" id="shelf-bar-l1"/>
-  <rect x="20" y="285" width="80" height="10" rx="3" class="colorable" id="shelf-bar-l2"/>
-  <rect x="300" y="168" width="80" height="10" rx="3" class="colorable" id="shelf-bar-r1"/>
-  <rect x="300" y="285" width="80" height="10" rx="3" class="colorable" id="shelf-bar-r2"/>
+  <!-- Floor line -->
+  <line x1="28" y1="442" x2="372" y2="442" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
 
-  <!-- 책들 (왼쪽 선반) -->
-  <rect x="28" y="80" width="16" height="82" rx="3" class="colorable" id="book-l1"/>
-  <rect x="46" y="90" width="14" height="72" rx="3" class="colorable" id="book-l2"/>
-  <rect x="62" y="75" width="18" height="87" rx="3" class="colorable" id="book-l3"/>
-  <rect x="28" y="198" width="15" height="80" rx="3" class="colorable" id="book-l4"/>
-  <rect x="45" y="205" width="18" height="73" rx="3" class="colorable" id="book-l5"/>
-  <rect x="65" y="192" width="14" height="86" rx="3" class="colorable" id="book-l6"/>
+  <!-- Bookshelf unit (left side) -->
+  <rect x="28" y="115" width="168" height="327" rx="4" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Shelf planks -->
+  <line x1="28" y1="205" x2="196" y2="205" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="28" y1="295" x2="196" y2="295" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="28" y1="385" x2="196" y2="385" stroke="#2a2a2a" stroke-width="2"/>
 
-  <!-- 책들 (오른쪽 선반) -->
-  <rect x="308" y="82" width="16" height="80" rx="3" class="colorable" id="book-r1"/>
-  <rect x="326" y="72" width="18" height="90" rx="3" class="colorable" id="book-r2"/>
-  <rect x="346" y="88" width="15" height="74" rx="3" class="colorable" id="book-r3"/>
-  <rect x="308" y="200" width="18" height="78" rx="3" class="colorable" id="book-r4"/>
-  <rect x="328" y="195" width="15" height="83" rx="3" class="colorable" id="book-r5"/>
-  <rect x="345" y="205" width="16" height="73" rx="3" class="colorable" id="book-r6"/>
+  <!-- Top shelf books -->
+  <rect x="34" y="126" width="16" height="73" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="52" y="133" width="22" height="66" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="76" y="128" width="15" height="71" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="93" y="136" width="19" height="63" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="114" y="124" width="24" height="75" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="140" y="130" width="17" height="69" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="159" y="126" width="27" height="73" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Book detail lines -->
+  <line x1="42" y1="130" x2="42" y2="195" stroke="#2a2a2a" stroke-width="1"/>
+  <line x1="63" y1="138" x2="63" y2="195" stroke="#2a2a2a" stroke-width="1"/>
+  <line x1="126" y1="128" x2="126" y2="195" stroke="#2a2a2a" stroke-width="1"/>
 
-  <!-- 지우 몸통 (부엉이) -->
-  <ellipse cx="200" cy="368" rx="68" ry="78" class="colorable" id="body"/>
-  <!-- 배 깃털 패턴 -->
-  <ellipse cx="200" cy="372" rx="42" ry="55" class="colorable" id="belly"/>
-  <path d="M175 345 Q200 355 225 345" class="outline" stroke-width="1.5"/>
-  <path d="M170 362 Q200 372 230 362" class="outline" stroke-width="1.5"/>
-  <path d="M172 378 Q200 388 228 378" class="outline" stroke-width="1.5"/>
+  <!-- Middle shelf books -->
+  <rect x="34" y="215" width="20" height="73" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="56" y="222" width="16" height="66" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="74" y="213" width="26" height="75" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="102" y="220" width="18" height="68" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="122" y="212" width="22" height="76" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="146" y="218" width="16" height="70" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="164" y="215" width="24" height="73" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2"/>
 
-  <!-- 날개 -->
-  <ellipse cx="128" cy="370" rx="30" ry="55" transform="rotate(12 128 370)" class="colorable" id="wing-l"/>
-  <ellipse cx="272" cy="370" rx="30" ry="55" transform="rotate(-12 272 370)" class="colorable" id="wing-r"/>
+  <!-- Bottom shelf books -->
+  <rect x="34" y="304" width="22" height="74" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="58" y="310" width="18" height="68" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="78" y="304" width="26" height="74" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="106" y="308" width="20" height="70" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="128" y="304" width="16" height="74" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="146" y="307" width="24" height="71" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2"/>
 
-  <!-- 발 -->
-  <ellipse cx="178" cy="446" rx="28" ry="15" class="colorable" id="foot-l"/>
-  <ellipse cx="222" cy="446" rx="28" ry="15" class="colorable" id="foot-r"/>
-  <!-- 발톱 -->
-  <line x1="162" y1="452" x2="155" y2="462" class="outline" stroke-width="2"/>
-  <line x1="178" y1="455" x2="178" y2="466" class="outline" stroke-width="2"/>
-  <line x1="194" y1="452" x2="200" y2="462" class="outline" stroke-width="2"/>
-  <line x1="206" y1="452" x2="200" y2="462" class="outline" stroke-width="2"/>
-  <line x1="222" y1="455" x2="222" y2="466" class="outline" stroke-width="2"/>
-  <line x1="238" y1="452" x2="245" y2="462" class="outline" stroke-width="2"/>
+  <!-- Reading armchair -->
+  <!-- Seat -->
+  <rect x="208" y="340" width="148" height="100" rx="20" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Back -->
+  <rect x="208" y="268" width="148" height="80" rx="15" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Left armrest -->
+  <rect x="196" y="306" width="24" height="72" rx="11" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Right armrest -->
+  <rect x="344" y="306" width="24" height="72" rx="11" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Chair legs -->
+  <rect x="220" y="436" width="14" height="18" rx="4" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="330" y="436" width="14" height="18" rx="4" fill="white" stroke="#2a2a2a" stroke-width="2"/>
 
-  <!-- 머리 -->
-  <circle cx="200" cy="248" r="80" class="colorable" id="head"/>
-  <!-- 귀 뿔 (부엉이) -->
-  <polygon points="165,185 155,148 185,178" class="colorable" id="tuft-l"/>
-  <polygon points="235,185 245,148 215,178" class="colorable" id="tuft-r"/>
+  <!-- Floor lamp (right of chair) -->
+  <line x1="370" y1="442" x2="370" y2="265" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="370" cy="444" rx="14" ry="5" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <polygon points="350,267 390,267 383,245 357,245" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <line x1="370" y1="267" x2="352" y2="280" stroke="#2a2a2a" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="370" y1="267" x2="370" y2="288" stroke="#2a2a2a" stroke-width="1" stroke-dasharray="3,3"/>
 
-  <!-- 안면 디스크 (부엉이 특징) -->
-  <ellipse cx="200" cy="255" rx="65" ry="60" class="colorable" id="face-disc"/>
+  <!-- OWL sitting in chair -->
+  <!-- Body -->
+  <ellipse cx="282" cy="370" rx="42" ry="52" fill="white" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Wing left -->
+  <path d="M244,355 Q222,372 238,402 Q255,392 255,368Z" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Wing right -->
+  <path d="M320,355 Q342,372 326,402 Q309,392 309,368Z" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Belly oval -->
+  <ellipse cx="282" cy="382" rx="24" ry="31" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <path d="M271,374 Q282,377 293,374" fill="none" stroke="#2a2a2a" stroke-width="1" stroke-linecap="round"/>
+  <path d="M269,384 Q282,387 295,384" fill="none" stroke="#2a2a2a" stroke-width="1" stroke-linecap="round"/>
+  <path d="M271,394 Q282,397 293,394" fill="none" stroke="#2a2a2a" stroke-width="1" stroke-linecap="round"/>
 
-  <!-- 큰 눈 (부엉이) -->
-  <circle cx="178" cy="248" r="22" class="colorable" id="eye-l-outer"/>
-  <circle cx="178" cy="248" r="15" class="colorable" id="eye-l-inner"/>
-  <circle cx="178" cy="248" r="8" class="fixed"/>
-  <circle cx="174" cy="244" r="3" fill="white"/>
-  <circle cx="222" cy="248" r="22" class="colorable" id="eye-r-outer"/>
-  <circle cx="222" cy="248" r="15" class="colorable" id="eye-r-inner"/>
-  <circle cx="222" cy="248" r="8" class="fixed"/>
-  <circle cx="218" cy="244" r="3" fill="white"/>
+  <!-- HEAD -->
+  <circle cx="282" cy="296" r="52" fill="white" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Ear tufts -->
+  <polygon points="256,252 249,228 267,248" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="308,252 315,228 297,248" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 
-  <!-- 부리 -->
-  <polygon points="200,262 192,278 208,278" class="colorable" id="beak"/>
+  <!-- Eyes -->
+  <circle cx="264" cy="294" r="20" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <circle cx="300" cy="294" r="20" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <circle cx="264" cy="294" r="13" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="300" cy="294" r="13" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="265" cy="295" r="6" fill="#2a2a2a"/>
+  <circle cx="301" cy="295" r="6" fill="#2a2a2a"/>
+  <circle cx="268" cy="291" r="2" fill="white"/>
+  <circle cx="304" cy="291" r="2" fill="white"/>
+  <!-- Lash lines -->
+  <path d="M248,280 Q256,275 266,278" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M282,278 Q292,274 302,277" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
 
-  <!-- 안경 (독서용) -->
-  <circle cx="178" cy="248" r="25" class="outline" stroke-width="2"/>
-  <circle cx="222" cy="248" r="25" class="outline" stroke-width="2"/>
-  <line x1="203" y1="248" x2="197" y2="248" class="outline" stroke-width="2"/>
-  <path d="M153 245 Q142 238 138 242" class="outline" stroke-width="2"/>
-  <path d="M247 245 Q258 238 262 242" class="outline" stroke-width="2"/>
+  <!-- Beak -->
+  <path d="M278,308 L282,317 L286,308 Q282,305 278,308Z" fill="white" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 
-  <!-- 든 책 -->
-  <rect x="118" y="330" width="62" height="80" rx="5" class="colorable" id="open-book-l"/>
-  <rect x="220" y="330" width="62" height="80" rx="5" class="colorable" id="open-book-r"/>
-  <line x1="200" y1="328" x2="200" y2="412" class="outline" stroke-width="3"/>
-  <!-- 책 줄 -->
-  <line x1="124" y1="348" x2="175" y2="348" class="outline" stroke-width="1.2"/>
-  <line x1="124" y1="358" x2="175" y2="358" class="outline" stroke-width="1.2"/>
-  <line x1="124" y1="368" x2="175" y2="368" class="outline" stroke-width="1.2"/>
-  <line x1="225" y1="348" x2="276" y2="348" class="outline" stroke-width="1.2"/>
-  <line x1="225" y1="358" x2="276" y2="358" class="outline" stroke-width="1.2"/>
-  <line x1="225" y1="368" x2="276" y2="368" class="outline" stroke-width="1.2"/>
+  <!-- Spectacles -->
+  <circle cx="264" cy="294" r="22" fill="none" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="300" cy="294" r="22" fill="none" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="286" y1="294" x2="278" y2="294" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="242" y1="290" x2="233" y2="286" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="322" y1="290" x2="331" y2="286" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
 
-  <!-- 별 장식 -->
-  <path d="M355 310 L357 303 L359 310 L366 312 L359 314 L357 321 L355 314 L348 312 Z" class="colorable" id="star-r"/>
-  <path d="M45 310 L47 303 L49 310 L56 312 L49 314 L47 321 L45 314 L38 312 Z" class="colorable" id="star-l"/>
+  <!-- Open book -->
+  <path d="M242,424 Q282,414 322,424 L322,452 Q282,442 242,452Z" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="282" y1="414" x2="282" y2="452" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="250" y1="428" x2="278" y2="423" stroke="#2a2a2a" stroke-width="1.2"/>
+  <line x1="250" y1="435" x2="278" y2="430" stroke="#2a2a2a" stroke-width="1.2"/>
+  <line x1="250" y1="442" x2="278" y2="437" stroke="#2a2a2a" stroke-width="1.2"/>
+  <line x1="286" y1="423" x2="314" y2="428" stroke="#2a2a2a" stroke-width="1.2"/>
+  <line x1="286" y1="430" x2="314" y2="435" stroke="#2a2a2a" stroke-width="1.2"/>
+  <line x1="286" y1="437" x2="314" y2="442" stroke="#2a2a2a" stroke-width="1.2"/>
 
-  <text x="200" y="490" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#9B8ED6" font-weight="bold">지우의 도서관 🦉</text>
+  <!-- Talons -->
+  <path d="M252,452 L245,462 M252,452 L252,465 M252,452 L260,463" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M312,452 L305,462 M312,452 L312,465 M312,452 L320,463" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Activity prompt -->
+  <text x="200" y="480" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="13" fill="#555">
+    <tspan x="200" dy="0">지우의 책장에서 읽고 싶은 책 제목을</tspan>
+    <tspan x="200" dy="18">적어 보세요.</tspan>
+  </text>
+  <text x="200" y="540" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="10" fill="#aaa">마음마을 © 색칠공부</text>
 </svg>

@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560">
+  <!-- White background -->
+  <rect width="400" height="560" fill="white"/>
+  <!-- Outer border -->
+  <rect x="8" y="8" width="384" height="544" rx="14" stroke="#2a2a2a" stroke-width="3" fill="none"/>
+  <!-- Inner border -->
+  <rect x="16" y="16" width="368" height="528" rx="10" stroke="#2a2a2a" stroke-width="1" fill="none"/>
+  <!-- Title -->
+  <text x="200" y="50" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="20" font-weight="bold" fill="#2a2a2a">친구 말을 듣는 다온이</text>
+  <!-- Dashed divider -->
+  <line x1="40" y1="62" x2="360" y2="62" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- === GROUND LINE === -->
+  <line x1="30" y1="430" x2="370" y2="430" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round" stroke-dasharray="8,4"/>
+
+  <!-- === MYSTERY FRIEND (left side, simple silhouette shape) === -->
+  <!-- Friend body - rounded simple shape -->
+  <ellipse cx="100" cy="320" rx="48" ry="58" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Friend head -->
+  <circle cx="100" cy="240" r="44" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Friend ears (little round ears - could be any animal) -->
+  <circle cx="80" cy="202" r="16" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="120" cy="202" r="16" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Friend face - left blank/simple for mystery -->
+  <!-- Just simple eyes -->
+  <circle cx="89" cy="234" r="6" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="90" cy="233" r="2.5" fill="#2a2a2a"/>
+  <circle cx="111" cy="234" r="6" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="112" cy="233" r="2.5" fill="#2a2a2a"/>
+  <!-- Friend talking mouth (open) -->
+  <path d="M90,250 Q100,262 110,250" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <!-- Friend arm pointing/gesturing toward speech bubble -->
+  <path d="M142,295 Q165,275 185,268" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="188" cy="267" rx="13" ry="9" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Friend legs -->
+  <ellipse cx="78" cy="375" rx="24" ry="16" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <ellipse cx="72" cy="390" rx="18" ry="10" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <ellipse cx="122" cy="375" rx="24" ry="16" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <ellipse cx="128" cy="390" rx="18" ry="10" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+
+  <!-- === SPEECH BUBBLE (large, empty for kids to write in) === -->
+  <!-- Bubble body -->
+  <rect x="150" y="75" width="210" height="130" rx="20" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Bubble tail pointing to friend -->
+  <path d="M175,205 L158,232 L195,210" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Lines inside bubble (for writing) -->
+  <line x1="172" y1="112" x2="342" y2="112" stroke="#2a2a2a" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <line x1="172" y1="132" x2="342" y2="132" stroke="#2a2a2a" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <line x1="172" y1="152" x2="342" y2="152" stroke="#2a2a2a" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <line x1="172" y1="172" x2="342" y2="172" stroke="#2a2a2a" stroke-width="1.2" stroke-dasharray="4,3"/>
+
+  <!-- === BEAR (right side, leaning in attentively) === -->
+  <!-- Left ear outer -->
+  <circle cx="258" cy="230" r="21" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="261" cy="233" r="12" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Right ear outer -->
+  <circle cx="338" cy="230" r="21" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="335" cy="233" r="12" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Head (leaning left toward friend) -->
+  <circle cx="298" cy="272" r="56" fill="white" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Eyes (attentive, looking left toward friend) -->
+  <circle cx="278" cy="262" r="7.5" fill="white" stroke="#2a2a2a" stroke-width="2.2"/>
+  <circle cx="276" cy="261" r="3.2" fill="#2a2a2a"/>
+  <circle cx="318" cy="262" r="7.5" fill="white" stroke="#2a2a2a" stroke-width="2.2"/>
+  <circle cx="316" cy="261" r="3.2" fill="#2a2a2a"/>
+  <!-- Eyebrows slightly raised (attentive) -->
+  <path d="M272,252 Q278,248 284,252" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M312,252 Q318,248 324,252" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <!-- Muzzle -->
+  <ellipse cx="298" cy="288" rx="24" ry="17" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <!-- Nose -->
+  <ellipse cx="298" cy="281" rx="7" ry="4.8" fill="#2a2a2a"/>
+  <!-- Gentle listening smile -->
+  <path d="M289,294 Q298,302 307,294" fill="none" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Blush (empathetic) -->
+  <ellipse cx="267" cy="288" rx="10" ry="7" fill="none" stroke="#2a2a2a" stroke-width="1.2" stroke-dasharray="2,2"/>
+  <ellipse cx="329" cy="288" rx="10" ry="7" fill="none" stroke="#2a2a2a" stroke-width="1.2" stroke-dasharray="2,2"/>
+  <!-- Body (leaning forward) -->
+  <ellipse cx="298" cy="390" rx="65" ry="68" fill="white" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Belly -->
+  <ellipse cx="298" cy="394" rx="38" ry="42" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <!-- Left arm (slightly forward, attentive gesture) -->
+  <path d="M240,348 Q218,355 210,375" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="208" cy="379" rx="14" ry="10" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Right arm relaxed -->
+  <path d="M356,348 Q372,358 374,390" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="374" cy="394" rx="13" ry="9" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Legs -->
+  <ellipse cx="268" cy="450" rx="26" ry="17" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <ellipse cx="260" cy="464" rx="20" ry="11" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <ellipse cx="328" cy="450" rx="26" ry="17" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <ellipse cx="336" cy="464" rx="20" ry="11" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+
+  <!-- Activity prompt -->
+  <text x="200" y="478" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="13" fill="#555">
+    <tspan x="200" dy="0">친구는 다온이에게 어떤 이야기를 할까요?</tspan>
+    <tspan x="200" dy="18">말풍선에 써 보세요.</tspan>
+  </text>
+  <!-- Footer -->
+  <text x="200" y="540" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="10" fill="#aaa">마음마을 © 색칠공부</text>
+</svg>

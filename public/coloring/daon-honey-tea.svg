@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560">
+  <!-- White background -->
+  <rect width="400" height="560" fill="white"/>
+  <!-- Outer border -->
+  <rect x="8" y="8" width="384" height="544" rx="14" stroke="#2a2a2a" stroke-width="3" fill="none"/>
+  <!-- Inner border -->
+  <rect x="16" y="16" width="368" height="528" rx="10" stroke="#2a2a2a" stroke-width="1" fill="none"/>
+  <!-- Title -->
+  <text x="200" y="50" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="20" font-weight="bold" fill="#2a2a2a">꿀차를 마시는 다온이</text>
+  <!-- Dashed divider -->
+  <line x1="40" y1="62" x2="360" y2="62" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- === TABLE === -->
+  <!-- Table top (round) -->
+  <ellipse cx="200" cy="360" rx="110" ry="20" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Table leg -->
+  <rect x="190" y="378" width="20" height="50" rx="4" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Table base -->
+  <ellipse cx="200" cy="428" rx="38" ry="8" fill="white" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- === CHAIR (suggested, back) === -->
+  <!-- Chair back -->
+  <rect x="148" y="286" width="104" height="62" rx="10" fill="white" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Chair seat (behind bear body, draw first) -->
+  <rect x="148" y="346" width="104" height="16" rx="4" fill="white" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Chair legs -->
+  <line x1="158" y1="362" x2="152" y2="400" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="242" y1="362" x2="248" y2="400" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- === HONEY JAR on table === -->
+  <!-- Jar body -->
+  <path d="M248,332 Q242,315 250,302 Q258,290 266,302 Q274,315 268,332 Z" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Jar bottom oval -->
+  <ellipse cx="258" cy="332" rx="10" ry="5" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Jar lid -->
+  <rect x="251" y="295" width="14" height="8" rx="3" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Jar label (small diamond) -->
+  <path d="M258,308 L264,315 L258,322 L252,315 Z" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Honey drip suggestion -->
+  <path d="M252,318 Q250,325 252,330" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- === MUG on table === -->
+  <!-- Mug body -->
+  <path d="M168,318 L168,352 Q168,360 178,360 L220,360 Q230,360 230,352 L230,318 Z" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Mug handle -->
+  <path d="M230,326 Q244,326 244,338 Q244,350 230,350" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Mug top rim -->
+  <ellipse cx="199" cy="318" rx="31" ry="7" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Steam swirls -->
+  <path d="M185,308 Q182,298 186,288 Q190,278 187,268" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M199,305 Q196,295 200,285 Q204,275 201,265" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M213,308 Q210,298 214,288 Q218,278 215,268" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- === BEAR SEATED === -->
+  <!-- Left ear outer -->
+  <circle cx="155" cy="108" r="22" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="158" cy="111" r="12" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Right ear outer -->
+  <circle cx="245" cy="108" r="22" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="242" cy="111" r="12" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Head -->
+  <circle cx="200" cy="158" r="60" fill="white" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Eyes (cozy half-closed) -->
+  <path d="M174,148 Q179,142 184,148" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="179" cy="149" r="3" fill="#2a2a2a"/>
+  <path d="M216,148 Q221,142 226,148" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="221" cy="149" r="3" fill="#2a2a2a"/>
+  <!-- Muzzle -->
+  <ellipse cx="200" cy="174" rx="26" ry="18" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Nose -->
+  <ellipse cx="200" cy="167" rx="7.5" ry="5" fill="#2a2a2a"/>
+  <!-- Smile - content/cozy -->
+  <path d="M189,180 Q200,192 211,180" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <!-- Blush -->
+  <ellipse cx="167" cy="174" rx="10" ry="7" fill="none" stroke="#2a2a2a" stroke-width="1.2" stroke-dasharray="2,2"/>
+  <ellipse cx="233" cy="174" rx="10" ry="7" fill="none" stroke="#2a2a2a" stroke-width="1.2" stroke-dasharray="2,2"/>
+  <!-- Body (seated - more compact) -->
+  <ellipse cx="200" cy="295" rx="68" ry="72" fill="white" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Belly -->
+  <ellipse cx="200" cy="298" rx="40" ry="44" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <!-- Left arm reaching forward to mug -->
+  <path d="M138,252 Q120,272 128,310 Q134,336 168,340" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Left paw on mug -->
+  <ellipse cx="168" cy="342" rx="16" ry="10" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Right arm reaching forward -->
+  <path d="M262,252 Q280,272 272,310 Q266,336 232,340" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Right paw on mug -->
+  <ellipse cx="232" cy="342" rx="16" ry="10" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+
+  <!-- Small flowers around -->
+  <!-- Flower left -->
+  <circle cx="80" cy="390" r="7" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <circle cx="68" cy="383" r="7" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <circle cx="68" cy="397" r="7" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <circle cx="80" cy="390" r="4" fill="white" stroke="#2a2a2a" stroke-width="1.2"/>
+  <line x1="80" y1="397" x2="80" y2="416" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <!-- Flower right -->
+  <circle cx="318" cy="388" r="7" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <circle cx="306" cy="381" r="7" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <circle cx="330" cy="381" r="7" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <circle cx="318" cy="388" r="4" fill="white" stroke="#2a2a2a" stroke-width="1.2"/>
+  <line x1="318" y1="395" x2="318" y2="414" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <!-- Small flower bud left -->
+  <circle cx="58" cy="360" r="5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="50" cy="354" r="5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="50" cy="366" r="5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="58" y1="365" x2="58" y2="378" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- Activity prompt -->
+  <text x="200" y="478" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="13" fill="#555">
+    <tspan x="200" dy="0">다온이의 찻잔에 내가 좋아하는</tspan>
+    <tspan x="200" dy="18">음료를 그려 넣어 보세요.</tspan>
+  </text>
+  <!-- Footer -->
+  <text x="200" y="540" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="10" fill="#aaa">마음마을 © 색칠공부</text>
+</svg>

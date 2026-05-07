@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560">
+  <!-- White background -->
+  <rect width="400" height="560" fill="white"/>
+  <!-- Outer border -->
+  <rect x="8" y="8" width="384" height="544" rx="14" stroke="#2a2a2a" stroke-width="3" fill="none"/>
+  <!-- Inner border -->
+  <rect x="16" y="16" width="368" height="528" rx="10" stroke="#2a2a2a" stroke-width="1" fill="none"/>
+  <!-- Title -->
+  <text x="200" y="50" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="20" font-weight="bold" fill="#2a2a2a">다온이의 따뜻한 포옹</text>
+  <!-- Dashed divider -->
+  <line x1="40" y1="62" x2="360" y2="62" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- === HEARTS FLOATING === -->
+  <!-- Heart 1 top-left -->
+  <path d="M80,100 C80,94 73,88 66,94 C59,88 52,94 52,100 C52,110 66,120 66,120 C66,120 80,110 80,100 Z" fill="white" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Heart 2 top-right -->
+  <path d="M342,88 C342,82 335,76 328,82 C321,76 314,82 314,88 C314,98 328,108 328,108 C328,108 342,98 342,88 Z" fill="white" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Heart 3 small upper -->
+  <path d="M225,95 C225,91 220,87 215,91 C210,87 205,91 205,95 C205,101 215,108 215,108 C215,108 225,101 225,95 Z" fill="white" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Heart 4 small right -->
+  <path d="M360,160 C360,156 355,152 350,156 C345,152 340,156 340,160 C340,166 350,172 350,172 C350,172 360,166 360,160 Z" fill="white" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Heart 5 small left -->
+  <path d="M62,172 C62,168 57,164 52,168 C47,164 42,168 42,172 C42,178 52,184 52,184 C52,184 62,178 62,172 Z" fill="white" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Heart 6 tiny -->
+  <path d="M170,82 C170,79 167,76 164,79 C161,76 158,79 158,82 C158,86 164,90 164,90 C164,90 170,86 170,82 Z" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+
+  <!-- === BEAR LEANING FORWARD WITH ARMS OPEN WIDE === -->
+  <!-- Left ear outer -->
+  <circle cx="148" cy="118" r="24" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="151" cy="121" r="13" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Right ear outer -->
+  <circle cx="252" cy="118" r="24" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="249" cy="121" r="13" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Head -->
+  <circle cx="200" cy="168" r="62" fill="white" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Eyes (big warm smile eyes) -->
+  <path d="M176,156 Q184,148 192,156" fill="none" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round"/>
+  <path d="M208,156 Q216,148 224,156" fill="none" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round"/>
+  <!-- Muzzle -->
+  <ellipse cx="200" cy="184" rx="28" ry="20" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Nose -->
+  <ellipse cx="200" cy="177" rx="8" ry="5.5" fill="#2a2a2a"/>
+  <!-- Big warm smile -->
+  <path d="M184,190 Q200,208 216,190" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Blush -->
+  <ellipse cx="165" cy="184" rx="12" ry="8" fill="none" stroke="#2a2a2a" stroke-width="1.2" stroke-dasharray="2,2"/>
+  <ellipse cx="235" cy="184" rx="12" ry="8" fill="none" stroke="#2a2a2a" stroke-width="1.2" stroke-dasharray="2,2"/>
+
+  <!-- Body (leaning forward slightly) -->
+  <ellipse cx="200" cy="330" rx="75" ry="82" fill="white" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Belly -->
+  <ellipse cx="200" cy="334" rx="44" ry="50" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+
+  <!-- LEFT ARM stretched wide open -->
+  <path d="M132,272 Q100,252 68,240 Q52,234 45,248" fill="white" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Left paw open -->
+  <circle cx="44" cy="252" r="16" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Paw pads -->
+  <circle cx="37" cy="245" r="5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="51" cy="245" r="5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="44" cy="242" r="5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+
+  <!-- RIGHT ARM stretched wide open -->
+  <path d="M268,272 Q300,252 332,240 Q348,234 355,248" fill="white" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Right paw open -->
+  <circle cx="356" cy="252" r="16" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Paw pads -->
+  <circle cx="349" cy="245" r="5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="363" cy="245" r="5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="356" cy="242" r="5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+
+  <!-- Empty hug space in front of bear (dashed circle suggestion) -->
+  <ellipse cx="200" cy="355" rx="55" ry="60" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- Legs -->
+  <ellipse cx="165" cy="402" rx="30" ry="22" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="158" cy="422" rx="24" ry="13" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <ellipse cx="235" cy="402" rx="30" ry="22" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="242" cy="422" rx="24" ry="13" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+
+  <!-- Activity prompt -->
+  <text x="200" y="478" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="13" fill="#555">
+    <tspan x="200" dy="0">다온이가 안아주는 친구는 누구인가요?</tspan>
+    <tspan x="200" dy="18">친구를 그려 보세요.</tspan>
+  </text>
+  <!-- Footer -->
+  <text x="200" y="540" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="10" fill="#aaa">마음마을 © 색칠공부</text>
+</svg>

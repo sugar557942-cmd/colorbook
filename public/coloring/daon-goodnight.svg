@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560">
+  <!-- White background -->
+  <rect width="400" height="560" fill="white"/>
+  <!-- Outer border -->
+  <rect x="8" y="8" width="384" height="544" rx="14" stroke="#2a2a2a" stroke-width="3" fill="none"/>
+  <!-- Inner border -->
+  <rect x="16" y="16" width="368" height="528" rx="10" stroke="#2a2a2a" stroke-width="1" fill="none"/>
+  <!-- Title -->
+  <text x="200" y="50" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="20" font-weight="bold" fill="#2a2a2a">잘 자요, 다온이</text>
+  <!-- Dashed divider -->
+  <line x1="40" y1="62" x2="360" y2="62" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- === WINDOW (moon & stars) === -->
+  <!-- Window frame -->
+  <rect x="290" y="78" width="82" height="100" rx="8" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Window cross bar -->
+  <line x1="331" y1="78" x2="331" y2="178" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="290" y1="128" x2="372" y2="128" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <!-- Curtains -->
+  <path d="M290,78 Q302,90 298,128 L290,128 Z" fill="white" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M372,78 Q360,90 364,128 L372,128 Z" fill="white" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Moon (crescent in window) -->
+  <path d="M315,95 A22,22 0 1 1 315,161" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M315,95 A12,33 0 0 0 315,161" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Stars in window -->
+  <path d="M350,90 L352,85 L354,90 L359,90 L355,93 L357,98 L352,95 L347,98 L349,93 L345,90 Z" fill="white" stroke="#2a2a2a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M342,152 L343.5,148 L345,152 L349,152 L346,154.5 L347,158 L343.5,156 L340,158 L341,154.5 L338,152 Z" fill="white" stroke="#2a2a2a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M360,136 L361,133 L362,136 L365,136 L363,138 L364,141 L361,139 L358,141 L359,138 L357,136 Z" fill="white" stroke="#2a2a2a" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Stars outside window (floatin in air) -->
+  <path d="M36,88 L38,82 L40,88 L46,88 L41,92 L43,98 L38,94 L33,98 L35,92 L30,88 Z" fill="white" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M55,115 L56.5,110 L58,115 L63,115 L59,118 L60.5,123 L56.5,120 L52.5,123 L54,118 L50,115 Z" fill="white" stroke="#2a2a2a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M44,148 L45,144 L46,148 L50,148 L47,150 L48,154 L45,152 L42,154 L43,150 L40,148 Z" fill="white" stroke="#2a2a2a" stroke-width="1.2"/>
+
+  <!-- === BED FRAME === -->
+  <!-- Headboard -->
+  <rect x="30" y="220" width="12" height="180" rx="6" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Headboard top panel -->
+  <rect x="28" y="220" width="90" height="60" rx="10" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Headboard decorative circles -->
+  <circle cx="60" cy="250" r="10" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <circle cx="90" cy="250" r="10" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <!-- Bed frame rail top -->
+  <rect x="30" y="276" width="340" height="18" rx="6" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Footboard -->
+  <rect x="330" y="276" width="42" height="140" rx="8" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Bed base -->
+  <rect x="30" y="398" width="340" height="22" rx="6" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Legs -->
+  <rect x="38" y="420" width="16" height="20" rx="4" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="316" y="420" width="16" height="20" rx="4" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- === PILLOW === -->
+  <rect x="50" y="280" width="110" height="70" rx="18" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Pillow stitching -->
+  <rect x="60" y="290" width="90" height="50" rx="12" fill="none" stroke="#2a2a2a" stroke-width="1.2" stroke-dasharray="3,3"/>
+
+  <!-- === BLANKET (with decorative border outline) === -->
+  <!-- Blanket body -->
+  <rect x="30" y="320" width="300" height="100" rx="8" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Blanket decorative border (outer) -->
+  <rect x="38" y="328" width="284" height="84" rx="6" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <!-- Blanket decorative border (inner) -->
+  <rect x="48" y="338" width="264" height="64" rx="4" fill="none" stroke="#2a2a2a" stroke-width="1.2" stroke-dasharray="3,3"/>
+  <!-- Blanket top folded edge -->
+  <path d="M30,320 Q90,308 160,314 Q230,320 330,312" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Blanket fold shadow suggestion -->
+  <path d="M30,332 Q90,320 160,326 Q230,332 330,324" fill="none" stroke="#2a2a2a" stroke-width="1.2" stroke-dasharray="3,2"/>
+
+  <!-- === TEDDY BEAR beside main bear === -->
+  <!-- Small teddy body -->
+  <ellipse cx="295" cy="345" rx="22" ry="26" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Small teddy head -->
+  <circle cx="295" cy="312" r="20" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Small teddy ears -->
+  <circle cx="280" cy="296" r="8" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <circle cx="310" cy="296" r="8" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <!-- Small teddy face -->
+  <circle cx="289" cy="308" r="3.5" fill="#2a2a2a"/>
+  <circle cx="301" cy="308" r="3.5" fill="#2a2a2a"/>
+  <ellipse cx="295" cy="320" rx="9" ry="6" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <ellipse cx="295" cy="317" rx="3" ry="2" fill="#2a2a2a"/>
+  <!-- Small teddy smile -->
+  <path d="M290,324 Q295,328 300,324" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Small teddy arms -->
+  <ellipse cx="273" cy="340" rx="8" ry="14" transform="rotate(-20,273,340)" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <ellipse cx="317" cy="340" rx="8" ry="14" transform="rotate(20,317,340)" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+
+  <!-- === MAIN BEAR tucked in bed, sleeping === -->
+  <!-- Nightcap -->
+  <path d="M163,235 Q175,200 196,175 L215,175 Q215,200 228,220 L228,242" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Nightcap pom-pom -->
+  <circle cx="196" cy="173" r="10" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Nightcap stripe -->
+  <path d="M170,225 Q196,218 222,228" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Left ear outer -->
+  <circle cx="155" cy="262" r="20" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <circle cx="158" cy="265" r="11" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Right ear outer -->
+  <circle cx="243" cy="262" r="20" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <circle cx="240" cy="265" r="11" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Head -->
+  <circle cx="198" cy="296" r="56" fill="white" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Closed eyes (sleeping, curved lines) -->
+  <path d="M174,288 Q182,282 190,288" fill="none" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round"/>
+  <path d="M206,288 Q214,282 222,288" fill="none" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round"/>
+  <!-- Peaceful sleeping eyebrows -->
+  <path d="M172,280 Q182,276 190,280" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M206,280 Q214,276 222,280" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Muzzle -->
+  <ellipse cx="198" cy="312" rx="24" ry="17" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <!-- Nose -->
+  <ellipse cx="198" cy="305" rx="7" ry="4.8" fill="#2a2a2a"/>
+  <!-- Peaceful smile -->
+  <path d="M189,317 Q198,325 207,317" fill="none" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- ZZZ floating from bear -->
+  <text x="252" y="280" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="none" stroke="#2a2a2a" stroke-width="1.5">z</text>
+  <text x="264" y="264" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="none" stroke="#2a2a2a" stroke-width="1.5">z</text>
+  <text x="280" y="246" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="none" stroke="#2a2a2a" stroke-width="1.8">z</text>
+
+  <!-- Activity prompt -->
+  <text x="200" y="478" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="13" fill="#555">
+    <tspan x="200" dy="0">다온이의 이불에 예쁜 무늬를</tspan>
+    <tspan x="200" dy="18">그려 넣어 보세요.</tspan>
+  </text>
+  <!-- Footer -->
+  <text x="200" y="540" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="10" fill="#aaa">마음마을 © 색칠공부</text>
+</svg>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560">
+  <rect width="400" height="560" fill="white"/>
+  <rect x="8" y="8" width="384" height="544" rx="14" fill="none" stroke="#2a2a2a" stroke-width="3"/>
+  <rect x="16" y="16" width="368" height="528" rx="10" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="200" y="50" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="20" font-weight="bold" fill="#2a2a2a">빙글빙글 톱니바퀴</text>
+  <line x1="40" y1="62" x2="360" y2="62" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- === LARGE GEAR 1 (center-left, biggest) === -->
+  <g transform="translate(148,230)">
+    <circle cx="0" cy="0" r="72" fill="white" stroke="#2a2a2a" stroke-width="3"/>
+    <circle cx="0" cy="0" r="38" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+    <circle cx="0" cy="0" r="10" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+    <!-- Teeth (12 teeth) -->
+    <rect x="-8" y="-80" width="16" height="12" rx="3" fill="white" stroke="#2a2a2a" stroke-width="2.2"/>
+    <rect x="-8" y="68" width="16" height="12" rx="3" fill="white" stroke="#2a2a2a" stroke-width="2.2"/>
+    <rect x="-80" y="-8" width="12" height="16" rx="3" fill="white" stroke="#2a2a2a" stroke-width="2.2"/>
+    <rect x="68" y="-8" width="12" height="16" rx="3" fill="white" stroke="#2a2a2a" stroke-width="2.2"/>
+    <!-- Diagonal teeth -->
+    <rect x="42" y="-66" width="16" height="12" rx="3" transform="rotate(30)" fill="white" stroke="#2a2a2a" stroke-width="2.2"/>
+    <rect x="42" y="54" width="16" height="12" rx="3" transform="rotate(-30)" fill="white" stroke="#2a2a2a" stroke-width="2.2"/>
+    <rect x="-58" y="-66" width="16" height="12" rx="3" transform="rotate(-30)" fill="white" stroke="#2a2a2a" stroke-width="2.2"/>
+    <rect x="-58" y="54" width="16" height="12" rx="3" transform="rotate(30)" fill="white" stroke="#2a2a2a" stroke-width="2.2"/>
+    <!-- Spoke lines inside -->
+    <line x1="0" y1="-38" x2="0" y2="-12" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+    <line x1="0" y1="12" x2="0" y2="38" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-38" y1="0" x2="-12" y2="0" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+    <line x1="12" y1="0" x2="38" y2="0" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-27" y1="-27" x2="-10" y2="-10" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+    <line x1="10" y1="10" x2="27" y2="27" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+    <line x1="27" y1="-27" x2="10" y2="-10" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-10" y1="10" x2="-27" y2="27" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+    <!-- Rotation arrow (clockwise) -->
+    <path d="M-5,-88 Q5,-92 12,-86" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+    <polygon points="12,-86 8,-79 16,-82" fill="#2a2a2a"/>
+  </g>
+
+  <!-- === GEAR 2 (upper right, medium) === -->
+  <g transform="translate(295,155)">
+    <circle cx="0" cy="0" r="48" fill="white" stroke="#2a2a2a" stroke-width="2.8"/>
+    <circle cx="0" cy="0" r="26" fill="white" stroke="#2a2a2a" stroke-width="2.2"/>
+    <circle cx="0" cy="0" r="8" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+    <!-- Teeth (8 teeth) -->
+    <rect x="-6" y="-56" width="12" height="10" rx="3" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+    <rect x="-6" y="46" width="12" height="10" rx="3" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+    <rect x="-56" y="-6" width="10" height="12" rx="3" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+    <rect x="46" y="-6" width="10" height="12" rx="3" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+    <rect x="28" y="-46" width="12" height="10" rx="3" transform="rotate(45)" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+    <rect x="28" y="36" width="12" height="10" rx="3" transform="rotate(-45)" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+    <rect x="-40" y="-46" width="12" height="10" rx="3" transform="rotate(-45)" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+    <rect x="-40" y="36" width="12" height="10" rx="3" transform="rotate(45)" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+    <!-- Spokes -->
+    <line x1="0" y1="-26" x2="0" y2="-10" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="0" y1="10" x2="0" y2="26" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="-26" y1="0" x2="-10" y2="0" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="10" y1="0" x2="26" y2="0" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+    <!-- Rotation arrow (counter-clockwise) -->
+    <path d="M3,-58 Q-5,-62 -12,-56" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+    <polygon points="-12,-56 -8,-49 -16,-51" fill="#2a2a2a"/>
+  </g>
+
+  <!-- === GEAR 3 (lower right, small) === -->
+  <g transform="translate(310,330)">
+    <circle cx="0" cy="0" r="34" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+    <circle cx="0" cy="0" r="18" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+    <circle cx="0" cy="0" r="6" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+    <!-- Teeth (8 teeth) -->
+    <rect x="-5" y="-40" width="10" height="8" rx="2" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+    <rect x="-5" y="32" width="10" height="8" rx="2" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+    <rect x="-40" y="-5" width="8" height="10" rx="2" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+    <rect x="32" y="-5" width="8" height="10" rx="2" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+    <rect x="18" y="-34" width="10" height="8" rx="2" transform="rotate(45)" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+    <rect x="18" y="26" width="10" height="8" rx="2" transform="rotate(-45)" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+    <rect x="-28" y="-34" width="10" height="8" rx="2" transform="rotate(-45)" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+    <rect x="-28" y="26" width="10" height="8" rx="2" transform="rotate(45)" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+    <!-- Rotation arrow -->
+    <path d="M-3,-42 Q5,-46 10,-40" fill="none" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+    <polygon points="10,-40 6,-34 13,-37" fill="#2a2a2a"/>
+  </g>
+
+  <!-- === GEAR 4 (upper left, small) === -->
+  <g transform="translate(72,145)">
+    <circle cx="0" cy="0" r="30" fill="white" stroke="#2a2a2a" stroke-width="2.2"/>
+    <circle cx="0" cy="0" r="16" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+    <circle cx="0" cy="0" r="5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+    <rect x="-4" y="-36" width="8" height="7" rx="2" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+    <rect x="-4" y="29" width="8" height="7" rx="2" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+    <rect x="-36" y="-4" width="7" height="8" rx="2" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+    <rect x="29" y="-4" width="7" height="8" rx="2" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+    <rect x="16" y="-30" width="8" height="7" rx="2" transform="rotate(45)" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+    <rect x="16" y="23" width="8" height="7" rx="2" transform="rotate(-45)" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+    <rect x="-24" y="-30" width="8" height="7" rx="2" transform="rotate(-45)" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+    <rect x="-24" y="23" width="8" height="7" rx="2" transform="rotate(45)" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+    <!-- Rotation arrow (counter-clockwise) -->
+    <path d="M3,-38 Q-5,-42 -10,-36" fill="none" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+    <polygon points="-10,-36 -6,-30 -14,-32" fill="#2a2a2a"/>
+  </g>
+
+  <!-- === NARI FOX (lower left corner, small, watching) === -->
+  <!-- Fox body (small) -->
+  <ellipse cx="68" cy="415" rx="26" ry="34" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Tail (small) -->
+  <path d="M88 420 Q112 408 114 390 Q116 375 104 372 Q96 370 95 380 Q103 382 101 392 Q98 402 85 412 Q78 418 82 424 Z" fill="white" stroke="#2a2a2a" stroke-width="2.2" stroke-linejoin="round"/>
+  <!-- Legs -->
+  <ellipse cx="56" cy="447" rx="12" ry="8" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="80" cy="447" rx="12" ry="8" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Arms (clasped in front, amazed) -->
+  <path d="M48 398 Q38 408 42 418" fill="none" stroke="#2a2a2a" stroke-width="2.2" stroke-linecap="round"/>
+  <ellipse cx="43" cy="421" rx="8" ry="6" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <!-- Neck -->
+  <rect x="62" y="375" width="12" height="12" rx="4" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <!-- Head (small) -->
+  <ellipse cx="68" cy="358" rx="28" ry="26" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Ears -->
+  <path d="M50 344 L43 320 L63 338Z" fill="white" stroke="#2a2a2a" stroke-width="2.2" stroke-linejoin="round"/>
+  <path d="M53 342 L48 323 L61 337Z" fill="none" stroke="#2a2a2a" stroke-width="1.2"/>
+  <path d="M86 344 L93 320 L73 338Z" fill="white" stroke="#2a2a2a" stroke-width="2.2" stroke-linejoin="round"/>
+  <path d="M83 342 L88 323 L75 337Z" fill="none" stroke="#2a2a2a" stroke-width="1.2"/>
+  <!-- Eyes (wide, amazed, looking up) -->
+  <circle cx="60" cy="356" r="7" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="60" cy="355" r="3.5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="60" cy="354" r="1.5" fill="#2a2a2a"/>
+  <circle cx="76" cy="356" r="7" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="76" cy="355" r="3.5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="76" cy="354" r="1.5" fill="#2a2a2a"/>
+  <!-- Muzzle (small) -->
+  <ellipse cx="68" cy="368" rx="14" ry="9" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <ellipse cx="68" cy="364" rx="3.5" ry="2.5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Open mouth (amazed "oh!") -->
+  <ellipse cx="68" cy="373" rx="5" ry="4" fill="none" stroke="#2a2a2a" stroke-width="1.8"/>
+  <!-- Goggles small -->
+  <rect x="55" y="347" width="12" height="8" rx="4" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <rect x="69" y="347" width="12" height="8" rx="4" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="67" y1="351" x2="69" y2="351" stroke="#2a2a2a" stroke-width="1.5"/>
+
+  <!-- Activity prompt -->
+  <text x="200" y="478" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="13" fill="#555">
+    <tspan x="200" dy="0">큰 바퀴와 작은 바퀴는 어느 쪽으로 돌까요?</tspan>
+    <tspan x="200" dy="18">화살표를 그려 보세요.</tspan>
+  </text>
+  <text x="200" y="540" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="10" fill="#aaa">마음마을 © 색칠공부</text>
+</svg>

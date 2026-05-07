@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560" width="400" height="560">
+  <rect width="400" height="560" fill="white"/>
+  <rect x="8" y="8" width="384" height="544" rx="14" fill="none" stroke="#2a2a2a" stroke-width="3"/>
+  <rect x="16" y="16" width="368" height="528" rx="10" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="200" y="50" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="20" font-weight="bold" fill="#2a2a2a">심호흡하는 소리</text>
+  <line x1="40" y1="62" x2="360" y2="62" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- Calm breath spiral circles radiating outward (centered around cat) -->
+  <!-- Innermost -->
+  <circle cx="200" cy="300" r="60" fill="none" stroke="#2a2a2a" stroke-width="1" opacity="0.4" stroke-dasharray="6,6"/>
+  <circle cx="200" cy="300" r="85" fill="none" stroke="#2a2a2a" stroke-width="1" opacity="0.35" stroke-dasharray="8,7"/>
+  <circle cx="200" cy="300" r="110" fill="none" stroke="#2a2a2a" stroke-width="0.8" opacity="0.28" stroke-dasharray="10,8"/>
+  <circle cx="200" cy="300" r="138" fill="none" stroke="#2a2a2a" stroke-width="0.8" opacity="0.2" stroke-dasharray="12,10"/>
+  <!-- Breath arc gentle -->
+  <path d="M200,240 Q240,238 245,265 Q250,290 230,298" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="5,5" stroke-linecap="round"/>
+  <path d="M200,240 Q160,238 155,265 Q150,290 170,298" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="5,5" stroke-linecap="round"/>
+
+  <!-- Calm flowers around -->
+  <!-- Flower 1 (top left) -->
+  <g transform="translate(75,130)">
+    <circle cx="0" cy="0" r="8" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+    <ellipse cx="0" cy="-16" rx="7" ry="10" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+    <ellipse cx="0" cy="16" rx="7" ry="10" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+    <ellipse cx="-16" cy="0" rx="10" ry="7" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+    <ellipse cx="16" cy="0" rx="10" ry="7" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+    <ellipse cx="-11" cy="-11" rx="7" ry="10" fill="white" stroke="#2a2a2a" stroke-width="1.8" transform="rotate(45)"/>
+    <ellipse cx="11" cy="-11" rx="7" ry="10" fill="white" stroke="#2a2a2a" stroke-width="1.8" transform="rotate(-45)"/>
+    <circle cx="0" cy="0" r="5" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  </g>
+  <!-- Flower stem 1 -->
+  <line x1="75" y1="148" x2="75" y2="175" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M75,162 Q62,155 58,144" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Leaf -->
+  <ellipse cx="62" cy="150" rx="9" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(-40 62 150)"/>
+
+  <!-- Flower 2 (top right) -->
+  <g transform="translate(325,130)">
+    <circle cx="0" cy="0" r="8" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+    <ellipse cx="0" cy="-15" rx="6" ry="9" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+    <ellipse cx="0" cy="15" rx="6" ry="9" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+    <ellipse cx="-15" cy="0" rx="9" ry="6" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+    <ellipse cx="15" cy="0" rx="9" ry="6" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+    <ellipse cx="-10" cy="-10" rx="6" ry="9" fill="white" stroke="#2a2a2a" stroke-width="1.8" transform="rotate(45)"/>
+    <ellipse cx="10" cy="-10" rx="6" ry="9" fill="white" stroke="#2a2a2a" stroke-width="1.8" transform="rotate(-45)"/>
+    <circle cx="0" cy="0" r="5" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  </g>
+  <line x1="325" y1="148" x2="325" y2="175" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M325,162 Q338,155 342,144" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <ellipse cx="338" cy="150" rx="9" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(40 338 150)"/>
+
+  <!-- Small flowers lower sides -->
+  <!-- Small left -->
+  <g transform="translate(52,390)">
+    <circle cx="0" cy="0" r="5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+    <ellipse cx="0" cy="-10" rx="5" ry="7" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+    <ellipse cx="0" cy="10" rx="5" ry="7" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+    <ellipse cx="-10" cy="0" rx="7" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+    <ellipse cx="10" cy="0" rx="7" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="3" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  </g>
+  <line x1="52" y1="400" x2="52" y2="420" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Small right -->
+  <g transform="translate(348,390)">
+    <circle cx="0" cy="0" r="5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+    <ellipse cx="0" cy="-10" rx="5" ry="7" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+    <ellipse cx="0" cy="10" rx="5" ry="7" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+    <ellipse cx="-10" cy="0" rx="7" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+    <ellipse cx="10" cy="0" rx="7" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="3" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  </g>
+  <line x1="348" y1="400" x2="348" y2="420" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Grass / ground -->
+  <line x1="36" y1="440" x2="364" y2="440" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Grass blades -->
+  <path d="M40,440 Q42,428 44,440" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <path d="M55,440 Q57,432 60,440" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <path d="M68,440 Q71,430 73,440" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <path d="M330,440 Q332,430 334,440" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <path d="M342,440 Q344,428 346,440" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <path d="M356,440 Q358,432 360,440" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+
+  <!-- Cat in cross-legged meditation pose -->
+  <!-- Seated base / crossed legs -->
+  <path d="M148,420 Q150,408 168,404 Q184,400 200,400 Q216,400 232,404 Q250,408 252,420" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Left foot -->
+  <ellipse cx="148" cy="422" rx="16" ry="9" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Right foot -->
+  <ellipse cx="252" cy="422" rx="16" ry="9" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Crossed leg lines -->
+  <path d="M165,408 Q185,418 215,408" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Body (sitting upright) -->
+  <ellipse cx="200" cy="360" rx="46" ry="50" fill="white" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Both hands resting on knees, palms up (peaceful) -->
+  <!-- Left hand on left knee -->
+  <path d="M158,372 Q138,390 130,410" fill="none" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="128" cy="415" rx="14" ry="10" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Right hand on right knee -->
+  <path d="M242,372 Q262,390 270,410" fill="none" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="272" cy="415" rx="14" ry="10" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+
+  <!-- Tail curling peacefully beside -->
+  <path d="M246,390 Q280,400 278,382 Q276,365 260,360 Q248,356 252,345" fill="none" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Head (eyes gently closed, serene) -->
+  <circle cx="200" cy="296" r="52" fill="white" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Ears -->
+  <polygon points="155,264 146,230 178,254" fill="white" stroke="#2a2a2a" stroke-width="3" stroke-linejoin="round"/>
+  <polygon points="158,261 152,242 173,255" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <polygon points="245,264 254,230 222,254" fill="white" stroke="#2a2a2a" stroke-width="3" stroke-linejoin="round"/>
+  <polygon points="242,261 248,242 227,255" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+
+  <!-- Beret (slightly tilted, calm) -->
+  <ellipse cx="200" cy="254" rx="37" ry="11" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <path d="M163,254 Q166,226 200,224 Q234,226 237,254" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <circle cx="185" cy="226" r="6" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- Eyes CLOSED (gentle curved lines) -->
+  <path d="M172,294 Q183,288 194,294" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M206,294 Q217,288 228,294" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Eyelash hint -->
+  <line x1="174" y1="294" x2="172" y2="300" stroke="#2a2a2a" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="183" y1="291" x2="183" y2="297" stroke="#2a2a2a" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="192" y1="294" x2="194" y2="300" stroke="#2a2a2a" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="208" y1="294" x2="206" y2="300" stroke="#2a2a2a" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="217" y1="291" x2="217" y2="297" stroke="#2a2a2a" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="226" y1="294" x2="228" y2="300" stroke="#2a2a2a" stroke-width="1.2" stroke-linecap="round"/>
+
+  <!-- Muzzle (small, serene smile) -->
+  <ellipse cx="200" cy="314" rx="18" ry="11" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <path d="M200,307 Q196,303 193,307 Q190,311 196,314 Q200,317 200,317 Q200,317 204,314 Q210,311 207,307 Q204,303 200,307 Z" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Gentle smile -->
+  <path d="M194,318 Q200,324 206,318" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Whiskers -->
+  <line x1="215" y1="311" x2="254" y2="304" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="215" y1="315" x2="255" y2="315" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="215" y1="319" x2="253" y2="326" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="185" y1="311" x2="146" y2="304" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="185" y1="315" x2="145" y2="315" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="185" y1="319" x2="147" y2="326" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+
+  <text x="200" y="480" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="13" fill="#555">
+    <tspan x="200" dy="0">색칠하는 동안 소리처럼</tspan>
+    <tspan x="200" dy="18">천천히 숨을 쉬어 보세요.</tspan>
+  </text>
+  <text x="200" y="540" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="10" fill="#aaa">마음마을 © 색칠공부</text>
+</svg>

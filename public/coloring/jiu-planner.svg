@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560" width="400" height="560">
+  <rect width="400" height="560" fill="white"/>
+  <rect x="8" y="8" width="384" height="544" rx="14" fill="none" stroke="#2a2a2a" stroke-width="3"/>
+  <rect x="16" y="16" width="368" height="528" rx="10" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="200" y="50" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="20" font-weight="bold" fill="#2a2a2a">지우의 완벽한 계획표</text>
+  <line x1="40" y1="62" x2="360" y2="62" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- Desk surface -->
+  <rect x="28" y="380" width="344" height="18" rx="4" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Desk legs -->
+  <rect x="45" y="398" width="16" height="44" rx="4" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="340" y="398" width="16" height="44" rx="4" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- Weekly planner pad on desk -->
+  <rect x="78" y="215" width="248" height="168" rx="6" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Planner top tab -->
+  <rect x="78" y="207" width="248" height="18" rx="4" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Planner spiral holes -->
+  <circle cx="98" cy="216" r="4" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="118" cy="216" r="4" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="138" cy="216" r="4" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="158" cy="216" r="4" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="178" cy="216" r="4" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="198" cy="216" r="4" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="218" cy="216" r="4" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="238" cy="216" r="4" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="258" cy="216" r="4" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="278" cy="216" r="4" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="298" cy="216" r="4" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="318" cy="216" r="4" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+
+  <!-- Day columns header -->
+  <rect x="78" y="225" width="248" height="22" rx="0" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Vertical dividers for 7 days + label col -->
+  <!-- Label col: x78-112 (34px), then 7 cols each ~30px -->
+  <line x1="112" y1="225" x2="112" y2="383" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="142" y1="225" x2="142" y2="383" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="172" y1="225" x2="172" y2="383" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="202" y1="225" x2="202" y2="383" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="232" y1="225" x2="232" y2="383" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="262" y1="225" x2="262" y2="383" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="292" y1="225" x2="292" y2="383" stroke="#2a2a2a" stroke-width="1.5"/>
+
+  <!-- Day labels -->
+  <text x="127" y="240" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#2a2a2a">월</text>
+  <text x="157" y="240" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#2a2a2a">화</text>
+  <text x="187" y="240" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#2a2a2a">수</text>
+  <text x="217" y="240" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#2a2a2a">목</text>
+  <text x="247" y="240" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#2a2a2a">금</text>
+  <text x="277" y="240" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#2a2a2a">토</text>
+  <text x="307" y="240" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#2a2a2a">일</text>
+
+  <!-- Horizontal row dividers (5 rows: h~30px each) -->
+  <line x1="78" y1="271" x2="326" y2="271" stroke="#2a2a2a" stroke-width="1"/>
+  <line x1="78" y1="301" x2="326" y2="301" stroke="#2a2a2a" stroke-width="1"/>
+  <line x1="78" y1="331" x2="326" y2="331" stroke="#2a2a2a" stroke-width="1"/>
+  <line x1="78" y1="361" x2="326" y2="361" stroke="#2a2a2a" stroke-width="1"/>
+
+  <!-- Row time labels -->
+  <text x="95" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#555">오전</text>
+  <text x="95" y="290" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#555">점심</text>
+  <text x="95" y="320" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#555">오후</text>
+  <text x="95" y="350" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#555">저녁</text>
+  <text x="95" y="377" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#555">밤</text>
+
+  <!-- Stack of books (left of desk, below) -->
+  <rect x="32" y="342" width="34" height="12" rx="3" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="34" y="330" width="30" height="13" rx="3" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="31" y="318" width="36" height="13" rx="3" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- Pencil on desk -->
+  <rect x="340" y="360" width="8" height="34" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2" transform="rotate(-20 344 377)"/>
+  <polygon points="340,394 348,394 344,404" fill="white" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" transform="rotate(-20 344 399)"/>
+  <!-- Eraser end -->
+  <rect x="340" y="357" width="8" height="6" rx="2" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(-20 344 360)"/>
+
+  <!-- Wall clock -->
+  <circle cx="355" cy="145" r="30" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <circle cx="355" cy="145" r="3" fill="#2a2a2a"/>
+  <!-- Clock hands -->
+  <line x1="355" y1="145" x2="355" y2="124" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="355" y1="145" x2="370" y2="152" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <!-- Hour ticks -->
+  <line x1="355" y1="118" x2="355" y2="124" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="355" y1="166" x2="355" y2="172" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="328" y1="145" x2="334" y2="145" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="376" y1="145" x2="382" y2="145" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Clock hanger -->
+  <line x1="355" y1="115" x2="355" y2="100" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M348,100 Q355,94 362,100" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- OWL at desk -->
+  <!-- Body -->
+  <ellipse cx="200" cy="320" rx="36" ry="44" fill="white" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Wings -->
+  <path d="M166,308 Q148,320 162,344 Q176,334 176,316Z" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M234,308 Q252,320 238,344 Q224,334 224,316Z" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Belly -->
+  <ellipse cx="200" cy="330" rx="20" ry="26" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+
+  <!-- HEAD -->
+  <circle cx="200" cy="252" r="48" fill="white" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Ear tufts -->
+  <polygon points="176,212 170,188 186,208" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="224,212 230,188 214,208" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Eyes -->
+  <circle cx="183" cy="250" r="20" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <circle cx="217" cy="250" r="20" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <circle cx="183" cy="250" r="13" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="217" cy="250" r="13" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="184" cy="251" r="6" fill="#2a2a2a"/>
+  <circle cx="218" cy="251" r="6" fill="#2a2a2a"/>
+  <circle cx="187" cy="247" r="2" fill="white"/>
+  <circle cx="221" cy="247" r="2" fill="white"/>
+  <path d="M167,236 Q175,231 185,234" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M200,234 Q210,230 220,233" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Beak -->
+  <path d="M196,263 L200,272 L204,263 Q200,260 196,263Z" fill="white" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Spectacles -->
+  <circle cx="183" cy="250" r="22" fill="none" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="217" cy="250" r="22" fill="none" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="205" y1="250" x2="195" y2="250" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="161" y1="246" x2="152" y2="242" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="239" y1="246" x2="248" y2="242" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Arm/wing holding pencil over planner -->
+  <path d="M234,308 Q256,290 270,272" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Pencil in talon -->
+  <rect x="264" y="255" width="7" height="28" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2" transform="rotate(30 267 269)"/>
+  <polygon points="264,283 271,283 267,292" fill="white" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" transform="rotate(30 267 287)"/>
+
+  <!-- Talon feet under desk -->
+  <path d="M182,362 L175,372 M182,362 L182,375 M182,362 L189,373" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M218,362 L211,372 M218,362 L218,375 M218,362 L225,373" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Activity prompt -->
+  <text x="200" y="476" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="13" fill="#555">
+    <tspan x="200" dy="0">지우의 계획표에 내 하루 일정을</tspan>
+    <tspan x="200" dy="18">직접 적어 보세요.</tspan>
+  </text>
+  <text x="200" y="540" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="10" fill="#aaa">마음마을 © 색칠공부</text>
+</svg>

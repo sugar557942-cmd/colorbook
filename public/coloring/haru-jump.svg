@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560">
+  <rect width="400" height="560" fill="white"/>
+  <rect x="8" y="8" width="384" height="544" rx="14" fill="none" stroke="#2a2a2a" stroke-width="3"/>
+  <rect x="16" y="16" width="368" height="528" rx="10" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="200" y="50" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="20" font-weight="bold" fill="#2a2a2a">펄쩍펄쩍 하루</text>
+  <line x1="40" y1="62" x2="360" y2="62" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- Ground -->
+  <path d="M30,440 Q80,430 130,438 Q180,446 230,436 Q280,426 330,434 Q360,438 375,442" fill="none" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Grass tufts -->
+  <path d="M50,440 Q54,428 58,440" fill="none" stroke="#2a2a2a" stroke-width="2"/>
+  <path d="M56,440 Q60,425 64,440" fill="none" stroke="#2a2a2a" stroke-width="2"/>
+  <path d="M110,438 Q114,426 118,438" fill="none" stroke="#2a2a2a" stroke-width="2"/>
+  <path d="M200,436 Q204,424 208,436" fill="none" stroke="#2a2a2a" stroke-width="2"/>
+  <path d="M290,434 Q294,422 298,434" fill="none" stroke="#2a2a2a" stroke-width="2"/>
+  <path d="M340,434 Q344,423 348,434" fill="none" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- Motion lines below jumping point -->
+  <path d="M160,438 Q165,455 180,460" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <path d="M200,440 Q200,458 200,466" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <path d="M240,438 Q235,455 220,460" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Rabbit jumping mid-air (tucked legs, ears flying) -->
+  <!-- Left ear (flying backward) -->
+  <path d="M170,170 Q145,135 152,105 Q158,80 175,95 Q185,108 178,142 Q174,162 170,170" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M170,168 Q150,138 156,112 Q160,92 172,102 Q179,112 173,140 Q171,158 170,168" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Right ear (flying up) -->
+  <path d="M228,165 Q250,130 248,100 Q246,78 230,88 Q218,100 222,138 Q224,158 228,165" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M227,163 Q246,133 244,106 Q242,85 230,93 Q221,103 224,135 Q226,155 227,163" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Head -->
+  <circle cx="200" cy="210" r="50" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Eyes (super excited wide) -->
+  <circle cx="183" cy="200" r="10" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="217" cy="200" r="10" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="185" cy="202" r="5" fill="#2a2a2a"/>
+  <circle cx="219" cy="202" r="5" fill="#2a2a2a"/>
+  <circle cx="182" cy="198" r="2.5" fill="white"/>
+  <circle cx="216" cy="198" r="2.5" fill="white"/>
+  <!-- Eyebrows raised -->
+  <path d="M177,190 Q183,185 189,190" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M211,190 Q217,185 223,190" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <!-- Nose + open mouth grin -->
+  <ellipse cx="200" cy="220" rx="6" ry="4.5" fill="none" stroke="#2a2a2a" stroke-width="2"/>
+  <path d="M188,225 Q200,238 212,225" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Body (compact mid-jump) -->
+  <ellipse cx="200" cy="322" rx="50" ry="48" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Arms up excited -->
+  <path d="M153,300 Q130,278 122,260" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="116" cy="253" rx="14" ry="9" fill="white" stroke="#2a2a2a" stroke-width="2" transform="rotate(-45,116,253)"/>
+  <path d="M247,300 Q270,278 278,260" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="284" cy="253" rx="14" ry="9" fill="white" stroke="#2a2a2a" stroke-width="2" transform="rotate(45,284,253)"/>
+  <!-- Legs tucked -->
+  <path d="M162,360 Q145,385 155,405" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="158" cy="410" rx="20" ry="12" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <path d="M238,360 Q255,385 245,405" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="242" cy="410" rx="20" ry="12" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Tail -->
+  <circle cx="246" cy="315" r="13" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- Stars of excitement -->
+  <line x1="82" y1="205" x2="82" y2="192" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="75" y1="213" x2="62" y2="213" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="77" y1="200" x2="67" y2="190" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="87" y1="200" x2="97" y2="190" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="318" y1="210" x2="318" y2="197" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="325" y1="218" x2="338" y2="218" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="323" y1="205" x2="333" y2="195" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="313" y1="205" x2="303" y2="195" stroke="#2a2a2a" stroke-width="2"/>
+
+  <text x="200" y="476" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="13" fill="#555">하루의 발 아래 무엇이 있나요?</text>
+  <text x="200" y="494" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="13" fill="#555">배경을 그려 넣어 보세요.</text>
+  <text x="200" y="540" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#aaa">마음마을 © 색칠공부</text>
+</svg>

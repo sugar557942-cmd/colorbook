@@ -1,95 +1,152 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
-  <style>
-    .colorable { fill: white; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; cursor: pointer; }
-    .outline { fill: none; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
-    .fixed { fill: #333; }
-  </style>
-  <rect width="400" height="500" fill="#FFFFFF"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560">
+  <rect width="400" height="560" fill="white"/>
+  <rect x="8" y="8" width="384" height="544" rx="14" fill="none" stroke="#2a2a2a" stroke-width="3"/>
+  <rect x="16" y="16" width="368" height="528" rx="10" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="200" y="50" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="20" font-weight="bold" fill="#2a2a2a">나리의 실험실</text>
+  <line x1="40" y1="62" x2="360" y2="62" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="5,4"/>
 
-  <!-- 실험대 -->
-  <rect x="40" y="360" width="320" height="18" rx="6" class="colorable" id="table"/>
-  <rect x="55" y="378" width="20" height="60" rx="5" class="colorable" id="table-leg-l"/>
-  <rect x="325" y="378" width="20" height="60" rx="5" class="colorable" id="table-leg-r"/>
+  <!-- WORKBENCH -->
+  <rect x="32" y="360" width="336" height="18" rx="4" fill="white" stroke="#2a2a2a" stroke-width="2.8"/>
+  <!-- Bench legs -->
+  <rect x="45" y="378" width="14" height="60" rx="3" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="341" y="378" width="14" height="60" rx="3" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Bench shelf underneath -->
+  <rect x="32" y="420" width="336" height="10" rx="3" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
 
-  <!-- 플라스크 (왼쪽) -->
-  <path d="M95 290 L95 330 Q75 355 70 370 L130 370 Q125 355 105 330 L105 290 Z" class="colorable" id="flask-l"/>
-  <rect x="92" y="278" width="16" height="16" rx="4" class="colorable" id="flask-neck-l"/>
-  <!-- 거품 -->
-  <circle cx="85" cy="262" r="8" class="colorable" id="bubble1"/>
-  <circle cx="100" cy="248" r="6" class="colorable" id="bubble2"/>
-  <circle cx="112" cy="258" r="5" class="colorable" id="bubble3"/>
+  <!-- WALL SHELF background line -->
+  <rect x="28" y="135" width="340" height="12" rx="4" fill="white" stroke="#2a2a2a" stroke-width="2"/>
 
-  <!-- 비커 (가운데) -->
-  <path d="M168 300 L162 368 L218 368 L212 300 Z" class="colorable" id="beaker"/>
-  <rect x="166" y="288" width="48" height="16" rx="3" class="colorable" id="beaker-top"/>
-  <!-- 비커 내용물 선 -->
-  <line x1="165" y1="340" x2="215" y2="340" class="outline" stroke-width="1.5"/>
+  <!-- === LAB ITEMS ON BENCH === -->
 
-  <!-- 시험관 (오른쪽) -->
-  <rect x="272" y="290" width="18" height="75" rx="9" class="colorable" id="tube1"/>
-  <rect x="300" y="305" width="16" height="60" rx="8" class="colorable" id="tube2"/>
-  <!-- 시험관 거치대 -->
-  <rect x="265" y="282" width="60" height="12" rx="4" class="colorable" id="tube-rack"/>
+  <!-- Triangular flask (Erlenmeyer) -->
+  <path d="M88 355 L72 355 L60 330 L56 305 L70 285 L88 285 L100 305 L98 330 Z" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Flask neck -->
+  <rect x="74" y="272" width="14" height="15" rx="4" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Flask stopper -->
+  <rect x="71" y="267" width="20" height="7" rx="3" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Liquid level in flask -->
+  <path d="M62 330 Q79 325 96 330" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <!-- Bubbles inside flask -->
+  <circle cx="74" cy="318" r="4" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="85" cy="308" r="3" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
 
-  <!-- 폭발 효과! -->
-  <path d="M190 220 L200 190 L210 220 L235 205 L215 225 L240 235 L210 232 L215 260 L200 240 L185 260 L190 232 L160 235 L185 225 L165 205 Z" class="colorable" id="explosion"/>
-  <circle cx="200" cy="235" r="18" class="colorable" id="smoke"/>
+  <!-- SMOKE PUFF from flask -->
+  <path d="M79 267 Q76 258 82 252 Q78 246 84 242 Q80 235 88 233 Q94 235 92 242 Q98 244 97 250 Q103 254 98 260 Q94 265 88 264 Q84 268 79 267Z" fill="none" stroke="#2a2a2a" stroke-width="1.8" stroke-linejoin="round"/>
 
-  <!-- 나리 몸통 -->
-  <rect x="150" y="265" width="100" height="95" rx="18" class="colorable" id="body"/>
-  <!-- 실험복 -->
-  <path d="M158 270 Q200 278 242 270 L238 358 Q200 365 162 358 Z" class="colorable" id="lab-coat"/>
+  <!-- Round-bottom flask -->
+  <circle cx="160" cy="328" r="32" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Round flask neck -->
+  <rect x="153" y="285" width="14" height="12" rx="4" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Liquid in round flask -->
+  <path d="M130 335 Q160 330 190 335" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <!-- Bubbles in round flask -->
+  <circle cx="152" cy="320" r="5" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="168" cy="312" r="3" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="158" cy="340" r="4" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
 
-  <!-- 팔 왼쪽 -->
-  <rect x="112" y="272" width="42" height="20" rx="10" class="colorable" id="arm-l"/>
-  <!-- 팔 오른쪽 (들어올림) -->
-  <rect x="246" y="258" width="20" height="50" rx="10" class="colorable" id="arm-r"/>
+  <!-- Test tube rack -->
+  <!-- Rack frame -->
+  <rect x="215" y="298" width="70" height="62" rx="4" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="215" y1="315" x2="285" y2="315" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="215" y1="345" x2="285" y2="345" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Test tubes in rack -->
+  <path d="M228 315 L228 355 Q228 362 232 362 Q236 362 236 355 L236 315" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <path d="M245 315 L245 355 Q245 362 249 362 Q253 362 253 355 L253 315" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <path d="M262 315 L262 355 Q262 362 266 362 Q270 362 270 355 L270 315" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Liquid in tubes -->
+  <path d="M228 345 L236 345" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="2,2"/>
+  <path d="M245 338 L253 338" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="2,2"/>
+  <path d="M262 350 L270 350" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="2,2"/>
 
-  <!-- 다리 -->
-  <rect x="162" y="358" width="28" height="48" rx="11" class="colorable" id="leg-l"/>
-  <rect x="210" y="358" width="28" height="48" rx="11" class="colorable" id="leg-r"/>
-  <ellipse cx="176" cy="406" rx="19" ry="11" class="colorable" id="foot-l"/>
-  <ellipse cx="224" cy="406" rx="19" ry="11" class="colorable" id="foot-r"/>
+  <!-- Magnifying glass -->
+  <circle cx="335" cy="318" r="22" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <circle cx="335" cy="318" r="16" fill="white" stroke="#2a2a2a" stroke-width="1.2"/>
+  <line x1="352" y1="335" x2="367" y2="356" stroke="#2a2a2a" stroke-width="4" stroke-linecap="round"/>
+  <!-- Shine in lens -->
+  <path d="M324 308 Q329 305 334 308" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
 
-  <!-- 머리 -->
-  <ellipse cx="200" cy="175" rx="78" ry="82" class="colorable" id="head"/>
-  <!-- 여우 귀 -->
-  <polygon points="132,130 118,78 157,115" class="colorable" id="ear-l"/>
-  <polygon points="137,135 124,84 162,120" fill="white" stroke="#333" stroke-width="1.5"/>
-  <polygon points="268,130 282,78 243,115" class="colorable" id="ear-r"/>
-  <polygon points="263,135 276,84 238,120" fill="white" stroke="#333" stroke-width="1.5"/>
+  <!-- SMALL BOTTLES on shelf -->
+  <!-- Bottle 1 -->
+  <rect x="45" y="108" width="16" height="28" rx="4" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="47" y="100" width="12" height="10" rx="3" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <!-- Bottle 2 -->
+  <rect x="75" y="110" width="14" height="25" rx="3" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="77" y="103" width="10" height="9" rx="2" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <!-- Bottle 3 -->
+  <path d="M102 135 L100 120 Q100 112 106 112 Q112 112 112 120 L110 135Z" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Book on shelf -->
+  <rect x="130" y="103" width="22" height="32" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="134" y1="103" x2="134" y2="135" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Notebook stacked -->
+  <rect x="155" y="108" width="28" height="27" rx="2" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Scissors on shelf -->
+  <g transform="translate(195, 120)">
+    <circle cx="-5" cy="-8" r="5" fill="none" stroke="#2a2a2a" stroke-width="1.8"/>
+    <circle cx="5" cy="-8" r="5" fill="none" stroke="#2a2a2a" stroke-width="1.8"/>
+    <line x1="-5" y1="-3" x2="0" y2="5" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+    <line x1="5" y1="-3" x2="0" y2="5" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <!-- Clock on wall -->
+  <circle cx="310" cy="110" r="22" fill="white" stroke="#2a2a2a" stroke-width="2.2"/>
+  <circle cx="310" cy="110" r="3" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="310" y1="110" x2="310" y2="96" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="310" y1="110" x2="320" y2="115" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="310" y1="89" x2="310" y2="93" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="310" y1="127" x2="310" y2="131" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="289" y1="110" x2="293" y2="110" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="327" y1="110" x2="331" y2="110" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
 
-  <!-- 안전 고글 -->
-  <ellipse cx="178" cy="152" rx="20" ry="15" class="colorable" id="goggle-l"/>
-  <ellipse cx="222" cy="152" rx="20" ry="15" class="colorable" id="goggle-r"/>
-  <line x1="198" y1="152" x2="202" y2="152" class="outline" stroke-width="3"/>
-  <path d="M135 147 Q158 140 158 152" class="outline" stroke-width="2.5"/>
-  <path d="M265 147 Q242 140 242 152" class="outline" stroke-width="2.5"/>
+  <!-- === NARI FOX leaning over bench === -->
+  <!-- Tail -->
+  <path d="M245 265 Q305 245 308 205 Q312 168 280 160 Q260 155 256 175 Q274 178 271 200 Q268 228 242 248 Q228 258 232 270 Z" fill="white" stroke="#2a2a2a" stroke-width="2.8" stroke-linejoin="round"/>
+  <!-- Body (leaning forward) -->
+  <ellipse cx="200" cy="290" rx="40" ry="52" fill="white" stroke="#2a2a2a" stroke-width="2.8" transform="rotate(-15,200,290)"/>
+  <!-- Lab coat collar -->
+  <path d="M175 265 Q200 258 225 265" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <!-- Left arm (extended onto bench) -->
+  <path d="M168 280 Q148 295 128 310 Q115 318 110 325" fill="none" stroke="#2a2a2a" stroke-width="2.8" stroke-linecap="round"/>
+  <ellipse cx="108" cy="329" rx="11" ry="8" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Right arm (holding beaker) -->
+  <path d="M232 282 Q248 290 258 305" fill="none" stroke="#2a2a2a" stroke-width="2.8" stroke-linecap="round"/>
+  <ellipse cx="260" cy="310" rx="10" ry="8" fill="white" stroke="#2a2a2a" stroke-width="2"/>
 
-  <!-- 주둥이 -->
-  <ellipse cx="200" cy="195" rx="30" ry="20" class="colorable" id="snout"/>
-  <!-- 눈 -->
-  <circle cx="178" cy="172" r="12" class="colorable" id="eye-l"/>
-  <circle cx="178" cy="172" r="5.5" class="fixed"/>
-  <circle cx="175" cy="169" r="2.5" fill="white"/>
-  <circle cx="222" cy="172" r="12" class="colorable" id="eye-r"/>
-  <circle cx="222" cy="172" r="5.5" class="fixed"/>
-  <circle cx="219" cy="169" r="2.5" fill="white"/>
-  <!-- 코 -->
-  <ellipse cx="200" cy="192" rx="7" ry="5" class="colorable" id="nose"/>
-  <!-- 입 (놀란 표정) -->
-  <ellipse cx="200" cy="205" rx="9" ry="7" class="colorable" id="mouth-open"/>
-  <!-- 볼 -->
-  <ellipse cx="163" cy="188" rx="13" ry="8" class="colorable" id="blush-l"/>
-  <ellipse cx="237" cy="188" rx="13" ry="8" class="colorable" id="blush-r"/>
+  <!-- NECK -->
+  <rect x="193" y="222" width="14" height="15" rx="5" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- HEAD (tilted forward/down to look at bench) -->
+  <ellipse cx="200" cy="200" rx="42" ry="38" fill="white" stroke="#2a2a2a" stroke-width="3" transform="rotate(-10,200,200)"/>
+  <!-- Ears -->
+  <path d="M166 180 L154 140 L188 167Z" fill="white" stroke="#2a2a2a" stroke-width="2.8" stroke-linejoin="round"/>
+  <path d="M170 178 L161 146 L185 169Z" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <path d="M232 177 L242 140 L210 168Z" fill="white" stroke="#2a2a2a" stroke-width="2.8" stroke-linejoin="round"/>
+  <path d="M228 176 L236 144 L213 170Z" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Goggles pushed up on forehead -->
+  <rect x="172" y="170" width="20" height="13" rx="6" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="205" y="170" width="20" height="13" rx="6" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="192" y1="176" x2="205" y2="176" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Eyes (looking down intently) -->
+  <ellipse cx="185" cy="198" rx="9" ry="7" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="185" cy="200" r="4" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="185" cy="200" r="2" fill="#2a2a2a"/>
+  <ellipse cx="215" cy="198" rx="9" ry="7" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="215" cy="200" r="4" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="215" cy="200" r="2" fill="#2a2a2a"/>
+  <!-- Muzzle -->
+  <ellipse cx="200" cy="212" rx="22" ry="14" fill="white" stroke="#2a2a2a" stroke-width="2.2"/>
+  <!-- Nose -->
+  <ellipse cx="200" cy="206" rx="5" ry="3.5" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Curious/focused expression mouth -->
+  <path d="M195 215 Q200 220 205 215" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <!-- Whisker lines -->
+  <line x1="178" y1="210" x2="162" y2="207" stroke="#2a2a2a" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="178" y1="215" x2="162" y2="215" stroke="#2a2a2a" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="222" y1="210" x2="238" y2="207" stroke="#2a2a2a" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="222" y1="215" x2="238" y2="215" stroke="#2a2a2a" stroke-width="1.2" stroke-linecap="round"/>
 
-  <!-- 책 (실험 노트) -->
-  <rect x="60" y="340" width="55" height="40" rx="5" class="colorable" id="notebook"/>
-  <line x1="87" y1="340" x2="87" y2="380" class="outline" stroke-width="2"/>
-  <!-- 노트 줄 -->
-  <line x1="92" y1="350" x2="110" y2="350" class="outline" stroke-width="1"/>
-  <line x1="92" y1="358" x2="110" y2="358" class="outline" stroke-width="1"/>
-  <line x1="92" y1="366" x2="110" y2="366" class="outline" stroke-width="1"/>
-
-  <text x="200" y="490" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#FF8B4A" font-weight="bold">나리의 실험실 🦊</text>
+  <!-- Activity prompt -->
+  <text x="200" y="478" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="13" fill="#555">
+    <tspan x="200" dy="0">실험이 실패했을 때</tspan>
+    <tspan x="200" dy="18">나리의 표정을 그려 넣어 보세요.</tspan>
+  </text>
+  <text x="200" y="540" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="10" fill="#aaa">마음마을 © 색칠공부</text>
 </svg>

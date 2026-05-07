@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560">
+  <rect width="400" height="560" fill="white"/>
+  <rect x="8" y="8" width="384" height="544" rx="14" stroke="#2a2a2a" stroke-width="3" fill="none"/>
+  <rect x="16" y="16" width="368" height="528" rx="10" stroke="#2a2a2a" stroke-width="1" fill="none"/>
+  <text x="200" y="50" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="20" font-weight="bold" fill="#2a2a2a">해냈어요! 느루</text>
+  <line x1="40" y1="62" x2="360" y2="62" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- Finish line tape (broken, behind turtle) -->
+  <path d="M30,360 L168,360" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round"/>
+  <path d="M232,360 L370,360" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round"/>
+  <!-- Tape diagonal pattern -->
+  <line x1="40" y1="352" x2="55" y2="368" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="55" y1="352" x2="70" y2="368" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="70" y1="352" x2="85" y2="368" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="85" y1="352" x2="100" y2="368" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="100" y1="352" x2="115" y2="368" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="115" y1="352" x2="130" y2="368" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="130" y1="352" x2="145" y2="368" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="145" y1="352" x2="160" y2="368" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="242" y1="352" x2="257" y2="368" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="257" y1="352" x2="272" y2="368" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="272" y1="352" x2="287" y2="368" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="287" y1="352" x2="302" y2="368" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="302" y1="352" x2="317" y2="368" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="317" y1="352" x2="332" y2="368" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="332" y1="352" x2="347" y2="368" stroke="#2a2a2a" stroke-width="1.5"/>
+  <line x1="347" y1="352" x2="362" y2="368" stroke="#2a2a2a" stroke-width="1.5"/>
+
+  <!-- Torn tape pieces -->
+  <path d="M165,352 Q168,360 163,370 Q172,360 168,352Z" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <path d="M232,354 Q237,362 232,372 Q240,362 238,354Z" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+
+  <!-- Ground -->
+  <path d="M30,420 Q200,410 370,420 L370,455 Q200,445 30,455 Z" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+
+  <!-- TROPHY held up high -->
+  <!-- Trophy base/pedestal -->
+  <rect x="178" y="158" width="44" height="14" rx="4" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <rect x="185" y="144" width="30" height="16" rx="3" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Trophy stem -->
+  <rect x="196" y="108" width="8" height="38" rx="3" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Trophy cup -->
+  <path d="M165,78 Q165,108 200,118 Q235,108 235,78 Z" fill="white" stroke="#2a2a2a" stroke-width="3" stroke-linejoin="round"/>
+  <!-- Trophy rim top -->
+  <rect x="160" y="72" width="80" height="10" rx="5" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Trophy handles -->
+  <path d="M165,82 Q148,82 148,95 Q148,108 165,108" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M235,82 Q252,82 252,95 Q252,108 235,108" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Star on trophy cup -->
+  <polygon points="200,83 203,92 213,92 205,98 208,107 200,101 192,107 195,98 187,92 197,92" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Trophy shine lines -->
+  <line x1="173" y1="84" x2="178" y2="96" stroke="#2a2a2a" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="180" y1="80" x2="183" y2="92" stroke="#2a2a2a" stroke-width="1.2" stroke-linecap="round"/>
+
+  <!-- Stars radiating from trophy -->
+  <polygon points="138,68 141,78 151,78 143,84 146,94 138,88 130,94 133,84 125,78 135,78" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <polygon points="262,72 265,82 275,82 267,88 270,98 262,92 254,98 257,88 249,82 259,82" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <polygon points="120,108 122,114 129,114 123,118 125,124 120,120 115,124 117,118 111,114 118,114" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <polygon points="280,95 282,102 289,102 283,106 285,113 280,109 275,113 277,106 271,102 278,102" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <polygon points="200,65 202,71 208,71 203,75 205,81 200,77 195,81 197,75 192,71 198,71" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+
+  <!-- Confetti / streamers -->
+  <path d="M50,110 Q60,90 55,75" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M55,75 Q65,68 70,80 Q62,90 55,75Z" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <path d="M348,100 Q355,82 350,68" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M350,68 Q360,62 364,74 Q356,84 350,68Z" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <rect x="38" y="140" width="10" height="14" rx="2" fill="white" stroke="#2a2a2a" stroke-width="1.8" transform="rotate(20,38,140)"/>
+  <rect x="350" y="135" width="10" height="14" rx="2" fill="white" stroke="#2a2a2a" stroke-width="1.8" transform="rotate(-20,350,135)"/>
+  <circle cx="72" cy="148" r="5" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <circle cx="332" cy="148" r="5" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <!-- Streamers -->
+  <path d="M80,80 Q95,100 85,120 Q75,140 90,155" fill="none" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M320,75 Q305,95 315,115 Q325,135 310,150" fill="none" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M40,165 Q55,180 45,200" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M360,165 Q345,182 355,200" fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- TURTLE holding trophy up, big proud smile -->
+  <!-- Shell -->
+  <ellipse cx="200" cy="350" rx="68" ry="54" fill="white" stroke="#2a2a2a" stroke-width="3"/>
+  <ellipse cx="200" cy="365" rx="68" ry="20" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Hex on shell -->
+  <polygon points="200,304 217,313 217,330 200,339 183,330 183,313" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <polygon points="222,317 238,325 238,341 222,349 206,341 206,325" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <polygon points="178,317 194,325 194,341 178,349 162,341 162,325" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <polygon points="200,332 216,340 216,355 200,363 184,355 184,340" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Flower on shell -->
+  <circle cx="200" cy="320" r="5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <ellipse cx="200" cy="313" rx="3" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <ellipse cx="206" cy="316" rx="3" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(60,206,316)"/>
+  <ellipse cx="206" cy="324" rx="3" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(120,206,324)"/>
+  <ellipse cx="194" cy="324" rx="3" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(240,194,324)"/>
+  <ellipse cx="194" cy="316" rx="3" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(300,194,316)"/>
+
+  <!-- Both arms raised high holding trophy -->
+  <ellipse cx="148" cy="300" rx="17" ry="10" fill="white" stroke="#2a2a2a" stroke-width="2.5" transform="rotate(-65,148,300)"/>
+  <ellipse cx="252" cy="300" rx="17" ry="10" fill="white" stroke="#2a2a2a" stroke-width="2.5" transform="rotate(65,252,300)"/>
+  <!-- Back legs -->
+  <ellipse cx="248" cy="378" rx="18" ry="11" fill="white" stroke="#2a2a2a" stroke-width="2.5" transform="rotate(15,248,378)"/>
+  <ellipse cx="152" cy="378" rx="18" ry="11" fill="white" stroke="#2a2a2a" stroke-width="2.5" transform="rotate(-15,152,378)"/>
+
+  <!-- Neck (head tilted back with pride) -->
+  <ellipse cx="200" cy="310" rx="14" ry="20" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Head -->
+  <circle cx="200" cy="290" r="24" fill="white" stroke="#2a2a2a" stroke-width="3"/>
+  <!-- Huge proud smile / big grin -->
+  <path d="M184,295 Q200,312 216,295" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Happy closed eyes (squinting in joy) -->
+  <path d="M188,284 Q193,279 198,284" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M202,284 Q207,279 212,284" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Cheek blushes -->
+  <ellipse cx="183" cy="292" rx="7" ry="4" fill="none" stroke="#2a2a2a" stroke-width="1.2" stroke-dasharray="2,2"/>
+  <ellipse cx="217" cy="292" rx="7" ry="4" fill="none" stroke="#2a2a2a" stroke-width="1.2" stroke-dasharray="2,2"/>
+  <!-- Tail -->
+  <path d="M200,384 Q200,398 196,403" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Activity prompt -->
+  <text x="200" y="490" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="13" fill="#555">
+    <tspan x="200" dy="0">느루의 트로피에 무엇을</tspan>
+    <tspan x="200" dy="18">이루었는지 써 보세요.</tspan>
+  </text>
+  <text x="200" y="540" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="10" fill="#aaa">마음마을 © 색칠공부</text>
+</svg>

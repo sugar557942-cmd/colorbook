@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560">
+  <rect width="400" height="560" fill="white"/>
+  <rect x="8" y="8" width="384" height="544" rx="14" fill="none" stroke="#2a2a2a" stroke-width="3"/>
+  <rect x="16" y="16" width="368" height="528" rx="10" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="200" y="50" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="20" font-weight="bold" fill="#2a2a2a">지평선을 바라보는 라온</text>
+  <line x1="40" y1="62" x2="360" y2="62" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- SUN RISING/SETTING on horizon -->
+  <!-- Sun half-circle on horizon -->
+  <path d="M145,330 Q145,268 200,268 Q255,268 255,330" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Sun inner glow ring -->
+  <path d="M158,330 Q158,286 200,286 Q242,286 242,330" fill="white" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4,3"/>
+  <!-- Sun rays spreading up and sideways -->
+  <line x1="200" y1="264" x2="200" y2="252" stroke="#2a2a2a" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="228" y1="272" x2="237" y2="262" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="250" y1="291" x2="261" y2="284" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="258" y1="314" x2="270" y2="311" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="172" y1="272" x2="163" y2="262" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="150" y1="291" x2="139" y2="284" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="142" y1="314" x2="130" y2="311" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <!-- Longer rays -->
+  <line x1="214" y1="266" x2="220" y2="254" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="186" y1="266" x2="180" y2="254" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="243" y1="280" x2="252" y2="270" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="157" y1="280" x2="148" y2="270" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- HORIZON LINE -->
+  <line x1="34" y1="330" x2="366" y2="330" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- DISTANT MOUNTAINS SILHOUETTE on horizon -->
+  <!-- Far mountains (small, behind) -->
+  <path d="M34,330 Q55,295 76,330" fill="white" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M62,330 Q88,280 114,330" fill="white" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Gap for sun area in mountains -->
+  <path d="M280,330 Q306,280 332,330" fill="white" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M318,330 Q338,298 358,330" fill="white" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Nearer mountain left -->
+  <path d="M28,330 Q60,258 95,330" fill="white" stroke="#2a2a2a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Nearer mountain right -->
+  <path d="M305,330 Q340,258 372,330" fill="white" stroke="#2a2a2a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- FOREGROUND: mountainTOP where sparrow stands -->
+  <!-- Large rocky peak/post in center -->
+  <!-- Rocky mountain top shape -->
+  <path d="M175,330 Q182,295 192,270 Q200,250 200,245 Q208,250 208,270 Q218,295 225,330 Z" fill="white" stroke="#2a2a2a" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Rock texture cracks -->
+  <path d="M193,310 Q196,300 194,290" fill="none" stroke="#2a2a2a" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M208,308 Q206,298 209,288" fill="none" stroke="#2a2a2a" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M185,320 Q188,312 186,304" fill="none" stroke="#2a2a2a" stroke-width="1" stroke-linecap="round"/>
+  <!-- Wider base connecting to horizon -->
+  <path d="M155,330 Q170,318 200,315 Q230,318 245,330" fill="white" stroke="#2a2a2a" stroke-width="2.2" stroke-linecap="round"/>
+
+  <!-- FOREGROUND GROUND + landscape below horizon -->
+  <path d="M34,330 L34,445 L366,445 L366,330 Q340,338 300,335 Q260,332 245,330 Q230,318 200,315 Q170,318 155,330 Q110,332 80,336 Q55,338 34,330 Z" fill="white" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Ground terrain features -->
+  <path d="M34,380 Q70,370 110,375 Q140,368 170,378" fill="none" stroke="#2a2a2a" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M230,376 Q260,368 300,374 Q330,368 366,378" fill="none" stroke="#2a2a2a" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- Small trees on foreground -->
+  <line x1="55" y1="380" x2="55" y2="352" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <ellipse cx="55" cy="343" rx="12" ry="14" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <line x1="75" y1="382" x2="75" y2="358" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <ellipse cx="75" cy="350" rx="10" ry="12" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <line x1="330" y1="380" x2="330" y2="352" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <ellipse cx="330" cy="343" rx="12" ry="14" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <line x1="350" y1="382" x2="350" y2="358" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <ellipse cx="350" cy="350" rx="10" ry="12" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+
+  <!-- SMALL CLOUDS in sky -->
+  <ellipse cx="80" cy="140" rx="30" ry="14" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="104" cy="130" rx="22" ry="12" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="62" cy="134" rx="18" ry="11" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+
+  <ellipse cx="320" cy="145" rx="32" ry="14" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="344" cy="134" rx="22" ry="12" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="300" cy="138" rx="19" ry="11" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- Dream/thought bubble shapes small -->
+  <circle cx="160" cy="110" r="6" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="152" cy="120" r="4" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="168" cy="122" r="4" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="240" cy="110" r="6" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="248" cy="120" r="4" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="232" cy="122" r="4" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+
+  <!-- ===== SPARROW RAON perched on mountain peak ===== -->
+  <!-- Body -->
+  <ellipse cx="200" cy="234" rx="20" ry="16" fill="white" stroke="#2a2a2a" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Tail fan -->
+  <path d="M181,236 Q170,245 164,241 Q170,233 180,231 Z" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="170" y1="237" x2="164" y2="242" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="172" y1="242" x2="166" y2="247" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Head -->
+  <circle cx="213" cy="218" r="14" fill="white" stroke="#2a2a2a" stroke-width="2.8"/>
+  <!-- Beak (facing forward/horizon, thoughtful closed) -->
+  <polygon points="225,215 234,213 226,220" fill="white" stroke="#2a2a2a" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Eye gentle dreamy -->
+  <circle cx="218" cy="214" r="5.5" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="219" cy="214" r="3" fill="#2a2a2a"/>
+  <circle cx="220.5" cy="212.5" r="1.1" fill="white"/>
+  <!-- Eyebrow soft raised (dreaming) -->
+  <path d="M214,208 Q218,205 222,207" fill="none" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Small dot under eye (thoughtful/emotional) -->
+  <circle cx="215" cy="220" r="1.2" fill="#2a2a2a"/>
+  <!-- Wing folded, relaxed -->
+  <path d="M197,227 Q187,233 189,243 Q197,245 209,243 Q208,233 200,227 Z" fill="white" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="190" y1="233" x2="206" y2="236" stroke="#2a2a2a" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="189" y1="239" x2="206" y2="242" stroke="#2a2a2a" stroke-width="1.3" stroke-linecap="round"/>
+  <!-- Feet gripping rock tip -->
+  <line x1="201" y1="250" x2="198" y2="258" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="195" y1="258" x2="198" y2="258" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="201" y1="258" x2="198" y2="258" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="198" y1="258" x2="198" y2="261" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="209" y1="250" x2="210" y2="258" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="207" y1="258" x2="210" y2="258" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="213" y1="258" x2="210" y2="258" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="210" y1="258" x2="210" y2="261" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- Dreamy swirl behind sparrow -->
+  <path d="M172,215 Q166,208 170,200 Q176,192 182,195 Q185,199 180,203" fill="none" stroke="#2a2a2a" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="3,3"/>
+  <path d="M168,220 Q158,212 164,202 Q170,192 178,197" fill="none" stroke="#2a2a2a" stroke-width="1" stroke-linecap="round" stroke-dasharray="2,4"/>
+
+  <!-- Activity prompt -->
+  <text x="200" y="476" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="13" fill="#555">
+    <tspan x="200" dy="0">지평선 너머에 무엇이 있을지</tspan>
+    <tspan x="200" dy="18">색칠하며 상상해 보세요.</tspan>
+  </text>
+  <text x="200" y="540" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="10" fill="#aaa">마음마을 © 색칠공부</text>
+</svg>

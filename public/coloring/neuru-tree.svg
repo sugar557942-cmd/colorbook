@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560">
+  <rect width="400" height="560" fill="white"/>
+  <rect x="8" y="8" width="384" height="544" rx="14" stroke="#2a2a2a" stroke-width="3" fill="none"/>
+  <rect x="16" y="16" width="368" height="528" rx="10" stroke="#2a2a2a" stroke-width="1" fill="none"/>
+  <text x="200" y="50" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="20" font-weight="bold" fill="#2a2a2a">나무 심는 느루</text>
+  <line x1="40" y1="62" x2="360" y2="62" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- Ground -->
+  <path d="M30,415 Q200,402 370,415 L370,455 Q200,445 30,455 Z" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Ground texture -->
+  <path d="M40,428 Q200,420 360,428" fill="none" stroke="#2a2a2a" stroke-width="1.2" stroke-dasharray="3,4"/>
+  <path d="M40,438 Q200,430 360,438" fill="none" stroke="#2a2a2a" stroke-width="1.2" stroke-dasharray="3,4"/>
+  <path d="M40,448 Q200,440 360,448" fill="none" stroke="#2a2a2a" stroke-width="1.2" stroke-dasharray="3,4"/>
+
+  <!-- Planting hole -->
+  <ellipse cx="170" cy="420" rx="28" ry="10" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Dirt pile beside hole -->
+  <path d="M144,418 Q135,410 128,418 Q135,420 144,418Z" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <path d="M142,416 Q132,406 125,414" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+
+  <!-- Sapling being planted -->
+  <line x1="170" y1="420" x2="170" y2="340" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round"/>
+  <!-- Sapling roots -->
+  <path d="M170,415 Q158,422 150,428" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M170,415 Q182,422 190,428" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <!-- Sapling branch left -->
+  <path d="M170,370 Q155,362 145,368" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Sapling branch right -->
+  <path d="M170,360 Q185,350 196,354" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Sapling leaves -->
+  <ellipse cx="145" cy="364" rx="12" ry="9" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="198" cy="350" rx="14" ry="10" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <ellipse cx="170" cy="338" rx="11" ry="9" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- Watering can nearby -->
+  <rect x="48" y="388" width="36" height="26" rx="5" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <path d="M84,396 Q100,388 108,398 L105,403 Q96,396 82,402 Z" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <path d="M48,393 Q38,385 42,400" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Small plant design on can -->
+  <path d="M60,399 L60,410" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <ellipse cx="57" cy="397" rx="5" ry="4" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <ellipse cx="63" cy="397" rx="5" ry="4" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+
+  <!-- Growth chart strip on right side -->
+  <rect x="318" y="130" width="45" height="260" rx="6" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Chart label -->
+  <text x="340" y="148" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#2a2a2a">성장</text>
+  <!-- Stage 1: seed -->
+  <circle cx="340" cy="175" r="7" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="340" y1="168" x2="340" y2="165" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="340" y="192" text-anchor="middle" font-family="Arial,sans-serif" font-size="7.5" fill="#555">씨앗</text>
+  <!-- Stage 2: sprout -->
+  <line x1="340" y1="228" x2="340" y2="208" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <ellipse cx="333" cy="220" rx="7" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(-20,333,220)"/>
+  <ellipse cx="347" cy="218" rx="7" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(20,347,218)"/>
+  <text x="340" y="240" text-anchor="middle" font-family="Arial,sans-serif" font-size="7.5" fill="#555">새싹</text>
+  <!-- Stage 3: small tree -->
+  <line x1="340" y1="278" x2="340" y2="255" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M340,268 Q330,262 325,268" fill="none" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M340,262 Q350,256 355,260" fill="none" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+  <ellipse cx="325" cy="266" rx="7" ry="6" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <ellipse cx="355" cy="258" rx="8" ry="6" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <ellipse cx="340" cy="253" rx="7" ry="6" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <text x="340" y="290" text-anchor="middle" font-family="Arial,sans-serif" font-size="7.5" fill="#555">작은</text>
+  <text x="340" y="300" text-anchor="middle" font-family="Arial,sans-serif" font-size="7.5" fill="#555">나무</text>
+  <!-- Stage 4: big tree -->
+  <line x1="340" y1="360" x2="340" y2="318" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round"/>
+  <path d="M340,346 Q325,338 318,348" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M340,335 Q356,325 363,332" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <ellipse cx="316" cy="346" rx="11" ry="9" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <ellipse cx="364" cy="330" rx="12" ry="9" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <ellipse cx="340" cy="315" rx="13" ry="10" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <text x="340" y="375" text-anchor="middle" font-family="Arial,sans-serif" font-size="7.5" fill="#555">큰</text>
+  <text x="340" y="385" text-anchor="middle" font-family="Arial,sans-serif" font-size="7.5" fill="#555">나무</text>
+  <!-- Connecting arrows between stages -->
+  <line x1="340" y1="196" x2="340" y2="203" stroke="#2a2a2a" stroke-width="1.2" stroke-linecap="round"/>
+  <polygon points="340,206 337,200 343,200" fill="#2a2a2a"/>
+  <line x1="340" y1="244" x2="340" y2="250" stroke="#2a2a2a" stroke-width="1.2" stroke-linecap="round"/>
+  <polygon points="340,253 337,247 343,247" fill="#2a2a2a"/>
+  <line x1="340" y1="303" x2="340" y2="309" stroke="#2a2a2a" stroke-width="1.2" stroke-linecap="round"/>
+  <polygon points="340,312 337,306 343,306" fill="#2a2a2a"/>
+
+  <!-- TURTLE planting -->
+  <!-- Shell -->
+  <ellipse cx="235" cy="335" rx="65" ry="52" fill="white" stroke="#2a2a2a" stroke-width="3"/>
+  <ellipse cx="235" cy="350" rx="65" ry="19" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Hex on shell -->
+  <polygon points="235,291 252,300 252,317 235,326 218,317 218,300" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <polygon points="257,304 273,312 273,328 257,336 241,328 241,312" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <polygon points="213,304 229,312 229,328 213,336 197,328 197,312" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <polygon points="235,319 251,327 251,342 235,350 219,342 219,327" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Flower on shell -->
+  <circle cx="235" cy="308" r="5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <ellipse cx="235" cy="301" rx="3" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <ellipse cx="241" cy="304" rx="3" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(60,241,304)"/>
+  <ellipse cx="241" cy="312" rx="3" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(120,241,312)"/>
+  <ellipse cx="229" cy="312" rx="3" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(240,229,312)"/>
+  <ellipse cx="229" cy="304" rx="3" ry="5" fill="white" stroke="#2a2a2a" stroke-width="1.5" transform="rotate(300,229,304)"/>
+
+  <!-- Back legs -->
+  <ellipse cx="278" cy="365" rx="17" ry="11" fill="white" stroke="#2a2a2a" stroke-width="2.5" transform="rotate(15,278,365)"/>
+  <!-- Right front leg (digging) pointing down -->
+  <ellipse cx="290" cy="385" rx="12" ry="17" fill="white" stroke="#2a2a2a" stroke-width="2.5" transform="rotate(10,290,385)"/>
+  <!-- Left front leg (holding sapling) -->
+  <ellipse cx="180" cy="358" rx="17" ry="11" fill="white" stroke="#2a2a2a" stroke-width="2.5" transform="rotate(-30,180,358)"/>
+
+  <!-- Neck -->
+  <ellipse cx="188" cy="308" rx="13" ry="20" fill="white" stroke="#2a2a2a" stroke-width="2.5" transform="rotate(-15,188,308)"/>
+  <!-- Head -->
+  <circle cx="175" cy="290" r="22" fill="white" stroke="#2a2a2a" stroke-width="3"/>
+  <!-- Eyes - gentle focused -->
+  <circle cx="168" cy="284" r="6" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="167" cy="284" r="2.5" fill="#2a2a2a"/>
+  <circle cx="166" cy="282" r="1" fill="white"/>
+  <circle cx="182" cy="285" r="4" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <circle cx="182" cy="285" r="1.5" fill="#2a2a2a"/>
+  <!-- Gentle smile -->
+  <path d="M166,297 Q174,304 182,298" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <!-- Tail -->
+  <path d="M300,353 Q313,360 315,371" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Activity prompt -->
+  <text x="200" y="490" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="13" fill="#555">
+    <tspan x="200" dy="0">느루가 심은 나무가 다 자라면</tspan>
+    <tspan x="200" dy="18">어떤 모습일까요?</tspan>
+  </text>
+  <text x="200" y="540" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="10" fill="#aaa">마음마을 © 색칠공부</text>
+</svg>

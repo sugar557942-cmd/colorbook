@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560">
+  <rect width="400" height="560" fill="white"/>
+  <rect x="8" y="8" width="384" height="544" rx="14" fill="none" stroke="#2a2a2a" stroke-width="3"/>
+  <rect x="16" y="16" width="368" height="528" rx="10" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="200" y="50" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="20" font-weight="bold" fill="#2a2a2a">발명 성공!</text>
+  <line x1="40" y1="62" x2="360" y2="62" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- === CONFETTI / CELEBRATION SHAPES === -->
+  <!-- Circles -->
+  <circle cx="45" cy="110" r="8" fill="none" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="355" cy="130" r="6" fill="none" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="80" cy="155" r="5" fill="none" stroke="#2a2a2a" stroke-width="1.8"/>
+  <circle cx="330" cy="90" r="7" fill="none" stroke="#2a2a2a" stroke-width="1.8"/>
+  <circle cx="360" cy="200" r="5" fill="none" stroke="#2a2a2a" stroke-width="1.8"/>
+  <circle cx="35" cy="280" r="6" fill="none" stroke="#2a2a2a" stroke-width="1.8"/>
+  <!-- Rectangles (confetti strips) -->
+  <rect x="38" y="88" width="14" height="6" rx="2" fill="none" stroke="#2a2a2a" stroke-width="1.8" transform="rotate(-30,45,91)"/>
+  <rect x="340" y="160" width="12" height="5" rx="2" fill="none" stroke="#2a2a2a" stroke-width="1.8" transform="rotate(20,346,162)"/>
+  <rect x="62" y="200" width="15" height="6" rx="2" fill="none" stroke="#2a2a2a" stroke-width="1.8" transform="rotate(45,69,203)"/>
+  <rect x="318" y="240" width="12" height="5" rx="2" fill="none" stroke="#2a2a2a" stroke-width="1.8" transform="rotate(-15,324,242)"/>
+  <rect x="30" y="200" width="14" height="5" rx="2" fill="none" stroke="#2a2a2a" stroke-width="1.8" transform="rotate(60,37,202)"/>
+  <rect x="355" y="310" width="13" height="5" rx="2" fill="none" stroke="#2a2a2a" stroke-width="1.8" transform="rotate(-40,361,312)"/>
+  <!-- Stars (confetti stars) -->
+  <path d="M320,115 L323,108 L326,115 L333,117 L326,120 L323,127 L320,120 L313,117 Z" fill="none" stroke="#2a2a2a" stroke-width="1.8"/>
+  <path d="M56,135 L58,130 L60,135 L65,137 L60,139 L58,144 L56,139 L51,137 Z" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <path d="M368,258 L370,253 L372,258 L377,260 L372,262 L370,267 L368,262 L363,260 Z" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <path d="M28,338 L30,333 L32,338 L37,340 L32,342 L30,347 L28,342 L23,340 Z" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <path d="M350,360 L353,354 L356,360 L362,362 L356,364 L353,370 L350,364 L344,362 Z" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+
+  <!-- THE GLOWING INVENTION (center, pedestal) -->
+  <!-- Pedestal -->
+  <rect x="152" y="368" width="96" height="18" rx="5" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <rect x="162" y="386" width="76" height="12" rx="4" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Invention: a bright flying contraption -->
+  <!-- Main body of invention -->
+  <rect x="165" y="310" width="70" height="58" rx="8" fill="white" stroke="#2a2a2a" stroke-width="2.5"/>
+  <!-- Wing left -->
+  <path d="M165 330 Q135 320 120 335 Q128 348 165 345Z" fill="white" stroke="#2a2a2a" stroke-width="2.2" stroke-linejoin="round"/>
+  <!-- Wing right -->
+  <path d="M235 330 Q265 320 280 335 Q272 348 235 345Z" fill="white" stroke="#2a2a2a" stroke-width="2.2" stroke-linejoin="round"/>
+  <!-- Propeller top -->
+  <rect x="195" y="295" width="10" height="20" rx="3" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Propeller blades -->
+  <ellipse cx="200" cy="295" rx="22" ry="7" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Dome/cockpit on top -->
+  <ellipse cx="200" cy="315" rx="20" ry="12" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Window in cockpit -->
+  <circle cx="200" cy="315" r="8" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Star on body -->
+  <path d="M200,335 L203,328 L206,335 L213,337 L206,340 L203,347 L200,340 L193,337 Z" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Exhaust jets / rockets at bottom -->
+  <path d="M175,368 L170,380 L175,380 L172,392 L178,386 L180,395 L182,386 L188,392 L185,380 L190,380 L185,368Z" fill="none" stroke="#2a2a2a" stroke-width="1.8"/>
+  <path d="M215,368 L210,380 L215,380 L212,392 L218,386 L220,395 L222,386 L228,392 L225,380 L230,380 L225,368Z" fill="none" stroke="#2a2a2a" stroke-width="1.8"/>
+
+  <!-- GLOW RAYS from invention -->
+  <line x1="200" y1="295" x2="200" y2="270" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="4,3" stroke-linecap="round"/>
+  <line x1="180" y1="302" x2="165" y2="282" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="4,3" stroke-linecap="round"/>
+  <line x1="220" y1="302" x2="235" y2="282" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="4,3" stroke-linecap="round"/>
+  <line x1="120" y1="338" x2="100" y2="328" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="4,3" stroke-linecap="round"/>
+  <line x1="280" y1="338" x2="300" y2="328" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="4,3" stroke-linecap="round"/>
+  <!-- Shooting stars -->
+  <path d="M260,175 L300,155 L292,165" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M130,185 L88,165 L97,174" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M310,265 L350,248 L343,258" fill="none" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- === NARI FOX (TRIUMPHANT, JUMPING, ARMS RAISED) === -->
+  <!-- Tail (flowing up in the jump) -->
+  <path d="M238 295 Q285 270 288 238 Q290 210 268 205 Q252 202 252 218 Q268 222 264 242 Q260 262 236 278 Q222 290 228 302 Z" fill="white" stroke="#2a2a2a" stroke-width="2.8" stroke-linejoin="round"/>
+  <!-- Body (in the air, rotated slightly) -->
+  <ellipse cx="196" cy="290" rx="35" ry="48" fill="white" stroke="#2a2a2a" stroke-width="2.8" transform="rotate(-5,196,290)"/>
+  <!-- Apron -->
+  <rect x="178" y="255" width="36" height="40" rx="5" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <path d="M178 295 Q175 330 180 348 Q196 356 212 348 Q217 330 214 295 Z" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- LEFT ARM (raised high) -->
+  <path d="M172 265 Q152 242 148 222 Q146 212 152 208" fill="none" stroke="#2a2a2a" stroke-width="2.8" stroke-linecap="round"/>
+  <ellipse cx="153" cy="206" rx="10" ry="8" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- RIGHT ARM (raised high) -->
+  <path d="M222 268 Q242 244 246 222 Q248 212 242 208" fill="none" stroke="#2a2a2a" stroke-width="2.8" stroke-linecap="round"/>
+  <ellipse cx="241" cy="206" rx="10" ry="8" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Legs (in air, kicked up) -->
+  <!-- Left leg -->
+  <path d="M178 348 Q165 375 155 388 Q148 395 150 402" fill="none" stroke="#2a2a2a" stroke-width="2.8" stroke-linecap="round"/>
+  <ellipse cx="151" cy="405" rx="12" ry="8" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Right leg (kicked outward) -->
+  <path d="M212 348 Q225 375 238 388 Q246 395 248 402" fill="none" stroke="#2a2a2a" stroke-width="2.8" stroke-linecap="round"/>
+  <ellipse cx="249" cy="405" rx="12" ry="8" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- NECK -->
+  <rect x="189" y="220" width="14" height="15" rx="5" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- HEAD (tilted back triumphantly) -->
+  <ellipse cx="196" cy="196" rx="44" ry="40" fill="white" stroke="#2a2a2a" stroke-width="3" transform="rotate(-8,196,196)"/>
+  <!-- Ears -->
+  <path d="M162 178 L150 136 L186 165Z" fill="white" stroke="#2a2a2a" stroke-width="2.8" stroke-linejoin="round"/>
+  <path d="M166 176 L157 141 L183 166Z" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <path d="M228 176 L240 136 L206 165Z" fill="white" stroke="#2a2a2a" stroke-width="2.8" stroke-linejoin="round"/>
+  <path d="M224 175 L233 141 L209 166Z" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Goggles flying off head (slightly separate) -->
+  <rect x="168" y="165" width="20" height="13" rx="6" fill="white" stroke="#2a2a2a" stroke-width="2" transform="rotate(-10,178,171)"/>
+  <rect x="200" y="163" width="20" height="13" rx="6" fill="white" stroke="#2a2a2a" stroke-width="2" transform="rotate(-10,210,169)"/>
+  <line x1="188" y1="169" x2="200" y2="167" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- Eyes (HUGE HAPPY smile-eyes) -->
+  <path d="M174 193 Q183 184 192 193" fill="none" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round"/>
+  <path d="M200 191 Q209 182 218 191" fill="none" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round"/>
+  <!-- Eye sparkles -->
+  <circle cx="183" cy="194" r="3.5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="209" cy="192" r="3.5" fill="white" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="182" cy="193" r="1.5" fill="#2a2a2a"/>
+  <circle cx="208" cy="191" r="1.5" fill="#2a2a2a"/>
+  <!-- BIG GRIN muzzle -->
+  <ellipse cx="196" cy="208" rx="24" ry="16" fill="white" stroke="#2a2a2a" stroke-width="2.2"/>
+  <ellipse cx="196" cy="202" rx="5.5" ry="4" fill="white" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Big wide open happy smile -->
+  <path d="M182 212 Q196 225 210 212" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Tongue (excited) -->
+  <path d="M189 218 Q196 225 203 218" fill="white" stroke="#2a2a2a" stroke-width="1.8"/>
+  <ellipse cx="196" cy="222" rx="7" ry="5" fill="none" stroke="#2a2a2a" stroke-width="1.8"/>
+  <!-- Cheeks (super happy) -->
+  <circle cx="173" cy="208" r="6" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  <circle cx="219" cy="207" r="6" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+
+  <!-- Big celebration stars above head -->
+  <path d="M138,145 L143,130 L148,145 L163,150 L148,155 L143,170 L138,155 L123,150 Z" fill="none" stroke="#2a2a2a" stroke-width="2"/>
+  <path d="M248,138 L252,126 L256,138 L268,142 L256,146 L252,158 L248,146 L236,142 Z" fill="none" stroke="#2a2a2a" stroke-width="2"/>
+  <path d="M195,95 L198,86 L201,95 L210,98 L201,101 L198,110 L195,101 L186,98 Z" fill="none" stroke="#2a2a2a" stroke-width="1.8"/>
+
+  <!-- Activity prompt -->
+  <text x="200" y="465" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="13" fill="#555">
+    <tspan x="200" dy="0">나리가 완성한 발명품은 무엇인가요?</tspan>
+    <tspan x="200" dy="18">그려 보세요.</tspan>
+  </text>
+  <text x="200" y="540" text-anchor="middle" font-family="'Noto Sans KR',Arial,sans-serif" font-size="10" fill="#aaa">마음마을 © 색칠공부</text>
+</svg>

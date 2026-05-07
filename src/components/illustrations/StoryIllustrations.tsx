@@ -141,6 +141,37 @@ const Turtle = ({ cx = 0, cy = 0, s = 1, mood = 'happy' as 'happy' | 'sad' }:
   </g>
 );
 
+// Cat (소리 – 고양이 🐱)
+const Cat = ({ cx = 0, cy = 0, s = 1, mood = 'happy' as Mood }:
+  { cx?: number; cy?: number; s?: number; mood?: Mood }) => (
+  <g transform={`translate(${cx},${cy}) scale(${s})`}>
+    <ellipse cx="0" cy="55" rx="36" ry="44" fill="#FF8B8B" />
+    <ellipse cx="0" cy="65" rx="20" ry="26" fill="#FFB3C1" />
+    <path d="M 28 78 Q 62 58 65 28 Q 66 6 48 0" stroke="#FF8B8B" strokeWidth="14" fill="none" strokeLinecap="round" />
+    <path d="M 28 78 Q 62 58 65 28 Q 66 6 48 0" stroke="#FFB3C1" strokeWidth="6" fill="none" strokeLinecap="round" />
+    <circle cx="0" cy="0" r="38" fill="#FF8B8B" />
+    <polygon points="-28,-26 -18,-52 -8,-26" fill="#FF8B8B" />
+    <polygon points="-24,-29 -18,-47 -12,-29" fill="#FFB3C1" />
+    <polygon points="8,-26 18,-52 28,-26" fill="#FF8B8B" />
+    <polygon points="12,-29 18,-47 24,-29" fill="#FFB3C1" />
+    <circle cx="-13" cy="-6" r="6" fill="#3D3D3D" />
+    <circle cx="13" cy="-6" r="6" fill="#3D3D3D" />
+    <circle cx="-11" cy="-9" r="2" fill="white" />
+    <circle cx="15" cy="-9" r="2" fill="white" />
+    <polygon points="0,4 -4,9 4,9" fill="#CC5577" />
+    <line x1="-5" y1="11" x2="-25" y2="7" stroke="#CC5577" strokeWidth="1.5" opacity="0.45" />
+    <line x1="-5" y1="13" x2="-25" y2="13" stroke="#CC5577" strokeWidth="1.5" opacity="0.45" />
+    <line x1="5" y1="11" x2="25" y2="7" stroke="#CC5577" strokeWidth="1.5" opacity="0.45" />
+    <line x1="5" y1="13" x2="25" y2="13" stroke="#CC5577" strokeWidth="1.5" opacity="0.45" />
+    {mood === 'happy'    && <path d="M -7 16 Q 0 23 7 16" stroke="#CC5577" strokeWidth="2.5" fill="none" strokeLinecap="round" />}
+    {mood === 'sad'      && <path d="M -7 21 Q 0 14 7 21" stroke="#CC5577" strokeWidth="2.5" fill="none" strokeLinecap="round" />}
+    {mood === 'thinking' && <line x1="-4" y1="18" x2="4" y2="18" stroke="#CC5577" strokeWidth="2" strokeLinecap="round" />}
+    {mood === 'surprised'&& <circle cx="0" cy="18" r="5" fill="none" stroke="#CC5577" strokeWidth="2" />}
+    <ellipse cx="-46" cy="26" rx="10" ry="20" fill="#FF8B8B" transform="rotate(-20,-46,26)" />
+    <ellipse cx="46" cy="26" rx="10" ry="20" fill="#FF8B8B" transform="rotate(20,46,26)" />
+  </g>
+);
+
 // ═══════════════════════════════════════════════════════════════
 //  1화  다온이의 마음 날씨  🐻
 // ═══════════════════════════════════════════════════════════════
@@ -1065,6 +1096,618 @@ export function JiuPlanP6({ className }: P) {
 }
 
 // ═══════════════════════════════════════════════════════════════
+//  5화  소리의 무지개 공방  🐱
+// ═══════════════════════════════════════════════════════════════
+
+export function SoriRainbowP1({ className }: P) {
+  return (
+    <svg viewBox="0 0 360 300" className={className}
+      style={{ background: 'linear-gradient(160deg,#FFF0F5 0%,#FFE4EC 80%,#FDDDE6 100%)' }}>
+      {/* Wall paintings */}
+      <rect x="16" y="18" width="56" height="46" rx="6" fill="#FFD93D" opacity="0.45" />
+      <rect x="82" y="14" width="52" height="58" rx="6" fill="#7EC8C1" opacity="0.4" />
+      <rect x="256" y="20" width="64" height="44" rx="6" fill="#FF8B4A" opacity="0.4" />
+      <rect x="280" y="74" width="54" height="52" rx="6" fill="#8BC48A" opacity="0.4" />
+      {/* Easel */}
+      <line x1="148" y1="238" x2="156" y2="92" stroke="#8B7355" strokeWidth="5" strokeLinecap="round" />
+      <line x1="212" y1="238" x2="204" y2="92" stroke="#8B7355" strokeWidth="5" strokeLinecap="round" />
+      <line x1="160" y1="160" x2="200" y2="160" stroke="#8B7355" strokeWidth="3" />
+      {/* Canvas */}
+      <rect x="150" y="90" width="60" height="72" rx="4" fill="white" stroke="#DDD" strokeWidth="2" />
+      <circle cx="170" cy="118" r="11" fill="#FF8B8B" opacity="0.7" />
+      <path d="M156 138 Q170 148 184 133" stroke="#FFD93D" strokeWidth="4" fill="none" strokeLinecap="round" />
+      <circle cx="187" cy="108" r="7" fill="#8BC48A" opacity="0.7" />
+      {/* Palette */}
+      <ellipse cx="224" cy="162" rx="22" ry="15" fill="#EEE" stroke="#CCC" strokeWidth="1.5" />
+      <circle cx="213" cy="157" r="5" fill="#FF8B8B" />
+      <circle cx="224" cy="154" r="5" fill="#FFD93D" />
+      <circle cx="233" cy="163" r="5" fill="#8BC48A" />
+      <circle cx="227" cy="172" r="5" fill="#7EC8C1" />
+      {/* Cat (소리) */}
+      <Cat cx={175} cy={215} s={0.85} mood="happy" />
+      {/* Paintbrush */}
+      <line x1="198" y1="196" x2="228" y2="168" stroke="#8B7355" strokeWidth="3" strokeLinecap="round" />
+      <ellipse cx="229" cy="167" rx="5" ry="3" fill="#FF8B8B" transform="rotate(-40,229,167)" />
+      <rect x="0" y="252" width="360" height="48" fill="#F8D8E4" opacity="0.5" />
+    </svg>
+  );
+}
+
+export function SoriRainbowP2({ className }: P) {
+  return (
+    <svg viewBox="0 0 360 300" className={className}
+      style={{ background: 'linear-gradient(160deg,#FFECEC 0%,#FFDAD0 80%)' }}>
+      <rect x="0" y="200" width="360" height="100" fill="#F0C4C4" opacity="0.4" />
+      {/* Fallen canvas */}
+      <rect x="88" y="165" width="60" height="72" rx="4" fill="white" stroke="#DDD" strokeWidth="2"
+        transform="rotate(-30,88,165)" />
+      {/* Paint splatters */}
+      <circle cx="130" cy="222" r="18" fill="#FF8B4A" opacity="0.35" />
+      <circle cx="165" cy="240" r="12" fill="#FFD93D" opacity="0.35" />
+      <circle cx="202" cy="225" r="10" fill="#8BC48A" opacity="0.35" />
+      <line x1="140" y1="234" x2="192" y2="218" stroke="#8B7355" strokeWidth="3" strokeLinecap="round" />
+      {/* Cat angry */}
+      <Cat cx={155} cy={200} s={0.85} mood="surprised" />
+      {/* Anger lines */}
+      <line x1="113" y1="148" x2="93" y2="132" stroke="#FF4444" strokeWidth="3" opacity="0.6" strokeLinecap="round" />
+      <line x1="106" y1="156" x2="82" y2="148" stroke="#FF4444" strokeWidth="3" opacity="0.6" strokeLinecap="round" />
+      <line x1="116" y1="142" x2="102" y2="122" stroke="#FF4444" strokeWidth="2.5" opacity="0.5" strokeLinecap="round" />
+      {/* Rabbit scared */}
+      <Rabbit cx={266} cy={208} s={0.78} mood="surprised" />
+      {/* Tear drop */}
+      <ellipse cx="247" cy="186" rx="4" ry="6" fill="#87CEEB" opacity="0.8" />
+      {/* Exclamation */}
+      <ellipse cx="88" cy="130" rx="36" ry="22" fill="white" opacity="0.9" stroke="#FF8B8B" strokeWidth="1.5" />
+      <text x="88" y="137" fontSize="22" textAnchor="middle">😤</text>
+    </svg>
+  );
+}
+
+export function SoriRainbowP3({ className }: P) {
+  return (
+    <svg viewBox="0 0 360 300" className={className}
+      style={{ background: 'linear-gradient(180deg,#E8EAF0 0%,#D8D8E8 55%,#E8E0E8 100%)' }}>
+      {/* Attic beams */}
+      <line x1="60" y1="0" x2="0" y2="200" stroke="#8B7355" strokeWidth="10" opacity="0.15" strokeLinecap="round" />
+      <line x1="180" y1="0" x2="60" y2="200" stroke="#8B7355" strokeWidth="10" opacity="0.15" strokeLinecap="round" />
+      {/* Small rainy window */}
+      <rect x="240" y="28" width="88" height="72" rx="6" fill="#B8CDE8" opacity="0.6" stroke="#8B7355" strokeWidth="5" />
+      <line x1="284" y1="28" x2="284" y2="100" stroke="#8B7355" strokeWidth="4" />
+      <line x1="240" y1="64" x2="328" y2="64" stroke="#8B7355" strokeWidth="4" />
+      {[250,262,274,286,298,310,322].map(x => (
+        <line key={x} x1={x} y1="34" x2={x - 4} y2="56"
+          stroke="#87CEEB" strokeWidth="1.5" opacity="0.6" strokeLinecap="round" />
+      ))}
+      {/* Cat sad, alone */}
+      <Cat cx={155} cy={218} s={0.80} mood="sad" />
+      {/* Thought bubble */}
+      <circle cx="206" cy="144" r="5" fill="white" opacity="0.7" />
+      <circle cx="216" cy="133" r="7" fill="white" opacity="0.72" />
+      <ellipse cx="234" cy="122" rx="26" ry="18" fill="white" opacity="0.88" />
+      <text x="234" y="128" fontSize="18" textAnchor="middle">😔</text>
+      <rect x="0" y="252" width="360" height="48" fill="#C8B8C8" opacity="0.3" />
+    </svg>
+  );
+}
+
+export function SoriRainbowP4({ className }: P) {
+  return (
+    <svg viewBox="0 0 360 300" className={className}
+      style={{ background: 'linear-gradient(160deg,#EDE7F6 0%,#E8EAF6 60%,#F3E5F5 100%)' }}>
+      {/* Door ajar */}
+      <rect x="288" y="132" width="58" height="118" rx="4" fill="#D4B896" opacity="0.5" />
+      <rect x="296" y="140" width="42" height="102" rx="3" fill="#C4A77D" opacity="0.3" />
+      <circle cx="296" cy="196" r="4" fill="#FFD93D" opacity="0.7" />
+      {/* Book on floor */}
+      <rect x="55" y="240" width="52" height="34" rx="3" fill="#6B7FBF" opacity="0.7" />
+      <rect x="57" y="242" width="48" height="30" rx="2" fill="#8090CF" opacity="0.5" />
+      {/* Owl (지우) */}
+      <Owl cx={108} cy={210} s={0.80} mood="thinking" />
+      {/* Cat */}
+      <Cat cx={248} cy={210} s={0.80} mood="thinking" />
+      {/* Speech bubble */}
+      <rect x="128" y="118" width="116" height="50" rx="12" fill="white" opacity="0.92" stroke="#7B8CBF" strokeWidth="2" />
+      <polygon points="148,168 160,168 144,182" fill="white" stroke="#7B8CBF" strokeWidth="1.5" />
+      <text x="186" y="140" fontSize="11.5" textAnchor="middle" fill="#5A6096">지금 어떤 기분이야?</text>
+      <text x="186" y="157" fontSize="11.5" textAnchor="middle" fill="#5A6096">화가 났어? 슬퍼? 💜</text>
+      <rect x="0" y="254" width="360" height="46" fill="#D8D0E8" opacity="0.3" />
+    </svg>
+  );
+}
+
+export function SoriRainbowP5({ className }: P) {
+  return (
+    <svg viewBox="0 0 360 300" className={className}
+      style={{ background: 'linear-gradient(160deg,#FFF8E1 0%,#FFF3CD 60%,#FFF0C8 100%)' }}>
+      {/* Easel with large canvas */}
+      <line x1="100" y1="240" x2="108" y2="70" stroke="#8B7355" strokeWidth="6" strokeLinecap="round" />
+      <line x1="200" y1="240" x2="192" y2="70" stroke="#8B7355" strokeWidth="6" strokeLinecap="round" />
+      <line x1="112" y1="158" x2="188" y2="158" stroke="#8B7355" strokeWidth="3" />
+      <rect x="103" y="68" width="94" height="94" rx="5" fill="white" stroke="#DDD" strokeWidth="2.5" />
+      {/* Emotion painting — red spiral */}
+      <path d="M 150 115 Q 165 98 168 115 Q 170 132 150 135 Q 130 137 128 115 Q 128 90 150 90"
+        stroke="#FF4444" strokeWidth="3.5" fill="none" strokeLinecap="round" />
+      <path d="M 150 115 Q 158 107 160 115 Q 162 123 150 125"
+        stroke="#FF8B8B" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+      {/* Blue teardrops */}
+      <ellipse cx="132" cy="108" rx="5" ry="7" fill="#64B5F6" opacity="0.7" />
+      <ellipse cx="170" cy="130" rx="4" ry="6" fill="#64B5F6" opacity="0.6" />
+      {/* Cat painting */}
+      <Cat cx={265} cy={205} s={0.82} mood="thinking" />
+      {/* Paintbrush to canvas */}
+      <line x1="245" y1="186" x2="208" y2="130" stroke="#8B7355" strokeWidth="3" strokeLinecap="round" />
+      <ellipse cx="207" cy="129" rx="5" ry="3" fill="#FF4444" transform="rotate(-50,207,129)" />
+      {/* Paint blobs */}
+      <circle cx="290" cy="238" r="10" fill="#FF8B8B" opacity="0.5" />
+      <circle cx="308" cy="232" r="8" fill="#FFD93D" opacity="0.5" />
+      <circle cx="298" cy="248" r="7" fill="#7EC8C1" opacity="0.5" />
+      <rect x="0" y="255" width="360" height="45" fill="#F5E8C0" opacity="0.5" />
+    </svg>
+  );
+}
+
+export function SoriRainbowP6({ className }: P) {
+  return (
+    <svg viewBox="0 0 360 300" className={className}
+      style={{ background: 'linear-gradient(160deg,#FFF0F5 0%,#FCE4EC 70%,#FFE0EB 100%)' }}>
+      {/* Rainbow arcs */}
+      {(['#FF8888','#FFAA44','#FFD93D','#88CC88','#64B5F6','#CC88FF'] as string[]).map((c, i) => (
+        <path key={i}
+          d={`M ${30 + i * 4} ${110 - i * 3} Q 180 ${20 - i * 5} ${330 - i * 4} ${110 - i * 3}`}
+          stroke={c} strokeWidth="6" fill="none" opacity="0.45" strokeLinecap="round" />
+      ))}
+      {/* New painting on easel */}
+      <line x1="145" y1="238" x2="152" y2="110" stroke="#8B7355" strokeWidth="5" strokeLinecap="round" />
+      <line x1="215" y1="238" x2="208" y2="110" stroke="#8B7355" strokeWidth="5" strokeLinecap="round" />
+      <rect x="148" y="108" width="64" height="58" rx="4" fill="white" stroke="#DDD" strokeWidth="2" />
+      <circle cx="165" cy="130" r="8" fill="#FF8B8B" opacity="0.7" />
+      <circle cx="191" cy="130" r="8" fill="#8BC48A" opacity="0.7" />
+      <path d="M 162 145 Q 179 152 194 145" stroke="#FFD93D" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+      {/* Cat (소리) */}
+      <Cat cx={120} cy={215} s={0.80} mood="happy" />
+      {/* Rabbit (하루) */}
+      <Rabbit cx={240} cy={215} s={0.80} mood="happy" />
+      {/* Friendship arc */}
+      <path d="M 152 208 Q 180 196 208 208" stroke="#FFB3C1" strokeWidth="4" fill="none"
+        opacity="0.6" strokeLinecap="round" />
+      <text x="178" y="182" fontSize="16" textAnchor="middle">✨</text>
+      <text x="80" y="170" fontSize="14" opacity="0.6">🎨</text>
+      <text x="278" y="165" fontSize="14" opacity="0.6">🎨</text>
+      <rect x="0" y="253" width="360" height="47" fill="#F8D8E4" opacity="0.4" />
+    </svg>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  6화  느루의 느린 정원  🐢
+// ═══════════════════════════════════════════════════════════════
+
+export function NeuruGardenP1({ className }: P) {
+  return (
+    <svg viewBox="0 0 360 300" className={className}
+      style={{ background: 'linear-gradient(180deg,#E8F5E9 0%,#F1F8E9 60%,#FFF8E7 100%)' }}>
+      <circle cx="300" cy="55" r="32" fill="#FFD93D" opacity="0.85" />
+      <ellipse cx="70" cy="55" rx="45" ry="19" fill="white" opacity="0.8" />
+      <ellipse cx="92" cy="42" rx="28" ry="17" fill="white" opacity="0.8" />
+      {/* Garden rows */}
+      {[0,1,2].map(i => (
+        <rect key={i} x={40 + i * 50} y={202} width="36" height="14" rx="6"
+          fill="#8B5E3C" opacity="0.35" />
+      ))}
+      {/* Turtle carefully planting */}
+      <Turtle cx={120} cy={215} s={0.88} mood="happy" />
+      {/* Seeds in hand area */}
+      <circle cx="152" cy="204" r="5" fill="#8B5E3C" opacity="0.8" />
+      <circle cx="164" cy="220" r="4" fill="#8B5E3C" opacity="0.7" />
+      {/* Fox rushing past */}
+      <Fox cx={278} cy={210} s={0.78} mood="happy" />
+      {/* Speed lines */}
+      <line x1="238" y1="195" x2="218" y2="195" stroke="#FF8B4A" strokeWidth="2.5" opacity="0.5" strokeLinecap="round" />
+      <line x1="236" y1="204" x2="214" y2="204" stroke="#FF8B4A" strokeWidth="2.5" opacity="0.5" strokeLinecap="round" />
+      <line x1="234" y1="213" x2="216" y2="213" stroke="#FF8B4A" strokeWidth="2" opacity="0.4" strokeLinecap="round" />
+      {/* Small sprout */}
+      <line x1="58" y1="202" x2="58" y2="182" stroke="#4CAF50" strokeWidth="2.5" strokeLinecap="round" />
+      <ellipse cx="58" cy="178" rx="9" ry="6" fill="#66BB6A" opacity="0.8" />
+      <rect x="0" y="240" width="360" height="60" fill="#A8D5A2" opacity="0.35" />
+    </svg>
+  );
+}
+
+export function NeuruGardenP2({ className }: P) {
+  return (
+    <svg viewBox="0 0 360 300" className={className}
+      style={{ background: 'linear-gradient(180deg,#ECEFF1 0%,#EEF5F4 60%,#E8F5F0 100%)' }}>
+      {/* Winding path */}
+      <path d="M 40 280 Q 120 230 180 220 Q 240 210 320 260"
+        stroke="#C8B8A2" strokeWidth="24" fill="none" opacity="0.5" strokeLinecap="round" />
+      {/* Other characters far ahead (small) */}
+      <Bear   cx={285} cy={218} s={0.52} mood="happy" />
+      <Rabbit cx={248} cy={222} s={0.50} mood="happy" />
+      <Fox    cx={310} cy={215} s={0.50} mood="happy" />
+      {/* Dots showing they've moved */}
+      <circle cx="232" cy="222" r="3" fill="#CCC" opacity="0.5" />
+      <circle cx="226" cy="222" r="3" fill="#CCC" opacity="0.4" />
+      <circle cx="220" cy="222" r="3" fill="#CCC" opacity="0.3" />
+      {/* Turtle alone behind */}
+      <Turtle cx={105} cy={234} s={0.80} mood="sad" />
+      {/* Thought bubble */}
+      <circle cx="144" cy="172" r="4" fill="white" opacity="0.7" />
+      <circle cx="155" cy="160" r="6" fill="white" opacity="0.75" />
+      <ellipse cx="174" cy="148" rx="26" ry="18" fill="white" opacity="0.88" />
+      <text x="174" y="154" fontSize="18" textAnchor="middle">😔</text>
+      <ellipse cx="90" cy="60" rx="48" ry="20" fill="white" opacity="0.6" />
+      <ellipse cx="250" cy="48" rx="40" ry="16" fill="white" opacity="0.6" />
+      <rect x="0" y="260" width="360" height="40" fill="#B2DFDB" opacity="0.25" />
+    </svg>
+  );
+}
+
+export function NeuruGardenP3({ className }: P) {
+  return (
+    <svg viewBox="0 0 360 300" className={className}
+      style={{ background: 'linear-gradient(180deg,#546E7A 0%,#78909C 30%,#B0BEC5 60%,#CFD8DC 100%)' }}>
+      {/* Storm clouds */}
+      <ellipse cx="120" cy="48" rx="80" ry="30" fill="#455A64" opacity="0.8" />
+      <ellipse cx="100" cy="34" rx="55" ry="22" fill="#546E7A" opacity="0.9" />
+      <ellipse cx="240" cy="52" rx="70" ry="26" fill="#455A64" opacity="0.75" />
+      <ellipse cx="258" cy="38" rx="50" ry="20" fill="#546E7A" opacity="0.85" />
+      {/* Rain drops */}
+      {[40,68,96,124,152,180,208,236,264,292,320,348].map(x => (
+        <line key={x} x1={x} y1={(x % 40) + 70} x2={x - 5} y2={(x % 40) + 96}
+          stroke="#90CAF9" strokeWidth="2" opacity="0.7" strokeLinecap="round" />
+      ))}
+      {[55,85,115,145,175,205,235,265,295,325].map(x => (
+        <line key={x} x1={x} y1={(x % 35) + 105} x2={x - 4} y2={(x % 35) + 128}
+          stroke="#90CAF9" strokeWidth="1.5" opacity="0.55" strokeLinecap="round" />
+      ))}
+      {/* Garden row */}
+      <rect x="80" y="212" width="140" height="18" rx="5" fill="#5D4037" opacity="0.5" />
+      {/* Seedlings */}
+      {[100,120,140,160,180].map(x => (
+        <g key={x}>
+          <line x1={x} y1="212" x2={x} y2="193"
+            stroke="#66BB6A" strokeWidth="2.5" strokeLinecap="round" />
+          <ellipse cx={x} cy={189} rx="8" ry="5" fill="#81C784" opacity="0.9" />
+        </g>
+      ))}
+      {/* Turtle covering plants */}
+      <Turtle cx={155} cy={218} s={0.95} mood="happy" />
+      {/* Shell glow */}
+      <ellipse cx="155" cy="196" rx="48" ry="22" fill="#7ECEC1" opacity="0.22" />
+      <rect x="0" y="245" width="360" height="55" fill="#4E342E" opacity="0.2" />
+    </svg>
+  );
+}
+
+export function NeuruGardenP4({ className }: P) {
+  return (
+    <svg viewBox="0 0 360 300" className={className}
+      style={{ background: 'linear-gradient(180deg,#E8F5E9 0%,#DCEDC8 50%,#F9FBE7 100%)' }}>
+      {/* Sun with rays */}
+      <circle cx="305" cy="52" r="34" fill="#FFD93D" opacity="0.9" />
+      {[0,40,80,120,160,200,240,280,320].map(a => (
+        <line key={a}
+          x1={305 + Math.cos(a * Math.PI / 180) * 42}
+          y1={52  + Math.sin(a * Math.PI / 180) * 42}
+          x2={305 + Math.cos(a * Math.PI / 180) * 55}
+          y2={52  + Math.sin(a * Math.PI / 180) * 55}
+          stroke="#FFD93D" strokeWidth="4" opacity="0.6" strokeLinecap="round" />
+      ))}
+      {/* Thriving plants */}
+      {[55,92,130,168,208].map((x, i) => (
+        <g key={x}>
+          <line x1={x} y1="220" x2={x} y2={165 - i * 6}
+            stroke="#388E3C" strokeWidth="3" strokeLinecap="round" />
+          <circle cx={x} cy={158 - i * 6} r={14 + i * 2} fill="#66BB6A" opacity="0.85" />
+          {i % 2 === 0
+            ? <circle cx={x + 8} cy={148 - i * 6} r={9} fill="#FF8B8B" opacity="0.7" />
+            : <circle cx={x - 7} cy={148 - i * 6} r={9} fill="#FFD93D" opacity="0.7" />}
+        </g>
+      ))}
+      {/* Turtle happy */}
+      <Turtle cx={130} cy={222} s={0.85} mood="happy" />
+      {/* Bear surprised */}
+      <Bear cx={245} cy={218} s={0.82} mood="surprised" />
+      {/* Speech bubble */}
+      <rect x="258" y="112" width="88" height="40" rx="10" fill="white"
+        opacity="0.92" stroke="#C4A77D" strokeWidth="1.5" />
+      <polygon points="270,152 282,152 266,166" fill="white" stroke="#C4A77D" strokeWidth="1.5" />
+      <text x="302" y="130" fontSize="10.5" textAnchor="middle" fill="#5D4037">느루 텃밭이</text>
+      <text x="302" y="145" fontSize="10.5" textAnchor="middle" fill="#5D4037">제일 튼튼해!</text>
+      <rect x="0" y="242" width="360" height="58" fill="#A5D6A7" opacity="0.35" />
+    </svg>
+  );
+}
+
+export function NeuruGardenP5({ className }: P) {
+  return (
+    <svg viewBox="0 0 360 300" className={className}
+      style={{ background: 'linear-gradient(160deg,#FFFDE7 0%,#FFF8E1 60%,#FFF3E0 100%)' }}>
+      {/* Festive banner */}
+      {(['#FF8B8B','#FFD93D','#8BC48A','#7EC8C1','#FF8B4A','#6B7FBF'] as string[]).map((c, i) => (
+        <rect key={i} x={30 + i * 52} y={22} width="36" height="22" rx="4" fill={c} opacity="0.6" />
+      ))}
+      <path d="M 20 33 Q 90 18 160 33 Q 230 48 300 33 Q 340 24 360 33"
+        stroke="#8B5E3C" strokeWidth="2" fill="none" opacity="0.5" />
+      {/* Flowers */}
+      {([40,85,130,230,280,320] as number[]).map((x, i) => (
+        <g key={x}>
+          <line x1={x} y1="225" x2={x} y2={195 - (i % 3) * 10}
+            stroke="#388E3C" strokeWidth="2.5" strokeLinecap="round" />
+          <circle cx={x} cy={190 - (i % 3) * 10} r="12"
+            fill={(['#FF8B8B','#FFD93D','#8BC48A','#7EC8C1','#FF8B4A','#FFB3C1'] as string[])[i]}
+            opacity="0.8" />
+        </g>
+      ))}
+      {/* Turtle (center) */}
+      <Turtle cx={180} cy={218} s={0.90} mood="happy" />
+      {/* Friends */}
+      <Bear   cx={72}  cy={218} s={0.70} mood="happy" />
+      <Rabbit cx={290} cy={218} s={0.68} mood="happy" />
+      <Fox    cx={46}  cy={225} s={0.60} mood="happy" />
+      <Owl    cx={310} cy={222} s={0.62} mood="happy" />
+      {/* Trophy */}
+      <circle cx="180" cy="140" r="22" fill="#FFD93D" opacity="0.9" />
+      <circle cx="180" cy="140" r="16" fill="white" opacity="0.9" />
+      <text x="180" y="146" fontSize="16" textAnchor="middle">🏆</text>
+      <rect x="0" y="250" width="360" height="50" fill="#C8E6C9" opacity="0.4" />
+    </svg>
+  );
+}
+
+export function NeuruGardenP6({ className }: P) {
+  return (
+    <svg viewBox="0 0 360 300" className={className}
+      style={{ background: 'linear-gradient(180deg,#1A237E 0%,#3949AB 35%,#5C6BC0 60%,#9FA8DA 100%)' }}>
+      {/* Stars */}
+      {([40,80,130,180,230,290,330,55,160,270] as number[]).map((x, i) => (
+        <circle key={i} cx={x} cy={20 + (i % 4) * 18}
+          r={i % 3 === 0 ? 3 : 2} fill="white" opacity={0.6 + (i % 4) * 0.1} />
+      ))}
+      {/* Moon */}
+      <circle cx="290" cy="55" r="28" fill="#FFD93D" opacity="0.85" />
+      <circle cx="300" cy="48" r="20" fill="#3949AB" />
+      {/* Night garden silhouette */}
+      {([45,85,130,178,222,265,305] as number[]).map((x, i) => (
+        <g key={x}>
+          <line x1={x} y1="218" x2={x} y2={178 - (i % 3) * 8}
+            stroke="#1B5E20" strokeWidth="2.5" strokeLinecap="round" opacity="0.9" />
+          <circle cx={x} cy={172 - (i % 3) * 8} r="12"
+            fill={(['#2E7D32','#388E3C','#1B5E20'] as string[])[i % 3]} opacity="0.9" />
+        </g>
+      ))}
+      {/* Turtle peaceful */}
+      <Turtle cx={180} cy={225} s={0.85} mood="happy" />
+      <ellipse cx="180" cy="205" rx="32" ry="14" fill="#7ECEC1" opacity="0.2" />
+      {/* Quote */}
+      <rect x="35" y="55" width="218" height="55" rx="12" fill="white" opacity="0.12" />
+      <text x="144" y="76" fontSize="11" textAnchor="middle" fill="white" opacity="0.9">느려도 괜찮아.</text>
+      <text x="144" y="93" fontSize="11" textAnchor="middle" fill="white" opacity="0.9">나만의 속도로 꾸준히 하면 돼.</text>
+      <rect x="0" y="247" width="360" height="53" fill="#1A237E" opacity="0.4" />
+    </svg>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  7화  라온이의 용기의 다리  🐦
+// ═══════════════════════════════════════════════════════════════
+
+export function RaonBridgeP1({ className }: P) {
+  return (
+    <svg viewBox="0 0 360 300" className={className}
+      style={{ background: 'linear-gradient(180deg,#E1F5FE 0%,#B3E5FC 30%,#E8F5E9 70%,#F9FBE7 100%)' }}>
+      <circle cx="265" cy="65" r="38" fill="#FFD93D" opacity="0.75" />
+      <ellipse cx="70" cy="65" rx="52" ry="20" fill="white" opacity="0.75" />
+      <ellipse cx="95" cy="50" rx="34" ry="17" fill="white" opacity="0.75" />
+      {/* Observation tower */}
+      <rect x="50" y="100" width="30" height="130" rx="4" fill="#8B7355" />
+      <rect x="40" y="92" width="50" height="20" rx="5" fill="#C4A77D" />
+      <rect x="36" y="85" width="58" height="12" rx="4" fill="#8B7355" />
+      <line x1="40" y1="85" x2="94" y2="85" stroke="#8B7355" strokeWidth="3" />
+      <line x1="40" y1="75" x2="40" y2="85" stroke="#8B7355" strokeWidth="2.5" />
+      <line x1="94" y1="75" x2="94" y2="85" stroke="#8B7355" strokeWidth="2.5" />
+      {/* Sparrow on tower */}
+      <Sparrow cx={67} cy={68} s={0.72} />
+      {/* Bridge in distance */}
+      <path d="M 180 200 Q 250 175 320 200"
+        stroke="#C4A77D" strokeWidth="8" fill="none" strokeLinecap="round" opacity="0.7" />
+      <path d="M 192 195 Q 250 170 308 195"
+        stroke="#D4B896" strokeWidth="4" fill="none" strokeLinecap="round" opacity="0.5" />
+      <line x1="180" y1="200" x2="210" y2="170" stroke="#8B7355" strokeWidth="2" opacity="0.5" />
+      <line x1="250" y1="180" x2="250" y2="155" stroke="#8B7355" strokeWidth="2" opacity="0.5" />
+      <line x1="320" y1="200" x2="290" y2="170" stroke="#8B7355" strokeWidth="2" opacity="0.5" />
+      {/* Far land */}
+      <ellipse cx="290" cy="215" rx="60" ry="18" fill="#8BC48A" opacity="0.4" />
+      {/* Thought bubble */}
+      <circle cx="100" cy="62" r="5" fill="white" opacity="0.7" />
+      <circle cx="110" cy="52" r="7" fill="white" opacity="0.75" />
+      <ellipse cx="130" cy="44" rx="26" ry="18" fill="white" opacity="0.88" />
+      <text x="130" y="50" fontSize="17" textAnchor="middle">🌉</text>
+      <rect x="0" y="240" width="360" height="60" fill="#A5D6A7" opacity="0.3" />
+    </svg>
+  );
+}
+
+export function RaonBridgeP2({ className }: P) {
+  return (
+    <svg viewBox="0 0 360 300" className={className}
+      style={{ background: 'linear-gradient(160deg,#FFFDE7 0%,#FFF9C4 50%,#FFF3CD 100%)' }}>
+      {/* Bridge */}
+      <path d="M 40 205 Q 180 170 320 205"
+        stroke="#C4A77D" strokeWidth="10" fill="none" opacity="0.7" strokeLinecap="round" />
+      {[70,100,130,160,190,220,250,280].map(x => (
+        <rect key={x} x={x} y={196 + Math.round((x - 180) * (x - 180) / 3000)}
+          width="18" height="10" rx="2" fill="#8B7355" opacity="0.55" />
+      ))}
+      <path d="M 38 185 Q 180 148 322 185" stroke="#8B5E3C" strokeWidth="3" fill="none" opacity="0.5" />
+      <path d="M 38 225 Q 180 190 322 225" stroke="#8B5E3C" strokeWidth="3" fill="none" opacity="0.5" />
+      <rect x="170" y="152" width="20" height="50" rx="4" fill="#8B7355" opacity="0.6" />
+      {/* Sparrow nervous at entrance */}
+      <Sparrow cx={78} cy={195} s={0.80} />
+      {/* Shaking lines */}
+      <line x1="55" y1="175" x2="48" y2="165" stroke="#FFD93D" strokeWidth="2" opacity="0.5" strokeLinecap="round" />
+      <line x1="50" y1="180" x2="40" y2="174" stroke="#FFD93D" strokeWidth="2" opacity="0.5" strokeLinecap="round" />
+      <line x1="56" y1="185" x2="44" y2="182" stroke="#FFD93D" strokeWidth="2" opacity="0.5" strokeLinecap="round" />
+      {/* Thought bubble */}
+      <circle cx="115" cy="155" r="5" fill="white" opacity="0.75" />
+      <circle cx="127" cy="143" r="8" fill="white" opacity="0.8" />
+      <ellipse cx="153" cy="130" rx="30" ry="20" fill="white" opacity="0.9" />
+      <text x="153" y="136" fontSize="18" textAnchor="middle">😰</text>
+      {/* Far side */}
+      <ellipse cx="305" cy="218" rx="48" ry="15" fill="#8BC48A" opacity="0.35" />
+      <rect x="0" y="240" width="360" height="60" fill="#E0D8A0" opacity="0.3" />
+    </svg>
+  );
+}
+
+export function RaonBridgeP3({ className }: P) {
+  return (
+    <svg viewBox="0 0 360 300" className={className}
+      style={{ background: 'linear-gradient(160deg,#EDE7F6 0%,#E8EAF6 50%,#EEF2FF 100%)' }}>
+      {/* Bookshelves */}
+      <rect x="14" y="50" width="20" height="200" rx="3" fill="#8B7355" opacity="0.5" />
+      <rect x="326" y="50" width="20" height="200" rx="3" fill="#8B7355" opacity="0.5" />
+      {(['#FF8B8B','#FFD93D','#8BC48A','#7EC8C1','#6B7FBF','#FF8B4A'] as string[]).map((c, i) => (
+        <rect key={i} x="18" y={55 + i * 32} width="12" height="28" rx="2" fill={c} opacity="0.7" />
+      ))}
+      {(['#6B7FBF','#8BC48A','#FF8B4A','#FF8B8B','#FFD93D','#7EC8C1'] as string[]).map((c, i) => (
+        <rect key={i} x="330" y={55 + i * 32} width="12" height="28" rx="2" fill={c} opacity="0.7" />
+      ))}
+      {/* Table */}
+      <rect x="88" y="195" width="186" height="12" rx="4" fill="#C4A77D" opacity="0.7" />
+      <rect x="104" y="205" width="12" height="45" rx="3" fill="#8B7355" opacity="0.6" />
+      <rect x="244" y="205" width="12" height="45" rx="3" fill="#8B7355" opacity="0.6" />
+      {/* Open book */}
+      <ellipse cx="180" cy="194" rx="58" ry="8" fill="#FFF8E7"
+        stroke="#C4A77D" strokeWidth="1.5" opacity="0.95" />
+      <line x1="180" y1="186" x2="180" y2="202" stroke="#C4A77D" strokeWidth="1.5" opacity="0.6" />
+      {/* Book illustration */}
+      <circle cx="158" cy="192" r="7" fill="#8BC48A" opacity="0.5" />
+      <circle cx="202" cy="192" r="7" fill="#FFD93D" opacity="0.5" />
+      {/* Sparrow reading */}
+      <Sparrow cx={138} cy={178} s={0.75} />
+      {/* Owl beside */}
+      <Owl cx={222} cy={175} s={0.75} mood="thinking" />
+      {/* Map page */}
+      <rect x="100" y="148" width="76" height="44" rx="5" fill="white"
+        opacity="0.85" stroke="#C4A77D" strokeWidth="1.5" />
+      <path d="M 108 168 Q 138 155 168 168" stroke="#C4A77D" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+      <circle cx="168" cy="165" r="5" fill="#8BC48A" opacity="0.7" />
+      <text x="138" y="185" fontSize="9" textAnchor="middle" fill="#8B7355">저 너머에 친구들이!</text>
+      <rect x="0" y="252" width="360" height="48" fill="#D1C4E9" opacity="0.3" />
+    </svg>
+  );
+}
+
+export function RaonBridgeP4({ className }: P) {
+  return (
+    <svg viewBox="0 0 360 300" className={className}
+      style={{ background: 'linear-gradient(160deg,#E0F7FA 0%,#B2EBF2 40%,#E8F5E9 80%,#F1F8E9 100%)' }}>
+      <circle cx="295" cy="55" r="36" fill="#FFD93D" opacity="0.8" />
+      {/* Bridge */}
+      <path d="M 20 210 Q 180 165 340 210"
+        stroke="#C4A77D" strokeWidth="12" fill="none" opacity="0.7" strokeLinecap="round" />
+      {[55,85,115,145,175,205,235,265,295,320].map(x => (
+        <rect key={x} x={x} y={199 + Math.round(Math.abs((x - 180) * 0.06))}
+          width="18" height="12" rx="2" fill="#8B7355" opacity="0.5" />
+      ))}
+      <path d="M 18 192 Q 180 145 342 192" stroke="#8B5E3C" strokeWidth="3" fill="none" opacity="0.5" />
+      {/* Sparrow walking across, wings spread */}
+      <Sparrow cx={175} cy={188} s={0.85} />
+      {/* Wing spread */}
+      <ellipse cx="148" cy="182" rx="20" ry="8" fill="#FFD93D" opacity="0.5" transform="rotate(-15,148,182)" />
+      <ellipse cx="202" cy="182" rx="20" ry="8" fill="#FFD93D" opacity="0.5" transform="rotate(15,202,182)" />
+      <text x="175" y="148" fontSize="14" textAnchor="middle">✨</text>
+      <text x="148" y="162" fontSize="11" opacity="0.7">💪</text>
+      {/* Cheer bubble */}
+      <rect x="188" y="110" width="108" height="36" rx="10" fill="white"
+        opacity="0.88" stroke="#7EC8C1" strokeWidth="1.5" />
+      <text x="242" y="126" fontSize="11" textAnchor="middle" fill="#4E8098">할 수 있어!</text>
+      <text x="242" y="140" fontSize="11" textAnchor="middle" fill="#4E8098">한 발씩 🐾</text>
+      <ellipse cx="320" cy="225" rx="40" ry="14" fill="#8BC48A" opacity="0.5" />
+      <rect x="0" y="248" width="360" height="52" fill="#A5D6A7" opacity="0.3" />
+    </svg>
+  );
+}
+
+export function RaonBridgeP5({ className }: P) {
+  return (
+    <svg viewBox="0 0 360 300" className={className}
+      style={{ background: 'linear-gradient(160deg,#E8F5E9 0%,#DCEDC8 50%,#F9FBE7 100%)' }}>
+      {/* Lush greenery */}
+      <circle cx="60"  cy="140" r="48" fill="#66BB6A" opacity="0.35" />
+      <circle cx="300" cy="130" r="52" fill="#66BB6A" opacity="0.3" />
+      <circle cx="180" cy="115" r="62" fill="#81C784" opacity="0.25" />
+      {/* Flowers */}
+      {([40,75,110,155,200,248,285,320] as number[]).map((x, i) => (
+        <g key={x}>
+          <line x1={x} y1="228" x2={x} y2={205 - (i % 3) * 8}
+            stroke="#388E3C" strokeWidth="2.5" strokeLinecap="round" />
+          <circle cx={x} cy={200 - (i % 3) * 8} r="10"
+            fill={(['#FF8B8B','#FFD93D','#FF8B4A','#7EC8C1','#8BC48A','#FFB3C1','#6B7FBF','#FFD93D'] as string[])[i]}
+            opacity="0.8" />
+        </g>
+      ))}
+      {/* Sparrow happy */}
+      <Sparrow cx={135} cy={210} s={0.85} />
+      {/* Snail (달리) — simple inline */}
+      <g transform="translate(250,215)">
+        <ellipse cx="0" cy="-8" rx="28" ry="22" fill="#FFD93D" opacity="0.9" />
+        <path d="M 0 -8 Q 12 -18 8 -4 Q 4 8 -8 4 Q -18 -2 -12 -14 Q -6 -22 0 -8"
+          stroke="#FF8B4A" strokeWidth="2.5" fill="none" opacity="0.8" />
+        <ellipse cx="0" cy="8" rx="22" ry="10" fill="#8BC48A" opacity="0.9" />
+        <circle cx="18" cy="6" r="8" fill="#A5D6A7" />
+        <circle cx="16" cy="5" r="2.5" fill="#3D3D3D" />
+        <circle cx="17" cy="4" r="1" fill="white" />
+        <path d="M 14 9 Q 18 12 22 9" stroke="#388E3C" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+        <line x1="16" y1="-2" x2="12" y2="-14" stroke="#66BB6A" strokeWidth="2" strokeLinecap="round" />
+        <circle cx="12" cy="-15" r="3" fill="#66BB6A" />
+        <line x1="20" y1="-2" x2="22" y2="-14" stroke="#66BB6A" strokeWidth="2" strokeLinecap="round" />
+        <circle cx="22" cy="-15" r="3" fill="#66BB6A" />
+      </g>
+      {/* Snail speech bubble */}
+      <rect x="255" y="142" width="90" height="40" rx="10" fill="white"
+        opacity="0.9" stroke="#8BC48A" strokeWidth="1.5" />
+      <polygon points="270,182 282,182 266,195" fill="white" stroke="#8BC48A" strokeWidth="1.5" />
+      <text x="300" y="158" fontSize="10.5" textAnchor="middle" fill="#388E3C">안녕? 나는 달리야!</text>
+      <text x="300" y="174" fontSize="10.5" textAnchor="middle" fill="#388E3C">같이 놀자! 🐌</text>
+      <rect x="0" y="248" width="360" height="52" fill="#A5D6A7" opacity="0.35" />
+    </svg>
+  );
+}
+
+export function RaonBridgeP6({ className }: P) {
+  return (
+    <svg viewBox="0 0 360 300" className={className}
+      style={{ background: 'linear-gradient(160deg,#FFF8E1 0%,#FFF3E0 60%,#FFE0B2 100%)' }}>
+      <circle cx="285" cy="60" r="42" fill="#FFD93D" opacity="0.75" />
+      {/* Sparrow center, excited */}
+      <Sparrow cx={180} cy={200} s={0.88} />
+      {/* Wing spread */}
+      <ellipse cx="148" cy="194" rx="24" ry="9" fill="#FFD93D" opacity="0.55" transform="rotate(-20,148,194)" />
+      <ellipse cx="212" cy="194" rx="24" ry="9" fill="#FFD93D" opacity="0.55" transform="rotate(20,212,194)" />
+      {/* Friends listening */}
+      <Bear   cx={62}  cy={218} s={0.68} mood="happy" />
+      <Rabbit cx={298} cy={218} s={0.65} mood="happy" />
+      <Turtle cx={42}  cy={228} s={0.58} mood="happy" />
+      <Fox    cx={320} cy={225} s={0.58} mood="happy" />
+      <Owl    cx={52}  cy={215} s={0.55} mood="surprised" />
+      {/* Speech bubble */}
+      <rect x="100" y="118" width="160" height="54" rx="12" fill="white"
+        opacity="0.92" stroke="#FFD93D" strokeWidth="2" />
+      <polygon points="168,172 180,172 172,185" fill="white" stroke="#FFD93D" strokeWidth="1.5" />
+      <text x="180" y="138" fontSize="10.5" textAnchor="middle" fill="#5D4037">다르다는 건</text>
+      <text x="180" y="153" fontSize="10.5" textAnchor="middle" fill="#5D4037">신기하고 멋진 거야! 🌟</text>
+      <text x="180" y="165" fontSize="9.5" textAnchor="middle" fill="#8B6914">더 큰 세상이 있어!</text>
+      <text x="80"  y="140" fontSize="14" opacity="0.7">✨</text>
+      <text x="275" y="145" fontSize="14" opacity="0.7">✨</text>
+      <text x="158" y="95" fontSize="16" opacity="0.8">🌉</text>
+      <rect x="0" y="252" width="360" height="48" fill="#FFE0B2" opacity="0.35" />
+    </svg>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════
 //  Lookup table used by the story reader
 // ═══════════════════════════════════════════════════════════════
 
@@ -1073,4 +1716,7 @@ export const STORY_ILLUSTRATIONS: Record<string, React.FC<P>[]> = {
   'nari-invention':[NariInventionP1, NariInventionP2, NariInventionP3, NariInventionP4, NariInventionP5, NariInventionP6],
   'haru-festival': [HaruFestivalP1, HaruFestivalP2, HaruFestivalP3, HaruFestivalP4, HaruFestivalP5, HaruFestivalP6],
   'jiu-plan':      [JiuPlanP1, JiuPlanP2, JiuPlanP3, JiuPlanP4, JiuPlanP5, JiuPlanP6],
+  'sori-rainbow':  [SoriRainbowP1, SoriRainbowP2, SoriRainbowP3, SoriRainbowP4, SoriRainbowP5, SoriRainbowP6],
+  'neuru-garden':  [NeuruGardenP1, NeuruGardenP2, NeuruGardenP3, NeuruGardenP4, NeuruGardenP5, NeuruGardenP6],
+  'raon-bridge':   [RaonBridgeP1, RaonBridgeP2, RaonBridgeP3, RaonBridgeP4, RaonBridgeP5, RaonBridgeP6],
 };

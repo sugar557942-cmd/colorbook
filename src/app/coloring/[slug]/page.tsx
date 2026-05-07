@@ -53,10 +53,44 @@ const ColoringDetailPage = () => {
         a.click();
     }, [slug, page]);
 
-    const handleDirectPrint = useCallback(() => {
+    const handleDirectPrint = useCallback(async () => {
+        if (!page) return;
         trackAction(slug, 'print');
-        window.print();
-    }, [slug]);
+        try {
+            const res = await fetch(page.svgPath);
+            const svgText = await res.text();
+            // viewBox 보존을 위해 width/height 속성만 제거
+            const cleaned = svgText
+                .replace(/\s+width="[^"]*"/, '')
+                .replace(/\s+height="[^"]*"/, '');
+            const win = window.open('', '_blank');
+            if (!win) { alert('팝업 차단을 해제해 주세요.'); return; }
+            win.document.write(`<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>마음마을 색칠공부 — ${page.title}</title>
+  <style>
+    @page { size: A4 portrait; margin: 10mm; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { background: #fff; width: 100%; }
+    svg { display: block; width: 190mm; height: auto; max-height: 277mm; }
+  </style>
+</head>
+<body>
+${cleaned}
+<script>
+  window.addEventListener('load', function () {
+    setTimeout(function () { window.print(); window.close(); }, 300);
+  });
+<\/script>
+</body>
+</html>`);
+            win.document.close();
+        } catch {
+            window.print();
+        }
+    }, [slug, page]);
 
     if (!page) {
         return <div className="p-20 text-center text-maeul-soft-gray">도안을 찾을 수 없어요!</div>;

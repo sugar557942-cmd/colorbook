@@ -103,22 +103,40 @@ export default function ColoringCanvas({ svgPath, slug, onDownload, onPrint }: C
         const svgEl = containerRef.current?.querySelector('svg');
         if (!svgEl) return;
         const clone = svgEl.cloneNode(true) as SVGElement;
+        // 색칠한 색상 모두 반영
         Object.entries(colorMap).forEach(([id, color]) => {
             const el = clone.querySelector(`#${id}`) as SVGElement | null;
             if (el) el.setAttribute('fill', color);
         });
-        clone.setAttribute('width', '100%');
-        clone.setAttribute('height', '100%');
-        const serializer = new XMLSerializer();
-        const svgStr = serializer.serializeToString(clone);
+        // CSS가 크기를 제어하도록 고정 크기 속성 제거
+        clone.removeAttribute('width');
+        clone.removeAttribute('height');
+        clone.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+
+        const svgStr = new XMLSerializer().serializeToString(clone);
         const win = window.open('', '_blank');
-        if (!win) return;
-        win.document.write(`<!DOCTYPE html><html><head><title>마음마을 색칠공부</title>
-<style>
-  body{margin:0;display:flex;justify-content:center;align-items:flex-start;background:#fff;}
-  svg{max-width:210mm;max-height:297mm;display:block;}
-  @media print{body{margin:0}@page{margin:8mm}}
-</style></head><body>${svgStr}<script>window.onload=()=>{window.print();window.close();}<\/script></body></html>`);
+        if (!win) { alert('팝업 차단을 해제해 주세요.'); return; }
+        win.document.write(`<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>마음마을 색칠공부</title>
+  <style>
+    @page { size: A4 portrait; margin: 10mm; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { background: #fff; width: 100%; }
+    svg { display: block; width: 190mm; height: auto; max-height: 277mm; }
+  </style>
+</head>
+<body>
+${svgStr}
+<script>
+  window.addEventListener('load', function () {
+    setTimeout(function () { window.print(); window.close(); }, 300);
+  });
+<\/script>
+</body>
+</html>`);
         win.document.close();
         onPrint?.();
     }, [colorMap, onPrint]);

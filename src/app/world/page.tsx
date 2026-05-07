@@ -6,30 +6,53 @@ import FloatingElements from '@/components/shared/FloatingElements';
 import MagicButton from '@/components/shared/MagicButton';
 import * as MapElements from '@/components/illustrations/MapElements';
 import { characters } from '@/data/characters';
-import { Search, Construction, Sparkles } from 'lucide-react';
+import { Search } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 
 const locations = [
-    { id: 'tree', name: '지혜의 큰 나무', x: '50%', y: '38%', component: MapElements.WisdomTree, char: 'daon', color: '#C4A77D' },
-    { id: 'market', name: '두근시장', x: '22%', y: '28%', component: MapElements.Market, char: 'nari', color: '#FF8B4A' },
-    { id: 'school', name: '배움터', x: '78%', y: '24%', component: MapElements.School, char: 'haru', color: '#8BC48A' },
-    { id: 'workshop', name: '무지개공방', x: '16%', y: '68%', component: MapElements.Workshop, char: 'jiu', color: '#6B7FBF' },
-    { id: 'farm', name: '나눔 텃밭', x: '46%', y: '78%', component: MapElements.Farm, char: 'sori', color: '#FF8B8B' },
-    { id: 'plaza', name: '어울림 광장', x: '50%', y: '56%', component: MapElements.Plaza, char: undefined, color: '#FFD93D' },
-    { id: 'pond', name: '고요한 연못', x: '80%', y: '73%', component: MapElements.Pond, char: 'neuru', color: '#7ECEC1' },
-    { id: 'bridge', name: '용기의 다리', x: '84%', y: '48%', component: MapElements.Bridge, char: 'raon', color: '#FFD93D' },
+    { id: 'tree',     name: '지혜의 큰 나무', x: '50%', y: '38%', component: MapElements.WisdomTree, char: 'daon',  color: '#C4A77D' },
+    { id: 'market',   name: '두근시장',       x: '22%', y: '28%', component: MapElements.Market,     char: 'nari',  color: '#FF8B4A' },
+    { id: 'school',   name: '배움터',         x: '78%', y: '24%', component: MapElements.School,     char: 'haru',  color: '#8BC48A' },
+    { id: 'workshop', name: '무지개공방',     x: '16%', y: '68%', component: MapElements.Workshop,   char: 'jiu',   color: '#6B7FBF' },
+    { id: 'farm',     name: '나눔 텃밭',      x: '46%', y: '78%', component: MapElements.Farm,       char: 'sori',  color: '#FF8B8B' },
+    { id: 'plaza',    name: '어울림 광장',    x: '50%', y: '56%', component: MapElements.Plaza,      char: undefined, color: '#FFD93D' },
+    { id: 'pond',     name: '고요한 연못',    x: '80%', y: '73%', component: MapElements.Pond,       char: 'neuru', color: '#7ECEC1' },
+    { id: 'bridge',   name: '용기의 다리',    x: '84%', y: '48%', component: MapElements.Bridge,     char: 'raon',  color: '#FFD93D' },
 ];
+
+/* ── Compass rose drawn with pure SVG ── */
+const CompassRose = () => (
+    <svg viewBox="0 0 80 80" width="72" height="72" aria-hidden="true">
+        {/* outer / inner guide rings */}
+        <circle cx="40" cy="40" r="36" fill="rgba(255,255,255,0.55)" stroke="#C4A77D" strokeWidth="1.2" />
+        <circle cx="40" cy="40" r="26" fill="none" stroke="#C4A77D" strokeWidth="0.6" opacity="0.4" />
+        {/* N (dark gold) */}
+        <polygon points="40,5 37,35 40,30 43,35" fill="#8B6914" />
+        {/* S / E / W (muted) */}
+        <polygon points="40,75 37,45 40,50 43,45" fill="#C4A77D" opacity="0.55" />
+        <polygon points="75,40 45,37 50,40 45,43" fill="#C4A77D" opacity="0.55" />
+        <polygon points="5,40 35,37 30,40 35,43"  fill="#C4A77D" opacity="0.55" />
+        {/* hub */}
+        <circle cx="40" cy="40" r="5.5" fill="white" stroke="#C4A77D" strokeWidth="1.4" />
+        <circle cx="40" cy="40" r="2.5" fill="#8B6914" />
+        {/* labels */}
+        <text x="40" y="3.5" textAnchor="middle" fontSize="8" fontWeight="bold" fill="#8B6914" fontFamily="Georgia,serif">N</text>
+        <text x="40" y="79" textAnchor="middle" fontSize="7"              fill="#C4A77D" fontFamily="Georgia,serif">S</text>
+        <text x="79" y="44" textAnchor="middle" fontSize="7"              fill="#C4A77D" fontFamily="Georgia,serif">E</text>
+        <text x="1"  y="44" textAnchor="middle" fontSize="7"              fill="#C4A77D" fontFamily="Georgia,serif">W</text>
+    </svg>
+);
 
 const WorldPage = () => {
     const [selectedLoc, setSelectedLoc] = useState<typeof locations[0] | null>(null);
-    const [showHint, setShowHint] = useState(false);
+    const [showHint, setShowHint]       = useState(false);
 
     return (
         <div className="relative min-h-screen overflow-hidden pt-20 pb-12">
             <FloatingElements density="low" elements={['cloud', 'leaf']} />
 
-            {/* Sky background */}
+            {/* Sky-to-meadow gradient background */}
             <div className="fixed inset-0 -z-10 bg-gradient-to-b from-sky-100 via-blue-50 to-emerald-50" />
 
             <div className="max-w-[1440px] mx-auto px-4 md:px-8">
@@ -42,9 +65,7 @@ const WorldPage = () => {
                 >
                     <span className="text-2xl flex-shrink-0">🏗️</span>
                     <div className="flex-1 min-w-0">
-                        <p className="font-bold text-maeul-charcoal text-sm">
-                            마음마을 지도는 현재 공사 중이에요!
-                        </p>
+                        <p className="font-bold text-maeul-charcoal text-sm">마음마을 지도는 현재 공사 중이에요!</p>
                         <p className="text-maeul-soft-gray text-xs mt-0.5">
                             각 장소를 클릭해 미리 살짝 엿볼 수 있어요. 곧 이야기와 활동들이 가득 채워질 거예요 ✨
                         </p>
@@ -80,35 +101,82 @@ const WorldPage = () => {
                     </button>
                 </div>
 
-                {/* Map Canvas */}
-                <div className="relative rounded-[48px] border-4 border-white shadow-storybook overflow-hidden"
-                    style={{ height: 'clamp(480px, 60vh, 700px)' }}
+                {/* ── Map Canvas ── */}
+                <div
+                    className="relative rounded-[48px] border-4 border-white shadow-storybook overflow-hidden"
+                    style={{ height: 'clamp(480px, 62vh, 720px)' }}
                 >
-                    {/* Map background layers */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-sky-200/60 via-emerald-100/40 to-green-200/60" />
+                    {/* Multi-layer map background */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-sky-200/70 via-emerald-100/50 to-green-200/70" />
 
-                    {/* Ground texture bands */}
-                    <div className="absolute bottom-0 left-0 right-0 h-[35%] bg-gradient-to-t from-emerald-200/50 to-transparent rounded-b-[44px]" />
-                    <div className="absolute top-0 left-0 right-0 h-[30%] bg-gradient-to-b from-sky-300/30 to-transparent rounded-t-[44px]" />
+                    {/* Parchment texture overlay */}
+                    <div className="absolute inset-0 opacity-[0.07]"
+                        style={{
+                            backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 24px, rgba(139,105,20,0.5) 24px, rgba(139,105,20,0.5) 25px),
+                                             repeating-linear-gradient(90deg, transparent, transparent 24px, rgba(139,105,20,0.5) 24px, rgba(139,105,20,0.5) 25px)`
+                        }}
+                    />
+
+                    {/* Sky band */}
+                    <div className="absolute top-0 left-0 right-0 h-[30%] bg-gradient-to-b from-sky-300/40 to-transparent" />
+                    {/* Ground band */}
+                    <div className="absolute bottom-0 left-0 right-0 h-[38%] bg-gradient-to-t from-green-300/35 to-transparent rounded-b-[44px]" />
 
                     {/* Decorative clouds */}
-                    <div className="absolute top-[8%] left-[12%] w-20 h-8 bg-white/70 rounded-full blur-sm" />
-                    <div className="absolute top-[6%] left-[14%] w-12 h-6 bg-white/80 rounded-full blur-sm" />
-                    <div className="absolute top-[12%] right-[18%] w-24 h-8 bg-white/70 rounded-full blur-sm" />
-                    <div className="absolute top-[10%] right-[20%] w-14 h-6 bg-white/80 rounded-full blur-sm" />
+                    <div className="absolute top-[7%]  left-[10%] flex gap-0">
+                        <div className="w-20 h-7 bg-white/75 rounded-full blur-[3px]" />
+                        <div className="w-12 h-6 bg-white/80 rounded-full blur-[2px] -ml-4 -mt-1" />
+                    </div>
+                    <div className="absolute top-[5%] right-[15%] flex gap-0">
+                        <div className="w-24 h-7 bg-white/75 rounded-full blur-[3px]" />
+                        <div className="w-14 h-5 bg-white/80 rounded-full blur-[2px] -ml-5 -mt-0.5" />
+                    </div>
+                    <div className="absolute top-[15%] left-[38%]">
+                        <div className="w-16 h-5 bg-white/60 rounded-full blur-[2px]" />
+                    </div>
 
-                    {/* Path lines (decorative) */}
-                    <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M 50% 56% Q 35% 47% 22% 28%" stroke="#C4A77D" strokeWidth="3" strokeDasharray="8,6" fill="none" />
-                        <path d="M 50% 56% Q 64% 40% 78% 24%" stroke="#C4A77D" strokeWidth="3" strokeDasharray="8,6" fill="none" />
-                        <path d="M 50% 56% Q 50% 47% 50% 38%" stroke="#C4A77D" strokeWidth="3" strokeDasharray="8,6" fill="none" />
-                        <path d="M 50% 56% Q 33% 62% 16% 68%" stroke="#C4A77D" strokeWidth="3" strokeDasharray="8,6" fill="none" />
-                        <path d="M 50% 56% Q 48% 67% 46% 78%" stroke="#C4A77D" strokeWidth="3" strokeDasharray="8,6" fill="none" />
-                        <path d="M 50% 56% Q 65% 65% 80% 73%" stroke="#C4A77D" strokeWidth="3" strokeDasharray="8,6" fill="none" />
-                        <path d="M 50% 56% Q 67% 52% 84% 48%" stroke="#C4A77D" strokeWidth="3" strokeDasharray="8,6" fill="none" />
+                    {/* ── Path lines ──
+                        SVG uses viewBox="0 0 100 100" preserveAspectRatio="none" so numeric
+                        coordinates map 1-to-1 with the location percentage values above.
+                        (% is invalid inside SVG <path d="..."> — only numeric values work)      */}
+                    <svg
+                        className="absolute inset-0 w-full h-full pointer-events-none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 100 100"
+                        preserveAspectRatio="none"
+                    >
+                        {/* All roads radiate from 어울림 광장 (50, 56) */}
+                        {/* → 두근시장 (22, 28) */}
+                        <path d="M 50 56 Q 35 47 22 28" stroke="#C4A77D" strokeWidth="0.35" strokeDasharray="1.5 1"   fill="none" opacity="0.55" />
+                        {/* → 배움터 (78, 24) */}
+                        <path d="M 50 56 Q 64 40 78 24" stroke="#C4A77D" strokeWidth="0.35" strokeDasharray="1.5 1"   fill="none" opacity="0.55" />
+                        {/* → 지혜의 큰 나무 (50, 38) */}
+                        <path d="M 50 56 Q 50 47 50 38"  stroke="#C4A77D" strokeWidth="0.35" strokeDasharray="1.5 1"   fill="none" opacity="0.55" />
+                        {/* → 무지개공방 (16, 68) */}
+                        <path d="M 50 56 Q 33 62 16 68"  stroke="#C4A77D" strokeWidth="0.35" strokeDasharray="1.5 1"   fill="none" opacity="0.55" />
+                        {/* → 나눔 텃밭 (46, 78) */}
+                        <path d="M 50 56 Q 48 67 46 78"  stroke="#C4A77D" strokeWidth="0.35" strokeDasharray="1.5 1"   fill="none" opacity="0.55" />
+                        {/* → 고요한 연못 (80, 73) */}
+                        <path d="M 50 56 Q 65 65 80 73"  stroke="#C4A77D" strokeWidth="0.35" strokeDasharray="1.5 1"   fill="none" opacity="0.55" />
+                        {/* → 용기의 다리 (84, 48) */}
+                        <path d="M 50 56 Q 67 52 84 48"  stroke="#C4A77D" strokeWidth="0.35" strokeDasharray="1.5 1"   fill="none" opacity="0.55" />
                     </svg>
 
-                    {/* Location Pins */}
+                    {/* ── Compass Rose (bottom-left corner) ── */}
+                    <div className="absolute bottom-5 left-6 z-20 drop-shadow-md">
+                        <CompassRose />
+                    </div>
+
+                    {/* ── Scale bar (bottom-right) ── */}
+                    <div className="absolute bottom-6 right-6 z-20 flex flex-col items-end gap-1 opacity-60">
+                        <div className="flex items-center gap-1">
+                            <div className="h-[2px] w-12 bg-maeul-charcoal/50" />
+                            <span className="text-[9px] font-bold text-maeul-charcoal/60 tracking-wide">100m</span>
+                        </div>
+                        <span className="text-[8px] text-maeul-charcoal/40 italic">마음마을 지도</span>
+                    </div>
+
+                    {/* ── Location Pins ── */}
                     {locations.map((loc, i) => (
                         <motion.div
                             key={loc.id}
@@ -119,7 +187,7 @@ const WorldPage = () => {
                             style={{ top: loc.y, left: loc.x, transform: 'translate(-50%, -50%)', zIndex: 10 }}
                         >
                             <motion.div
-                                whileHover={{ scale: 1.15, zIndex: 50 }}
+                                whileHover={{ scale: 1.18, zIndex: 50 }}
                                 onClick={() => setSelectedLoc(loc)}
                                 className="flex flex-col items-center gap-1.5 cursor-pointer group"
                             >
@@ -128,7 +196,7 @@ const WorldPage = () => {
                                     <motion.div
                                         initial={{ opacity: 0, y: 6 }}
                                         animate={{ opacity: 1, y: 0 }}
-                                        className="px-2.5 py-1 rounded-xl text-[10px] font-bold text-white shadow-md whitespace-nowrap"
+                                        className="relative px-2.5 py-1 rounded-xl text-[10px] font-bold text-white shadow-md whitespace-nowrap"
                                         style={{ backgroundColor: loc.color }}
                                     >
                                         {characters.find(c => c.slug === loc.char)?.name} 여기 있어요!
@@ -141,16 +209,16 @@ const WorldPage = () => {
 
                                 {/* Icon container */}
                                 <div
-                                    className="w-16 h-16 md:w-20 md:h-20 rounded-3xl bg-white/80 backdrop-blur-sm p-2 shadow-lg border-2 border-white group-hover:shadow-xl transition-shadow"
-                                    style={{ borderColor: `${loc.color}40` }}
+                                    className="w-16 h-16 md:w-20 md:h-20 rounded-3xl bg-white/85 backdrop-blur-sm p-2 shadow-lg border-2 border-white group-hover:shadow-xl transition-shadow"
+                                    style={{ borderColor: `${loc.color}55` }}
                                 >
                                     <loc.component className="w-full h-full drop-shadow-sm" />
                                 </div>
 
                                 {/* Name label */}
                                 <span
-                                    className="px-2.5 py-0.5 bg-white/90 rounded-full text-[11px] font-bold text-maeul-charcoal shadow-sm border whitespace-nowrap"
-                                    style={{ borderColor: `${loc.color}30` }}
+                                    className="px-2.5 py-0.5 bg-white/92 rounded-full text-[10px] md:text-[11px] font-bold text-maeul-charcoal shadow-sm border whitespace-nowrap"
+                                    style={{ borderColor: `${loc.color}40` }}
                                 >
                                     {loc.name}
                                 </span>
@@ -158,7 +226,7 @@ const WorldPage = () => {
                         </motion.div>
                     ))}
 
-                    {/* Location Detail Modal */}
+                    {/* ── Location Detail Modal ── */}
                     <AnimatePresence>
                         {selectedLoc && (
                             <motion.div
@@ -175,14 +243,14 @@ const WorldPage = () => {
                                     className="bg-white w-full max-w-lg rounded-[40px] shadow-2xl overflow-hidden"
                                     onClick={(e) => e.stopPropagation()}
                                 >
-                                    {/* Header with color accent */}
+                                    {/* Header */}
                                     <div
                                         className="px-8 pt-8 pb-6 flex items-center gap-4"
                                         style={{ backgroundColor: `${selectedLoc.color}18` }}
                                     >
                                         <div
                                             className="w-20 h-20 rounded-2xl bg-white p-2 shadow-sm border-2 flex-shrink-0"
-                                            style={{ borderColor: `${selectedLoc.color}40` }}
+                                            style={{ borderColor: `${selectedLoc.color}50` }}
                                         >
                                             <selectedLoc.component className="w-full h-full" />
                                         </div>
@@ -213,7 +281,6 @@ const WorldPage = () => {
                                             이곳에서 친구들이 함께 어울리며 다양한 이야기를 만들어간답니다.
                                         </p>
 
-                                        {/* Coming soon notice */}
                                         <div className="flex items-start gap-3 bg-maeul-gold/10 rounded-2xl p-4 mb-5">
                                             <span className="text-xl flex-shrink-0">🏗️</span>
                                             <div>

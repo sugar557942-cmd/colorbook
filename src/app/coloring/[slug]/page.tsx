@@ -9,6 +9,7 @@ import { stories } from '@/data/stories';
 import MagicButton from '@/components/shared/MagicButton';
 import FloatingElements from '@/components/shared/FloatingElements';
 import ColoringCanvas from '@/components/coloring/ColoringCanvas';
+import ColoringCanvasPNG from '@/components/coloring/ColoringCanvasPNG';
 import { ArrowLeft, Download, Star, Printer, Palette, Info, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import ColoringCard from '@/components/shared/ColoringCard';
@@ -180,12 +181,22 @@ ${cleaned}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.2 }}
                             >
-                                <ColoringCanvas
-                                    svgPath={page.svgPath}
-                                    slug={slug}
-                                    onDownload={handleDownload}
-                                    onPrint={handlePrint}
-                                />
+                                {/* PNG가 있으면 flood-fill 캔버스, 없으면 SVG 영역 클릭 방식 */}
+                                {hasPng && pngPath ? (
+                                    <ColoringCanvasPNG
+                                        imagePath={pngPath}
+                                        slug={slug}
+                                        onDownload={handleDownload}
+                                        onPrint={handlePrint}
+                                    />
+                                ) : (
+                                    <ColoringCanvas
+                                        svgPath={page.svgPath}
+                                        slug={slug}
+                                        onDownload={handleDownload}
+                                        onPrint={handlePrint}
+                                    />
+                                )}
                             </motion.div>
                         )}
 

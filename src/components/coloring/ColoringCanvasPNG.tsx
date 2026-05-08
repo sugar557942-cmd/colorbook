@@ -277,76 +277,85 @@ export default function ColoringCanvasPNG({
         onPrint?.();
     }, [onPrint]);
 
-    if (loading) {
-        return (
-            <div className="flex items-center justify-center aspect-[4/5] bg-white rounded-3xl border-2 border-dashed border-gray-200">
-                <Loader2 className="animate-spin text-maeul-coral" size={32} />
-            </div>
-        );
-    }
-
     return (
         <div className="space-y-4">
-            {/* 모드 안내 */}
-            <div className="flex items-center justify-between px-1">
-                <p className="text-xs font-body text-[#9A8569]">
-                    🪣 원하는 색을 선택하고 영역을 클릭하면 채워져요!
-                </p>
-                <button
-                    onClick={() => setErasing(v => !v)}
-                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold transition-all ${
-                        erasing
-                            ? 'bg-[#4A3826] text-white'
-                            : 'bg-[#FBF1DC] text-[#6E5942] hover:bg-[#F7E8CC]'
-                    }`}
-                >
-                    <Eraser size={12} />
-                    지우개
-                </button>
-            </div>
+            {/* 로딩 오버레이 — canvas는 항상 DOM에 유지 (canvasRef가 null이 되면 이미지 로드 불가) */}
+            {loading && (
+                <div className="flex items-center justify-center aspect-[4/5] bg-white rounded-3xl border-2 border-dashed border-gray-200">
+                    <Loader2 className="animate-spin text-maeul-coral" size={32} />
+                </div>
+            )}
 
-            {/* 캔버스 */}
+            {/* 모드 안내 */}
+            {!loading && (
+                <div className="flex items-center justify-between px-1">
+                    <p className="text-xs font-body text-[#9A8569]">
+                        🪣 원하는 색을 선택하고 영역을 클릭하면 채워져요!
+                    </p>
+                    <button
+                        onClick={() => setErasing(v => !v)}
+                        className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold transition-all ${
+                            erasing
+                                ? 'bg-[#4A3826] text-white'
+                                : 'bg-[#FBF1DC] text-[#6E5942] hover:bg-[#F7E8CC]'
+                        }`}
+                    >
+                        <Eraser size={12} />
+                        지우개
+                    </button>
+                </div>
+            )}
+
+            {/* 캔버스 — 항상 렌더링, 로딩 중에는 숨김 (ref 유지 필수) */}
             <canvas
                 ref={canvasRef}
                 onClick={handleClick}
-                className="w-full bg-white rounded-3xl border-2 border-gray-100 shadow-sm overflow-hidden block"
-                style={{ cursor: erasing ? 'cell' : 'crosshair', imageRendering: 'pixelated' }}
+                className="bg-white rounded-3xl border-2 border-gray-100 shadow-sm block"
+                style={{
+                    display: loading ? 'none' : 'block',
+                    width: '100%',
+                    cursor: erasing ? 'cell' : 'crosshair',
+                }}
                 title="클릭해서 색칠하세요"
             />
 
             {/* 진행 힌트 */}
-            {fillCount > 0 && (
+            {!loading && fillCount > 0 && (
                 <p className="text-center text-xs text-[#9A8569] font-body">
                     {fillCount}번 색칠했어요 🎨
                 </p>
             )}
 
             {/* 팔레트 */}
-            <ColorPalette
-                selectedColor={selectedColor}
-                onColorSelect={(c) => { setSelectedColor(c); setErasing(false); }}
-                onUndo={handleUndo}
-                canUndo={history.length > 0}
-                onReset={handleReset}
-            />
+            {!loading && (
+                <ColorPalette
+                    selectedColor={selectedColor}
+                    onColorSelect={(c) => { setSelectedColor(c); setErasing(false); }}
+                    onUndo={handleUndo}
+                    canUndo={history.length > 0}
+                    onReset={handleReset}
+                />
+            )}
 
             {/* 저장 / 인쇄 */}
-            <div className="flex gap-3">
-                <button
-                    onClick={handleDownload}
-                    className="flex-1 flex items-center justify-center gap-2 py-3 rounded-2xl bg-maeul-gold text-white font-bold text-sm hover:bg-maeul-gold/90 transition-colors shadow-sm"
-                >
-                    <Download size={16} />
-                    색칠본 저장 (PNG)
-                </button>
-                <button
-                    onClick={handlePrint}
-                    className="flex-1 flex items-center justify-center gap-2 py-3 rounded-2xl bg-white border-2 border-maeul-coral/20 text-maeul-coral font-bold text-sm hover:bg-maeul-coral/5 transition-colors"
-                >
-                    <Printer size={16} />
-                    바로 인쇄
-                </button>
-            </div>
+            {!loading && (
+                <div className="flex gap-3">
+                    <button
+                        onClick={handleDownload}
+                        className="flex-1 flex items-center justify-center gap-2 py-3 rounded-2xl bg-maeul-gold text-white font-bold text-sm hover:bg-maeul-gold/90 transition-colors shadow-sm"
+                    >
+                        <Download size={16} />
+                        색칠본 저장 (PNG)
+                    </button>
+                    <button
+                        onClick={handlePrint}
+                        className="flex-1 flex items-center justify-center gap-2 py-3 rounded-2xl bg-white border-2 border-maeul-coral/20 text-maeul-coral font-bold text-sm hover:bg-maeul-coral/5 transition-colors"
+                    >
+                        <Printer size={16} />
+                        바로 인쇄
+                    </button>
+                </div>
+            )}
         </div>
     );
 }

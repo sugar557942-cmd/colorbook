@@ -12,6 +12,7 @@ import ColoringCanvas from '@/components/coloring/ColoringCanvas';
 import { ArrowLeft, Download, Star, Printer, Palette, Info, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import ColoringCard from '@/components/shared/ColoringCard';
+import { getColoringImagePath } from '@/lib/coloringImage';
 
 type Tab = 'color' | 'print';
 
@@ -37,6 +38,11 @@ const ColoringDetailPage = () => {
     const page = coloringPages.find(p => p.slug === slug);
     const [activeTab, setActiveTab] = useState<Tab>('color');
 
+    // AI PNG 경로 계산 (없으면 null → SVG fallback)
+    const pngPath = page ? getColoringImagePath(page) : null;
+    const [previewSrc, setPreviewSrc] = useState<string>(pngPath ?? (page?.svgPath ?? ''));
+    const [hasPng, setHasPng] = useState<boolean>(!!pngPath);
+
     const handleDownload = useCallback(() => {
         trackAction(slug, 'download');
     }, [slug]);
@@ -48,10 +54,15 @@ const ColoringDetailPage = () => {
     const handleDirectDownload = useCallback(() => {
         trackAction(slug, 'download');
         const a = document.createElement('a');
-        a.href = page?.downloadUrl ?? '#';
-        a.download = `maeul-${slug}.svg`;
+        if (hasPng && pngPath) {
+            a.href = pngPath;
+            a.download = pngPath.split('/').pop() ?? `maeul-${slug}.png`;
+        } else {
+            a.href = page?.downloadUrl ?? '#';
+            a.download = `maeul-${slug}.svg`;
+        }
         a.click();
-    }, [slug, page]);
+    }, [slug, page, hasPng, pngPath]);
 
     const handleDirectPrint = useCallback(async () => {
         if (!page) return;
@@ -185,12 +196,18 @@ ${cleaned}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.2 }}
                             >
-                                {/* SVG preview */}
+                                {/* Preview: AI PNG → SVG fallback */}
                                 <div className="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 mb-6">
                                     <img
-                                        src={page.svgPath}
+                                        src={previewSrc}
                                         alt={page.title}
                                         className="w-full max-w-sm mx-auto block"
+                                        onError={() => {
+                                            if (hasPng) {
+                                                setHasPng(false);
+                                                setPreviewSrc(page.svgPath);
+                                            }
+                                        }}
                                     />
                                 </div>
 
@@ -223,7 +240,7 @@ ${cleaned}
                                         className="flex-1 flex items-center justify-center gap-2 py-4 rounded-3xl bg-maeul-gold text-white font-bold hover:bg-maeul-gold/90 transition-all shadow-sm"
                                     >
                                         <Download size={18} />
-                                        도안 무료 다운로드 (SVG)
+                                        도안 무료 다운로드 ({hasPng ? 'PNG' : 'SVG'})
                                     </button>
                                     <button
                                         onClick={handleDirectPrint}

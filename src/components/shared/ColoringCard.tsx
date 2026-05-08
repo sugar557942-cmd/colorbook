@@ -1,12 +1,13 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { ColoringPage } from '@/types';
 import { characters } from '@/data/characters';
 import { Star as StarIcon, Download } from 'lucide-react';
+import { getColoringImagePath } from '@/lib/coloringImage';
 
 interface ColoringCardProps {
     page: ColoringPage;
@@ -48,6 +49,11 @@ const ColoringCard = ({ page, className }: ColoringCardProps) => {
     const typeLabel = TYPE_LABEL[page.type] ?? page.type;
     const typeColor = TYPE_COLOR[page.type] ?? 'bg-gray-50 text-gray-500';
 
+    // PNG 우선, 없으면 SVG fallback
+    const pngPath = getColoringImagePath(page);
+    const [imgSrc, setImgSrc] = useState<string>(pngPath ?? page.svgPath);
+    const [hasPng, setHasPng] = useState<boolean>(!!pngPath);
+
     return (
         <Link href={`/coloring/${page.slug}`}>
             <motion.div
@@ -57,12 +63,18 @@ const ColoringCard = ({ page, className }: ColoringCardProps) => {
                     className
                 )}
             >
-                {/* SVG Thumbnail */}
+                {/* Thumbnail: AI PNG → SVG fallback */}
                 <div className="relative aspect-[4/5] w-full bg-white overflow-hidden">
                     <img
-                        src={page.svgPath}
+                        src={imgSrc}
                         alt={page.title}
                         className="w-full h-full object-contain p-3 group-hover:scale-105 transition-transform duration-500"
+                        onError={() => {
+                            if (hasPng) {
+                                setHasPng(false);
+                                setImgSrc(page.svgPath);
+                            }
+                        }}
                     />
 
                     {/* Type badge */}
@@ -103,8 +115,11 @@ const ColoringCard = ({ page, className }: ColoringCardProps) => {
                             e.stopPropagation();
                             await trackDownload(page.slug);
                             const a = document.createElement('a');
-                            a.href = page.downloadUrl;
-                            a.download = `maeul-${page.slug}.svg`;
+                            // PNG가 로드됐으면 PNG로, 아니면 SVG로 다운로드
+                            a.href = hasPng ? imgSrc : page.downloadUrl;
+                            a.download = hasPng
+                                ? imgSrc.split('/').pop() ?? `maeul-${page.slug}.png`
+                                : `maeul-${page.slug}.svg`;
                             a.click();
                         }}
                     >

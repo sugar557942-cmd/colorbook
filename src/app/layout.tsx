@@ -21,6 +21,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
+      <head>
+        {/* 낡은 Service Worker 자동 해제 — sw.js 없는 배포 환경에서 캐시된 SW 제거 */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.getRegistrations().then(function(regs) {
+    regs.forEach(function(reg) { reg.unregister(); });
+  });
+}
+`,
+          }}
+        />
+      </head>
       <body className="antialiased sb-paper">
         <Header />
         <main className="max-w-[1440px] mx-auto min-h-screen">

@@ -7,6 +7,7 @@ import CharacterParade from '@/components/home/CharacterParade';
 import StoryPreview from '@/components/home/StoryPreview';
 import ColoringCTA from '@/components/home/ColoringCTA';
 import ParentsSection from '@/components/home/ParentsSection';
+import VisitorCounter from '@/components/home/VisitorCounter';
 
 export default function Home() {
   return (
@@ -27,6 +28,9 @@ export default function Home() {
 
       {/* 5. 부모님 신뢰 */}
       <ParentsSection />
+
+      {/* 6. 방문자 카운터 */}
+      <VisitorCounter />
 
       <div className="h-20" />
     </div>

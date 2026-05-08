@@ -1,11 +1,13 @@
 import { getAllStats } from '@/lib/tracking';
+import { getVisitorStats } from '@/lib/visitors';
 import { coloringPages } from '@/data/coloringPages';
-import { Download, Printer, BarChart2, TrendingUp } from 'lucide-react';
+import { Download, Printer, BarChart2, TrendingUp, Users } from 'lucide-react';
 
 export const dynamic = 'force-dynamic';
 
 export default function AdminPage() {
     const stats = getAllStats();
+    const visitors = getVisitorStats();
     const now = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
 
     const totalDownloads = Object.values(stats).reduce((s, v) => s + (v.downloads ?? 0), 0);
@@ -38,12 +40,20 @@ export default function AdminPage() {
                     <p className="text-sm text-gray-500 mt-1">기준 시각: {now}</p>
                 </div>
 
+                {/* Visitor cards */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+                    <StatCard label="총 방문자" value={visitors.total} icon="🏡" color="violet" />
+                    <StatCard label="오늘 방문자" value={visitors.today} icon="🌱" color="violet" />
+                    <StatCard label="전체 도안" value={coloringPages.length} icon="🎨" />
+                    <StatCard label="총 이용 (다운+인쇄)" value={totalDownloads + totalPrints} icon="📊" />
+                </div>
+
                 {/* Summary cards */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                    <StatCard label="전체 도안" value={coloringPages.length} icon="🎨" />
                     <StatCard label="총 다운로드" value={totalDownloads} icon="⬇️" highlight />
                     <StatCard label="총 인쇄" value={totalPrints} icon="🖨️" highlight />
-                    <StatCard label="총 이용" value={totalDownloads + totalPrints} icon="📊" />
+                    <StatCard label="다운 + 인쇄 합계" value={totalDownloads + totalPrints} icon="📊" />
+                    <StatCard label="방문자 대비 이용률" value={visitors.total > 0 ? Math.round((totalDownloads + totalPrints) / visitors.total * 100) : 0} icon="%" />
                 </div>
 
                 {/* Table */}
@@ -115,11 +125,22 @@ export default function AdminPage() {
     );
 }
 
-function StatCard({ label, value, icon, highlight }: { label: string; value: number; icon: string; highlight?: boolean }) {
+function StatCard({ label, value, icon, highlight, color }: {
+    label: string; value: number; icon: string; highlight?: boolean; color?: 'violet';
+}) {
+    const isViolet = color === 'violet';
     return (
-        <div className={`rounded-2xl p-4 border ${highlight ? 'bg-indigo-50 border-indigo-100' : 'bg-white border-gray-100'}`}>
+        <div className={`rounded-2xl p-4 border ${
+            isViolet ? 'bg-violet-50 border-violet-100' :
+            highlight ? 'bg-indigo-50 border-indigo-100' :
+            'bg-white border-gray-100'
+        }`}>
             <div className="text-2xl mb-1">{icon}</div>
-            <div className={`text-2xl font-bold ${highlight ? 'text-indigo-600' : 'text-gray-700'}`}>{value.toLocaleString()}</div>
+            <div className={`text-2xl font-bold ${
+                isViolet ? 'text-violet-600' :
+                highlight ? 'text-indigo-600' :
+                'text-gray-700'
+            }`}>{value.toLocaleString()}</div>
             <div className="text-xs text-gray-500 mt-0.5">{label}</div>
         </div>
     );

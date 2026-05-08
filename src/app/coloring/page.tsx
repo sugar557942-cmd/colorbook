@@ -57,19 +57,21 @@ export default function ColoringListPage() {
                     transition={{ duration: 0.5 }}
                     className="text-center mb-12"
                 >
-                    <p className="font-body text-[#9A8569] text-sm font-bold tracking-wider uppercase mb-3">🎨 색칠공부</p>
+                    <div style={{ fontFamily: 'var(--font-script)', fontSize: 22, color: '#D87C7E', marginBottom: 4 }}>
+                        color it your way
+                    </div>
                     <h1 className="font-title font-bold text-4xl md:text-5xl text-[#4A3826] mb-4">
-                        마음껏 색칠해 보세요!
+                        색칠도안
                     </h1>
                     <p className="font-body text-[#6E5942] text-lg">
-                        마음마을 친구들과 함께 색칠하며 마음을 표현해요
+                        인쇄해서 크레용으로, 또는 화면에서 바로 — 마음껏 칠해봐요.
                     </p>
                 </motion.div>
 
                 {/* 필터 패널 */}
                 <div
-                    className="sticky top-[68px] z-30 mb-8 rounded-2xl px-5 py-4 space-y-3"
-                    style={{ background: "rgba(251,241,220,0.93)", backdropFilter: "blur(14px)", boxShadow: "0 2px 18px rgba(120,80,30,0.10), inset 0 0 0 1px rgba(155,120,70,0.14)" }}
+                    className="mb-8 rounded-[28px] px-6 py-5 space-y-3"
+                    style={{ background: '#FFFCF3', border: '1px solid rgba(155,120,70,0.16)', boxShadow: '0 2px 14px rgba(120,80,30,0.08)' }}
                 >
                     {/* 캐릭터 필터 */}
                     <div className="flex flex-wrap items-center gap-2">

@@ -68,41 +68,57 @@ const ColoringDetailPage = () => {
     const handleDirectPrint = useCallback(async () => {
         if (!page) return;
         trackAction(slug, 'print');
+
+        // 팝업은 반드시 사용자 이벤트 핸들러 안에서 동기적으로 열어야 팝업 차단 안 됨
+        const win = window.open('', '_blank');
+        if (!win) { alert('팝업 차단을 해제해 주세요.'); return; }
+
+        const printStyles = `
+  @page { size: A4 portrait; margin: 10mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #fff; }`;
+
+        if (hasPng && pngPath) {
+            // PNG 도안 — img 태그로 바로 임베드 (canvas 불필요)
+            win.document.write(`<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <title>마음마을 색칠공부 — ${page.title}</title>
+  <style>${printStyles}
+  img { display: block; width: 190mm; height: auto; max-height: 277mm; }
+  </style>
+</head><body>
+<img src="${pngPath}" onload="setTimeout(function(){window.print();window.close();},300)" />
+</body></html>`);
+            win.document.close();
+            return;
+        }
+
+        // SVG 도안 — fetch 후 인라인 삽입
         try {
             const res = await fetch(page.svgPath);
+            if (!res.ok) throw new Error(`${res.status}`);
             const svgText = await res.text();
-            // viewBox 보존을 위해 width/height 속성만 제거
             const cleaned = svgText
                 .replace(/\s+width="[^"]*"/, '')
                 .replace(/\s+height="[^"]*"/, '');
-            const win = window.open('', '_blank');
-            if (!win) { alert('팝업 차단을 해제해 주세요.'); return; }
             win.document.write(`<!DOCTYPE html>
-<html>
-<head>
+<html><head>
   <meta charset="utf-8">
   <title>마음마을 색칠공부 — ${page.title}</title>
-  <style>
-    @page { size: A4 portrait; margin: 10mm; }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { background: #fff; width: 100%; }
-    svg { display: block; width: 190mm; height: auto; max-height: 277mm; }
+  <style>${printStyles}
+  svg { display: block; width: 190mm; height: auto; max-height: 277mm; }
   </style>
-</head>
-<body>
+</head><body>
 ${cleaned}
-<script>
-  window.addEventListener('load', function () {
-    setTimeout(function () { window.print(); window.close(); }, 300);
-  });
-<\/script>
-</body>
-</html>`);
+<script>window.addEventListener('load',function(){setTimeout(function(){window.print();window.close();},300);});<\/script>
+</body></html>`);
             win.document.close();
         } catch {
-            window.print();
+            win.close();
+            alert('인쇄 준비 중 오류가 발생했습니다.\n도안을 다운로드한 후 인쇄해 주세요.');
         }
-    }, [slug, page]);
+    }, [slug, page, hasPng, pngPath]);
 
     if (!page) {
         return <div className="p-20 text-center text-maeul-soft-gray">도안을 찾을 수 없어요!</div>;

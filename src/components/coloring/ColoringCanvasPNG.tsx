@@ -346,10 +346,18 @@ export default function ColoringCanvasPNG({ imagePath, slug, onDownload, onPrint
     const handlePrint = useCallback(() => {
         const tmp = getComposited();
         if (!tmp) return;
-        const url = tmp.toDataURL('image/png');
+
+        // 팝업은 동기적으로 먼저 열어야 팝업 차단 안 됨
         const win = window.open('', '_blank');
         if (!win) { alert('팝업 차단을 해제해 주세요.'); return; }
-        win.document.write(`<!DOCTYPE html>
+
+        // toBlob: toDataURL보다 메모리 효율적, 대용량 이미지에서도 안정적
+        tmp.toBlob((blob) => {
+            if (!blob) { win.close(); alert('인쇄 준비 중 오류가 발생했어요.'); return; }
+
+            const blobUrl = URL.createObjectURL(blob);
+
+            win.document.write(`<!DOCTYPE html>
 <html><head>
 <meta charset="utf-8"><title>마음마을 색칠공부</title>
 <style>
@@ -358,11 +366,15 @@ export default function ColoringCanvasPNG({ imagePath, slug, onDownload, onPrint
   html, body { background: #fff; }
   img { display: block; width: 190mm; height: auto; max-height: 277mm; }
 </style></head>
-<body><img src="${url}" />
-<script>window.addEventListener('load',()=>{setTimeout(()=>{window.print();window.close();},400);});<\/script>
+<body>
+<img src="${blobUrl}" onload="setTimeout(function(){window.print();window.close();},300)" />
 </body></html>`);
-        win.document.close();
-        onPrint?.();
+            win.document.close();
+
+            // blob URL 자동 해제 (인쇄 완료 후 여유 있게)
+            setTimeout(() => URL.revokeObjectURL(blobUrl), 60_000);
+            onPrint?.();
+        }, 'image/png');
     }, [onPrint, getComposited]);
 
     /* ─── 툴 버튼 ─── */

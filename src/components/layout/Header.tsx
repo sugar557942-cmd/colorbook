@@ -1,49 +1,168 @@
 "use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import Navigation from './Navigation';
-import MobileNav from './MobileNav';
+import { usePathname } from 'next/navigation';
+import { cn } from '@/lib/utils';
+import { Menu, X, Palette } from 'lucide-react';
 
-const Header = () => {
+const navItems = [
+    { name: "색칠공부", href: "/coloring", badge: "무료" },
+    { name: "친구들",   href: "/characters" },
+    { name: "동화책",   href: "/stories" },
+    { name: "마을 구경", href: "/world" },
+    { name: "부모님 공간", href: "/parents" },
+];
+
+export default function Header() {
+    const pathname = usePathname();
+    const [open, setOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const fn = () => setScrolled(window.scrollY > 8);
+        window.addEventListener("scroll", fn, { passive: true });
+        return () => window.removeEventListener("scroll", fn);
+    }, []);
+
     return (
-        <header className="sticky top-0 z-50 w-full bg-maeul-cream/90 backdrop-blur-lg">
-            <div className="max-w-[1440px] mx-auto h-16 md:h-20 px-4 md:px-8 flex items-center justify-between">
-                {/* Logo Area */}
-                <Link href="/">
+        <>
+            <header
+                className={cn(
+                    "sticky top-0 z-50 w-full transition-all duration-300",
+                    scrolled
+                        ? "bg-[#FBF1DC]/95 backdrop-blur-md shadow-[0_2px_18px_rgba(120,80,30,0.10)]"
+                        : "bg-[#FBF1DC]/80 backdrop-blur-sm"
+                )}
+            >
+                {/* wave bottom border */}
+                <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] translate-y-full pointer-events-none">
+                    <svg viewBox="0 0 1200 16" preserveAspectRatio="none" className="block w-full h-[10px]">
+                        <path d="M0 8 Q150 0 300 8 T600 8 T900 8 T1200 8 V16 H0Z" fill="rgba(176,122,85,0.08)" />
+                    </svg>
+                </div>
+
+                <div className="max-w-[1440px] mx-auto h-[68px] px-4 md:px-8 flex items-center justify-between gap-4">
+                    {/* Logo */}
+                    <Link href="/" className="flex-shrink-0">
+                        <motion.div
+                            className="flex items-center gap-2.5"
+                            whileHover={{ scale: 1.04 }}
+                            whileTap={{ scale: 0.96 }}
+                        >
+                            {/* 원형 로고 오브 */}
+                            <div
+                                className="w-10 h-10 rounded-full flex items-center justify-center font-title font-bold text-lg text-white flex-shrink-0"
+                                style={{
+                                    background: "linear-gradient(145deg, #E89A82 0%, #D87C7E 55%, #C96A72 100%)",
+                                    boxShadow: "inset 0 2px 6px rgba(255,255,255,0.30), 0 4px 12px rgba(216,124,126,0.45)"
+                                }}
+                            >
+                                마
+                            </div>
+                            <div className="flex flex-col leading-none">
+                                <span className="font-title font-bold text-[17px] text-[#4A3826]">마음마을</span>
+                                <span className="font-body text-[10px] text-[#9A8569] tracking-widest uppercase mt-0.5">이야기</span>
+                            </div>
+                        </motion.div>
+                    </Link>
+
+                    {/* Desktop Nav */}
+                    <nav className="hidden lg:flex items-center gap-1">
+                        {navItems.map((item) => {
+                            const active = pathname === item.href || pathname.startsWith(item.href + '/');
+                            return (
+                                <Link key={item.href} href={item.href}>
+                                    <span
+                                        className={cn(
+                                            "relative inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-body font-bold transition-all duration-200",
+                                            active
+                                                ? "text-[#4A3826] bg-[#E69282]/15"
+                                                : "text-[#6E5942] hover:text-[#4A3826] hover:bg-[#F1C667]/15"
+                                        )}
+                                    >
+                                        {item.name}
+                                        {item.badge && (
+                                            <span className="text-[9px] font-black bg-[#E69282] text-white px-1.5 py-0.5 rounded-full leading-none">
+                                                {item.badge}
+                                            </span>
+                                        )}
+                                        {active && (
+                                            <motion.span
+                                                layoutId="nav-active"
+                                                className="absolute bottom-1 left-1/2 -translate-x-1/2 w-4 h-[2px] rounded-full bg-[#E69282]"
+                                            />
+                                        )}
+                                    </span>
+                                </Link>
+                            );
+                        })}
+                    </nav>
+
+                    {/* CTA + Mobile toggle */}
+                    <div className="flex items-center gap-2">
+                        <Link
+                            href="/coloring"
+                            className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full font-title font-bold text-sm text-white transition-all hover:-translate-y-[1px]"
+                            style={{
+                                background: "linear-gradient(180deg, #E89A82 0%, #D87C7E 100%)",
+                                boxShadow: "inset 0 -2px 0 rgba(120,50,50,0.18), 0 3px 0 #B86560, 0 8px 16px -6px rgba(216,124,126,0.5)"
+                            }}
+                        >
+                            <Palette size={14} />
+                            무료 색칠하기
+                        </Link>
+                        <button
+                            onClick={() => setOpen(v => !v)}
+                            className="lg:hidden w-10 h-10 flex items-center justify-center rounded-full text-[#6E5942] hover:bg-[#F1C667]/20 transition-colors"
+                            aria-label="메뉴"
+                        >
+                            {open ? <X size={20} /> : <Menu size={20} />}
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            {/* Mobile Menu */}
+            <AnimatePresence>
+                {open && (
                     <motion.div
-                        className="flex items-center gap-2 group cursor-pointer"
-                        whileHover={{ rotate: [-1, 1, -1, 1, 0] }}
-                        transition={{ duration: 0.5 }}
+                        key="mobile-menu"
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.18 }}
+                        className="fixed inset-x-0 top-[68px] z-40 sb-paper border-b border-[rgba(155,120,70,0.12)] shadow-[0_8px_32px_rgba(120,80,30,0.12)] lg:hidden"
                     >
-                        <div className="text-3xl md:text-4xl">🌳</div>
-                        <div className="flex flex-col">
-                            <span className="text-xl md:text-2xl font-title text-maeul-charcoal leading-none">
-                                마음마을
-                            </span>
-                            <span className="text-[10px] md:text-xs text-maeul-soft-gray font-nunito font-bold tracking-widest uppercase">
-                                Story
-                            </span>
-                        </div>
+                        <nav className="max-w-[1440px] mx-auto px-6 py-4 flex flex-col gap-1">
+                            {navItems.map((item) => {
+                                const active = pathname === item.href || pathname.startsWith(item.href + '/');
+                                return (
+                                    <Link
+                                        key={item.href}
+                                        href={item.href}
+                                        onClick={() => setOpen(false)}
+                                        className={cn(
+                                            "flex items-center justify-between px-4 py-3 rounded-2xl font-body font-bold text-sm transition-all",
+                                            active
+                                                ? "bg-[#E69282]/15 text-[#4A3826]"
+                                                : "text-[#6E5942] hover:bg-[#F9EBD0]"
+                                        )}
+                                    >
+                                        {item.name}
+                                        {item.badge && (
+                                            <span className="text-[9px] font-black bg-[#E69282] text-white px-2 py-0.5 rounded-full">
+                                                {item.badge}
+                                            </span>
+                                        )}
+                                    </Link>
+                                );
+                            })}
+                        </nav>
                     </motion.div>
-                </Link>
-
-                {/* Navigation */}
-                <Navigation />
-                <MobileNav />
-            </div>
-
-            {/* Wave Border */}
-            <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] translate-y-full pointer-events-none">
-                <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-[20px] fill-maeul-cream/90 backdrop-blur-lg">
-                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"></path>
-                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.51V0Z" opacity=".5"></path>
-                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"></path>
-                </svg>
-            </div>
-        </header>
+                )}
+            </AnimatePresence>
+        </>
     );
-};
-
-export default Header;
+}

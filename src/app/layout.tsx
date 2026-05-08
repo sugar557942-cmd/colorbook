@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className="antialiased">
+      <body className="antialiased sb-paper">
         <Header />
         <main className="max-w-[1440px] mx-auto min-h-screen">
           {children}

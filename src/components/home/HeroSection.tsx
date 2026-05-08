@@ -3,134 +3,124 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { cn } from '@/lib/utils';
-import MagicButton from '@/components/shared/MagicButton';
-import SparkleEffect from '@/components/shared/SparkleEffect';
-import Cloud from '@/components/icons/Cloud';
-import * as Silhouettes from '@/components/illustrations/CharacterSilhouettes';
-import { characters } from '@/data/characters';
-import { fadeInUp, staggerContainer } from '@/styles/animations';
+import { Palette, Sparkles } from 'lucide-react';
 
-const HeroSection = () => {
+const characters = [
+    { emoji: "🐻", name: "다온", href: "/characters/daon", color: "#C9A87E", quote: "괜찮아, 천천히 해도 돼." },
+    { emoji: "🦊", name: "나리", href: "/characters/nari", color: "#E69470", quote: "이건 이렇게 하면 어떨까?" },
+    { emoji: "🐰", name: "하루", href: "/characters/haru", color: "#B6CB95", quote: "같이 하자!" },
+    { emoji: "🦉", name: "지우", href: "/characters/jiu", color: "#9CABCE", quote: "잠깐, 먼저 생각해 보자." },
+    { emoji: "🐱", name: "소리", href: "/characters/sori", color: "#E29AA2", quote: "내 마음을 표현해야 해!" },
+    { emoji: "🐢", name: "느루", href: "/characters/neuru", color: "#9CC4B8", quote: "느려도 괜찮아." },
+    { emoji: "🐦", name: "라온", href: "/characters/raon", color: "#ECC472", quote: "저기 봐, 새로운 게 생겼어!" },
+];
+
+export default function HeroSection() {
     return (
-        <section className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden pt-20">
-            {/* Background Layers */}
-            <div className="absolute inset-0 bg-gradient-to-b from-maeul-sky/30 to-maeul-cream -z-10" />
+        <section className="relative min-h-[88vh] flex flex-col items-center justify-center overflow-hidden sb-sky">
+            {/* 수채 블러브 */}
+            <div className="sb-bloom w-[500px] h-[500px] bg-[#F5D4C8] top-[-100px] left-[-100px]" />
+            <div className="sb-bloom w-[400px] h-[400px] bg-[#F1E8A0] bottom-[80px] right-[-80px]" />
+            <div className="sb-bloom w-[300px] h-[300px] bg-[#C8DFB8] bottom-[-60px] left-[20%]" />
 
-            {/* Animated Clouds */}
-            <div className="absolute inset-0 pointer-events-none -z-5">
-                {[1, 2, 3, 4, 5].map((i) => (
-                    <motion.div
-                        key={i}
-                        className="absolute"
-                        initial={{ x: i % 2 === 0 ? "-20%" : "120%", y: `${i * 15}%` }}
-                        animate={{ x: i % 2 === 0 ? "120%" : "-20%" }}
-                        transition={{
-                            duration: 30 + i * 5,
-                            repeat: Infinity,
-                            ease: "linear",
-                            delay: i * 2,
+            {/* 메인 콘텐츠 */}
+            <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+                className="relative z-10 text-center px-6 max-w-3xl mx-auto pt-16"
+            >
+                {/* 배지 */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.2, duration: 0.4 }}
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-sm mb-8 text-sm font-body font-bold text-[#6E5942]"
+                    style={{ boxShadow: "0 2px 14px rgba(120,80,30,0.10), inset 0 0 0 1px rgba(155,120,70,0.15)" }}
+                >
+                    <span className="text-base">✨</span>
+                    일곱 동물 친구들의 사회정서 동화
+                </motion.div>
+
+                <h1 className="font-title font-bold text-4xl sm:text-5xl md:text-6xl text-[#4A3826] mb-6 leading-tight">
+                    <span className="inline-block" style={{ color: "#D87C7E" }}>마음마을</span>에<br />
+                    오신 것을 환영해요! 🌳
+                </h1>
+
+                <p className="font-body text-lg md:text-xl text-[#6E5942] mb-10 leading-relaxed">
+                    동화를 읽고, 색칠하고,<br className="sm:hidden" /> 마음을 키워요.
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+                    <Link
+                        href="/coloring"
+                        className="inline-flex items-center gap-2 px-7 py-4 rounded-full font-title font-bold text-base text-white transition-all hover:-translate-y-1"
+                        style={{
+                            background: "linear-gradient(180deg, #E89A82 0%, #D87C7E 100%)",
+                            boxShadow: "inset 0 -3px 0 rgba(120,50,50,0.18), 0 4px 0 #B86560, 0 12px 24px -8px rgba(216,124,126,0.6)"
                         }}
                     >
-                        <Cloud
-                            className="text-white drop-shadow-sm"
-                            opacity={0.4 + (i * 0.1)}
-                            width={100 + i * 40}
-                        />
-                    </motion.div>
-                ))}
-            </div>
-
-            <SparkleEffect />
-
-            {/* Content */}
-            <motion.div
-                variants={staggerContainer}
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: true }}
-                className="relative z-10 text-center px-4 max-w-4xl"
-            >
-                <motion.h1
-                    variants={fadeInUp}
-                    className="text-4xl md:text-6xl lg:text-7xl font-title text-maeul-charcoal mb-6 leading-tight"
-                >
-                    <span className="text-maeul-gold inline-block hover:rotate-[-2deg] transition-transform duration-300">마음마을</span>에<br className="md:hidden" /> 오신 것을 환영해요!
-                </motion.h1>
-
-                <motion.p
-                    variants={fadeInUp}
-                    className="text-lg md:text-2xl text-maeul-charcoal/70 mb-10 font-body leading-relaxed"
-                >
-                    일곱 동물 친구들과 함께 이야기를 읽고,<br />
-                    색칠하고, 마음을 키워요.
-                </motion.p>
-
-                <motion.div
-                    variants={fadeInUp}
-                    className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-                >
-                    <MagicButton href="/coloring" size="lg" sparkle>
-                        🎨 무료 색칠공부 시작하기
-                    </MagicButton>
-                    <MagicButton href="/world" variant="secondary" size="lg">
-                        ✨ 마을 구경하기
-                    </MagicButton>
-                </motion.div>
+                        <Palette size={18} />
+                        무료 색칠공부 시작하기
+                    </Link>
+                    <Link
+                        href="/characters"
+                        className="inline-flex items-center gap-2 px-7 py-4 rounded-full font-title font-bold text-base text-[#4A3826] transition-all hover:-translate-y-1 bg-white/70 backdrop-blur-sm"
+                        style={{
+                            boxShadow: "inset 0 0 0 1.5px #4A3826, 0 4px 0 #4A3826, 0 10px 24px -10px rgba(74,56,38,0.35)"
+                        }}
+                    >
+                        <Sparkles size={18} />
+                        친구들 만나기
+                    </Link>
+                </div>
             </motion.div>
 
-            {/* Bottom Characters & Hills */}
-            <div className="absolute bottom-0 left-0 w-full pointer-events-none h-40 md:h-60">
-                {/* Layered Hills */}
-                <div className="absolute bottom-0 left-0 w-full h-1/2 bg-maeul-leaf/20 rounded-t-[100%] translate-y-1/4 scale-x-110" />
-                <div className="absolute bottom-0 left-0 w-full h-2/3 bg-maeul-leaf/10 rounded-t-[100%] translate-y-1/3 scale-x-125 -rotate-2" />
-
-                {/* Characters */}
-                <div className="absolute bottom-4 left-0 w-full flex justify-center items-end gap-2 md:gap-6 px-4 pointer-events-auto">
-                    {characters.map((char, i) => {
-                        const Silhouette = (Silhouettes as any)[`${char.slug.charAt(0).toUpperCase() + char.slug.slice(1)}Silhouette`] || Silhouettes.DaonSilhouette;
-
-                        return (
-                            <motion.div
-                                key={char.slug}
-                                initial={{ opacity: 0, y: 50 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 1.4 + i * 0.1 }}
-                                className="relative group flex flex-col items-center"
-                            >
-                                {/* Speech Bubble on Hover */}
-                                <div className="absolute -top-12 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none w-max max-w-[150px]">
-                                    <div className="bg-white px-3 py-1 rounded-xl shadow-md text-[10px] md:text-xs font-bold text-maeul-charcoal relative">
-                                        {char.quote}
-                                        <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-white rotate-45" />
-                                    </div>
+            {/* 캐릭터 퍼레이드 */}
+            <div className="relative z-10 w-full mt-14 px-4 max-w-4xl mx-auto">
+                <div className="flex justify-center items-end gap-4 sm:gap-6 flex-wrap">
+                    {characters.map((c, i) => (
+                        <motion.div
+                            key={c.href}
+                            initial={{ opacity: 0, y: 40 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.5 + i * 0.08, duration: 0.5, ease: "easeOut" }}
+                            className="group relative flex flex-col items-center gap-1 cursor-pointer"
+                        >
+                            {/* 말풍선 */}
+                            <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-max max-w-[130px] opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-10">
+                                <div className="bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-xl text-[10px] font-body font-bold text-[#4A3826] relative"
+                                    style={{ boxShadow: "0 4px 12px rgba(120,80,30,0.15)" }}>
+                                    "{c.quote}"
+                                    <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white/90 rotate-45" />
                                 </div>
+                            </div>
 
-                                <Link href={`/characters/${char.slug}`}>
-                                    <motion.div
-                                        whileHover={{
-                                            y: -20,
-                                            scale: 1.1,
-                                            transition: { type: "spring", stiffness: 300 }
-                                        }}
-                                        className="cursor-pointer"
-                                    >
-                                        <Silhouette
-                                            color={char.color}
-                                            className={cn(
-                                                "w-12 h-16 md:w-20 md:h-28 drop-shadow-lg",
-                                                char.slug === 'daon' ? "w-16 h-20 md:w-28 md:h-36" : ""
-                                            )}
-                                        />
-                                    </motion.div>
-                                </Link>
-                            </motion.div>
-                        );
-                    })}
+                            <Link href={c.href}>
+                                <motion.div
+                                    whileHover={{ y: -12, scale: 1.1 }}
+                                    transition={{ type: "spring", stiffness: 300, damping: 14 }}
+                                    className="w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center text-3xl sm:text-4xl"
+                                    style={{
+                                        background: `radial-gradient(circle at 35% 30%, ${c.color}60 0%, ${c.color}CC 70%)`,
+                                        boxShadow: `inset 0 -4px 12px rgba(0,0,0,0.08), inset 0 4px 10px rgba(255,255,255,0.4), 0 8px 20px -8px ${c.color}88`
+                                    }}
+                                >
+                                    {c.emoji}
+                                </motion.div>
+                            </Link>
+                            <span className="text-[11px] font-body font-bold text-[#6E5942]">{c.name}</span>
+                        </motion.div>
+                    ))}
                 </div>
+            </div>
+
+            {/* 바닥 물결 */}
+            <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] pointer-events-none">
+                <svg viewBox="0 0 1200 60" preserveAspectRatio="none" className="block w-full h-[40px]">
+                    <path d="M0 40 Q150 10 300 40 T600 40 T900 40 T1200 40 V60 H0Z" fill="#FBF1DC" opacity="0.95" />
+                </svg>
             </div>
         </section>
     );
-};
-
-export default HeroSection;
+}

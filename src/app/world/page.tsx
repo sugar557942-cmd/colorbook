@@ -49,11 +49,11 @@ const WorldPage = () => {
     const [showHint, setShowHint]       = useState(false);
 
     return (
-        <div className="relative min-h-screen overflow-hidden pt-20 pb-12">
-            <FloatingElements density="low" elements={['cloud', 'leaf']} />
+        <div className="relative min-h-screen overflow-hidden pt-28 pb-12 sb-paper">
 
-            {/* Sky-to-meadow gradient background */}
-            <div className="fixed inset-0 -z-10 bg-gradient-to-b from-sky-100 via-blue-50 to-emerald-50" />
+            {/* 배경 블러브 */}
+            <div className="sb-bloom w-[450px] h-[450px] bg-[#B5C39A] opacity-25 top-[-80px] right-[-60px]" />
+            <div className="sb-bloom w-[350px] h-[350px] bg-[#9CABCE] opacity-20 bottom-0 left-[-60px]" />
 
             <div className="max-w-[1440px] mx-auto px-4 md:px-8">
 
@@ -61,12 +61,12 @@ const WorldPage = () => {
                 <motion.div
                     initial={{ opacity: 0, y: -12 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="mb-6 flex items-center gap-3 bg-maeul-gold/15 border-2 border-maeul-gold/30 rounded-3xl px-6 py-4"
+                    className="mb-6 flex items-center gap-3 bg-[#F8E7B5] border-2 border-[rgba(226,163,82,0.35)] rounded-3xl px-6 py-4"
                 >
                     <span className="text-2xl flex-shrink-0">🏗️</span>
                     <div className="flex-1 min-w-0">
-                        <p className="font-bold text-maeul-charcoal text-sm">마음마을 지도는 현재 공사 중이에요!</p>
-                        <p className="text-maeul-soft-gray text-xs mt-0.5">
+                        <p className="font-body font-bold text-[#4A3826] text-sm">마음마을 지도는 현재 공사 중이에요!</p>
+                        <p className="font-body text-[#9A8569] text-xs mt-0.5">
                             각 장소를 클릭해 미리 살짝 엿볼 수 있어요. 곧 이야기와 활동들이 가득 채워질 거예요 ✨
                         </p>
                     </div>

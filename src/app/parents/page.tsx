@@ -3,30 +3,17 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { articles as allArticles } from '@/data/articles';
 
-const articles = [
-    {
-        tag: '교육 칼럼',
-        title: '우리 아이 정서 지능, 어떻게 키울까요?',
-        tone: '#F1C667',
-        summary: '아이의 감정을 읽어주는 5단계 코칭 방법으로 정서 지능을 키워요.',
-        time: '5분 읽기',
-    },
-    {
-        tag: '활동 가이드',
-        title: '색칠 한 장으로 시작하는 부모-아이 대화',
-        tone: '#E29AA2',
-        summary: '도안을 활용한 10가지 감정 놀이 방법을 소개해요.',
-        time: '7분 읽기',
-    },
-    {
-        tag: '안전 수칙',
-        title: '디지털 네이티브 세대를 위한 미디어 약속',
-        tone: '#9CC4B8',
-        summary: '가정에서 함께 지키는 3가지 미디어 원칙.',
-        time: '3분 읽기',
-    },
-];
+/* 메인 카드 데이터 — data/articles.ts에서 자동 매핑 */
+const articles = allArticles.map(a => ({
+    slug: a.slug,
+    tag: a.category,
+    title: a.title,
+    tone: a.tone,
+    summary: a.summary,
+    time: a.readingTime,
+}));
 
 const faqs = [
     {
@@ -165,36 +152,40 @@ export default function ParentsPage() {
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                         {articles.map((a, i) => (
                             <motion.div
-                                key={i}
+                                key={a.slug}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.08 }}
-                                className="sb-card overflow-hidden"
-                                style={{ padding: 0 }}
                             >
-                                <div
-                                    className="relative overflow-hidden flex items-center justify-center"
-                                    style={{
-                                        aspectRatio: '16/9', borderRadius: '22px 22px 0 0',
-                                        background: `linear-gradient(135deg, ${a.tone}33, ${a.tone}88)`,
-                                    }}
-                                >
-                                    <div style={{ fontFamily: 'var(--font-script)', fontSize: 32, color: a.tone, opacity: 0.9 }}>
-                                        {a.tag}
+                                <Link href={`/parents/${a.slug}`} className="block sb-card overflow-hidden group transition-all hover:-translate-y-1"
+                                    style={{ padding: 0 }}>
+                                    <div
+                                        className="relative overflow-hidden flex items-center justify-center"
+                                        style={{
+                                            aspectRatio: '16/9', borderRadius: '22px 22px 0 0',
+                                            background: `linear-gradient(135deg, ${a.tone}33, ${a.tone}88)`,
+                                        }}
+                                    >
+                                        <div style={{ fontFamily: 'var(--font-script)', fontSize: 32, color: a.tone, opacity: 0.9 }}>
+                                            {a.tag}
+                                        </div>
                                     </div>
-                                </div>
-                                <div style={{ padding: 22 }}>
-                                    <div style={{ fontFamily: 'var(--font-hand)', fontSize: 13, color: a.tone, fontWeight: 700, marginBottom: 8 }}>
-                                        {a.tag} · {a.time}
+                                    <div style={{ padding: 22 }}>
+                                        <div style={{ fontFamily: 'var(--font-hand)', fontSize: 13, color: a.tone, fontWeight: 700, marginBottom: 8 }}>
+                                            {a.tag} · {a.time}
+                                        </div>
+                                        <div className="font-title font-bold text-[#4A3826] leading-snug mb-2 group-hover:text-[#D87C7E] transition-colors" style={{ fontSize: 16 }}>
+                                            {a.title}
+                                        </div>
+                                        <div className="font-body text-[#6E5942] leading-relaxed" style={{ fontSize: 14 }}>
+                                            {a.summary}
+                                        </div>
+                                        <div className="mt-3 inline-flex items-center gap-1 text-xs font-bold" style={{ color: a.tone }}>
+                                            읽으러 가기 →
+                                        </div>
                                     </div>
-                                    <div className="font-title font-bold text-[#4A3826] leading-snug mb-2" style={{ fontSize: 16 }}>
-                                        {a.title}
-                                    </div>
-                                    <div className="font-body text-[#6E5942] leading-relaxed" style={{ fontSize: 14 }}>
-                                        {a.summary}
-                                    </div>
-                                </div>
+                                </Link>
                             </motion.div>
                         ))}
                     </div>

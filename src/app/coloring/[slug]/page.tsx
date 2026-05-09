@@ -10,7 +10,8 @@ import MagicButton from '@/components/shared/MagicButton';
 import FloatingElements from '@/components/shared/FloatingElements';
 import ColoringCanvas from '@/components/coloring/ColoringCanvas';
 import ColoringCanvasPNG from '@/components/coloring/ColoringCanvasPNG';
-import { ArrowLeft, Download, Star, Printer, Palette, Info, ChevronRight } from 'lucide-react';
+import { ArrowLeft, Download, Star, Printer, Palette, Info, ChevronRight, HeartHandshake } from 'lucide-react';
+import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import ColoringCard from '@/components/shared/ColoringCard';
 import { getColoringImagePath } from '@/lib/coloringImage';
@@ -213,6 +214,9 @@ ${cleaned}
                                         onPrint={handlePrint}
                                     />
                                 )}
+
+                                {/* ── 정화(2단계) 섹션 ── */}
+                                <CatharsisSection slug={slug} title={page.title} />
                             </motion.div>
                         )}
 
@@ -397,6 +401,65 @@ function InfoRow({ label, value }: { label: string; value: string }) {
         <div>
             <span className="text-xs font-bold text-gray-400 block mb-0.5">{label}</span>
             <span className="text-sm text-gray-600 leading-relaxed">{value}</span>
+        </div>
+    );
+}
+
+/* ── 정화(2단계) 섹션 ── */
+const CATHARSIS_EMOTIONS = [
+    { value: '기쁨', emoji: '😊' }, { value: '슬픔', emoji: '😢' },
+    { value: '불안', emoji: '😰' }, { value: '평온', emoji: '😌' },
+    { value: '화남', emoji: '😤' }, { value: '복잡해요', emoji: '🤔' },
+    { value: '잘 모르겠어요', emoji: '🌫️' },
+];
+
+function CatharsisSection({ slug, title }: { slug: string; title: string }) {
+    const [selected, setSelected] = React.useState('');
+
+    const toQna = `/counsel?tab=qna&slug=${encodeURIComponent(slug)}&title=${encodeURIComponent(title)}${selected ? `&emotion=${encodeURIComponent(selected)}` : ''}`;
+    const toConsult = `/counsel?tab=consult&slug=${encodeURIComponent(slug)}${selected ? `&emotion=${encodeURIComponent(selected)}` : ''}`;
+
+    return (
+        <div className="mt-8 rounded-3xl p-6"
+            style={{ background: '#FFFCF3', border: '1px solid rgba(155,120,70,0.16)', boxShadow: '0 2px 12px rgba(120,80,30,0.07)' }}>
+            {/* 헤더 */}
+            <div className="mb-4">
+                <div style={{ fontFamily: 'var(--font-script)', fontSize: 16, color: '#7B9D67', marginBottom: 2 }}>
+                    STEP 02 · 정화
+                </div>
+                <h3 className="font-title font-bold text-[#4A3826] text-lg">색칠 후 마음 기록하기 🌊</h3>
+                <p className="font-body text-[#9A8569] text-xs mt-1">
+                    색칠하면서 어떤 기분이 느껴지셨나요? 감정을 선택하고 전문가에게 물어보세요.
+                </p>
+            </div>
+
+            {/* 감정 선택 */}
+            <div className="flex flex-wrap gap-2 mb-5">
+                {CATHARSIS_EMOTIONS.map(e => (
+                    <button key={e.value}
+                        onClick={() => setSelected(v => v === e.value ? '' : e.value)}
+                        className={`px-3 py-1.5 rounded-full text-xs font-bold font-body transition-all ${
+                            selected === e.value ? 'bg-[#D87C7E] text-white shadow-sm' : 'bg-[#FBF1DC] text-[#6E5942] hover:bg-[#F7E8CC]'
+                        }`}>
+                        {e.emoji} {e.value}
+                    </button>
+                ))}
+            </div>
+
+            {/* CTA 버튼 */}
+            <div className="flex gap-3 flex-col sm:flex-row">
+                <Link href={toQna}
+                    className="flex-1 flex items-center justify-center gap-2 py-3 rounded-2xl font-bold text-sm text-white transition-all"
+                    style={{ background: '#D87C7E' }}>
+                    💬 Q&amp;A에 익명으로 남기기
+                </Link>
+                <Link href={toConsult}
+                    className="flex-1 flex items-center justify-center gap-2 py-3 rounded-2xl font-bold text-sm transition-all"
+                    style={{ background: 'linear-gradient(135deg, #DBE5C4, #7B9D67)', color: 'white' }}>
+                    <HeartHandshake size={15} />
+                    전문가 상담 신청하기
+                </Link>
+            </div>
         </div>
     );
 }

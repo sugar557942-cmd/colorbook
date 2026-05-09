@@ -961,21 +961,6 @@ export const coloringPages: ColoringPage[] = [
         artTherapyTheme: '다양한 친구들과 함께하는 숲 속 이야기를 색으로 표현해요.',
         activityPrompt: '라온의 숲속 친구들에게 각각 이름을 지어 주세요.',
     },
-    {
-        slug: 'raon-horizon',
-        title: '라온의 드넓은 세상',             // raon-10 없음 → slug 유지, 제목만 정리
-        character: 'raon',
-        difficulty: 2,
-        svgPath: '/coloring/raon-horizon.svg',
-        downloadUrl: '/coloring/raon-horizon.svg',
-        type: 'scene',
-        relatedStory: 'raon-bridge',
-        ageRange: '6-8세',
-        artTherapyGoal: '꿈 · 미래 지향',
-        artTherapyTheme: '저 넓은 세상에 어떤 멋진 일이 기다리고 있을까요?',
-        therapeuticColor: '#FFD93D',
-        activityPrompt: '지평선 너머에 무엇이 있을지 색칠하며 상상해 보세요.',
-    },
 
     // ═══════════════════════════════════════════
     // 🎨  미술치료 테마 (8개 — 기존 유지)

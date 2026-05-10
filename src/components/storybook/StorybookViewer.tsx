@@ -357,9 +357,10 @@ export default function StorybookViewer({ storybook }: Props) {
                 }
                 .sb-page-text {
                     flex: 1 1 auto;
-                    padding: clamp(28px, 3.5vw, 48px) clamp(28px, 4vw, 56px) clamp(56px, 5vw, 72px);
+                    padding: clamp(36px, 4.5vw, 60px) clamp(32px, 4vw, 60px) clamp(56px, 5vw, 72px);
                     display: flex;
                     flex-direction: column;
+                    justify-content: center;     /* 본문만 있으니 세로 가운데 정렬 */
                     overflow-y: auto;
                     -webkit-overflow-scrolling: touch;
                     background:
@@ -741,7 +742,7 @@ function ReadingScreen({
                     transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
                     className="sb-spread">
                     <ImagePage page={cur} slug={slug} />
-                    <TextPage page={cur} accent={storybook.coverColor} />
+                    <TextPage page={cur} />
                 </motion.div>
             </AnimatePresence>
 
@@ -761,43 +762,29 @@ function ImagePage({ page, slug }: { page: Storybook['pages'][number]; slug: str
     );
 }
 
-/* ── 우측 페이지 (텍스트) ── */
-function TextPage({ page, accent }: { page: Storybook['pages'][number]; accent: string }) {
+/* ── 텍스트 페이지 — 본문만 깔끔하게 ── */
+function TextPage({ page }: { page: Storybook['pages'][number] }) {
     return (
         <div className="sb-page sb-page-text">
-            {/* 장면 번호 */}
-            <div style={{
-                fontFamily: 'var(--font-script)', fontSize: 18, color: accent,
-                marginBottom: 6,
-            }}>
-                scene {String(page.pageNumber).padStart(2, '0')}
-            </div>
-
-            {/* 장면 제목 */}
-            {page.sceneTitle && (
-                <h2 className="font-title font-bold text-[#4A3826] mb-5"
-                    style={{ fontSize: 'clamp(20px, 2.4vw, 26px)', lineHeight: 1.3 }}>
-                    {page.sceneTitle}
-                </h2>
-            )}
-
-            {/* 본문 */}
-            <p className="font-body text-[#4A3826] whitespace-pre-line leading-loose"
+            {/* 본문 — 진짜 그림책처럼 본문만 */}
+            <p className="font-body text-[#4A3826] whitespace-pre-line"
                 style={{
-                    fontSize: 'clamp(15px, 1.5vw, 17px)',
-                    lineHeight: 2,
+                    fontSize: 'clamp(16px, 1.6vw, 19px)',
+                    lineHeight: 1.95,
                     fontFamily: 'var(--font-body)',
+                    textAlign: 'center',
                 }}>
                 {page.text}
             </p>
 
-            {/* 페이지 번호 (하단 우측) */}
-            <div className="absolute bottom-5 right-6"
+            {/* 페이지 번호 — 하단 가운데, 단정하게 */}
+            <div className="absolute left-1/2 -translate-x-1/2 bottom-5"
                 style={{
                     fontFamily: 'var(--font-hand)',
-                    fontSize: 13, color: '#9A8569',
+                    fontSize: 13, color: '#C4A77D',
+                    letterSpacing: '0.1em',
                 }}>
-                — {page.pageNumber} —
+                · {page.pageNumber} ·
             </div>
         </div>
     );

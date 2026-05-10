@@ -18,7 +18,7 @@
 
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 import ColorPalette from './ColorPalette';
-import { Download, Printer, Loader2, Eraser, Lock, Unlock } from 'lucide-react';
+import { Download, Printer, Loader2, Eraser, Lock, Unlock, Undo2 } from 'lucide-react';
 
 interface Props {
     imagePath: string;
@@ -347,6 +347,21 @@ export default function ColoringCanvasPNG({ imagePath, slug, onDownload, onPrint
         setStrokeCount(c => Math.max(0, c - 1));
     }, [history]);
 
+    /* ─── 키보드 단축키: Ctrl/Cmd+Z = 되돌리기 ─── */
+    useEffect(() => {
+        const handler = (e: KeyboardEvent) => {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'z' && !e.shiftKey) {
+                // 다른 input/textarea 포커스 중이면 무시
+                const target = e.target as HTMLElement;
+                if (target?.tagName === 'INPUT' || target?.tagName === 'TEXTAREA') return;
+                e.preventDefault();
+                handleUndo();
+            }
+        };
+        window.addEventListener('keydown', handler);
+        return () => window.removeEventListener('keydown', handler);
+    }, [handleUndo]);
+
     /* ─── 초기화 ─── */
     const handleReset = useCallback(() => {
         const canvas = colorRef.current;
@@ -455,6 +470,28 @@ export default function ColoringCanvasPNG({ imagePath, slug, onDownload, onPrint
                         <ToolBtn t="bucket" label="페인트통" icon={<span className="text-sm">🪣</span>} />
                         <ToolBtn t="brush"  label="붓"       icon={<span className="text-sm">🖌️</span>} />
                         <ToolBtn t="eraser" label="지우개"   icon={<Eraser size={12} />} />
+
+                        {/* 시각 구분선 */}
+                        <div className="w-px h-5 bg-[#D5C9B6] mx-0.5" />
+
+                        {/* 되돌리기 — 마지막 색칠 한 단계 취소 */}
+                        <button
+                            onClick={handleUndo}
+                            disabled={history.length === 0}
+                            title={history.length === 0
+                                ? '되돌릴 작업이 없어요'
+                                : `방금 칠한 것 되돌리기 (${history.length}단계 가능) · Ctrl+Z`}
+                            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold transition-all ${
+                                history.length === 0
+                                    ? 'bg-[#FBF1DC] text-[#C4A77D] cursor-not-allowed opacity-60'
+                                    : 'bg-[#9CC4B8] text-white hover:bg-[#7BAA9E] shadow-sm'
+                            }`}
+                        >
+                            <Undo2 size={12} /> 되돌리기
+                            {history.length > 0 && (
+                                <span className="ml-0.5 text-[10px] opacity-90">({history.length})</span>
+                            )}
+                        </button>
 
                         {/* 스크롤 잠금 토글 — 모바일/태블릿에서 색칠 시 화면 흔들림 방지 */}
                         <button

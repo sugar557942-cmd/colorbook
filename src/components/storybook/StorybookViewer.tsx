@@ -35,7 +35,6 @@ interface Props {
 
 type Phase = 'cover' | 'reading' | 'ending';
 
-const FLIP_MS = 850;
 const OPEN_MS = 1100;   // 표지 → 본문 인트로 애니메이션 길이
 
 export default function StorybookViewer({ storybook }: Props) {
@@ -47,7 +46,6 @@ export default function StorybookViewer({ storybook }: Props) {
     /* ── 상태 ── */
     const [phase, setPhase]       = useState<Phase>('cover');
     const [spread, setSpread]     = useState(0);
-    const [flipping, setFlipping] = useState<'next' | 'prev' | null>(null);
     const [direction, setDirection] = useState<'next' | 'prev'>('next');
     const [bgmOn, setBgmOn]       = useState(true);
     const [sfxOn, setSfxOn]       = useState(true);
@@ -191,9 +189,9 @@ export default function StorybookViewer({ storybook }: Props) {
         }, OPEN_MS - 200);
     }, [initAudio, playOpenSfx, startBgm]);
 
-    /* ── 다음 페이지 ── */
+    /* ── 다음 페이지 — 즉시 슬라이드 ── */
     const goNext = useCallback(() => {
-        if (flipping || phase !== 'reading') return;
+        if (phase !== 'reading') return;
         if (spread >= totalPages - 1) {
             stopBgm();
             setPhase('ending');
@@ -201,38 +199,16 @@ export default function StorybookViewer({ storybook }: Props) {
         }
         setDirection('next');
         playFlipSfx();
+        setSpread(s => s + 1);
+    }, [phase, spread, totalPages, playFlipSfx, stopBgm]);
 
-        const isMobile = typeof window !== 'undefined' && window.innerWidth <= 720;
-        if (isMobile) {
-            // 모바일: 즉시 슬라이드, FLIP_MS 대기 X
-            setSpread(s => s + 1);
-            return;
-        }
-        // 데스크탑: 3D 플립
-        setFlipping('next');
-        window.setTimeout(() => {
-            setSpread(s => s + 1);
-            setFlipping(null);
-        }, FLIP_MS);
-    }, [flipping, phase, spread, totalPages, playFlipSfx, stopBgm]);
-
-    /* ── 이전 페이지 ── */
+    /* ── 이전 페이지 — 즉시 슬라이드 ── */
     const goPrev = useCallback(() => {
-        if (flipping || phase !== 'reading' || spread === 0) return;
+        if (phase !== 'reading' || spread === 0) return;
         setDirection('prev');
         playFlipSfx();
-
-        const isMobile = typeof window !== 'undefined' && window.innerWidth <= 720;
-        if (isMobile) {
-            setSpread(s => s - 1);
-            return;
-        }
-        setFlipping('prev');
-        window.setTimeout(() => {
-            setSpread(s => s - 1);
-            setFlipping(null);
-        }, FLIP_MS);
-    }, [flipping, phase, spread, playFlipSfx]);
+        setSpread(s => s - 1);
+    }, [phase, spread, playFlipSfx]);
 
     /* ── 닫고 목록으로 ── */
     const handleClose = useCallback(() => {
@@ -289,8 +265,6 @@ export default function StorybookViewer({ storybook }: Props) {
     }, [spread, phase, slug, storybook.pages, totalPages]);
 
     const cur = storybook.pages[spread];
-    const next = spread + 1 < totalPages ? storybook.pages[spread + 1] : null;
-    const prev = spread - 1 >= 0 ? storybook.pages[spread - 1] : null;
 
     return (
         <>
@@ -321,60 +295,47 @@ export default function StorybookViewer({ storybook }: Props) {
                     pointer-events: none;
                 }
 
-                /* ── 펼친 책 컨테이너 ──
-                   원본 이미지 1400×1045 (1.34:1 가로형)에 맞춰 스프레드 = 8:3.
-                   각 페이지 = 4:3 → 이미지가 자르지 않고 정확히 채워짐. */
+                /* ── 동화책 카드 (세로 3:4) ── */
                 .sb-book {
                     position: relative;
-                    width: min(94vw, calc(82vh * 8 / 3), 1800px);
-                    aspect-ratio: 8 / 3;
+                    width: min(88vw, calc(86vh * 0.75), 760px);
+                    aspect-ratio: 3 / 4;
                     transform-style: preserve-3d;
                 }
-                /* 책의 그림자 */
+                /* 책 아래 그림자 */
                 .sb-book::before {
                     content: '';
                     position: absolute;
-                    bottom: -28px; left: 8%; right: 8%;
-                    height: 30px;
+                    bottom: -24px; left: 8%; right: 8%;
+                    height: 28px;
                     background: radial-gradient(ellipse, rgba(0,0,0,0.55), transparent 70%);
                     filter: blur(12px);
                     z-index: -1;
                 }
 
-                /* ── 스프레드 (좌/우 페이지 합본) ── */
+                /* ── 페이지 (이미지 위 / 텍스트 아래) ── */
                 .sb-spread {
                     position: absolute; inset: 0;
                     display: flex;
+                    flex-direction: column;
                     background: #FFFCF3;
-                    border-radius: 6px;
+                    border-radius: 14px;
                     box-shadow:
                         0 30px 80px rgba(0,0,0,0.6),
                         0 12px 24px rgba(0,0,0,0.4),
                         inset 0 1px 0 rgba(255,255,255,0.6);
                     overflow: hidden;
                 }
-                /* 책등 (스프레드 가운데) */
-                .sb-spread::after {
-                    content: '';
-                    position: absolute;
-                    top: 0; bottom: 0; left: 50%;
-                    width: 24px;
-                    transform: translateX(-50%);
-                    background: linear-gradient(90deg,
-                        rgba(0,0,0,0.18) 0%,
-                        rgba(0,0,0,0.06) 30%,
-                        rgba(0,0,0,0.06) 70%,
-                        rgba(0,0,0,0.18) 100%);
-                    pointer-events: none;
-                }
 
                 .sb-page {
-                    flex: 1;
                     position: relative;
                     overflow: hidden;
                     background: #FFFCF3;
                 }
                 .sb-page-image {
+                    flex: 0 0 auto;
+                    width: 100%;
+                    aspect-ratio: 4 / 3;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -382,60 +343,29 @@ export default function StorybookViewer({ storybook }: Props) {
                 }
                 .sb-page-image img {
                     width: 100%; height: 100%;
-                    object-fit: contain;   /* 자르지 않고 항상 전체 표시 */
+                    object-fit: cover;     /* 4:3 컨테이너 = 4:3 이미지 → 자르지 않고 채움 */
                     display: block;
                 }
+                /* 이미지 → 텍스트 부드러운 경계 */
+                .sb-page-image::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0; left: 0; right: 0;
+                    height: 16px;
+                    background: linear-gradient(180deg, transparent, rgba(120,80,30,0.10));
+                    pointer-events: none;
+                }
                 .sb-page-text {
-                    /* 상단부터 자연스럽게 흐름 — 페이지 번호는 absolute로 하단 고정 */
-                    padding: clamp(48px, 6vw, 84px) clamp(32px, 4vw, 60px) clamp(72px, 6vw, 96px);
+                    flex: 1 1 auto;
+                    padding: clamp(28px, 3.5vw, 48px) clamp(28px, 4vw, 56px) clamp(56px, 5vw, 72px);
                     display: flex;
                     flex-direction: column;
-                    gap: 0;
+                    overflow-y: auto;
+                    -webkit-overflow-scrolling: touch;
                     background:
                         repeating-linear-gradient(180deg,
-                            transparent 0 39px,
-                            rgba(180,140,90,0.04) 39px 40px);
-                }
-
-                /* ── 플리핑 페이지 (페이지 넘김 애니메이션) ── */
-                .sb-flip {
-                    position: absolute;
-                    top: 0;
-                    width: 50%;
-                    height: 100%;
-                    transform-style: preserve-3d;
-                    z-index: 50;
-                    will-change: transform;
-                }
-                .sb-flip-next {
-                    right: 0;
-                    transform-origin: left center;
-                    animation: sb-flip-fwd ${FLIP_MS}ms cubic-bezier(0.45, 0.05, 0.35, 1) forwards;
-                }
-                .sb-flip-prev {
-                    left: 0;
-                    transform-origin: right center;
-                    animation: sb-flip-bwd ${FLIP_MS}ms cubic-bezier(0.45, 0.05, 0.35, 1) forwards;
-                }
-                @keyframes sb-flip-fwd {
-                    0%   { transform: rotateY(0deg);     box-shadow: 0 0 0 rgba(0,0,0,0); }
-                    50%  { box-shadow: -30px 0 40px rgba(0,0,0,0.35); }
-                    100% { transform: rotateY(-180deg); box-shadow: 0 0 0 rgba(0,0,0,0); }
-                }
-                @keyframes sb-flip-bwd {
-                    0%   { transform: rotateY(0deg); }
-                    50%  { box-shadow: 30px 0 40px rgba(0,0,0,0.35); }
-                    100% { transform: rotateY(180deg); }
-                }
-
-                .sb-face {
-                    position: absolute; inset: 0;
-                    backface-visibility: hidden;
-                    -webkit-backface-visibility: hidden;
-                    overflow: hidden;
-                }
-                .sb-face-back {
-                    transform: rotateY(180deg);
+                            transparent 0 35px,
+                            rgba(180,140,90,0.04) 35px 36px);
                 }
 
                 /* ── 표지 ── */
@@ -505,73 +435,32 @@ export default function StorybookViewer({ storybook }: Props) {
                 }
 
                 /* ════════════════════════════════════════════════════
-                   모바일 (≤720px) — 풀스크린 리더 모드
-                   진짜 책 시뮬레이션을 버리고 콘텐츠 우선 레이아웃
+                   모바일 (≤720px) — 풀스크린 리더
+                   레이아웃은 데스크탑과 동일 (이미지 위 / 텍스트 아래),
+                   다만 책이 화면 전체를 채움
                 ════════════════════════════════════════════════════ */
                 @media (max-width: 720px) {
-                    /* 책이 화면 전체 차지 */
                     .sb-book {
-                        position: relative;
                         width: 100vw;
                         height: 100vh;
-                        height: 100dvh;     /* 모던 브라우저 dynamic viewport */
+                        height: 100dvh;
                         max-width: none;
                         max-height: none;
                         aspect-ratio: unset;
                         margin: 0;
                     }
-                    /* 책 그림자 제거 (풀스크린이라 의미 없음) */
                     .sb-book::before { display: none; }
 
-                    /* 스프레드 → 세로 stack */
                     .sb-spread {
-                        position: absolute;
-                        inset: 0;
-                        flex-direction: column;
                         border-radius: 0;
                         box-shadow: none;
                     }
-                    /* 책등 제거 */
-                    .sb-spread::after { display: none; }
 
-                    /* 이미지: 상단, 4:3 비율 정확히 유지 */
-                    .sb-page-image {
-                        flex: 0 0 auto;
-                        width: 100%;
-                        height: auto;
-                        aspect-ratio: 4 / 3;
-                        position: relative;
-                    }
-                    .sb-page-image img {
-                        object-fit: cover;       /* 4:3 컨테이너 = 4:3 이미지 → 자르지 않고 채움 */
-                    }
-                    /* 이미지 → 텍스트 부드러운 경계 */
-                    .sb-page-image::after {
-                        content: '';
-                        position: absolute;
-                        bottom: 0; left: 0; right: 0;
-                        height: 18px;
-                        background: linear-gradient(180deg, transparent, rgba(120,80,30,0.12));
-                        pointer-events: none;
-                    }
-
-                    /* 텍스트: 남은 공간 차지, 상단부터 흐름 */
                     .sb-page-text {
-                        flex: 1 1 auto;
-                        padding: 36px 24px 88px;       /* 위 여유 + 아래 여유 (페이지 번호용) */
-                        overflow-y: auto;
-                        -webkit-overflow-scrolling: touch;
-                        background:
-                            repeating-linear-gradient(180deg,
-                                transparent 0 35px,
-                                rgba(180,140,90,0.04) 35px 36px),
-                            #FFFCF3;
+                        padding: 32px 24px 88px;
                     }
 
-                    /* 데스크탑 3D 플립 제거 */
-                    .sb-flip { display: none; }
-
-                    /* 탭 영역: 텍스트 영역 하단부에만 (스크롤 방해 X) */
+                    /* 탭 영역: 텍스트 하단부에만 (스크롤 방해 X) */
                     .sb-tap-zone {
                         top: auto;
                         bottom: 0;
@@ -579,7 +468,6 @@ export default function StorybookViewer({ storybook }: Props) {
                         width: 30%;
                     }
 
-                    /* 표지 살짝 더 크게 — 모바일에서도 시각적 임팩트 */
                     .sb-cover-stage {
                         width: min(82vw, calc(72vh * 0.7));
                     }
@@ -611,9 +499,8 @@ export default function StorybookViewer({ storybook }: Props) {
                     {phase === 'reading' && (
                         <ReadingScreen key="reading"
                             storybook={storybook}
-                            cur={cur} next={next} prev={prev}
+                            cur={cur}
                             spread={spread}
-                            flipping={flipping}
                             direction={direction}
                             slug={slug}
                             onNext={goNext} onPrev={goPrev}
@@ -793,15 +680,12 @@ function CoverScreen({
    본문 읽기 화면
 ════════════════════════════════════════════════════ */
 function ReadingScreen({
-    storybook, cur, next, prev, spread, flipping, direction, slug,
+    storybook, cur, direction, slug, spread,
     onNext, onPrev, isFirst, isLast,
 }: {
     storybook: Storybook;
     cur: Storybook['pages'][number];
-    next: Storybook['pages'][number] | null;
-    prev: Storybook['pages'][number] | null;
     spread: number;
-    flipping: 'next' | 'prev' | null;
     direction: 'next' | 'prev';
     slug: string;
     onNext: () => void; onPrev: () => void;
@@ -829,7 +713,6 @@ function ReadingScreen({
             exit={{ opacity: 0, scale: isMobile ? 0.96 : 0.5 }}
             transition={{ duration: isMobile ? 0.5 : 1.0, ease: [0.34, 1.32, 0.64, 1] }}
             className="sb-book"
-            style={{ '--flip-ms': `${FLIP_MS}ms` } as React.CSSProperties}
         >
             {/* 좌/우 화살표 (큰 화면) */}
             {!isFirst && (
@@ -849,64 +732,18 @@ function ReadingScreen({
                 </motion.button>
             )}
 
-            {/* 모바일: 좌우 슬라이드 transition */}
-            {isMobile ? (
-                <AnimatePresence mode="wait" initial={false}>
-                    <motion.div key={spread}
-                        initial={{ opacity: 0, x: direction === 'next' ? 40 : -40 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: direction === 'next' ? -40 : 40 }}
-                        transition={{ duration: 0.32, ease: [0.4, 0, 0.2, 1] }}
-                        className="sb-spread">
-                        <ImagePage page={cur} slug={slug} />
-                        <TextPage page={cur} accent={storybook.coverColor} />
-                    </motion.div>
-                </AnimatePresence>
-            ) : (
-                <>
-                    {/* 데스크탑: 3D flip */}
-                    {/* 하단 (다음 스프레드 미리 노출) */}
-                    {flipping === 'next' && next ? (
-                        <div className="sb-spread">
-                            <ImagePage page={next} slug={slug} />
-                            <TextPage page={next} accent={storybook.coverColor} />
-                        </div>
-                    ) : flipping === 'prev' && prev ? (
-                        <div className="sb-spread">
-                            <ImagePage page={prev} slug={slug} />
-                            <TextPage page={prev} accent={storybook.coverColor} />
-                        </div>
-                    ) : (
-                        <div className="sb-spread">
-                            <ImagePage page={cur} slug={slug} />
-                            <TextPage page={cur} accent={storybook.coverColor} />
-                        </div>
-                    )}
-
-                    {/* 플리핑 페이지 (전진): 현재 텍스트 → 다음 이미지 */}
-                    {flipping === 'next' && next && (
-                        <div className="sb-flip sb-flip-next">
-                            <div className="sb-face">
-                                <TextPage page={cur} accent={storybook.coverColor} />
-                            </div>
-                            <div className="sb-face sb-face-back">
-                                <ImagePage page={next} slug={slug} />
-                            </div>
-                        </div>
-                    )}
-                    {/* 플리핑 페이지 (후진): 현재 이미지 → 이전 텍스트 */}
-                    {flipping === 'prev' && prev && (
-                        <div className="sb-flip sb-flip-prev">
-                            <div className="sb-face">
-                                <ImagePage page={cur} slug={slug} />
-                            </div>
-                            <div className="sb-face sb-face-back">
-                                <TextPage page={prev} accent={storybook.coverColor} />
-                            </div>
-                        </div>
-                    )}
-                </>
-            )}
+            {/* 페이지 슬라이드 — 데스크탑/모바일 통합 */}
+            <AnimatePresence mode="wait" initial={false}>
+                <motion.div key={spread}
+                    initial={{ opacity: 0, x: direction === 'next' ? 40 : -40 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: direction === 'next' ? -40 : 40 }}
+                    transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+                    className="sb-spread">
+                    <ImagePage page={cur} slug={slug} />
+                    <TextPage page={cur} accent={storybook.coverColor} />
+                </motion.div>
+            </AnimatePresence>
 
             {/* 클릭 영역 */}
             {!isFirst && <div className="sb-tap-zone left" onClick={onPrev} />}

@@ -300,12 +300,13 @@ export default function StorybookViewer({ storybook }: Props) {
                     pointer-events: none;
                 }
 
-                /* ── 펼친 책 컨테이너 ── */
+                /* ── 펼친 책 컨테이너 ──
+                   원본 이미지 1400×1045 (1.34:1 가로형)에 맞춰 스프레드 = 8:3.
+                   각 페이지 = 4:3 → 이미지가 자르지 않고 정확히 채워짐. */
                 .sb-book {
                     position: relative;
-                    /* width와 height 모두 viewport 안에 들어오도록 — 3:2 비율 유지 */
-                    width: min(94vw, calc(78vh * 1.5), 1320px);
-                    aspect-ratio: 3 / 2;
+                    width: min(94vw, calc(82vh * 8 / 3), 1800px);
+                    aspect-ratio: 8 / 3;
                     transform-style: preserve-3d;
                 }
                 /* 책의 그림자 */
@@ -360,7 +361,7 @@ export default function StorybookViewer({ storybook }: Props) {
                 }
                 .sb-page-image img {
                     width: 100%; height: 100%;
-                    object-fit: cover;
+                    object-fit: contain;   /* 자르지 않고 항상 전체 표시 */
                     display: block;
                 }
                 .sb-page-text {

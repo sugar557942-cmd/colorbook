@@ -285,6 +285,10 @@ export default function StorybookViewer({ storybook }: Props) {
                     perspective: 2400px;
                     user-select: none;
                     -webkit-user-select: none;
+                    /* flex 중앙 정렬 — framer-motion transform과 충돌 안 함 */
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 /* 책 무대 — 따뜻한 조명 효과 */
                 .sb-stage::before {
@@ -298,10 +302,9 @@ export default function StorybookViewer({ storybook }: Props) {
 
                 /* ── 펼친 책 컨테이너 ── */
                 .sb-book {
-                    position: absolute;
-                    top: 50%; left: 50%;
-                    transform: translate(-50%, -50%);
-                    width: min(94vw, 1320px);
+                    position: relative;
+                    /* width와 height 모두 viewport 안에 들어오도록 — 3:2 비율 유지 */
+                    width: min(94vw, calc(78vh * 1.5), 1320px);
                     aspect-ratio: 3 / 2;
                     transform-style: preserve-3d;
                 }
@@ -414,10 +417,9 @@ export default function StorybookViewer({ storybook }: Props) {
 
                 /* ── 표지 ── */
                 .sb-cover-stage {
-                    position: absolute;
-                    top: 50%; left: 50%;
-                    transform: translate(-50%, -50%);
-                    width: min(80vw, 460px);
+                    position: relative;
+                    /* 3:4 비율 — 높이 제약도 함께 (height = width / 0.75) */
+                    width: min(80vw, calc(78vh * 0.75), 380px);
                     aspect-ratio: 3 / 4;
                     transform-style: preserve-3d;
                 }
@@ -481,7 +483,10 @@ export default function StorybookViewer({ storybook }: Props) {
 
                 /* 모바일에서 스프레드 → 단일 페이지 */
                 @media (max-width: 720px) {
-                    .sb-book { aspect-ratio: 3 / 4; width: 88vw; }
+                    .sb-book {
+                        aspect-ratio: 3 / 4;
+                        width: min(88vw, calc(82vh * 0.75));
+                    }
                     .sb-spread { flex-direction: column; }
                     .sb-spread::after { display: none; }
                     .sb-page { flex: 1; }

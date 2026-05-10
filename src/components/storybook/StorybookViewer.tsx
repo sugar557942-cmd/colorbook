@@ -48,6 +48,7 @@ export default function StorybookViewer({ storybook }: Props) {
     const [phase, setPhase]       = useState<Phase>('cover');
     const [spread, setSpread]     = useState(0);
     const [flipping, setFlipping] = useState<'next' | 'prev' | null>(null);
+    const [direction, setDirection] = useState<'next' | 'prev'>('next');
     const [bgmOn, setBgmOn]       = useState(true);
     const [sfxOn, setSfxOn]       = useState(true);
     const [showResume, setShowResume] = useState(false);
@@ -198,8 +199,17 @@ export default function StorybookViewer({ storybook }: Props) {
             setPhase('ending');
             return;
         }
-        setFlipping('next');
+        setDirection('next');
         playFlipSfx();
+
+        const isMobile = typeof window !== 'undefined' && window.innerWidth <= 720;
+        if (isMobile) {
+            // 모바일: 즉시 슬라이드, FLIP_MS 대기 X
+            setSpread(s => s + 1);
+            return;
+        }
+        // 데스크탑: 3D 플립
+        setFlipping('next');
         window.setTimeout(() => {
             setSpread(s => s + 1);
             setFlipping(null);
@@ -209,8 +219,15 @@ export default function StorybookViewer({ storybook }: Props) {
     /* ── 이전 페이지 ── */
     const goPrev = useCallback(() => {
         if (flipping || phase !== 'reading' || spread === 0) return;
-        setFlipping('prev');
+        setDirection('prev');
         playFlipSfx();
+
+        const isMobile = typeof window !== 'undefined' && window.innerWidth <= 720;
+        if (isMobile) {
+            setSpread(s => s - 1);
+            return;
+        }
+        setFlipping('prev');
         window.setTimeout(() => {
             setSpread(s => s - 1);
             setFlipping(null);
@@ -486,17 +503,85 @@ export default function StorybookViewer({ storybook }: Props) {
                     left: 0;
                 }
 
-                /* 모바일에서 스프레드 → 단일 페이지 */
+                /* ════════════════════════════════════════════════════
+                   모바일 (≤720px) — 풀스크린 리더 모드
+                   진짜 책 시뮬레이션을 버리고 콘텐츠 우선 레이아웃
+                ════════════════════════════════════════════════════ */
                 @media (max-width: 720px) {
+                    /* 책이 화면 전체 차지 */
                     .sb-book {
-                        aspect-ratio: 3 / 4;
-                        width: min(88vw, calc(82vh * 0.75));
+                        position: relative;
+                        width: 100vw;
+                        height: 100vh;
+                        height: 100dvh;     /* 모던 브라우저 dynamic viewport */
+                        max-width: none;
+                        max-height: none;
+                        aspect-ratio: unset;
+                        margin: 0;
                     }
-                    .sb-spread { flex-direction: column; }
+                    /* 책 그림자 제거 (풀스크린이라 의미 없음) */
+                    .sb-book::before { display: none; }
+
+                    /* 스프레드 → 세로 stack */
+                    .sb-spread {
+                        position: absolute;
+                        inset: 0;
+                        flex-direction: column;
+                        border-radius: 0;
+                        box-shadow: none;
+                    }
+                    /* 책등 제거 */
                     .sb-spread::after { display: none; }
-                    .sb-page { flex: 1; }
-                    .sb-page-text { padding: 24px; font-size: 14px; }
-                    .sb-flip { display: none; } /* 모바일은 fade로 */
+
+                    /* 이미지: 상단, 4:3 비율 정확히 유지 */
+                    .sb-page-image {
+                        flex: 0 0 auto;
+                        width: 100%;
+                        height: auto;
+                        aspect-ratio: 4 / 3;
+                        position: relative;
+                    }
+                    .sb-page-image img {
+                        object-fit: cover;       /* 4:3 컨테이너 = 4:3 이미지 → 자르지 않고 채움 */
+                    }
+                    /* 이미지 → 텍스트 부드러운 경계 */
+                    .sb-page-image::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0; left: 0; right: 0;
+                        height: 18px;
+                        background: linear-gradient(180deg, transparent, rgba(120,80,30,0.12));
+                        pointer-events: none;
+                    }
+
+                    /* 텍스트: 남은 공간 차지, 스크롤 가능 */
+                    .sb-page-text {
+                        flex: 1 1 auto;
+                        padding: 28px 24px 96px;       /* 하단 여유 — 탭 영역 확보 */
+                        overflow-y: auto;
+                        -webkit-overflow-scrolling: touch;
+                        background:
+                            repeating-linear-gradient(180deg,
+                                transparent 0 35px,
+                                rgba(180,140,90,0.04) 35px 36px),
+                            #FFFCF3;
+                    }
+
+                    /* 데스크탑 3D 플립 제거 */
+                    .sb-flip { display: none; }
+
+                    /* 탭 영역: 텍스트 영역 하단부에만 (스크롤 방해 X) */
+                    .sb-tap-zone {
+                        top: auto;
+                        bottom: 0;
+                        height: 35%;
+                        width: 30%;
+                    }
+
+                    /* 표지 살짝 더 크게 — 모바일에서도 시각적 임팩트 */
+                    .sb-cover-stage {
+                        width: min(82vw, calc(72vh * 0.7));
+                    }
                 }
             `}</style>
 
@@ -528,6 +613,7 @@ export default function StorybookViewer({ storybook }: Props) {
                             cur={cur} next={next} prev={prev}
                             spread={spread}
                             flipping={flipping}
+                            direction={direction}
                             slug={slug}
                             onNext={goNext} onPrev={goPrev}
                             isFirst={spread === 0}
@@ -706,7 +792,7 @@ function CoverScreen({
    본문 읽기 화면
 ════════════════════════════════════════════════════ */
 function ReadingScreen({
-    storybook, cur, next, prev, spread, flipping, slug,
+    storybook, cur, next, prev, spread, flipping, direction, slug,
     onNext, onPrev, isFirst, isLast,
 }: {
     storybook: Storybook;
@@ -715,19 +801,32 @@ function ReadingScreen({
     prev: Storybook['pages'][number] | null;
     spread: number;
     flipping: 'next' | 'prev' | null;
+    direction: 'next' | 'prev';
     slug: string;
     onNext: () => void; onPrev: () => void;
     isFirst: boolean; isLast: boolean;
 }) {
-    const isMobile = typeof window !== 'undefined' && window.innerWidth <= 720;
+    const [isMobile, setIsMobile] = React.useState(() => {
+        if (typeof window !== 'undefined') return window.innerWidth <= 720;
+        return false;
+    });
+
+    React.useEffect(() => {
+        const check = () => setIsMobile(window.innerWidth <= 720);
+        check();
+        window.addEventListener('resize', check);
+        return () => window.removeEventListener('resize', check);
+    }, []);
 
     return (
         <motion.div
-            /* 처음 mount 될 때 책이 작은 상태에서 펼쳐지는 듯한 인트로 */
-            initial={{ opacity: 0, scale: 0.35, rotateY: -25, y: 8 }}
+            /* 처음 mount 될 때 책이 펼쳐지는 인트로 — 모바일은 차분하게, 데스크탑은 드라마틱하게 */
+            initial={isMobile
+                ? { opacity: 0, y: 24, scale: 0.96 }
+                : { opacity: 0, scale: 0.35, rotateY: -25, y: 8 }}
             animate={{ opacity: 1, scale: 1, rotateY: 0, y: 0 }}
-            exit={{ opacity: 0, scale: 0.5 }}
-            transition={{ duration: 1.0, ease: [0.34, 1.32, 0.64, 1] }}
+            exit={{ opacity: 0, scale: isMobile ? 0.96 : 0.5 }}
+            transition={{ duration: isMobile ? 0.5 : 1.0, ease: [0.34, 1.32, 0.64, 1] }}
             className="sb-book"
             style={{ '--flip-ms': `${FLIP_MS}ms` } as React.CSSProperties}
         >
@@ -749,14 +848,14 @@ function ReadingScreen({
                 </motion.button>
             )}
 
-            {/* 모바일: fade transition */}
+            {/* 모바일: 좌우 슬라이드 transition */}
             {isMobile ? (
-                <AnimatePresence mode="wait">
+                <AnimatePresence mode="wait" initial={false}>
                     <motion.div key={spread}
-                        initial={{ opacity: 0, x: flipping === 'prev' ? -30 : 30 }}
+                        initial={{ opacity: 0, x: direction === 'next' ? 40 : -40 }}
                         animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: flipping === 'prev' ? 30 : -30 }}
-                        transition={{ duration: 0.35 }}
+                        exit={{ opacity: 0, x: direction === 'next' ? -40 : 40 }}
+                        transition={{ duration: 0.32, ease: [0.4, 0, 0.2, 1] }}
                         className="sb-spread">
                         <ImagePage page={cur} slug={slug} />
                         <TextPage page={cur} accent={storybook.coverColor} />

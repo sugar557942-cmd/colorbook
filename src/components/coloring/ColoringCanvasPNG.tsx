@@ -18,7 +18,7 @@
 
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 import ColorPalette from './ColorPalette';
-import { Download, Printer, Loader2, Eraser } from 'lucide-react';
+import { Download, Printer, Loader2, Eraser, Lock, Unlock } from 'lucide-react';
 
 interface Props {
     imagePath: string;
@@ -125,10 +125,46 @@ export default function ColoringCanvasPNG({ imagePath, slug, onDownload, onPrint
     const [strokeCount, setStrokeCount]     = useState(0);
     const [tool, setTool]                   = useState<ToolMode>('bucket');
     const [brushSize, setBrushSize]         = useState(18);
+    const [scrollLocked, setScrollLocked]   = useState(false);
 
     const isDrawing   = useRef(false);
     const lastPos     = useRef<{ x: number; y: number } | null>(null);
     const strokeSaved = useRef(false);
+
+    /* ─── 스크롤 잠금: body·html에 overflow hidden + iOS용 position fixed ─── */
+    useEffect(() => {
+        if (!scrollLocked) return;
+
+        const scrollY = window.scrollY;
+        const html = document.documentElement;
+        const body = document.body;
+
+        const prev = {
+            htmlOverflow:    html.style.overflow,
+            bodyOverflow:    body.style.overflow,
+            bodyTouchAction: body.style.touchAction,
+            bodyPosition:    body.style.position,
+            bodyTop:         body.style.top,
+            bodyWidth:       body.style.width,
+        };
+
+        html.style.overflow    = 'hidden';
+        body.style.overflow    = 'hidden';
+        body.style.touchAction = 'none';
+        body.style.position    = 'fixed';        // iOS Safari 바운스 제거
+        body.style.top         = `-${scrollY}px`;
+        body.style.width       = '100%';
+
+        return () => {
+            html.style.overflow    = prev.htmlOverflow;
+            body.style.overflow    = prev.bodyOverflow;
+            body.style.touchAction = prev.bodyTouchAction;
+            body.style.position    = prev.bodyPosition;
+            body.style.top         = prev.bodyTop;
+            body.style.width       = prev.bodyWidth;
+            window.scrollTo(0, scrollY);
+        };
+    }, [scrollLocked]);
 
     /* ─── 이미지 로드 → 두 레이어 초기화 ─── */
     useEffect(() => {
@@ -419,6 +455,23 @@ export default function ColoringCanvasPNG({ imagePath, slug, onDownload, onPrint
                         <ToolBtn t="bucket" label="페인트통" icon={<span className="text-sm">🪣</span>} />
                         <ToolBtn t="brush"  label="붓"       icon={<span className="text-sm">🖌️</span>} />
                         <ToolBtn t="eraser" label="지우개"   icon={<Eraser size={12} />} />
+
+                        {/* 스크롤 잠금 토글 — 모바일/태블릿에서 색칠 시 화면 흔들림 방지 */}
+                        <button
+                            onClick={() => setScrollLocked(v => !v)}
+                            title={scrollLocked
+                                ? '스크롤 잠금 해제 — 다시 페이지를 움직일 수 있어요'
+                                : '스크롤 잠금 — 색칠 중 페이지 흔들림 방지 (모바일/태블릿)'}
+                            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold transition-all ${
+                                scrollLocked
+                                    ? 'bg-[#D87C7E] text-white shadow-sm ring-2 ring-[#D87C7E]/30'
+                                    : 'bg-[#FBF1DC] text-[#6E5942] hover:bg-[#F7E8CC]'
+                            }`}
+                        >
+                            {scrollLocked
+                                ? <><Lock size={12} /> 잠금됨</>
+                                : <><Unlock size={12} /> 스크롤 잠금</>}
+                        </button>
                     </div>
 
                     {/* 붓/지우개 크기 슬라이더 */}
@@ -447,7 +500,15 @@ export default function ColoringCanvasPNG({ imagePath, slug, onDownload, onPrint
             {!loading && (
                 <p className="text-xs font-body text-[#9A8569] px-1">
                     {tool === 'bucket' && '🪣 원하는 색을 선택하고 영역을 클릭하면 채워져요!'}
-                    {tool === 'brush'  && '🖌️ 드래그해서 자유롭게 그려보세요! 윤곽선은 보호돼요.'}
+                    {tool === 'brush'  && (
+                        <>🖌️ 드래그해서 자유롭게 그려보세요! 윤곽선은 보호돼요.
+                            {!scrollLocked && (
+                                <span className="ml-1 text-[#D87C7E] font-bold">
+                                    📱 화면이 흔들리면 <Lock size={10} className="inline mb-0.5" /> 스크롤 잠금을 켜보세요.
+                                </span>
+                            )}
+                        </>
+                    )}
                     {tool === 'eraser' && '지우개로 드래그해서 색상을 지워요. 윤곽선은 보호돼요.'}
                 </p>
             )}

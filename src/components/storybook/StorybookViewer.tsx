@@ -33,9 +33,10 @@ interface Props {
     storybook: Storybook;
 }
 
-type Phase = 'cover' | 'opening' | 'reading' | 'ending';
+type Phase = 'cover' | 'reading' | 'ending';
 
 const FLIP_MS = 850;
+const OPEN_MS = 1100;   // 표지 → 본문 인트로 애니메이션 길이
 
 export default function StorybookViewer({ storybook }: Props) {
     const router = useRouter();
@@ -176,15 +177,18 @@ export default function StorybookViewer({ storybook }: Props) {
         return stopBgm;
     }, [bgmOn, phase, startBgm, stopBgm]);
 
-    /* ── 표지 펼치기 ── */
+    /* ── 표지 펼치기 — 직접 본문으로, 본문이 인트로 애니메이션 처리 ── */
     const handleOpen = useCallback((startSpread = 0) => {
         initAudio();
         setSpread(startSpread);
         setShowResume(false);
         playOpenSfx();
-        setPhase('opening');
-        window.setTimeout(() => setPhase('reading'), 1400);
-    }, [initAudio, playOpenSfx]);
+        setPhase('reading');
+        // BGM은 책이 펼쳐진 후에 시작
+        window.setTimeout(() => {
+            if (audioCtxRef.current) startBgm();
+        }, OPEN_MS - 200);
+    }, [initAudio, playOpenSfx, startBgm]);
 
     /* ── 다음 페이지 ── */
     const goNext = useCallback(() => {
@@ -518,10 +522,6 @@ export default function StorybookViewer({ storybook }: Props) {
                             onOpen={handleOpen} />
                     )}
 
-                    {phase === 'opening' && (
-                        <OpeningScreen key="opening" storybook={storybook} />
-                    )}
-
                     {phase === 'reading' && (
                         <ReadingScreen key="reading"
                             storybook={storybook}
@@ -703,32 +703,6 @@ function CoverScreen({
 }
 
 /* ════════════════════════════════════════════════════
-   책 펼치기 인트로 애니메이션
-════════════════════════════════════════════════════ */
-function OpeningScreen({ storybook }: { storybook: Storybook }) {
-    return (
-        <motion.div
-            initial={{ opacity: 1, scale: 1 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="sb-cover-stage"
-        >
-            <motion.div
-                initial={{ rotateY: 0, scale: 1 }}
-                animate={{ rotateY: -160, scale: 1.1 }}
-                transition={{ duration: 1.4, ease: [0.45, 0.05, 0.35, 1] }}
-                className="sb-cover"
-                style={{
-                    background: `linear-gradient(135deg, ${storybook.coverColor} 0%, ${shade(storybook.coverColor, -0.3)} 100%)`,
-                    transformOrigin: 'left center',
-                }}
-            >
-                <div style={{ fontSize: 64 }}>{storybook.coverEmoji}</div>
-            </motion.div>
-        </motion.div>
-    );
-}
-
-/* ════════════════════════════════════════════════════
    본문 읽기 화면
 ════════════════════════════════════════════════════ */
 function ReadingScreen({
@@ -749,10 +723,11 @@ function ReadingScreen({
 
     return (
         <motion.div
-            initial={{ opacity: 0, scale: 0.96 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.4 }}
+            /* 처음 mount 될 때 책이 작은 상태에서 펼쳐지는 듯한 인트로 */
+            initial={{ opacity: 0, scale: 0.35, rotateY: -25, y: 8 }}
+            animate={{ opacity: 1, scale: 1, rotateY: 0, y: 0 }}
+            exit={{ opacity: 0, scale: 0.5 }}
+            transition={{ duration: 1.0, ease: [0.34, 1.32, 0.64, 1] }}
             className="sb-book"
             style={{ '--flip-ms': `${FLIP_MS}ms` } as React.CSSProperties}
         >

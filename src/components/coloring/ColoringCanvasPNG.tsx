@@ -18,7 +18,7 @@
 
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 import ColorPalette from './ColorPalette';
-import { Download, Printer, Loader2, Eraser, Lock, Undo2 } from 'lucide-react';
+import { Download, Printer, Loader2, Eraser, Lock, Undo2, ZoomIn, ZoomOut } from 'lucide-react';
 
 interface Props {
     imagePath: string;
@@ -126,10 +126,15 @@ export default function ColoringCanvasPNG({ imagePath, slug, onDownload, onPrint
     const [tool, setTool]                   = useState<ToolMode>('bucket');
     const [brushSize, setBrushSize]         = useState(18);
     const [scrollLocked, setScrollLocked]   = useState(false);
+    const [zoom, setZoom]                   = useState(100);   // 50 ~ 150 (%)
 
     const isDrawing   = useRef(false);
     const lastPos     = useRef<{ x: number; y: number } | null>(null);
     const strokeSaved = useRef(false);
+
+    /* ─── 줌 인/아웃 ─── */
+    const handleZoomIn  = useCallback(() => setZoom(z => Math.min(150, z + 10)), []);
+    const handleZoomOut = useCallback(() => setZoom(z => Math.max(50, z - 10)), []);
 
     /* ─── 스크롤 잠금: body·html에 overflow hidden + iOS용 position fixed ─── */
     useEffect(() => {
@@ -492,6 +497,38 @@ export default function ColoringCanvasPNG({ imagePath, slug, onDownload, onPrint
                                 <span className="ml-0.5 text-[10px] opacity-90">({history.length})</span>
                             )}
                         </button>
+
+                        {/* 시각 구분선 */}
+                        <div className="w-px h-5 bg-[#D5C9B6] mx-0.5" />
+
+                        {/* 줌 컨트롤 — 도안 50%~150% */}
+                        <button
+                            onClick={handleZoomOut}
+                            disabled={zoom <= 50}
+                            title="축소 (도안 작게)"
+                            className={`flex items-center justify-center w-8 h-8 rounded-full transition-all ${
+                                zoom <= 50
+                                    ? 'bg-[#FBF1DC] text-[#C4A77D] cursor-not-allowed opacity-60'
+                                    : 'bg-[#FBF1DC] text-[#6E5942] hover:bg-[#F7E8CC]'
+                            }`}
+                        >
+                            <ZoomOut size={14} />
+                        </button>
+                        <span className="text-xs font-bold text-[#6E5942] tabular-nums min-w-[36px] text-center">
+                            {zoom}%
+                        </span>
+                        <button
+                            onClick={handleZoomIn}
+                            disabled={zoom >= 150}
+                            title="확대 (도안 크게)"
+                            className={`flex items-center justify-center w-8 h-8 rounded-full transition-all ${
+                                zoom >= 150
+                                    ? 'bg-[#FBF1DC] text-[#C4A77D] cursor-not-allowed opacity-60'
+                                    : 'bg-[#FBF1DC] text-[#6E5942] hover:bg-[#F7E8CC]'
+                            }`}
+                        >
+                            <ZoomIn size={14} />
+                        </button>
                     </div>
 
                     {/* 붓/지우개 크기 슬라이더 */}
@@ -524,7 +561,7 @@ export default function ColoringCanvasPNG({ imagePath, slug, onDownload, onPrint
                         <>🖌️ 드래그해서 자유롭게 그려보세요! 윤곽선은 보호돼요.
                             {!scrollLocked && (
                                 <span className="ml-1 text-[#D87C7E] font-bold">
-                                    📱 화면이 흔들리면 아래 색 선택 영역의 <Lock size={10} className="inline mb-0.5" /> 스크롤 잠금을 켜보세요.
+                                    📱 화면이 흔들리면 아래 색 선택 영역의 <Lock size={10} className="inline mb-0.5" /> 스크롤 버튼을 켜보세요.
                                 </span>
                             )}
                         </>
@@ -533,42 +570,55 @@ export default function ColoringCanvasPNG({ imagePath, slug, onDownload, onPrint
                 </p>
             )}
 
-            {/* ── 듀얼 레이어 캔버스 ── */}
+            {/* ── 듀얼 레이어 캔버스 (줌 적용) ── */}
             <div
                 ref={wrapRef}
-                className="relative rounded-3xl border-2 border-gray-100 shadow-sm overflow-hidden bg-white"
-                style={{ display: loading ? 'none' : 'block' }}
+                className="relative rounded-3xl border-2 border-gray-100 shadow-sm bg-white"
+                style={{
+                    display: loading ? 'none' : 'block',
+                    overflow: zoom > 100 ? 'auto' : 'hidden',  // 확대 시 스크롤 가능
+                }}
             >
-                {/* 하단: 색칠 레이어 (이벤트 수신) */}
-                <canvas
-                    ref={colorRef}
-                    onPointerDown={handlePointerDown}
-                    onPointerMove={handlePointerMove}
-                    onPointerUp={handlePointerUp}
-                    onPointerCancel={handlePointerUp}
-                    onPointerLeave={handlePointerUp}
+                {/* 줌 컨테이너 — 줌 비율에 따라 너비 변경 */}
+                <div
                     style={{
-                        display: 'block',
-                        width: '100%',
-                        cursor: tool === 'bucket' ? 'crosshair' : 'cell',
-                        userSelect: 'none',
-                        WebkitUserSelect: 'none',
-                        touchAction: 'none',          /* 모바일에서 페이지 스크롤·확대 방지 */
-                        WebkitTouchCallout: 'none',   /* iOS 길게 누르기 메뉴 방지 */
+                        width: `${zoom}%`,
+                        margin: '0 auto',
+                        position: 'relative',
+                        transition: 'width 200ms ease',
                     }}
-                    title={tool === 'bucket' ? '클릭해서 색칠하세요' : '드래그해서 그리세요'}
-                />
-                {/* 상단: 윤곽선 레이어 (터치/이벤트 무시, 항상 위에) */}
-                <canvas
-                    ref={outlineRef}
-                    style={{
-                        position: 'absolute',
-                        inset: 0,
-                        width: '100%',
-                        height: '100%',
-                        pointerEvents: 'none',
-                    }}
-                />
+                >
+                    {/* 하단: 색칠 레이어 (이벤트 수신) */}
+                    <canvas
+                        ref={colorRef}
+                        onPointerDown={handlePointerDown}
+                        onPointerMove={handlePointerMove}
+                        onPointerUp={handlePointerUp}
+                        onPointerCancel={handlePointerUp}
+                        onPointerLeave={handlePointerUp}
+                        style={{
+                            display: 'block',
+                            width: '100%',
+                            cursor: tool === 'bucket' ? 'crosshair' : 'cell',
+                            userSelect: 'none',
+                            WebkitUserSelect: 'none',
+                            touchAction: 'none',          /* 모바일에서 페이지 스크롤·확대 방지 */
+                            WebkitTouchCallout: 'none',   /* iOS 길게 누르기 메뉴 방지 */
+                        }}
+                        title={tool === 'bucket' ? '클릭해서 색칠하세요' : '드래그해서 그리세요'}
+                    />
+                    {/* 상단: 윤곽선 레이어 (터치/이벤트 무시, 항상 위에) */}
+                    <canvas
+                        ref={outlineRef}
+                        style={{
+                            position: 'absolute',
+                            inset: 0,
+                            width: '100%',
+                            height: '100%',
+                            pointerEvents: 'none',
+                        }}
+                    />
+                </div>
             </div>
 
             {/* 진행 힌트 */}

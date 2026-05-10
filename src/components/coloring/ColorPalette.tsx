@@ -124,18 +124,9 @@ export default function ColorPalette({
                         )}
                     >
                         {scrollLocked ? <Lock size={14} /> : <Unlock size={14} />}
-                        {scrollLocked ? '잠금됨' : '스크롤 잠금'}
+                        스크롤
                     </button>
                 )}
-
-                {/* Current color preview */}
-                <div className="ml-auto flex items-center gap-2">
-                    <span className="text-xs text-gray-400">선택:</span>
-                    <div
-                        className="w-7 h-7 rounded-full border-2 border-gray-300 shadow-sm"
-                        style={{ backgroundColor: isEraser ? '#fff' : selectedColor }}
-                    />
-                </div>
             </div>
 
             {/* Reset */}

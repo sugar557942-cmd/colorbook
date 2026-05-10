@@ -386,10 +386,11 @@ export default function StorybookViewer({ storybook }: Props) {
                     display: block;
                 }
                 .sb-page-text {
-                    padding: clamp(28px, 4vw, 56px) clamp(28px, 4vw, 60px);
+                    /* 상단부터 자연스럽게 흐름 — 페이지 번호는 absolute로 하단 고정 */
+                    padding: clamp(48px, 6vw, 84px) clamp(32px, 4vw, 60px) clamp(72px, 6vw, 96px);
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
+                    gap: 0;
                     background:
                         repeating-linear-gradient(180deg,
                             transparent 0 39px,
@@ -554,10 +555,10 @@ export default function StorybookViewer({ storybook }: Props) {
                         pointer-events: none;
                     }
 
-                    /* 텍스트: 남은 공간 차지, 스크롤 가능 */
+                    /* 텍스트: 남은 공간 차지, 상단부터 흐름 */
                     .sb-page-text {
                         flex: 1 1 auto;
-                        padding: 28px 24px 96px;       /* 하단 여유 — 탭 영역 확보 */
+                        padding: 36px 24px 88px;       /* 위 여유 + 아래 여유 (페이지 번호용) */
                         overflow-y: auto;
                         -webkit-overflow-scrolling: touch;
                         background:

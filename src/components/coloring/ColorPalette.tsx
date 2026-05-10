@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { Eraser, RotateCcw } from 'lucide-react';
+import { Eraser, RotateCcw, Lock, Unlock } from 'lucide-react';
 
 export interface PaletteColor {
     hex: string;
@@ -34,6 +34,8 @@ interface ColorPaletteProps {
     onUndo?: () => void;
     canUndo?: boolean;
     onReset?: () => void;
+    scrollLocked?: boolean;
+    onToggleScrollLock?: () => void;
 }
 
 export default function ColorPalette({
@@ -42,6 +44,8 @@ export default function ColorPalette({
     onUndo,
     canUndo,
     onReset,
+    scrollLocked,
+    onToggleScrollLock,
 }: ColorPaletteProps) {
     const isEraser = selectedColor === '#FFFFFF';
 
@@ -90,7 +94,7 @@ export default function ColorPalette({
                 {/* Undo */}
                 {onUndo && (
                     <button
-                        title="실행 취소"
+                        title="실행 취소 · Ctrl+Z"
                         onClick={onUndo}
                         disabled={!canUndo}
                         className={cn(
@@ -102,6 +106,25 @@ export default function ColorPalette({
                     >
                         <RotateCcw size={14} />
                         되돌리기
+                    </button>
+                )}
+
+                {/* Scroll lock — 모바일/태블릿에서 색칠 시 화면 흔들림 방지 */}
+                {onToggleScrollLock && (
+                    <button
+                        title={scrollLocked
+                            ? '스크롤 잠금 해제'
+                            : '스크롤 잠금 — 색칠 중 페이지 흔들림 방지'}
+                        onClick={onToggleScrollLock}
+                        className={cn(
+                            'flex items-center gap-1.5 px-3 py-2 rounded-2xl text-xs font-bold transition-all',
+                            scrollLocked
+                                ? 'bg-[#D87C7E] text-white shadow ring-2 ring-[#D87C7E]/30'
+                                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                        )}
+                    >
+                        {scrollLocked ? <Lock size={14} /> : <Unlock size={14} />}
+                        {scrollLocked ? '잠금됨' : '스크롤 잠금'}
                     </button>
                 )}
 

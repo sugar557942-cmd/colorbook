@@ -18,7 +18,7 @@
 
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 import ColorPalette from './ColorPalette';
-import { Download, Printer, Loader2, Eraser, Lock, Unlock, Undo2 } from 'lucide-react';
+import { Download, Printer, Loader2, Eraser, Lock, Undo2 } from 'lucide-react';
 
 interface Props {
     imagePath: string;
@@ -492,23 +492,6 @@ export default function ColoringCanvasPNG({ imagePath, slug, onDownload, onPrint
                                 <span className="ml-0.5 text-[10px] opacity-90">({history.length})</span>
                             )}
                         </button>
-
-                        {/* 스크롤 잠금 토글 — 모바일/태블릿에서 색칠 시 화면 흔들림 방지 */}
-                        <button
-                            onClick={() => setScrollLocked(v => !v)}
-                            title={scrollLocked
-                                ? '스크롤 잠금 해제 — 다시 페이지를 움직일 수 있어요'
-                                : '스크롤 잠금 — 색칠 중 페이지 흔들림 방지 (모바일/태블릿)'}
-                            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold transition-all ${
-                                scrollLocked
-                                    ? 'bg-[#D87C7E] text-white shadow-sm ring-2 ring-[#D87C7E]/30'
-                                    : 'bg-[#FBF1DC] text-[#6E5942] hover:bg-[#F7E8CC]'
-                            }`}
-                        >
-                            {scrollLocked
-                                ? <><Lock size={12} /> 잠금됨</>
-                                : <><Unlock size={12} /> 스크롤 잠금</>}
-                        </button>
                     </div>
 
                     {/* 붓/지우개 크기 슬라이더 */}
@@ -541,7 +524,7 @@ export default function ColoringCanvasPNG({ imagePath, slug, onDownload, onPrint
                         <>🖌️ 드래그해서 자유롭게 그려보세요! 윤곽선은 보호돼요.
                             {!scrollLocked && (
                                 <span className="ml-1 text-[#D87C7E] font-bold">
-                                    📱 화면이 흔들리면 <Lock size={10} className="inline mb-0.5" /> 스크롤 잠금을 켜보세요.
+                                    📱 화면이 흔들리면 아래 색 선택 영역의 <Lock size={10} className="inline mb-0.5" /> 스크롤 잠금을 켜보세요.
                                 </span>
                             )}
                         </>
@@ -606,6 +589,8 @@ export default function ColoringCanvasPNG({ imagePath, slug, onDownload, onPrint
                     onUndo={handleUndo}
                     canUndo={history.length > 0}
                     onReset={handleReset}
+                    scrollLocked={scrollLocked}
+                    onToggleScrollLock={() => setScrollLocked(v => !v)}
                 />
             )}
 

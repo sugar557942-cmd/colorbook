@@ -190,8 +190,8 @@ export default function ColoringCanvasPNG({ imagePath, slug, onDownload, onPrint
         img.src = imagePath;
     }, [imagePath]);
 
-    /* ─── 좌표 변환 ─── */
-    const getXY = useCallback((e: React.MouseEvent<HTMLCanvasElement>) => {
+    /* ─── 좌표 변환 (마우스/터치 통합 처리) ─── */
+    const getXY = useCallback((e: React.PointerEvent<HTMLCanvasElement>) => {
         const canvas = colorRef.current!;
         const rect   = canvas.getBoundingClientRect();
         const scaleX = canvas.width  / rect.width;
@@ -238,11 +238,16 @@ export default function ColoringCanvasPNG({ imagePath, slug, onDownload, onPrint
         ctx.restore();
     }, []);
 
-    /* ─── 마우스/포인터 이벤트 ─── */
-    const handlePointerDown = useCallback((e: React.MouseEvent<HTMLCanvasElement>) => {
+    /* ─── 포인터 이벤트 (마우스 + 터치 통합) ─── */
+    const handlePointerDown = useCallback((e: React.PointerEvent<HTMLCanvasElement>) => {
         const canvas = colorRef.current;
         const ctx    = canvas?.getContext('2d', { willReadFrequently: true });
         if (!canvas || !ctx) return;
+
+        // 터치/펜으로 그릴 때 페이지 스크롤·확대 차단
+        e.preventDefault();
+        // 손가락이 캔버스 밖으로 나가도 계속 추적
+        try { canvas.setPointerCapture(e.pointerId); } catch { /* ignore */ }
 
         const { x, y } = getXY(e);
 
@@ -264,12 +269,15 @@ export default function ColoringCanvasPNG({ imagePath, slug, onDownload, onPrint
         lastPos.current     = { x, y };
     }, [tool, selectedColor, getXY, saveSnapshot]);
 
-    const handlePointerMove = useCallback((e: React.MouseEvent<HTMLCanvasElement>) => {
+    const handlePointerMove = useCallback((e: React.PointerEvent<HTMLCanvasElement>) => {
         if (!isDrawing.current) return;
         if (tool !== 'brush' && tool !== 'eraser') return;
         const canvas = colorRef.current;
         const ctx    = canvas?.getContext('2d', { willReadFrequently: true });
         if (!canvas || !ctx || !lastPos.current) return;
+
+        // 그리기 중 페이지 스크롤 방지
+        e.preventDefault();
 
         if (!strokeSaved.current) {
             saveSnapshot();
@@ -281,13 +289,16 @@ export default function ColoringCanvasPNG({ imagePath, slug, onDownload, onPrint
         lastPos.current = { x, y };
     }, [tool, selectedColor, brushSize, getXY, paintBrush, saveSnapshot]);
 
-    const handlePointerUp = useCallback(() => {
+    const handlePointerUp = useCallback((e?: React.PointerEvent<HTMLCanvasElement>) => {
         if (isDrawing.current && strokeSaved.current) {
             setStrokeCount(c => c + 1);
         }
         isDrawing.current   = false;
         strokeSaved.current = false;
         lastPos.current     = null;
+        if (e && colorRef.current) {
+            try { colorRef.current.releasePointerCapture(e.pointerId); } catch { /* ignore */ }
+        }
     }, []);
 
     /* ─── Undo ─── */
@@ -450,15 +461,19 @@ export default function ColoringCanvasPNG({ imagePath, slug, onDownload, onPrint
                 {/* 하단: 색칠 레이어 (이벤트 수신) */}
                 <canvas
                     ref={colorRef}
-                    onMouseDown={handlePointerDown}
-                    onMouseMove={handlePointerMove}
-                    onMouseUp={handlePointerUp}
-                    onMouseLeave={handlePointerUp}
+                    onPointerDown={handlePointerDown}
+                    onPointerMove={handlePointerMove}
+                    onPointerUp={handlePointerUp}
+                    onPointerCancel={handlePointerUp}
+                    onPointerLeave={handlePointerUp}
                     style={{
                         display: 'block',
                         width: '100%',
                         cursor: tool === 'bucket' ? 'crosshair' : 'cell',
                         userSelect: 'none',
+                        WebkitUserSelect: 'none',
+                        touchAction: 'none',          /* 모바일에서 페이지 스크롤·확대 방지 */
+                        WebkitTouchCallout: 'none',   /* iOS 길게 누르기 메뉴 방지 */
                     }}
                     title={tool === 'bucket' ? '클릭해서 색칠하세요' : '드래그해서 그리세요'}
                 />
